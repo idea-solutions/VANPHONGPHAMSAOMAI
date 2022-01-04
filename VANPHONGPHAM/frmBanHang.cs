@@ -93,6 +93,7 @@ namespace VANPHONGPHAM
         // thau đổi
         // thay đổi
         // xin chào các bạn
+        // lại là mình đây
         private void frmBanHang_Load(object sender, EventArgs e)
         {
             dateEditTuNgay.EditValue = GetFirstDayOfMonth(DateTime.Now);

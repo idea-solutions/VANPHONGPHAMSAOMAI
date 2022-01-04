@@ -25,6 +25,9 @@ namespace VANPHONGPHAM
         // ciuvhrijdso
         //fdudgydgcye
         //uhudcgeudh
+
+
+        // xin chào mọi người
         private void frmDelete_Load(object sender, EventArgs e)
         {
             _cthd = new HOADONMATHANG();

@@ -90,10 +90,7 @@ namespace VANPHONGPHAM
             dtResult = dtResult.AddDays((-dtResult.Day) + 1);
             return dtResult;
         }
-        // thau đổi
-        // thay đổi
-        // xin chào các bạn
-        // lại là mình đây
+        
         private void frmBanHang_Load(object sender, EventArgs e)
         {
             dateEditTuNgay.EditValue = GetFirstDayOfMonth(DateTime.Now);

@@ -169,12 +169,12 @@ namespace VANPHONGPHAM
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 46);
+            this.label1.Location = new System.Drawing.Point(45, 46);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 16);
+            this.label1.Size = new System.Drawing.Size(45, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Servername";
+            this.label1.Text = "Server";
             // 
             // frmKetNoiDB
             // 

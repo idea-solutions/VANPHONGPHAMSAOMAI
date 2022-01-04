@@ -90,7 +90,7 @@ namespace VANPHONGPHAM
             dtResult = dtResult.AddDays((-dtResult.Day) + 1);
             return dtResult;
         }
-
+        // thau đổi
         // thay đổi
         private void frmBanHang_Load(object sender, EventArgs e)
         {

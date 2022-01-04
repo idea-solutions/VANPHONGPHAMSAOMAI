@@ -21,7 +21,7 @@ namespace VANPHONGPHAM
         }
 
         HOADONMATHANG _cthd;
-
+        //dhyegdfcyegfydce
         private void frmDelete_Load(object sender, EventArgs e)
         {
             _cthd = new HOADONMATHANG();

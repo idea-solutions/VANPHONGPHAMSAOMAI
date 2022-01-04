@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e563892cfef24ee492b1adda3db36d57" Name="Diagram1">
+        <EntityTypeShape EntityType="VANPHONGPHAM.DON_DAT_HANG" Width="1.5" PointX="3" PointY="15.625" />
+        <EntityTypeShape EntityType="VANPHONGPHAM.DONDATHANG_MATHANG" Width="1.5" PointX="5.25" PointY="3.75" />
+        <EntityTypeShape EntityType="VANPHONGPHAM.HOA_DON" Width="1.5" PointX="3" PointY="9.875" />
+        <EntityTypeShape EntityType="VANPHONGPHAM.HOADON_MATHANG" Width="1.5" PointX="5.25" PointY="0.75" />
+        <EntityTypeShape EntityType="VANPHONGPHAM.LOAI_MAT_HANG" Width="1.5" PointX="0.75" PointY="4" />
+        <EntityTypeShape EntityType="VANPHONGPHAM.MAT_HANG" Width="1.5" PointX="3" PointY="3.375" />
+        <EntityTypeShape EntityType="VANPHONGPHAM.NHA_CUNG_CAP" Width="1.5" PointX="0.75" PointY="15.625" />
+        <EntityTypeShape EntityType="VANPHONGPHAM.NHAN_VIEN" Width="1.5" PointX="0.75" PointY="8" />
+        <AssociationConnector Association="VANPHONGPHAM.FK__CT_DON_DA__MADDH__37A5467C" />
+        <AssociationConnector Association="VANPHONGPHAM.FK_DON_DAT_HANG_NHA_CUNG_CAP" />
+        <AssociationConnector Association="VANPHONGPHAM.FK_DON_DAT_HANG_NHAN_VIEN" />
+        <AssociationConnector Association="VANPHONGPHAM.FK_DONDATHANG_NHACUNGCAP_MAT_HANG" />
+        <AssociationConnector Association="VANPHONGPHAM.FK__HOA_DON__MANHANV__38996AB5" />
+        <AssociationConnector Association="VANPHONGPHAM.FK_CT_HOA_DON_HOA_DON" />
+        <AssociationConnector Association="VANPHONGPHAM.FK__CT_HOA_DON__MAMH__36B12243" />
+        <AssociationConnector Association="VANPHONGPHAM.FK__MAT_HANG__MALOAI__3A81B327" />
+        <EntityTypeShape EntityType="VANPHONGPHAM.KHACH_HANG" Width="1.5" PointX="5.375" PointY="6.875" />
+        <AssociationConnector Association="VANPHONGPHAM.FK_HOA_DON_KHACH_HANG" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

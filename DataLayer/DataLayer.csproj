@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AE880D91-201A-4046-AB21-3D2EB3A1D885}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataLayer</RootNamespace>
+    <AssemblyName>DataLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BANHANG_Result.cs">
+      <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="connect.cs" />
+    <Compile Include="DONDATHANG_MATHANG.cs">
+      <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DON_DAT_HANG.cs">
+      <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Encryptor.cs" />
+    <Compile Include="Entities.cs" />
+    <Compile Include="FNBANHANGByTIMEGROUPMH_Result.cs">
+      <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FNBANHANGByTIMEGROUP_Result.cs">
+      <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FNBANHANGByTIME_Result.cs">
+      <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FNBANHANG_Result.cs">
+      <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FNKHACHHANGGROUP_Result.cs">
+      <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FNLOAIMAT_HANG_Result.cs">
+      <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FNMAT_HANG_Result.cs">
+      <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HOADON_MATHANG.cs">
+      <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HOADON_Result.cs">
+      <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HOA_DON.cs">
+      <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KHACH_HANG.cs">
+      <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOAI_MAT_HANG.cs">
+      <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MATHANG_Result.cs">
+      <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAT_HANG.cs">
+      <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NHAN_VIEN.cs">
+      <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NHA_CUNG_CAP.cs">
+      <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VANPHONGPHAM.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VANPHONGPHAM.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VANPHONGPHAM.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VANPHONGPHAM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VANPHONGPHAM.edmx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <EntityDeploy Include="VANPHONGPHAM.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>VANPHONGPHAM.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="VANPHONGPHAM.edmx.diagram">
+      <DependentUpon>VANPHONGPHAM.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="VANPHONGPHAM.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VANPHONGPHAM.edmx</DependentUpon>
+      <LastGenOutput>VANPHONGPHAM.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="VANPHONGPHAM.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VANPHONGPHAM.edmx</DependentUpon>
+      <LastGenOutput>VANPHONGPHAM.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="VANPHONGPHAMDataSet" targetNamespace="http://tempuri.org/VANPHONGPHAMDataSet.xsd" xmlns:mstns="http://tempuri.org/VANPHONGPHAMDataSet.xsd" xmlns="http://tempuri.org/VANPHONGPHAMDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="VANPHONGPHAMConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="VANPHONGPHAMConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.VANPHONGPHAM.Properties.Settings.GlobalReference.Default.VANPHONGPHAMConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FNBANHANGTableAdapter" GeneratorDataComponentClassName="FNBANHANGTableAdapter" Name="FNBANHANG" UserDataComponentName="FNBANHANGTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="VANPHONGPHAMConnectionString (Settings)" DbObjectName="VANPHONGPHAM.dbo.FNBANHANG" DbObjectType="Function" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT TENMH, SOLUONG FROM dbo.FNBANHANG()</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TENMH" DataSetColumn="TENMH" />
+              <Mapping SourceColumn="SOLUONG" DataSetColumn="SOLUONG" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="VANPHONGPHAMDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="VANPHONGPHAMDataSet" msprop:Generator_UserDSName="VANPHONGPHAMDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FNBANHANG" msprop:Generator_TableClassName="FNBANHANGDataTable" msprop:Generator_TableVarName="tableFNBANHANG" msprop:Generator_TablePropName="FNBANHANG" msprop:Generator_RowDeletingName="FNBANHANGRowDeleting" msprop:Generator_RowChangingName="FNBANHANGRowChanging" msprop:Generator_RowEvHandlerName="FNBANHANGRowChangeEventHandler" msprop:Generator_RowDeletedName="FNBANHANGRowDeleted" msprop:Generator_UserTableName="FNBANHANG" msprop:Generator_RowChangedName="FNBANHANGRowChanged" msprop:Generator_RowEvArgName="FNBANHANGRowChangeEvent" msprop:Generator_RowClassName="FNBANHANGRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TENMH" msprop:Generator_ColumnVarNameInTable="columnTENMH" msprop:Generator_ColumnPropNameInRow="TENMH" msprop:Generator_ColumnPropNameInTable="TENMHColumn" msprop:Generator_UserColumnName="TENMH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SOLUONG" msprop:Generator_ColumnVarNameInTable="columnSOLUONG" msprop:Generator_ColumnPropNameInRow="SOLUONG" msprop:Generator_ColumnPropNameInTable="SOLUONGColumn" msprop:Generator_UserColumnName="SOLUONG" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

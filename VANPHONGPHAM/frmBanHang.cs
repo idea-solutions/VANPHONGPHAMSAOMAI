@@ -91,6 +91,7 @@ namespace VANPHONGPHAM
             return dtResult;
         }
 
+        // thay đổi
         private void frmBanHang_Load(object sender, EventArgs e)
         {
             dateEditTuNgay.EditValue = GetFirstDayOfMonth(DateTime.Now);

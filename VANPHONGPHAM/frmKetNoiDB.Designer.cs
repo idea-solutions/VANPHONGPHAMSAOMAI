@@ -60,25 +60,28 @@ namespace VANPHONGPHAM
             this.groupControl1.Controls.Add(this.label1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(434, 251);
+            this.groupControl1.Size = new System.Drawing.Size(372, 204);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Thông tin kết nối";
             // 
             // cboDatabase
             // 
             this.cboDatabase.FormattingEnabled = true;
-            this.cboDatabase.Location = new System.Drawing.Point(121, 128);
+            this.cboDatabase.Location = new System.Drawing.Point(104, 104);
+            this.cboDatabase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboDatabase.Name = "cboDatabase";
-            this.cboDatabase.Size = new System.Drawing.Size(269, 24);
+            this.cboDatabase.Size = new System.Drawing.Size(231, 21);
             this.cboDatabase.TabIndex = 3;
             this.cboDatabase.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cboDatabase_MouseClick);
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(312, 187);
+            this.btnThoat.Location = new System.Drawing.Point(267, 152);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 40);
+            this.btnThoat.Size = new System.Drawing.Size(64, 32);
             this.btnThoat.TabIndex = 2;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -86,9 +89,10 @@ namespace VANPHONGPHAM
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(224, 187);
+            this.btnLuu.Location = new System.Drawing.Point(192, 152);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(75, 40);
+            this.btnLuu.Size = new System.Drawing.Size(64, 32);
             this.btnLuu.TabIndex = 2;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
@@ -96,9 +100,10 @@ namespace VANPHONGPHAM
             // 
             // btnKiemtra
             // 
-            this.btnKiemtra.Location = new System.Drawing.Point(121, 187);
+            this.btnKiemtra.Location = new System.Drawing.Point(104, 152);
+            this.btnKiemtra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnKiemtra.Name = "btnKiemtra";
-            this.btnKiemtra.Size = new System.Drawing.Size(90, 40);
+            this.btnKiemtra.Size = new System.Drawing.Size(77, 32);
             this.btnKiemtra.TabIndex = 2;
             this.btnKiemtra.Text = "Kiểm tra";
             this.btnKiemtra.UseVisualStyleBackColor = true;
@@ -107,69 +112,73 @@ namespace VANPHONGPHAM
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 133);
+            this.label4.Location = new System.Drawing.Point(26, 108);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 17);
+            this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "Database";
             // 
             // txtPassword
             // 
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPassword.Location = new System.Drawing.Point(121, 100);
+            this.txtPassword.Location = new System.Drawing.Point(104, 81);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(269, 23);
+            this.txtPassword.Size = new System.Drawing.Size(231, 21);
             this.txtPassword.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 104);
+            this.label3.Location = new System.Drawing.Point(25, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 17);
+            this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Password";
             // 
             // txtUsername
             // 
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsername.Location = new System.Drawing.Point(121, 72);
+            this.txtUsername.Location = new System.Drawing.Point(104, 58);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(269, 23);
+            this.txtUsername.Size = new System.Drawing.Size(231, 21);
             this.txtUsername.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 75);
+            this.label2.Location = new System.Drawing.Point(26, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 17);
+            this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Usename";
             // 
             // txtServer
             // 
             this.txtServer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtServer.Location = new System.Drawing.Point(121, 44);
+            this.txtServer.Location = new System.Drawing.Point(104, 36);
+            this.txtServer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtServer.Name = "txtServer";
-            this.txtServer.Size = new System.Drawing.Size(269, 23);
+            this.txtServer.Size = new System.Drawing.Size(231, 21);
             this.txtServer.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 46);
+            this.label1.Location = new System.Drawing.Point(26, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 17);
+            this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Server";
+            this.label1.Text = "Servername";
             // 
             // frmKetNoiDB
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 251);
+            this.ClientSize = new System.Drawing.Size(372, 204);
             this.Controls.Add(this.groupControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmKetNoiDB";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kết nối cơ sở dữ liệu";

@@ -122,6 +122,7 @@ namespace VANPHONGPHAM
             lbThoiGian.Text = DateTime.Now.ToLongTimeString();
         }
 
+        // xin chào
         private void dateEditTuNgay_DateTimeChanged(object sender, EventArgs e)
         {
             if (dateEditDenNgay.DateTime < dateEditTuNgay.DateTime)

@@ -44,6 +44,7 @@ namespace VANPHONGPHAM
         {
             gcDanhSach.DataSource = _loaimh.getAll1();
             enable(false);
+            showHideControl(true);
         }
 
         void showHideControl(bool t)

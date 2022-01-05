@@ -49,6 +49,7 @@ namespace VANPHONGPHAM
         {
             
             enable(false);
+            showHideControl(true);
             loadLoaiMH();
             gcDanhSach.DataSource = _mh.getAll();
         }

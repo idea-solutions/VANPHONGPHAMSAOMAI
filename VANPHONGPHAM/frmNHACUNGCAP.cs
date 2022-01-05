@@ -61,6 +61,8 @@ namespace VANPHONGPHAM
         {
             gcDanhSach.DataSource = _ncc.getAll();
             enable(false);
+            showHideControl(true);
+
         }
 
         void showHideControl(bool t)

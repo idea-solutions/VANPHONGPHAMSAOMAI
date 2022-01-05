@@ -211,6 +211,7 @@
           <Parameter Name="TUNGAY" Type="datetime" Mode="In" />
           <Parameter Name="DENNGAY" Type="datetime" Mode="In" />
         </Function>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
         <Function Name="FNBANHANG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <ReturnType>
             <CollectionType>
@@ -255,6 +256,18 @@
             </CollectionType>
           </ReturnType>
         </Function>
+        <Function Name="FNKHACHHANGByTIME" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NGAY" Type="datetime" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="TENKH" Type="nvarchar" MaxLength="30" Nullable="false" />
+                <Property Name="THANHTIEN" Type="float" />
+                <Property Name="NGAYLAP" Type="datetime" Nullable="false" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
         <Function Name="FNKHACHHANGGROUP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="NGAY" Type="datetime" Mode="In" />
           <ReturnType>
@@ -292,12 +305,38 @@
             </CollectionType>
           </ReturnType>
         </Function>
-        <Function Name="HOADON" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="NGAY" Type="datetime" Mode="In" />
+        <Function Name="KHACHHANG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="MATHANG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
         </Function>
-        <Function Name="MATHANG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="MAMH" Type="varchar" Mode="In" />
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
         </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="VANPHONGPHAMStoreContainer">
           <EntitySet Name="DON_DAT_HANG" EntityType="Self.DON_DAT_HANG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DONDATHANG_MATHANG" EntityType="Self.DONDATHANG_MATHANG" Schema="dbo" store:Type="Tables" />
@@ -397,7 +436,6 @@
           </AssociationSet>
           <FunctionImport Name="FNMAT_HANG" IsComposable="true" ReturnType="Collection(VANPHONGPHAM.FNMAT_HANG_Result)" />
           <FunctionImport Name="MATHANG" ReturnType="Collection(VANPHONGPHAM.MATHANG_Result)">
-          <Parameter Name="MAMH" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="FNLOAIMAT_HANG" IsComposable="true" ReturnType="Collection(VANPHONGPHAM.FNLOAIMAT_HANG_Result)" />
           <FunctionImport Name="FNBANHANG" IsComposable="true" ReturnType="Collection(VANPHONGPHAM.FNBANHANG_Result)" />
@@ -414,12 +452,47 @@
           <Parameter Name="NGAY" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="BANHANG" ReturnType="Collection(VANPHONGPHAM.BANHANG_Result)">
-            <Parameter Name="TUNGAY" Mode="In" Type="DateTime" />
+          <Parameter Name="TUNGAY" Mode="In" Type="DateTime" />
             <Parameter Name="DENNGAY" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="HOADON" ReturnType="Collection(VANPHONGPHAM.HOADON_Result)">
             <Parameter Name="NGAY" Mode="In" Type="DateTime" />
           </FunctionImport>
+          <FunctionImport Name="FNKHACHHANGByTIME" IsComposable="true" ReturnType="Collection(VANPHONGPHAM.FNKHACHHANGByTIME_Result)">
+          <Parameter Name="NGAY" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="KHACHHANG" ReturnType="Collection(VANPHONGPHAM.KHACHHANG_Result)" >
+          </FunctionImport>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(VANPHONGPHAM.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(VANPHONGPHAM.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
         </EntityContainer>
         <EntityType Name="DON_DAT_HANG">
           <Key>
@@ -707,6 +780,28 @@
           <Property Type="String" Name="DVT" Nullable="false" MaxLength="10" />
           <Property Type="String" Name="TENNHANVIEN" Nullable="false" MaxLength="30" />
         </ComplexType>
+        <ComplexType Name="FNKHACHHANGByTIME_Result">
+          <Property Type="String" Name="TENKH" Nullable="false" MaxLength="30" />
+          <Property Type="Double" Name="THANHTIEN" Nullable="true" />
+          <Property Type="DateTime" Name="NGAYLAP" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="KHACHHANG_Result">
+          <Property Type="String" Name="TENKH" Nullable="false" MaxLength="30" />
+          <Property Type="Boolean" Name="GIOITINH" Nullable="false" />
+          <Property Type="Boolean" Name="VOHIEUHOA" Nullable="false" />
+          <Property Type="String" Name="SDT" Nullable="true" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -905,21 +1000,49 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="HOADON" FunctionName="VANPHONGPHAM.Store.HOADON">
+          <FunctionImportMapping FunctionImportName="FNKHACHHANGByTIME" FunctionName="VANPHONGPHAM.Store.FNKHACHHANGByTIME">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="VANPHONGPHAM.HOADON_Result">
-                <ScalarProperty Name="SOLUONGMUA" ColumnName="SOLUONGMUA" />
-                <ScalarProperty Name="SDT" ColumnName="SDT" />
+              <ComplexTypeMapping TypeName="VANPHONGPHAM.FNKHACHHANGByTIME_Result">
+                <ScalarProperty Name="TENKH" ColumnName="TENKH" />
                 <ScalarProperty Name="THANHTIEN" ColumnName="THANHTIEN" />
                 <ScalarProperty Name="NGAYLAP" ColumnName="NGAYLAP" />
-                <ScalarProperty Name="TENKH" ColumnName="TENKH" />
-                <ScalarProperty Name="TENMH" ColumnName="TENMH" />
-                <ScalarProperty Name="GIABAN" ColumnName="GIABAN" />
-                <ScalarProperty Name="DVT" ColumnName="DVT" />
-                <ScalarProperty Name="TENNHANVIEN" ColumnName="TENNHANVIEN" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="KHACHHANG" FunctionName="VANPHONGPHAM.Store.KHACHHANG">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="VANPHONGPHAM.KHACHHANG_Result">
+                <ScalarProperty Name="TENKH" ColumnName="TENKH" />
+                <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+                <ScalarProperty Name="VOHIEUHOA" ColumnName="VOHIEUHOA" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="VANPHONGPHAM.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="VANPHONGPHAM.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="VANPHONGPHAM.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="VANPHONGPHAM.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="VANPHONGPHAM.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="VANPHONGPHAM.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="VANPHONGPHAM.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="VANPHONGPHAM.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="VANPHONGPHAM.Store.sp_upgraddiagrams" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

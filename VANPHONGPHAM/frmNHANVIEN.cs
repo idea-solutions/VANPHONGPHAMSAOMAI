@@ -11,6 +11,9 @@ using System.Windows.Forms;
 using DataLayer;
 using BusinessLayer;
 using DevExpress.XtraGrid.Views.Grid;
+using CrystalDecisions.Windows.Forms;
+using CrystalDecisions.Shared;
+using CrystalDecisions.CrystalReports.Engine;
 
 namespace VANPHONGPHAM
 {
@@ -200,6 +203,48 @@ namespace VANPHONGPHAM
                     ckbGioiTinh.Checked = bool.Parse(gvDanhSach.GetFocusedRowCellValue("GIOITINH").ToString());
                 }
             }
+        }
+
+        private void btnPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            XuatReport("ReportNV", "DANH SÁCH NHÂN VIÊN");
+        }
+
+        private void XuatReport(string _reportName, string _tieude)
+        {
+            if (_manv != null || _manv == null)
+            {
+                Form frm = new Form();
+                CrystalReportViewer Crv = new CrystalReportViewer();
+                Crv.ShowGroupTreeButton = false;
+                Crv.ShowParameterPanelButton = false;
+                Crv.ToolPanelView = ToolPanelViewType.None;
+                TableLogOnInfo Thongtin;
+                ReportDocument doc = new ReportDocument();
+                doc.Load(System.Windows.Forms.Application.StartupPath + "\\Reports\\" + _reportName + @".rpt");
+                Thongtin = doc.Database.Tables[0].LogOnInfo;
+                Thongtin.ConnectionInfo.ServerName = myFun._srv;
+                Thongtin.ConnectionInfo.UserID = myFun._us;
+                Thongtin.ConnectionInfo.Password = myFun._pw;
+                Thongtin.ConnectionInfo.DatabaseName = myFun._db;
+                doc.Database.Tables[0].ApplyLogOnInfo(Thongtin);
+                try
+                {
+                    Crv.Dock = DockStyle.Fill;
+                    Crv.ReportSource = doc;
+                    frm.Controls.Add(Crv);
+                    Crv.Refresh();
+                    frm.Text = _tieude;
+                    frm.WindowState = FormWindowState.Maximized;
+                    frm.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi: " + ex.Message);
+                }
+            }
+            else
+                MessageBox.Show("Không có dữ liệu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

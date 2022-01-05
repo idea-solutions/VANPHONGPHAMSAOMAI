@@ -51,10 +51,10 @@ namespace VANPHONGPHAM
 
         private void btnShow_Click(object sender, EventArgs e)
         {
-            if (txtPass.PasswordChar == '*')
-                txtPass.PasswordChar = '\0';
+            if (txtPass.UseSystemPasswordChar == true)
+                txtPass.UseSystemPasswordChar = false;
             else
-                txtPass.PasswordChar = '*';
+                txtPass.UseSystemPasswordChar = true;
         }
     }
 }

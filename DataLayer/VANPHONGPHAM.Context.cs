@@ -239,5 +239,27 @@ namespace DataLayer
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
         }
+    
+        public virtual ObjectResult<DONDATHANG_Result> DONDATHANG(Nullable<System.DateTime> tUNGAY, Nullable<System.DateTime> dENNGAY)
+        {
+            var tUNGAYParameter = tUNGAY.HasValue ?
+                new ObjectParameter("TUNGAY", tUNGAY) :
+                new ObjectParameter("TUNGAY", typeof(System.DateTime));
+    
+            var dENNGAYParameter = dENNGAY.HasValue ?
+                new ObjectParameter("DENNGAY", dENNGAY) :
+                new ObjectParameter("DENNGAY", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<DONDATHANG_Result>("DONDATHANG", tUNGAYParameter, dENNGAYParameter);
+        }
+    
+        public virtual ObjectResult<HOADON1_Result> HOADON1(Nullable<System.DateTime> nGAY)
+        {
+            var nGAYParameter = nGAY.HasValue ?
+                new ObjectParameter("NGAY", nGAY) :
+                new ObjectParameter("NGAY", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<HOADON1_Result>("HOADON1", nGAYParameter);
+        }
     }
 }

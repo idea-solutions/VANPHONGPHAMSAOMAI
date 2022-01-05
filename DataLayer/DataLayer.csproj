@@ -60,6 +60,9 @@
     <Compile Include="DONDATHANG_MATHANG.cs">
       <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
     </Compile>
+    <Compile Include="DONDATHANG_Result.cs">
+      <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
+    </Compile>
     <Compile Include="DON_DAT_HANG.cs">
       <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
     </Compile>
@@ -87,6 +90,9 @@
       <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
     </Compile>
     <Compile Include="FNMAT_HANG_Result.cs">
+      <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HOADON1_Result.cs">
       <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
     </Compile>
     <Compile Include="HOADON_MATHANG.cs">

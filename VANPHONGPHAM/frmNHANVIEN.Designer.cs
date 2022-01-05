@@ -76,6 +76,7 @@ namespace VANPHONGPHAM
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.btnPrint = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgaySinh.Properties.CalendarTimeProperties)).BeginInit();
@@ -428,9 +429,10 @@ namespace VANPHONGPHAM
             this.btnEdit,
             this.btnDelete,
             this.btnSave,
-            this.btnCancel});
+            this.btnCancel,
+            this.btnPrint});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 5;
+            this.barManager1.MaxItemId = 6;
             // 
             // bar2
             // 
@@ -443,7 +445,8 @@ namespace VANPHONGPHAM
             new DevExpress.XtraBars.LinkPersistInfo(this.btnEdit),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnDelete),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnSave),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnCancel)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnCancel),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnPrint)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
@@ -523,6 +526,16 @@ namespace VANPHONGPHAM
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 543);
             // 
+            // btnPrint
+            // 
+            this.btnPrint.Caption = "In";
+            this.btnPrint.Id = 5;
+            this.btnPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.btnPrint.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPrint_ItemClick);
+            // 
             // frmNHANVIEN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -597,5 +610,6 @@ namespace VANPHONGPHAM
         private DevExpress.XtraBars.BarButtonItem btnDelete;
         private DevExpress.XtraBars.BarButtonItem btnSave;
         private DevExpress.XtraBars.BarButtonItem btnCancel;
+        private DevExpress.XtraBars.BarButtonItem btnPrint;
     }
 }

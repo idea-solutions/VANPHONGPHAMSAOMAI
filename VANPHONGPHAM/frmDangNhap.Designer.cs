@@ -77,7 +77,7 @@ namespace VANPHONGPHAM
             // 
             this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUser.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(38, 9);
+            this.txtUser.Location = new System.Drawing.Point(41, 9);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(266, 21);
             this.txtUser.TabIndex = 0;
@@ -119,18 +119,18 @@ namespace VANPHONGPHAM
             // txtPass
             // 
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPass.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(38, 11);
+            this.txtPass.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Location = new System.Drawing.Point(42, 6);
             this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(230, 21);
+            this.txtPass.Size = new System.Drawing.Size(230, 25);
             this.txtPass.TabIndex = 0;
             this.txtPass.Text = "admin12345";
+            this.txtPass.UseSystemPasswordChar = true;
             // 
             // btnDangNhap
             // 
             this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnDangNhap.Font = new System.Drawing.Font("Josefin Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.Location = new System.Drawing.Point(-5, -5);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(320, 54);

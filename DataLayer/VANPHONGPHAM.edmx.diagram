@@ -9,6 +9,7 @@
         <EntityTypeShape EntityType="VANPHONGPHAM.DONDATHANG_MATHANG" Width="1.5" PointX="5.25" PointY="3.75" />
         <EntityTypeShape EntityType="VANPHONGPHAM.HOA_DON" Width="1.5" PointX="3" PointY="9.875" />
         <EntityTypeShape EntityType="VANPHONGPHAM.HOADON_MATHANG" Width="1.5" PointX="5.25" PointY="0.75" />
+        <EntityTypeShape EntityType="VANPHONGPHAM.KHACH_HANG" Width="1.5" PointX="0.75" PointY="12" />
         <EntityTypeShape EntityType="VANPHONGPHAM.LOAI_MAT_HANG" Width="1.5" PointX="0.75" PointY="4" />
         <EntityTypeShape EntityType="VANPHONGPHAM.MAT_HANG" Width="1.5" PointX="3" PointY="3.375" />
         <EntityTypeShape EntityType="VANPHONGPHAM.NHA_CUNG_CAP" Width="1.5" PointX="0.75" PointY="15.625" />
@@ -19,10 +20,9 @@
         <AssociationConnector Association="VANPHONGPHAM.FK_DONDATHANG_NHACUNGCAP_MAT_HANG" />
         <AssociationConnector Association="VANPHONGPHAM.FK__HOA_DON__MANHANV__38996AB5" />
         <AssociationConnector Association="VANPHONGPHAM.FK_CT_HOA_DON_HOA_DON" />
+        <AssociationConnector Association="VANPHONGPHAM.FK_HOA_DON_KHACH_HANG" />
         <AssociationConnector Association="VANPHONGPHAM.FK__CT_HOA_DON__MAMH__36B12243" />
         <AssociationConnector Association="VANPHONGPHAM.FK__MAT_HANG__MALOAI__3A81B327" />
-        <EntityTypeShape EntityType="VANPHONGPHAM.KHACH_HANG" Width="1.5" PointX="5.375" PointY="6.875" />
-        <AssociationConnector Association="VANPHONGPHAM.FK_HOA_DON_KHACH_HANG" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

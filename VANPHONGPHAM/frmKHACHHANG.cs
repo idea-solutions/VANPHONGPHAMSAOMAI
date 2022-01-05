@@ -61,8 +61,7 @@ namespace VANPHONGPHAM
         private void loadData()
         {
             gcDanhSach.DataSource = _kh.getAll();
-            enable(false);    
-            showHideControl(true);
+            enable(false);            
         }
 
         void showHideControl(bool t)
@@ -70,8 +69,8 @@ namespace VANPHONGPHAM
             btnAdd.Enabled = t;
             btnEdit.Enabled = t;
             btnDelete.Enabled = t;
-            btnCancel.Enabled = !t;
             btnSave.Enabled = !t;
+            btnCancel.Enabled = !t;
         }
 
         void enable(bool t)
@@ -216,6 +215,7 @@ namespace VANPHONGPHAM
                 doc.Database.Tables[0].ApplyLogOnInfo(Thongtin);
                 try
                 {
+                    //doc.SetParameterValue("maloaimh", _maloaimh);
                     Crv.Dock = DockStyle.Fill;
                     Crv.ReportSource = doc;
                     frm.Controls.Add(Crv);

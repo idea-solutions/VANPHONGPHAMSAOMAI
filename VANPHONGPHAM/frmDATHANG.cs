@@ -360,7 +360,7 @@ namespace VANPHONGPHAM
             lbThanhTien.Text = double.Parse(gvDanhSachDatHang.Columns["THANHTIEN"].SummaryItem.SummaryValue.ToString()).ToString("N0") + " ₫";
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void btnPrint_Click(object sender, EventArgs e)
         {
             XuatReport("ReportDDH", "DANH SÁCH THỐNG KÊ LỊCH SỬ ĐẶT HÀNG");
         }

@@ -8,8 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DataLayer;
 using BusinessLayer;
+using DataLayer;
 
 namespace VANPHONGPHAM
 {
@@ -38,15 +38,36 @@ namespace VANPHONGPHAM
         {
             this.Close();
         }
-        string user;
-        string pass;
-        
+
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            frmMain frm = new frmMain();
-            this.Visible = false;
-            frm.ShowDialog();
-            this.Visible = true;
+            if (txtUser.TextLength <= 0)
+            {
+                lbTaikhoan.Visible = true;
+            }
+
+            if (txtPass.TextLength <= 0)
+            {
+                lbMatkhau.Visible = true;
+            }
+            if(txtPass.TextLength!=0 && txtUser.TextLength != 0)
+            {
+                var nv = _nv.getItemDN(txtUser.Text, txtPass.Text);
+                if (nv != null)
+                {
+                    frmMain frm = new frmMain();
+                    this.Visible = false;
+                    frm.ShowDialog();
+                    this.Visible = true;
+                }
+                else
+                {
+                    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+                MessageBox.Show("Vui lòng điền đầy đủ đăng nhập và mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
         }
 
         private void btnShow_Click(object sender, EventArgs e)
@@ -55,6 +76,52 @@ namespace VANPHONGPHAM
                 txtPass.UseSystemPasswordChar = false;
             else
                 txtPass.UseSystemPasswordChar = true;
+        }
+
+        private void txtUser_TextChanged(object sender, EventArgs e)
+        {
+            if (txtUser.TextLength > 0)
+            {
+                lbTaikhoan.Visible = false;
+            }
+            else
+            {
+                lbTaikhoan.Visible = true;
+            }
+        }
+
+        private void txtPass_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPass.TextLength > 0)
+            {
+                lbMatkhau.Visible = false;
+            }
+            else
+            {
+                lbMatkhau.Visible = true;
+            }
+        }
+
+        private void txtUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPass.Focus();
+            }
+        }
+
+        private void txtPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnDangNhap_Click(sender, e);
+            }
+        }
+
+        private void btnQuenMK_Click(object sender, EventArgs e)
+        {
+            frmQuenMK frm = new frmQuenMK();
+            frm.ShowDialog();
         }
     }
 }

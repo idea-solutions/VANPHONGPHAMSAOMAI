@@ -60,7 +60,6 @@ namespace VANPHONGPHAM
             this.groupControl1.Controls.Add(this.label1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(434, 251);
             this.groupControl1.TabIndex = 1;
@@ -70,7 +69,6 @@ namespace VANPHONGPHAM
             // 
             this.cboDatabase.FormattingEnabled = true;
             this.cboDatabase.Location = new System.Drawing.Point(121, 128);
-            this.cboDatabase.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.cboDatabase.Name = "cboDatabase";
             this.cboDatabase.Size = new System.Drawing.Size(269, 24);
             this.cboDatabase.TabIndex = 3;
@@ -79,9 +77,8 @@ namespace VANPHONGPHAM
             // btnThoat
             // 
             this.btnThoat.Location = new System.Drawing.Point(312, 187);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 39);
+            this.btnThoat.Size = new System.Drawing.Size(75, 40);
             this.btnThoat.TabIndex = 2;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -90,9 +87,8 @@ namespace VANPHONGPHAM
             // btnLuu
             // 
             this.btnLuu.Location = new System.Drawing.Point(224, 187);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(75, 39);
+            this.btnLuu.Size = new System.Drawing.Size(75, 40);
             this.btnLuu.TabIndex = 2;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
@@ -101,9 +97,8 @@ namespace VANPHONGPHAM
             // btnKiemtra
             // 
             this.btnKiemtra.Location = new System.Drawing.Point(121, 187);
-            this.btnKiemtra.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnKiemtra.Name = "btnKiemtra";
-            this.btnKiemtra.Size = new System.Drawing.Size(90, 39);
+            this.btnKiemtra.Size = new System.Drawing.Size(90, 40);
             this.btnKiemtra.TabIndex = 2;
             this.btnKiemtra.Text = "Kiểm tra";
             this.btnKiemtra.UseVisualStyleBackColor = true;
@@ -113,9 +108,8 @@ namespace VANPHONGPHAM
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(30, 133);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 16);
+            this.label4.Size = new System.Drawing.Size(65, 17);
             this.label4.TabIndex = 0;
             this.label4.Text = "Database";
             // 
@@ -123,7 +117,6 @@ namespace VANPHONGPHAM
             // 
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Location = new System.Drawing.Point(121, 100);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(269, 23);
             this.txtPassword.TabIndex = 1;
@@ -131,18 +124,16 @@ namespace VANPHONGPHAM
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 103);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(29, 104);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 16);
+            this.label3.Size = new System.Drawing.Size(66, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Password";
             // 
             // txtUsername
             // 
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsername.Location = new System.Drawing.Point(121, 71);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.txtUsername.Location = new System.Drawing.Point(121, 72);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(269, 23);
             this.txtUsername.TabIndex = 1;
@@ -151,9 +142,8 @@ namespace VANPHONGPHAM
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(30, 75);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 16);
+            this.label2.Size = new System.Drawing.Size(64, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Usename";
             // 
@@ -161,7 +151,6 @@ namespace VANPHONGPHAM
             // 
             this.txtServer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtServer.Location = new System.Drawing.Point(121, 44);
-            this.txtServer.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtServer.Name = "txtServer";
             this.txtServer.Size = new System.Drawing.Size(269, 23);
             this.txtServer.TabIndex = 1;
@@ -169,10 +158,9 @@ namespace VANPHONGPHAM
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 46);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(30, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 16);
+            this.label1.Size = new System.Drawing.Size(48, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Server";
             // 
@@ -182,7 +170,6 @@ namespace VANPHONGPHAM
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 251);
             this.Controls.Add(this.groupControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "frmKetNoiDB";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kết nối cơ sở dữ liệu";

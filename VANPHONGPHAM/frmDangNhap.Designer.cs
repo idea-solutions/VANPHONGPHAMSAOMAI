@@ -38,9 +38,10 @@ namespace VANPHONGPHAM
             this.svgImageBox2 = new DevExpress.XtraEditors.SvgImageBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.btnDangNhap = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnQuenMK = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lbTaikhoan = new DevExpress.XtraEditors.LabelControl();
+            this.lbMatkhau = new DevExpress.XtraEditors.LabelControl();
             this.btnExit = new DevExpress.XtraEditors.SimpleButton();
             this.peImage = new DevExpress.XtraEditors.PictureEdit();
             this.panel1.SuspendLayout();
@@ -76,12 +77,13 @@ namespace VANPHONGPHAM
             // txtUser
             // 
             this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUser.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(41, 9);
+            this.txtUser.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.Location = new System.Drawing.Point(40, 9);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(266, 21);
             this.txtUser.TabIndex = 0;
-            this.txtUser.Text = "nguyenphuduc62001";
+            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
+            this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUser_KeyDown);
             // 
             // panel2
             // 
@@ -119,18 +121,19 @@ namespace VANPHONGPHAM
             // txtPass
             // 
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPass.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(42, 6);
+            this.txtPass.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Location = new System.Drawing.Point(39, 7);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(230, 25);
+            this.txtPass.Size = new System.Drawing.Size(230, 21);
             this.txtPass.TabIndex = 0;
-            this.txtPass.Text = "admin12345";
             this.txtPass.UseSystemPasswordChar = true;
+            this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
+            this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
             // 
             // btnDangNhap
             // 
             this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.Location = new System.Drawing.Point(-5, -5);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(320, 54);
@@ -139,28 +142,17 @@ namespace VANPHONGPHAM
             this.btnDangNhap.UseVisualStyleBackColor = true;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
-            // checkBox1
+            // btnQuenMK
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.White;
-            this.checkBox1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(136, 195);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(123, 22);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Nhớ mật khẩu";
-            this.checkBox1.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(329, 279);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 18);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Quên mật khẩu?";
+            this.btnQuenMK.AutoSize = true;
+            this.btnQuenMK.BackColor = System.Drawing.Color.Transparent;
+            this.btnQuenMK.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuenMK.Location = new System.Drawing.Point(329, 281);
+            this.btnQuenMK.Name = "btnQuenMK";
+            this.btnQuenMK.Size = new System.Drawing.Size(117, 18);
+            this.btnQuenMK.TabIndex = 3;
+            this.btnQuenMK.Text = "Quên mật khẩu?";
+            this.btnQuenMK.Click += new System.EventHandler(this.btnQuenMK_Click);
             // 
             // panel3
             // 
@@ -171,6 +163,28 @@ namespace VANPHONGPHAM
             this.panel3.Size = new System.Drawing.Size(310, 44);
             this.panel3.TabIndex = 13;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lbTaikhoan
+            // 
+            this.lbTaikhoan.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.lbTaikhoan.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.lbTaikhoan.Appearance.Options.UseBackColor = true;
+            this.lbTaikhoan.Appearance.Options.UseForeColor = true;
+            this.lbTaikhoan.Location = new System.Drawing.Point(344, 135);
+            this.lbTaikhoan.Name = "lbTaikhoan";
+            this.lbTaikhoan.Size = new System.Drawing.Size(100, 17);
+            this.lbTaikhoan.TabIndex = 14;
+            this.lbTaikhoan.Text = "*Nhập tài khoản";
+            // 
+            // lbMatkhau
+            // 
+            this.lbMatkhau.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.lbMatkhau.Appearance.Options.UseForeColor = true;
+            this.lbMatkhau.Location = new System.Drawing.Point(344, 194);
+            this.lbMatkhau.Name = "lbMatkhau";
+            this.lbMatkhau.Size = new System.Drawing.Size(102, 17);
+            this.lbMatkhau.TabIndex = 15;
+            this.lbMatkhau.Text = "*Nhập mật khẩu";
             // 
             // btnExit
             // 
@@ -205,10 +219,11 @@ namespace VANPHONGPHAM
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(591, 443);
+            this.Controls.Add(this.lbMatkhau);
+            this.Controls.Add(this.lbTaikhoan);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.btnQuenMK);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.peImage);
@@ -242,11 +257,12 @@ namespace VANPHONGPHAM
         private DevExpress.XtraEditors.SvgImageBox svgImageBox2;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Button btnDangNhap;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label btnQuenMK;
         private DevExpress.XtraEditors.PictureEdit peImage;
         private DevExpress.XtraEditors.SimpleButton btnExit;
         private System.Windows.Forms.Panel panel3;
         private DevExpress.XtraEditors.SvgImageBox btnShow;
+        private DevExpress.XtraEditors.LabelControl lbTaikhoan;
+        private DevExpress.XtraEditors.LabelControl lbMatkhau;
     }
 }

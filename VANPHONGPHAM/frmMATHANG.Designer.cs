@@ -323,8 +323,6 @@ namespace VANPHONGPHAM
             // GIABAN
             // 
             this.GIABAN.Caption = "GIÁ BÁN";
-            this.GIABAN.DisplayFormat.FormatString = "0,0.##";
-            this.GIABAN.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.GIABAN.FieldName = "GIABAN";
             this.GIABAN.MinWidth = 25;
             this.GIABAN.Name = "GIABAN";

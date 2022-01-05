@@ -31,11 +31,11 @@ namespace DataLayer
         public virtual DbSet<DONDATHANG_MATHANG> DONDATHANG_MATHANG { get; set; }
         public virtual DbSet<HOA_DON> HOA_DON { get; set; }
         public virtual DbSet<HOADON_MATHANG> HOADON_MATHANG { get; set; }
+        public virtual DbSet<KHACH_HANG> KHACH_HANG { get; set; }
         public virtual DbSet<LOAI_MAT_HANG> LOAI_MAT_HANG { get; set; }
         public virtual DbSet<MAT_HANG> MAT_HANG { get; set; }
         public virtual DbSet<NHA_CUNG_CAP> NHA_CUNG_CAP { get; set; }
         public virtual DbSet<NHAN_VIEN> NHAN_VIEN { get; set; }
-        public virtual DbSet<KHACH_HANG> KHACH_HANG { get; set; }
     
         [DbFunction("Entities", "FNMAT_HANG")]
         public virtual IQueryable<FNMAT_HANG_Result> FNMAT_HANG()
@@ -113,133 +113,6 @@ namespace DataLayer
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BANHANG_Result>("BANHANG", tUNGAYParameter, dENNGAYParameter);
         }
     
-        public virtual ObjectResult<HOADON_Result> HOADON(Nullable<System.DateTime> nGAY)
-        {
-            var nGAYParameter = nGAY.HasValue ?
-                new ObjectParameter("NGAY", nGAY) :
-                new ObjectParameter("NGAY", typeof(System.DateTime));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<HOADON_Result>("HOADON", nGAYParameter);
-        }
-    
-        [DbFunction("Entities", "FNKHACHHANGByTIME")]
-        public virtual IQueryable<FNKHACHHANGByTIME_Result> FNKHACHHANGByTIME(Nullable<System.DateTime> nGAY)
-        {
-            var nGAYParameter = nGAY.HasValue ?
-                new ObjectParameter("NGAY", nGAY) :
-                new ObjectParameter("NGAY", typeof(System.DateTime));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<FNKHACHHANGByTIME_Result>("[Entities].[FNKHACHHANGByTIME](@NGAY)", nGAYParameter);
-        }
-    
-        public virtual ObjectResult<KHACHHANG_Result> KHACHHANG()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<KHACHHANG_Result>("KHACHHANG");
-        }
-    
-        public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
-        {
-            var diagramnameParameter = diagramname != null ?
-                new ObjectParameter("diagramname", diagramname) :
-                new ObjectParameter("diagramname", typeof(string));
-    
-            var owner_idParameter = owner_id.HasValue ?
-                new ObjectParameter("owner_id", owner_id) :
-                new ObjectParameter("owner_id", typeof(int));
-    
-            var versionParameter = version.HasValue ?
-                new ObjectParameter("version", version) :
-                new ObjectParameter("version", typeof(int));
-    
-            var definitionParameter = definition != null ?
-                new ObjectParameter("definition", definition) :
-                new ObjectParameter("definition", typeof(byte[]));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_alterdiagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
-        }
-    
-        public virtual int sp_creatediagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
-        {
-            var diagramnameParameter = diagramname != null ?
-                new ObjectParameter("diagramname", diagramname) :
-                new ObjectParameter("diagramname", typeof(string));
-    
-            var owner_idParameter = owner_id.HasValue ?
-                new ObjectParameter("owner_id", owner_id) :
-                new ObjectParameter("owner_id", typeof(int));
-    
-            var versionParameter = version.HasValue ?
-                new ObjectParameter("version", version) :
-                new ObjectParameter("version", typeof(int));
-    
-            var definitionParameter = definition != null ?
-                new ObjectParameter("definition", definition) :
-                new ObjectParameter("definition", typeof(byte[]));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_creatediagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
-        }
-    
-        public virtual int sp_dropdiagram(string diagramname, Nullable<int> owner_id)
-        {
-            var diagramnameParameter = diagramname != null ?
-                new ObjectParameter("diagramname", diagramname) :
-                new ObjectParameter("diagramname", typeof(string));
-    
-            var owner_idParameter = owner_id.HasValue ?
-                new ObjectParameter("owner_id", owner_id) :
-                new ObjectParameter("owner_id", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_dropdiagram", diagramnameParameter, owner_idParameter);
-        }
-    
-        public virtual ObjectResult<sp_helpdiagramdefinition_Result> sp_helpdiagramdefinition(string diagramname, Nullable<int> owner_id)
-        {
-            var diagramnameParameter = diagramname != null ?
-                new ObjectParameter("diagramname", diagramname) :
-                new ObjectParameter("diagramname", typeof(string));
-    
-            var owner_idParameter = owner_id.HasValue ?
-                new ObjectParameter("owner_id", owner_id) :
-                new ObjectParameter("owner_id", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagramdefinition_Result>("sp_helpdiagramdefinition", diagramnameParameter, owner_idParameter);
-        }
-    
-        public virtual ObjectResult<sp_helpdiagrams_Result> sp_helpdiagrams(string diagramname, Nullable<int> owner_id)
-        {
-            var diagramnameParameter = diagramname != null ?
-                new ObjectParameter("diagramname", diagramname) :
-                new ObjectParameter("diagramname", typeof(string));
-    
-            var owner_idParameter = owner_id.HasValue ?
-                new ObjectParameter("owner_id", owner_id) :
-                new ObjectParameter("owner_id", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagrams_Result>("sp_helpdiagrams", diagramnameParameter, owner_idParameter);
-        }
-    
-        public virtual int sp_renamediagram(string diagramname, Nullable<int> owner_id, string new_diagramname)
-        {
-            var diagramnameParameter = diagramname != null ?
-                new ObjectParameter("diagramname", diagramname) :
-                new ObjectParameter("diagramname", typeof(string));
-    
-            var owner_idParameter = owner_id.HasValue ?
-                new ObjectParameter("owner_id", owner_id) :
-                new ObjectParameter("owner_id", typeof(int));
-    
-            var new_diagramnameParameter = new_diagramname != null ?
-                new ObjectParameter("new_diagramname", new_diagramname) :
-                new ObjectParameter("new_diagramname", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_renamediagram", diagramnameParameter, owner_idParameter, new_diagramnameParameter);
-        }
-    
-        public virtual int sp_upgraddiagrams()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
-        }
-    
         public virtual ObjectResult<DONDATHANG_Result> DONDATHANG(Nullable<System.DateTime> tUNGAY, Nullable<System.DateTime> dENNGAY)
         {
             var tUNGAYParameter = tUNGAY.HasValue ?
@@ -253,13 +126,28 @@ namespace DataLayer
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<DONDATHANG_Result>("DONDATHANG", tUNGAYParameter, dENNGAYParameter);
         }
     
-        public virtual ObjectResult<HOADON1_Result> HOADON1(Nullable<System.DateTime> nGAY)
+        [DbFunction("Entities", "FNKHACHHANGByTIME")]
+        public virtual IQueryable<FNKHACHHANGByTIME_Result> FNKHACHHANGByTIME(Nullable<System.DateTime> nGAY)
         {
             var nGAYParameter = nGAY.HasValue ?
                 new ObjectParameter("NGAY", nGAY) :
                 new ObjectParameter("NGAY", typeof(System.DateTime));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<HOADON1_Result>("HOADON1", nGAYParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<FNKHACHHANGByTIME_Result>("[Entities].[FNKHACHHANGByTIME](@NGAY)", nGAYParameter);
+        }
+    
+        public virtual ObjectResult<HOADON_Result> HOADON(Nullable<System.DateTime> nGAY)
+        {
+            var nGAYParameter = nGAY.HasValue ?
+                new ObjectParameter("NGAY", nGAY) :
+                new ObjectParameter("NGAY", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<HOADON_Result>("HOADON", nGAYParameter);
+        }
+    
+        public virtual ObjectResult<KHACHHANG_Result> KHACHHANG()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<KHACHHANG_Result>("KHACHHANG");
         }
     }
 }

@@ -90,7 +90,7 @@ namespace VANPHONGPHAM
             dtResult = dtResult.AddDays((-dtResult.Day) + 1);
             return dtResult;
         }
-        
+
         private void frmBanHang_Load(object sender, EventArgs e)
         {
             dateEditTuNgay.EditValue = GetFirstDayOfMonth(DateTime.Now);
@@ -116,10 +116,8 @@ namespace VANPHONGPHAM
             timer1.Enabled = true;
             timer1.Start();
             label7.Text = DateTime.Now.ToLongTimeString();
-            lbThoiGian.Text = DateTime.Now.ToLongTimeString();
         }
 
-        // xin chào
         private void dateEditTuNgay_DateTimeChanged(object sender, EventArgs e)
         {
             if (dateEditDenNgay.DateTime < dateEditTuNgay.DateTime)
@@ -237,7 +235,6 @@ namespace VANPHONGPHAM
         {
             btnThem.Enabled = t;
             btnLuu.Enabled = !t;
-            btnIN.Enabled = !t;
             btnBoQua.Enabled = !t;
             btnXoaMH.Enabled = !t;
         }
@@ -258,16 +255,13 @@ namespace VANPHONGPHAM
             gcDanhSachMuaHang.DataSource = _hdmh.getAll(0);
         }
 
-        DateTime ngay = DateTime.Now;
-
         private void btnThem_Click(object sender, EventArgs e)
         {
-            ngay = DateTime.Now;
             _them = true;
             reset(true);
             enable(true);
             showHideControl(false);
-            btnIN.Enabled = false;
+
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -277,9 +271,8 @@ namespace VANPHONGPHAM
             loadData();
             showHideControl(true);
             enable(false);
-            btnIN.Enabled = true;
             objMain.loadChart();
-            btnBoQua.Enabled = true;
+            simpleButton2.Enabled = true;
         }
 
 
@@ -313,10 +306,6 @@ namespace VANPHONGPHAM
             reset(true);
             enable(false);
             showHideControl(true);
-            btnIN.Enabled = false;
-            tabControl.SelectedTabPage = tabDanhSach;
-            reset(true);
-            listHDMH.Clear();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -347,7 +336,6 @@ namespace VANPHONGPHAM
         {
             string a = "";
             label7.Text = DateTime.Now.ToLongTimeString();
-            lbThoiGian.Text = DateTime.Now.ToLongTimeString();
             if (DateTime.Now.Hour > 5 && DateTime.Now.Hour <= 10)
                 a = "Good morning";
             else if (DateTime.Now.Hour > 10 && DateTime.Now.Hour <= 17)
@@ -387,9 +375,9 @@ namespace VANPHONGPHAM
                 try
                 {
                     DateTime tungay = dateEditTuNgay.DateTime.Date;
-                    DateTime denngay = dateEditDenNgay.DateTime.Date;
+                    DateTime denngay = dateEditDenNgay.DateTime.Date.AddDays(1);
 
-                    // thông báo
+
                     doc.SetParameterValue("@TUNGAY", tungay);
                     doc.SetParameterValue("@DENNGAY", denngay);
                     Crv.Dock = DockStyle.Fill;
@@ -417,6 +405,7 @@ namespace VANPHONGPHAM
             listHDMH.Clear();
         }
 
+        DateTime ngay = DateTime.Now;
         private void XuatReportHD(string _reportName, string _tieude)
         {
             if (_mamh != null || _mamh == null)

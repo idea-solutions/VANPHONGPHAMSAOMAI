@@ -14,9 +14,7 @@ namespace VANPHONGPHAM
         public frmLoading()
         {
             InitializeComponent();
-            timer1.Enabled = true;
-            timer1.Start();
-            lbTime.Text = DateTime.Now.ToLongTimeString();
+            lbTime.Text = DateTime.Now.ToString();
         }
 
         #region Overrides

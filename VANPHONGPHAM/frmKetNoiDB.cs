@@ -27,7 +27,7 @@ namespace VANPHONGPHAM
 
         private void frmKetNoiDB_Load(object sender, EventArgs e)
         {
-            // xin chào
+           
         }
 
         private void btnKiemtra_Click(object sender, EventArgs e)

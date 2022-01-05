@@ -37,7 +37,7 @@ namespace VANPHONGPHAM
         {
             _loaimh = new LOAIMATHANG();
             loadData();
-            
+            showHideControl(true);
         }
 
         private void loadData()

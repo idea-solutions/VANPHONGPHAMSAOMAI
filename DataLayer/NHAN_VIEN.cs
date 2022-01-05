@@ -31,6 +31,7 @@ namespace DataLayer
         public string TENDANGNHAP { get; set; }
         public string MATKHAU { get; set; }
         public bool VOHIEUHOA { get; set; }
+        public Nullable<bool> LAQUANLY { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DON_DAT_HANG> DON_DAT_HANG { get; set; }

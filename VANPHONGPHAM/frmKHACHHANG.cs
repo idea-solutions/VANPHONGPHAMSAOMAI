@@ -56,6 +56,7 @@ namespace VANPHONGPHAM
         {
             _kh = new KHACHHANG();
             loadData();
+            showHideControl(true);
         }
 
         private void loadData()

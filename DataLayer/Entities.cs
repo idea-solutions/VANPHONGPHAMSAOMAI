@@ -20,6 +20,7 @@ namespace DataLayer
         {
             //Doc file connect
             BinaryFormatter bf = new BinaryFormatter();
+            
             FileStream fs = File.Open("connectdb.dba", FileMode.Open, FileAccess.Read);
             connect cp = (connect)bf.Deserialize(fs);
 

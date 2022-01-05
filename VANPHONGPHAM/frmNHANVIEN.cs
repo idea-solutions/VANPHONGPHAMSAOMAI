@@ -56,6 +56,7 @@ namespace VANPHONGPHAM
         {
             _nv = new NHANVIEN();
             loadData();
+            showHideControl(true);
         }
 
         private void loadData()

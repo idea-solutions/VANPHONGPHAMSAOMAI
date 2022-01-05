@@ -361,6 +361,7 @@ namespace VANPHONGPHAM
             this.btnLoaiMH.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLoaiMH.ImageOptions.LargeImage")));
             this.btnLoaiMH.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnLoaiMH.ImageOptions.SmallImage")));
             this.btnLoaiMH.Name = "btnLoaiMH";
+            this.btnLoaiMH.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnLoaiHang_LinkClicked);
             // 
             // navBarGroup3
             // 

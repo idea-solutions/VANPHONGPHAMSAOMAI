@@ -55,6 +55,7 @@ namespace VANPHONGPHAM
         {
             _ncc = new NHACUNGCAP();
             loadData();
+            showHideControl(true);
         }
 
         private void loadData()

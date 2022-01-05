@@ -98,6 +98,7 @@
           <Property Name="TENDANGNHAP" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="MATKHAU" Type="varchar" MaxLength="16" Nullable="false" />
           <Property Name="VOHIEUHOA" Type="bit" Nullable="false" />
+          <Property Name="LAQUANLY" Type="bit" />
         </EntityType>
         <Association Name="FK__CT_DON_DA__MADDH__37A5467C">
           <End Role="DON_DAT_HANG" Type="Self.DON_DAT_HANG" Multiplicity="1" />
@@ -386,6 +387,17 @@
             <Parameter Name="TUNGAY" Mode="In" Type="DateTime" />
             <Parameter Name="DENNGAY" Mode="In" Type="DateTime" />
           </FunctionImport>
+          <FunctionImport Name="DONDATHANG" ReturnType="Collection(VANPHONGPHAM.DONDATHANG_Result)">
+            <Parameter Name="TUNGAY" Mode="In" Type="DateTime" />
+            <Parameter Name="DENNGAY" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="FNKHACHHANGByTIME" IsComposable="true" ReturnType="Collection(VANPHONGPHAM.FNKHACHHANGByTIME_Result)">
+          <Parameter Name="NGAY" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="HOADON" ReturnType="Collection(VANPHONGPHAM.HOADON_Result)">
+          <Parameter Name="NGAY" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="KHACHHANG" ReturnType="Collection(VANPHONGPHAM.KHACHHANG_Result)" />
           <EntitySet Name="DON_DAT_HANG" EntityType="VANPHONGPHAM.DON_DAT_HANG" />
           <EntitySet Name="DONDATHANG_MATHANG" EntityType="VANPHONGPHAM.DONDATHANG_MATHANG" />
           <EntitySet Name="HOA_DON" EntityType="VANPHONGPHAM.HOA_DON" />
@@ -431,17 +443,6 @@
             <End Role="LOAI_MAT_HANG" EntitySet="LOAI_MAT_HANG" />
             <End Role="MAT_HANG" EntitySet="MAT_HANG" />
           </AssociationSet>
-          <FunctionImport Name="DONDATHANG" ReturnType="Collection(VANPHONGPHAM.DONDATHANG_Result)">
-            <Parameter Name="TUNGAY" Mode="In" Type="DateTime" />
-            <Parameter Name="DENNGAY" Mode="In" Type="DateTime" />
-          </FunctionImport>
-          <FunctionImport Name="FNKHACHHANGByTIME" IsComposable="true" ReturnType="Collection(VANPHONGPHAM.FNKHACHHANGByTIME_Result)">
-            <Parameter Name="NGAY" Mode="In" Type="DateTime" />
-          </FunctionImport>
-          <FunctionImport Name="HOADON" ReturnType="Collection(VANPHONGPHAM.HOADON_Result)">
-            <Parameter Name="NGAY" Mode="In" Type="DateTime" />
-          </FunctionImport>
-          <FunctionImport Name="KHACHHANG" ReturnType="Collection(VANPHONGPHAM.KHACHHANG_Result)" />
         </EntityContainer>
         <ComplexType Name="FNMAT_HANG_Result">
           <Property Type="String" Name="MAMH" Nullable="false" MaxLength="5" />
@@ -497,6 +498,37 @@
           <Property Type="String" Name="TENNHANVIEN" Nullable="false" MaxLength="30" />
           <Property Type="Int64" Name="GIABAN" Nullable="false" />
           <Property Type="String" Name="DVT" Nullable="false" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="DONDATHANG_Result">
+          <Property Type="DateTime" Name="NGAYDAT" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="SOLUONG" Nullable="false" />
+          <Property Type="Double" Name="DONGIA" Nullable="false" />
+          <Property Type="String" Name="TENMH" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="DVT" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="TENNCC" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="TENNHANVIEN" Nullable="false" MaxLength="30" />
+        </ComplexType>
+        <ComplexType Name="FNKHACHHANGByTIME_Result">
+          <Property Type="String" Name="TENKH" Nullable="false" MaxLength="30" />
+          <Property Type="Double" Name="THANHTIEN" Nullable="true" />
+          <Property Type="DateTime" Name="NGAYLAP" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="HOADON_Result">
+          <Property Type="Int32" Name="SOLUONGMUA" Nullable="false" />
+          <Property Type="Double" Name="THANHTIEN" Nullable="true" />
+          <Property Type="DateTime" Name="NGAYLAP" Nullable="false" Precision="23" />
+          <Property Type="String" Name="TENKH" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="SDT" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="TENMH" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="TENNHANVIEN" Nullable="false" MaxLength="30" />
+          <Property Type="Int64" Name="GIABAN" Nullable="false" />
+          <Property Type="String" Name="DVT" Nullable="false" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="KHACHHANG_Result">
+          <Property Type="String" Name="TENKH" Nullable="false" MaxLength="30" />
+          <Property Type="Boolean" Name="GIOITINH" Nullable="false" />
+          <Property Type="Boolean" Name="VOHIEUHOA" Nullable="false" />
+          <Property Type="String" Name="SDT" Nullable="true" MaxLength="10" />
         </ComplexType>
         <EntityType Name="DON_DAT_HANG">
           <Key>
@@ -607,6 +639,7 @@
           <Property Name="TENDANGNHAP" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="MATKHAU" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
           <Property Name="VOHIEUHOA" Type="Boolean" Nullable="false" />
+          <Property Name="LAQUANLY" Type="Boolean" />
           <NavigationProperty Name="DON_DAT_HANG" Relationship="VANPHONGPHAM.FK_DON_DAT_HANG_NHAN_VIEN" FromRole="NHAN_VIEN" ToRole="DON_DAT_HANG" />
           <NavigationProperty Name="HOA_DON" Relationship="VANPHONGPHAM.FK__HOA_DON__MANHANV__38996AB5" FromRole="NHAN_VIEN" ToRole="HOA_DON" />
         </EntityType>
@@ -718,37 +751,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <ComplexType Name="DONDATHANG_Result">
-          <Property Type="DateTime" Name="NGAYDAT" Nullable="false" Precision="23" />
-          <Property Type="Int32" Name="SOLUONG" Nullable="false" />
-          <Property Type="Double" Name="DONGIA" Nullable="false" />
-          <Property Type="String" Name="TENMH" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="DVT" Nullable="false" MaxLength="10" />
-          <Property Type="String" Name="TENNCC" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="TENNHANVIEN" Nullable="false" MaxLength="30" />
-        </ComplexType>
-        <ComplexType Name="FNKHACHHANGByTIME_Result">
-          <Property Type="String" Name="TENKH" Nullable="false" MaxLength="30" />
-          <Property Type="Double" Name="THANHTIEN" Nullable="true" />
-          <Property Type="DateTime" Name="NGAYLAP" Nullable="false" Precision="23" />
-        </ComplexType>
-        <ComplexType Name="HOADON_Result">
-          <Property Type="Int32" Name="SOLUONGMUA" Nullable="false" />
-          <Property Type="Double" Name="THANHTIEN" Nullable="true" />
-          <Property Type="DateTime" Name="NGAYLAP" Nullable="false" Precision="23" />
-          <Property Type="String" Name="TENKH" Nullable="false" MaxLength="30" />
-          <Property Type="String" Name="SDT" Nullable="true" MaxLength="10" />
-          <Property Type="String" Name="TENMH" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="TENNHANVIEN" Nullable="false" MaxLength="30" />
-          <Property Type="Int64" Name="GIABAN" Nullable="false" />
-          <Property Type="String" Name="DVT" Nullable="false" MaxLength="10" />
-        </ComplexType>
-        <ComplexType Name="KHACHHANG_Result">
-          <Property Type="String" Name="TENKH" Nullable="false" MaxLength="30" />
-          <Property Type="Boolean" Name="GIOITINH" Nullable="false" />
-          <Property Type="Boolean" Name="VOHIEUHOA" Nullable="false" />
-          <Property Type="String" Name="SDT" Nullable="true" MaxLength="10" />
-        </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -846,6 +848,53 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DONDATHANG" FunctionName="VANPHONGPHAM.Store.DONDATHANG">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="VANPHONGPHAM.DONDATHANG_Result">
+                <ScalarProperty Name="NGAYDAT" ColumnName="NGAYDAT" />
+                <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+                <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
+                <ScalarProperty Name="TENMH" ColumnName="TENMH" />
+                <ScalarProperty Name="DVT" ColumnName="DVT" />
+                <ScalarProperty Name="TENNCC" ColumnName="TENNCC" />
+                <ScalarProperty Name="TENNHANVIEN" ColumnName="TENNHANVIEN" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="FNKHACHHANGByTIME" FunctionName="VANPHONGPHAM.Store.FNKHACHHANGByTIME">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="VANPHONGPHAM.FNKHACHHANGByTIME_Result">
+                <ScalarProperty Name="TENKH" ColumnName="TENKH" />
+                <ScalarProperty Name="THANHTIEN" ColumnName="THANHTIEN" />
+                <ScalarProperty Name="NGAYLAP" ColumnName="NGAYLAP" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="HOADON" FunctionName="VANPHONGPHAM.Store.HOADON">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="VANPHONGPHAM.HOADON_Result">
+                <ScalarProperty Name="SOLUONGMUA" ColumnName="SOLUONGMUA" />
+                <ScalarProperty Name="THANHTIEN" ColumnName="THANHTIEN" />
+                <ScalarProperty Name="NGAYLAP" ColumnName="NGAYLAP" />
+                <ScalarProperty Name="TENKH" ColumnName="TENKH" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="TENMH" ColumnName="TENMH" />
+                <ScalarProperty Name="TENNHANVIEN" ColumnName="TENNHANVIEN" />
+                <ScalarProperty Name="GIABAN" ColumnName="GIABAN" />
+                <ScalarProperty Name="DVT" ColumnName="DVT" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="KHACHHANG" FunctionName="VANPHONGPHAM.Store.KHACHHANG">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="VANPHONGPHAM.KHACHHANG_Result">
+                <ScalarProperty Name="TENKH" ColumnName="TENKH" />
+                <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+                <ScalarProperty Name="VOHIEUHOA" ColumnName="VOHIEUHOA" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <EntitySetMapping Name="DON_DAT_HANG">
             <EntityTypeMapping TypeName="VANPHONGPHAM.DON_DAT_HANG">
               <MappingFragment StoreEntitySet="DON_DAT_HANG">
@@ -934,6 +983,7 @@
           <EntitySetMapping Name="NHAN_VIEN">
             <EntityTypeMapping TypeName="VANPHONGPHAM.NHAN_VIEN">
               <MappingFragment StoreEntitySet="NHAN_VIEN">
+                <ScalarProperty Name="LAQUANLY" ColumnName="LAQUANLY" />
                 <ScalarProperty Name="VOHIEUHOA" ColumnName="VOHIEUHOA" />
                 <ScalarProperty Name="MATKHAU" ColumnName="MATKHAU" />
                 <ScalarProperty Name="TENDANGNHAP" ColumnName="TENDANGNHAP" />
@@ -947,53 +997,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="DONDATHANG" FunctionName="VANPHONGPHAM.Store.DONDATHANG">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="VANPHONGPHAM.DONDATHANG_Result">
-                <ScalarProperty Name="NGAYDAT" ColumnName="NGAYDAT" />
-                <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
-                <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
-                <ScalarProperty Name="TENMH" ColumnName="TENMH" />
-                <ScalarProperty Name="DVT" ColumnName="DVT" />
-                <ScalarProperty Name="TENNCC" ColumnName="TENNCC" />
-                <ScalarProperty Name="TENNHANVIEN" ColumnName="TENNHANVIEN" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="FNKHACHHANGByTIME" FunctionName="VANPHONGPHAM.Store.FNKHACHHANGByTIME">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="VANPHONGPHAM.FNKHACHHANGByTIME_Result">
-                <ScalarProperty Name="TENKH" ColumnName="TENKH" />
-                <ScalarProperty Name="THANHTIEN" ColumnName="THANHTIEN" />
-                <ScalarProperty Name="NGAYLAP" ColumnName="NGAYLAP" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="HOADON" FunctionName="VANPHONGPHAM.Store.HOADON">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="VANPHONGPHAM.HOADON_Result">
-                <ScalarProperty Name="SOLUONGMUA" ColumnName="SOLUONGMUA" />
-                <ScalarProperty Name="THANHTIEN" ColumnName="THANHTIEN" />
-                <ScalarProperty Name="NGAYLAP" ColumnName="NGAYLAP" />
-                <ScalarProperty Name="TENKH" ColumnName="TENKH" />
-                <ScalarProperty Name="SDT" ColumnName="SDT" />
-                <ScalarProperty Name="TENMH" ColumnName="TENMH" />
-                <ScalarProperty Name="TENNHANVIEN" ColumnName="TENNHANVIEN" />
-                <ScalarProperty Name="GIABAN" ColumnName="GIABAN" />
-                <ScalarProperty Name="DVT" ColumnName="DVT" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="KHACHHANG" FunctionName="VANPHONGPHAM.Store.KHACHHANG">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="VANPHONGPHAM.KHACHHANG_Result">
-                <ScalarProperty Name="TENKH" ColumnName="TENKH" />
-                <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
-                <ScalarProperty Name="VOHIEUHOA" ColumnName="VOHIEUHOA" />
-                <ScalarProperty Name="SDT" ColumnName="SDT" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

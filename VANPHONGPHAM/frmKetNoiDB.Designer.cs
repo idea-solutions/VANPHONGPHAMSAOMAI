@@ -170,6 +170,7 @@ namespace VANPHONGPHAM
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 251);
             this.Controls.Add(this.groupControl1);
+            this.IconOptions.Image = global::VANPHONGPHAM.Properties.Resources.Nhiều_màu_sắc_Hình_khối_Thiết_kế___Nghệ_thuật_Biểu_trưng__3_;
             this.Name = "frmKetNoiDB";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kết nối cơ sở dữ liệu";

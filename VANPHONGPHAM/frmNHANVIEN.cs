@@ -59,6 +59,11 @@ namespace VANPHONGPHAM
             showHideControl(true);
         }
 
+        private void Btn1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("true");
+        }
+
         private void loadData()
         {
             gcDanhSach.DataSource = _nv.getAll();
@@ -196,7 +201,7 @@ namespace VANPHONGPHAM
                     txtSDT.Text = gvDanhSach.GetFocusedRowCellValue("SDT").ToString();
                     txtCMND.Text = gvDanhSach.GetFocusedRowCellValue("CMND_CCCD").ToString();
                     txtTenDangNhap.Text = gvDanhSach.GetFocusedRowCellValue("TENDANGNHAP").ToString();
-                    txtMatKhau.Text = gvDanhSach.GetFocusedRowCellValue("MATKHAU").ToString();
+                    //txtMatKhau.Text = gvDanhSach.GetFocusedRowCellValue("MATKHAU").ToString();
                     dtNgaySinh.Text = gvDanhSach.GetFocusedRowCellValue("NGAYSINH").ToString();
                     ckbDisable.Checked = bool.Parse(gvDanhSach.GetFocusedRowCellValue("VOHIEUHOA").ToString());
                     ckbGioiTinh.Checked = bool.Parse(gvDanhSach.GetFocusedRowCellValue("GIOITINH").ToString());

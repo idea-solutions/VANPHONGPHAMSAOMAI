@@ -94,12 +94,12 @@ namespace VANPHONGPHAM
             // 
             // txtPASS
             // 
-            this.txtPASS.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPASS.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPASS.Location = new System.Drawing.Point(70, 111);
             this.txtPASS.Name = "txtPASS";
-            this.txtPASS.PasswordChar = '*';
             this.txtPASS.Size = new System.Drawing.Size(288, 34);
             this.txtPASS.TabIndex = 4;
+            this.txtPASS.UseSystemPasswordChar = true;
             this.txtPASS.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
@@ -113,6 +113,8 @@ namespace VANPHONGPHAM
             // 
             // frmDelete
             // 
+            this.Appearance.BackColor = System.Drawing.Color.White;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 164);
@@ -123,6 +125,8 @@ namespace VANPHONGPHAM
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.ckbDongY);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IconOptions.Image = global::VANPHONGPHAM.Properties.Resources.Nhiều_màu_sắc_Hình_khối_Thiết_kế___Nghệ_thuật_Biểu_trưng__3_;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmDelete";

@@ -51,11 +51,25 @@ namespace VANPHONGPHAM
                 BeginInvoke(new MethodInvoker(delegate { cal(_Width, gvDanhSach); })); // Tăng kích thước nếu text vượt quá
             }
         }
+        frmMain objMain = (frmMain)Application.OpenForms["frmMain"];
+        NHANVIEN _nv;
         private void frmNHACUNGCAP_Load(object sender, EventArgs e)
         {
             _ncc = new NHACUNGCAP();
             loadData();
             showHideControl(true);
+            _nv = new NHANVIEN();
+            bool t = _nv.kiemtraQuyen(objMain._tendn);
+            if (t)
+            {
+
+            }
+            else
+            {
+                btnAdd.Enabled = false;
+                btnEdit.Enabled = false;
+                btnDelete.Enabled = false;
+            }
         }
 
         private void loadData()

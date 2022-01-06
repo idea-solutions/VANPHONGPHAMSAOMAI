@@ -49,20 +49,20 @@ namespace VANPHONGPHAM
             this.txtCMND = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.cmbTaiKhoan = new System.Windows.Forms.ComboBox();
             this.svgImageBox4 = new DevExpress.XtraEditors.SvgImageBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.cmbTaiKhoan = new System.Windows.Forms.ComboBox();
             this.peImage = new DevExpress.XtraEditors.PictureEdit();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.svgImageBox10 = new DevExpress.XtraEditors.SvgImageBox();
             this.svgImageBox5 = new DevExpress.XtraEditors.SvgImageBox();
             this.txtXNMK = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.svgImageBox9 = new DevExpress.XtraEditors.SvgImageBox();
             this.svgImageBox8 = new DevExpress.XtraEditors.SvgImageBox();
             this.txtMK = new System.Windows.Forms.TextBox();
-            this.svgImageBox9 = new DevExpress.XtraEditors.SvgImageBox();
-            this.svgImageBox10 = new DevExpress.XtraEditors.SvgImageBox();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.dateNgaySinh = new DevExpress.XtraEditors.DateEdit();
@@ -80,11 +80,11 @@ namespace VANPHONGPHAM
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peImage.Properties)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox5)).BeginInit();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox8)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties)).BeginInit();
@@ -293,6 +293,16 @@ namespace VANPHONGPHAM
             this.panel4.TabIndex = 13;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // cmbTaiKhoan
+            // 
+            this.cmbTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbTaiKhoan.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTaiKhoan.FormattingEnabled = true;
+            this.cmbTaiKhoan.Location = new System.Drawing.Point(42, 5);
+            this.cmbTaiKhoan.Name = "cmbTaiKhoan";
+            this.cmbTaiKhoan.Size = new System.Drawing.Size(265, 29);
+            this.cmbTaiKhoan.TabIndex = 2;
+            // 
             // svgImageBox4
             // 
             this.svgImageBox4.Location = new System.Drawing.Point(3, 4);
@@ -313,16 +323,6 @@ namespace VANPHONGPHAM
             this.label6.Size = new System.Drawing.Size(109, 17);
             this.label6.TabIndex = 14;
             this.label6.Text = "*Chọn tài khoản";
-            // 
-            // cmbTaiKhoan
-            // 
-            this.cmbTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbTaiKhoan.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTaiKhoan.FormattingEnabled = true;
-            this.cmbTaiKhoan.Location = new System.Drawing.Point(42, 5);
-            this.cmbTaiKhoan.Name = "cmbTaiKhoan";
-            this.cmbTaiKhoan.Size = new System.Drawing.Size(265, 29);
-            this.cmbTaiKhoan.TabIndex = 2;
             // 
             // peImage
             // 
@@ -373,6 +373,17 @@ namespace VANPHONGPHAM
             this.panel5.TabIndex = 17;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // svgImageBox10
+            // 
+            this.svgImageBox10.Location = new System.Drawing.Point(274, 4);
+            this.svgImageBox10.Name = "svgImageBox10";
+            this.svgImageBox10.Size = new System.Drawing.Size(32, 30);
+            this.svgImageBox10.SizeMode = DevExpress.XtraEditors.SvgImageSizeMode.Squeeze;
+            this.svgImageBox10.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageBox10.SvgImage")));
+            this.svgImageBox10.TabIndex = 1;
+            this.svgImageBox10.Text = "svgImageBox1";
+            this.svgImageBox10.Click += new System.EventHandler(this.svgImageBox10_Click);
+            // 
             // svgImageBox5
             // 
             this.svgImageBox5.Location = new System.Drawing.Point(3, 4);
@@ -406,6 +417,17 @@ namespace VANPHONGPHAM
             this.panel8.TabIndex = 18;
             this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // svgImageBox9
+            // 
+            this.svgImageBox9.Location = new System.Drawing.Point(274, 4);
+            this.svgImageBox9.Name = "svgImageBox9";
+            this.svgImageBox9.Size = new System.Drawing.Size(32, 30);
+            this.svgImageBox9.SizeMode = DevExpress.XtraEditors.SvgImageSizeMode.Squeeze;
+            this.svgImageBox9.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageBox9.SvgImage")));
+            this.svgImageBox9.TabIndex = 1;
+            this.svgImageBox9.Text = "svgImageBox1";
+            this.svgImageBox9.Click += new System.EventHandler(this.svgImageBox9_Click);
+            // 
             // svgImageBox8
             // 
             this.svgImageBox8.Location = new System.Drawing.Point(3, 4);
@@ -426,28 +448,6 @@ namespace VANPHONGPHAM
             this.txtMK.TabIndex = 0;
             this.txtMK.UseSystemPasswordChar = true;
             this.txtMK.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMK_KeyDown);
-            // 
-            // svgImageBox9
-            // 
-            this.svgImageBox9.Location = new System.Drawing.Point(274, 4);
-            this.svgImageBox9.Name = "svgImageBox9";
-            this.svgImageBox9.Size = new System.Drawing.Size(32, 30);
-            this.svgImageBox9.SizeMode = DevExpress.XtraEditors.SvgImageSizeMode.Squeeze;
-            this.svgImageBox9.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageBox9.SvgImage")));
-            this.svgImageBox9.TabIndex = 1;
-            this.svgImageBox9.Text = "svgImageBox1";
-            this.svgImageBox9.Click += new System.EventHandler(this.svgImageBox9_Click);
-            // 
-            // svgImageBox10
-            // 
-            this.svgImageBox10.Location = new System.Drawing.Point(274, 4);
-            this.svgImageBox10.Name = "svgImageBox10";
-            this.svgImageBox10.Size = new System.Drawing.Size(32, 30);
-            this.svgImageBox10.SizeMode = DevExpress.XtraEditors.SvgImageSizeMode.Squeeze;
-            this.svgImageBox10.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageBox10.SvgImage")));
-            this.svgImageBox10.TabIndex = 1;
-            this.svgImageBox10.Text = "svgImageBox1";
-            this.svgImageBox10.Click += new System.EventHandler(this.svgImageBox10_Click);
             // 
             // simpleButton1
             // 
@@ -542,6 +542,7 @@ namespace VANPHONGPHAM
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.peImage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IconOptions.Image = global::VANPHONGPHAM.Properties.Resources.Nhiều_màu_sắc_Hình_khối_Thiết_kế___Nghệ_thuật_Biểu_trưng__3_;
             this.Name = "frmQuenMK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmQuenMK";
@@ -563,12 +564,12 @@ namespace VANPHONGPHAM
             ((System.ComponentModel.ISupportInitialize)(this.peImage.Properties)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox5)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox8)).EndInit();
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties)).EndInit();

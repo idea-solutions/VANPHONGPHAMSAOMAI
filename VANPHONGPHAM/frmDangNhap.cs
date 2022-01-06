@@ -21,7 +21,7 @@ namespace VANPHONGPHAM
         }
 
         NHANVIEN _nv;
-
+        public string tendangnhap;
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
             _nv = new NHANVIEN();
@@ -55,10 +55,11 @@ namespace VANPHONGPHAM
                 var nv = _nv.getItemDN(txtUser.Text, txtPass.Text);
                 if (nv != null)
                 {
-                    frmMain frm = new frmMain();
+                    frmMain frm = new frmMain(txtUser.Text);
                     this.Visible = false;
                     frm.ShowDialog();
                     this.Visible = true;
+                    tendangnhap = txtUser.Text;
                 }
                 else
                 {

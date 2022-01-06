@@ -116,6 +116,7 @@ namespace VANPHONGPHAM
             timer1.Enabled = true;
             timer1.Start();
             label7.Text = DateTime.Now.ToLongTimeString();
+            
         }
 
         private void dateEditTuNgay_DateTimeChanged(object sender, EventArgs e)

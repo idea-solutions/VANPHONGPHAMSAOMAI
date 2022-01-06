@@ -874,6 +874,7 @@ namespace VANPHONGPHAM
             this.ClientSize = new System.Drawing.Size(1918, 1020);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.panel4);
+            this.IconOptions.Image = global::VANPHONGPHAM.Properties.Resources.Nhiều_màu_sắc_Hình_khối_Thiết_kế___Nghệ_thuật_Biểu_trưng__3_;
             this.Name = "frmDATHANG";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QUẢN LÝ ĐẶT HÀNG";

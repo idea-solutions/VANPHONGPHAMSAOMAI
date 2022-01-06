@@ -14,10 +14,12 @@ namespace VANPHONGPHAM
 {
     public partial class frmMain : DevExpress.XtraEditors.XtraForm
     {
-        public frmMain()
+        public frmMain(string Messen)
         {
+            _tendn = Messen;
             InitializeComponent();
         }
+        public string _tendn;
 
         private void btnLoaiHang_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
@@ -54,9 +56,11 @@ namespace VANPHONGPHAM
         Series series1 = new Series("", ViewType.Bar); // cột
         Series series2 = new Series("", ViewType.Bar); // cột
 
-
+        frmDangNhap objDN = (frmDangNhap)Application.OpenForms["frmDangNhap"];
+        NHANVIEN _nv;
         public void frmMain_Load(object sender, EventArgs e)
         {
+            _nv = new NHANVIEN();
             _thongke = new THONGKE();
             loadChart();
             chartControl1.Series.Add(series);
@@ -68,6 +72,23 @@ namespace VANPHONGPHAM
             timer1.Enabled = true;
             timer1.Start();
             label5.Text = DateTime.Now.ToLongTimeString();
+
+            bool t = _nv.kiemtraQuyen(_tendn);
+            if (t)
+            {
+
+            }
+            else
+            {
+                quyenChucNang(false);
+            }
+        }
+
+        void quyenChucNang(bool t)
+        {
+            btnDelete.Visible = t;
+            btnDatHang.Enabled = t;
+            navBarGroup4.Visible = t;
         }
 
         public void loadChart()
@@ -138,6 +159,12 @@ namespace VANPHONGPHAM
             if (label6.Left >= this.Width - 500 || label6.Left <= -750)
                 i = -i;
             label6.Left += i;
+        }
+
+        private void navBarItem2_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmPhanQuyenND frm = new frmPhanQuyenND();
+            frm.ShowDialog();
         }
     }
 }

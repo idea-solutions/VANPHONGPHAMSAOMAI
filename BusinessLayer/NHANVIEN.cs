@@ -16,8 +16,6 @@ namespace BusinessLayer
             db = Entities.CreateEntities();
         }
 
-        
-
         public List<NHAN_VIEN> getAll()
         {
             return db.NHAN_VIEN.OrderBy(x => x.TENNHANVIEN).ToList();
@@ -40,6 +38,46 @@ namespace BusinessLayer
         public List<NHAN_VIEN> getItemQMK(string sdt)
         {
             return db.NHAN_VIEN.Where(x => x.SDT == sdt).ToList();
+        }
+
+        public List<NHAN_VIEN> getItemByQuyen1(bool t)
+        {
+            return db.NHAN_VIEN.Where(x => x.LAQUANLY == t).ToList();
+        }
+
+        public List<NHAN_VIEN> getItemByQuyen(bool t)
+        {
+            var lst = db.NHAN_VIEN.Where(x => x.LAQUANLY == t).ToList();
+
+            List<NHAN_VIEN> lstNV = new List<NHAN_VIEN>();
+            NHAN_VIEN objNV;
+
+            foreach (var item in lst)
+            {
+                if (item.TENDANGNHAP != "ADMIN")
+                {
+                    objNV = new NHAN_VIEN();
+                    objNV.MANHANVIEN = item.MANHANVIEN;
+                    objNV.TENNHANVIEN = item.TENNHANVIEN;
+                    objNV.SDT = item.SDT;
+                    objNV.NGAYSINH = item.NGAYSINH;
+                    objNV.DIACHI = item.DIACHI;
+                    objNV.TENDANGNHAP = item.TENDANGNHAP;
+                    objNV.MATKHAU = item.MATKHAU;
+                    objNV.GIOITINH = item.GIOITINH;
+                    objNV.VOHIEUHOA = item.VOHIEUHOA;
+                    objNV.LAQUANLY = item.LAQUANLY;
+                    objNV.CMND_CCCD = item.CMND_CCCD;
+                    lstNV.Add(objNV);
+                }
+            }
+            return lstNV.OrderBy(x => x.TENNHANVIEN).ToList();
+        }
+
+        public bool kiemtraQuyen(string tentaikhoan)
+        {
+            var nv = db.NHAN_VIEN.FirstOrDefault(x => x.TENDANGNHAP == tentaikhoan);
+            return (bool)nv.LAQUANLY;
         }
 
         public void add(NHAN_VIEN nv)
@@ -94,6 +132,20 @@ namespace BusinessLayer
         {
             NHAN_VIEN nv = db.NHAN_VIEN.FirstOrDefault(x => x.MANHANVIEN == manv);
             nv.VOHIEUHOA = true;
+            try
+            {
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Có lỗi xảy ra trong quá trình xử lý dữ liệu. " + ex.Message);
+            }
+        }
+
+        public void chuyenQuyen(string manv, bool t)
+        {
+            NHAN_VIEN nv = db.NHAN_VIEN.FirstOrDefault(x => x.MANHANVIEN == manv);
+            nv.LAQUANLY = t;
             try
             {
                 db.SaveChanges();

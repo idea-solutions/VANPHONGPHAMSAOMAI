@@ -51,12 +51,25 @@ namespace VANPHONGPHAM
                 BeginInvoke(new MethodInvoker(delegate { cal(_Width, gvDanhSach); })); // Tăng kích thước nếu text vượt quá
             }
         }
-
+        NHANVIEN _nv;
         private void frmKHACHHANG_Load(object sender, EventArgs e)
         {
+            
             _kh = new KHACHHANG();
             loadData();
             showHideControl(true);
+            _nv = new NHANVIEN();
+            bool t = _nv.kiemtraQuyen(objMain._tendn);
+            if (t)
+            {
+
+            }
+            else
+            {
+                btnAdd.Enabled = false;
+                btnEdit.Enabled = false;
+                btnDelete.Enabled = false;
+            }
         }
 
         private void loadData()
@@ -172,6 +185,7 @@ namespace VANPHONGPHAM
         }
 
         frmBanHang objBANHANG = (frmBanHang)Application.OpenForms["frmBanHang"];
+        frmMain objMain = (frmMain)Application.OpenForms["frmMain"];
 
         private void gvDanhSach_DoubleClick(object sender, EventArgs e)
         {
@@ -198,40 +212,34 @@ namespace VANPHONGPHAM
 
         private void XuatReport(string _reportName, string _tieude)
         {
-            if (_makh != null || _makh == null)
+            Form frm = new Form();
+            CrystalReportViewer Crv = new CrystalReportViewer();
+            Crv.ShowGroupTreeButton = false;
+            Crv.ShowParameterPanelButton = false;
+            Crv.ToolPanelView = ToolPanelViewType.None;
+            TableLogOnInfo Thongtin;
+            ReportDocument doc = new ReportDocument();
+            doc.Load(System.Windows.Forms.Application.StartupPath + "\\Reports\\" + _reportName + @".rpt");
+            Thongtin = doc.Database.Tables[0].LogOnInfo;
+            Thongtin.ConnectionInfo.ServerName = myFun._srv;
+            Thongtin.ConnectionInfo.UserID = myFun._us;
+            Thongtin.ConnectionInfo.Password = myFun._pw;
+            Thongtin.ConnectionInfo.DatabaseName = myFun._db;
+            doc.Database.Tables[0].ApplyLogOnInfo(Thongtin);
+            try
             {
-                Form frm = new Form();
-                CrystalReportViewer Crv = new CrystalReportViewer();
-                Crv.ShowGroupTreeButton = false;
-                Crv.ShowParameterPanelButton = false;
-                Crv.ToolPanelView = ToolPanelViewType.None;
-                TableLogOnInfo Thongtin;
-                ReportDocument doc = new ReportDocument();
-                doc.Load(System.Windows.Forms.Application.StartupPath + "\\Reports\\" + _reportName + @".rpt");
-                Thongtin = doc.Database.Tables[0].LogOnInfo;
-                Thongtin.ConnectionInfo.ServerName = myFun._srv;
-                Thongtin.ConnectionInfo.UserID = myFun._us;
-                Thongtin.ConnectionInfo.Password = myFun._pw;
-                Thongtin.ConnectionInfo.DatabaseName = myFun._db;
-                doc.Database.Tables[0].ApplyLogOnInfo(Thongtin);
-                try
-                {
-                    //doc.SetParameterValue("maloaimh", _maloaimh);
-                    Crv.Dock = DockStyle.Fill;
-                    Crv.ReportSource = doc;
-                    frm.Controls.Add(Crv);
-                    Crv.Refresh();
-                    frm.Text = _tieude;
-                    frm.WindowState = FormWindowState.Maximized;
-                    frm.ShowDialog();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi: " + ex.Message);
-                }
+                Crv.Dock = DockStyle.Fill;
+                Crv.ReportSource = doc;
+                frm.Controls.Add(Crv);
+                Crv.Refresh();
+                frm.Text = _tieude;
+                frm.WindowState = FormWindowState.Maximized;
+                frm.ShowDialog();
             }
-            else
-                MessageBox.Show("Không có dữ liệu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
         }
     }
 }

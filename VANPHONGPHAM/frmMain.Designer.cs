@@ -53,12 +53,13 @@ namespace VANPHONGPHAM
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
+            this.btnPhanQuyen = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
             this.btnLoaiMH = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
             this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
             this.label1 = new System.Windows.Forms.Label();
             this.peImage = new DevExpress.XtraEditors.PictureEdit();
@@ -78,7 +79,7 @@ namespace VANPHONGPHAM
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPhanQuyen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
             this.splitContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.peImage.Properties)).BeginInit();
@@ -307,7 +308,7 @@ namespace VANPHONGPHAM
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl1.Location = new System.Drawing.Point(0, 45);
             this.splitContainerControl1.Name = "splitContainerControl1";
-            this.splitContainerControl1.Panel1.Controls.Add(this.navBarControl1);
+            this.splitContainerControl1.Panel1.Controls.Add(this.btnPhanQuyen);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.splitContainerControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
@@ -315,23 +316,24 @@ namespace VANPHONGPHAM
             this.splitContainerControl1.SplitterPosition = 272;
             this.splitContainerControl1.TabIndex = 8;
             // 
-            // navBarControl1
+            // btnPhanQuyen
             // 
-            this.navBarControl1.ActiveGroup = this.navBarGroup1;
-            this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
+            this.btnPhanQuyen.ActiveGroup = this.navBarGroup1;
+            this.btnPhanQuyen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPhanQuyen.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.navBarGroup1,
             this.navBarGroup2,
             this.navBarGroup3,
             this.navBarGroup4});
-            this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
-            this.btnLoaiMH});
-            this.navBarControl1.Location = new System.Drawing.Point(0, 0);
-            this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 272;
-            this.navBarControl1.Size = new System.Drawing.Size(272, 946);
-            this.navBarControl1.TabIndex = 0;
-            this.navBarControl1.Text = "navBarControl1";
+            this.btnPhanQuyen.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
+            this.btnLoaiMH,
+            this.navBarItem2});
+            this.btnPhanQuyen.Location = new System.Drawing.Point(0, 0);
+            this.btnPhanQuyen.Name = "btnPhanQuyen";
+            this.btnPhanQuyen.OptionsNavPane.ExpandedWidth = 272;
+            this.btnPhanQuyen.Size = new System.Drawing.Size(272, 946);
+            this.btnPhanQuyen.TabIndex = 0;
+            this.btnPhanQuyen.Text = "navBarControl1";
             // 
             // navBarGroup1
             // 
@@ -381,8 +383,17 @@ namespace VANPHONGPHAM
             this.navBarGroup4.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup4.ImageOptions.LargeImage")));
             this.navBarGroup4.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup4.ImageOptions.SmallImage")));
             this.navBarGroup4.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnNhanVien)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.btnNhanVien),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2)});
             this.navBarGroup4.Name = "navBarGroup4";
+            // 
+            // navBarItem2
+            // 
+            this.navBarItem2.Caption = "Phân quyền người dùng";
+            this.navBarItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarItem2.ImageOptions.LargeImage")));
+            this.navBarItem2.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem2.ImageOptions.SmallImage")));
+            this.navBarItem2.Name = "navBarItem2";
+            this.navBarItem2.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem2_LinkClicked);
             // 
             // splitContainerControl2
             // 
@@ -561,6 +572,7 @@ namespace VANPHONGPHAM
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.IconOptions.Image = global::VANPHONGPHAM.Properties.Resources.Nhiều_màu_sắc_Hình_khối_Thiết_kế___Nghệ_thuật_Biểu_trưng__3_;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -575,7 +587,7 @@ namespace VANPHONGPHAM
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPhanQuyen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).EndInit();
             this.splitContainerControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.peImage.Properties)).EndInit();
@@ -612,7 +624,7 @@ namespace VANPHONGPHAM
         private DevExpress.XtraBars.BarButtonItem btnDatHang;
         private System.Windows.Forms.Timer timer1;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
-        private DevExpress.XtraNavBar.NavBarControl navBarControl1;
+        private DevExpress.XtraNavBar.NavBarControl btnPhanQuyen;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
         private DevExpress.XtraNavBar.NavBarItem btnLoaiMH;
@@ -636,6 +648,7 @@ namespace VANPHONGPHAM
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label6;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem2;
     }
 }
 

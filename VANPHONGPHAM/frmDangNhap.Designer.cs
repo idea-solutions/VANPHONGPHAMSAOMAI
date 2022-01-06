@@ -82,6 +82,7 @@ namespace VANPHONGPHAM
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(266, 21);
             this.txtUser.TabIndex = 0;
+            this.txtUser.Text = "nguyentu";
             this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUser_KeyDown);
             // 
@@ -126,6 +127,7 @@ namespace VANPHONGPHAM
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(230, 21);
             this.txtPass.TabIndex = 0;
+            this.txtPass.Text = "nguyentu";
             this.txtPass.UseSystemPasswordChar = true;
             this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
             this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
@@ -228,6 +230,7 @@ namespace VANPHONGPHAM
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.peImage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmDangNhap.IconOptions.Image")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmDangNhap";

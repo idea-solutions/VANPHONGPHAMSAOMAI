@@ -24,6 +24,7 @@ namespace VANPHONGPHAM
         {
             InitializeComponent();
         }
+        private
 
         LOAIMATHANG _loaimh;
         MATHANG _mh;
@@ -35,14 +36,33 @@ namespace VANPHONGPHAM
             return true;
         }
 
+        void quyenChucNang(bool t)
+        {
+            btnDelete.Enabled = t;
+            btnEdit.Enabled = t;
+            btnAdd.Enabled = t;
+        }
+        NHANVIEN _nv;
 
         private void frmMATHANG_Load(object sender, EventArgs e)
         {
+            _nv = new NHANVIEN();
             _loaimh = new LOAIMATHANG();
             _mh = new MATHANG();
             loadData();
             gvDanhSach.ExpandAllGroups();
             showHideControl(true);
+            bool t = _nv.kiemtraQuyen(objMain._tendn);
+            if (t)
+            {
+
+            }
+            else
+            {
+                btnAdd.Enabled = false;
+                btnEdit.Enabled = false;
+                btnDelete.Enabled = false;
+            }
         }
 
         private void loadData()
@@ -52,7 +72,7 @@ namespace VANPHONGPHAM
             loadLoaiMH();
             gcDanhSach.DataSource = _mh.getAll();
         }
-
+        frmMain objMain = (frmMain)Application.OpenForms["frmMain"];
         public void loadLoaiMH()
         {
             cmbLoaiMH.DataSource = _loaimh.getAll();
@@ -170,7 +190,6 @@ namespace VANPHONGPHAM
             reset(true);
             loadData();
         }
-        frmMain objMain = (frmMain)Application.OpenForms["frmMain"];
 
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

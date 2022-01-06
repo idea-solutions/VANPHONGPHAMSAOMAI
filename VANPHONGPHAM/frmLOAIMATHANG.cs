@@ -32,12 +32,24 @@ namespace VANPHONGPHAM
             _view.IndicatorWidth = _view.IndicatorWidth < _Width ? _Width : _view.IndicatorWidth;
             return true;
         }
-
+        NHANVIEN _nv;
         private void frmLOAIMATHANG_Load(object sender, EventArgs e)
         {
             _loaimh = new LOAIMATHANG();
             loadData();
             showHideControl(true);
+            _nv = new NHANVIEN();
+            bool t = _nv.kiemtraQuyen(objMain._tendn);
+            if (t)
+            {
+
+            }
+            else
+            {
+                btnAdd.Enabled = false;
+                btnEdit.Enabled = false;
+                btnDelete.Enabled = false;
+            }
         }
 
         private void loadData()

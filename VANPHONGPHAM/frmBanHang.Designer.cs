@@ -32,6 +32,11 @@ namespace VANPHONGPHAM
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::VANPHONGPHAM.frmloaddulieu), true, true);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBanHang));
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -109,6 +114,7 @@ namespace VANPHONGPHAM
             this.gvDanhSachMuaHang = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.mhMAMH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.mhTENMH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnBoMH = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.mhSOLUONG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.mhGIABAN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.mhTENKH = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -118,12 +124,12 @@ namespace VANPHONGPHAM
             this.btnXoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.btnXoaMH = new DevExpress.XtraEditors.SimpleButton();
             this.btnBoQua = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
@@ -162,6 +168,7 @@ namespace VANPHONGPHAM
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSachMuaHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhSachMuaHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBoMH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -886,7 +893,8 @@ namespace VANPHONGPHAM
             this.gcDanhSachMuaHang.Name = "gcDanhSachMuaHang";
             this.gcDanhSachMuaHang.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnXoa,
-            this.repositoryItemPictureEdit1});
+            this.repositoryItemPictureEdit1,
+            this.btnBoMH});
             this.gcDanhSachMuaHang.Size = new System.Drawing.Size(852, 651);
             this.gcDanhSachMuaHang.TabIndex = 12;
             this.gcDanhSachMuaHang.UseDisabledStatePainter = false;
@@ -929,8 +937,16 @@ namespace VANPHONGPHAM
             this.mhTENMH.Name = "mhTENMH";
             this.mhTENMH.OptionsColumn.AllowEdit = false;
             this.mhTENMH.Visible = true;
-            this.mhTENMH.VisibleIndex = 1;
-            this.mhTENMH.Width = 232;
+            this.mhTENMH.VisibleIndex = 0;
+            this.mhTENMH.Width = 142;
+            // 
+            // btnBoMH
+            // 
+            this.btnBoMH.AutoHeight = false;
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            this.btnBoMH.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.btnBoMH.Name = "btnBoMH";
             // 
             // mhSOLUONG
             // 
@@ -939,8 +955,8 @@ namespace VANPHONGPHAM
             this.mhSOLUONG.MinWidth = 25;
             this.mhSOLUONG.Name = "mhSOLUONG";
             this.mhSOLUONG.Visible = true;
-            this.mhSOLUONG.VisibleIndex = 2;
-            this.mhSOLUONG.Width = 232;
+            this.mhSOLUONG.VisibleIndex = 1;
+            this.mhSOLUONG.Width = 142;
             // 
             // mhGIABAN
             // 
@@ -950,8 +966,8 @@ namespace VANPHONGPHAM
             this.mhGIABAN.Name = "mhGIABAN";
             this.mhGIABAN.OptionsColumn.AllowEdit = false;
             this.mhGIABAN.Visible = true;
-            this.mhGIABAN.VisibleIndex = 3;
-            this.mhGIABAN.Width = 232;
+            this.mhGIABAN.VisibleIndex = 2;
+            this.mhGIABAN.Width = 142;
             // 
             // mhTENKH
             // 
@@ -961,8 +977,8 @@ namespace VANPHONGPHAM
             this.mhTENKH.Name = "mhTENKH";
             this.mhTENKH.OptionsColumn.AllowEdit = false;
             this.mhTENKH.Visible = true;
-            this.mhTENKH.VisibleIndex = 4;
-            this.mhTENKH.Width = 232;
+            this.mhTENKH.VisibleIndex = 3;
+            this.mhTENKH.Width = 142;
             // 
             // mhMAKH
             // 
@@ -983,17 +999,15 @@ namespace VANPHONGPHAM
             this.mhTHANHTIEN.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "THANHTIEN", "TỔNG TIỀN: {0:n0} ₫")});
             this.mhTHANHTIEN.Visible = true;
-            this.mhTHANHTIEN.VisibleIndex = 5;
-            this.mhTHANHTIEN.Width = 274;
+            this.mhTHANHTIEN.VisibleIndex = 4;
+            this.mhTHANHTIEN.Width = 165;
             // 
             // mhXOA
             // 
             this.mhXOA.ColumnEdit = this.btnXoa;
             this.mhXOA.MinWidth = 25;
             this.mhXOA.Name = "mhXOA";
-            this.mhXOA.Visible = true;
-            this.mhXOA.VisibleIndex = 0;
-            this.mhXOA.Width = 29;
+            this.mhXOA.Width = 69;
             // 
             // btnXoa
             // 
@@ -1022,6 +1036,17 @@ namespace VANPHONGPHAM
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(852, 44);
             this.panel3.TabIndex = 11;
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(264, 3);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.simpleButton2.Size = new System.Drawing.Size(89, 39);
+            this.simpleButton2.TabIndex = 11;
+            this.simpleButton2.Text = "In";
+            this.simpleButton2.Click += new System.EventHandler(this.btnIN_Click);
             // 
             // btnXoaMH
             // 
@@ -1071,17 +1096,6 @@ namespace VANPHONGPHAM
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // simpleButton2
-            // 
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(264, 3);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.simpleButton2.Size = new System.Drawing.Size(89, 39);
-            this.simpleButton2.TabIndex = 11;
-            this.simpleButton2.Text = "In";
-            this.simpleButton2.Click += new System.EventHandler(this.btnIN_Click);
-            // 
             // frmBanHang
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -1103,6 +1117,7 @@ namespace VANPHONGPHAM
             this.Controls.Add(this.barDockControl8);
             this.Controls.Add(this.barDockControl6);
             this.Controls.Add(this.barDockControl5);
+            this.IconOptions.Image = global::VANPHONGPHAM.Properties.Resources.Nhiều_màu_sắc_Hình_khối_Thiết_kế___Nghệ_thuật_Biểu_trưng__3_;
             this.Name = "frmBanHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QUẢN LÝ BÁN HÀNG";
@@ -1150,6 +1165,7 @@ namespace VANPHONGPHAM
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSachMuaHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhSachMuaHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBoMH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -1251,5 +1267,6 @@ namespace VANPHONGPHAM
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraGrid.Columns.GridColumn dsDVT;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnBoMH;
     }
 }

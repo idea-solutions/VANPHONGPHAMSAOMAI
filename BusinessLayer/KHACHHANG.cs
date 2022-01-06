@@ -17,7 +17,7 @@ namespace BusinessLayer
 
         public List<KHACH_HANG> getAll()
         {
-            return db.KHACH_HANG.OrderBy(x => x.TENKH).ToList();
+            return db.KHACH_HANG.OrderBy(x => x.TENKH).ToList(); // trả về danh sách khách hàng sắp xếp theo tên
         }
 
         public KHACH_HANG getItem(int makh)

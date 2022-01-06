@@ -37,7 +37,11 @@ namespace VANPHONGPHAM
             this.svgImageBox1 = new DevExpress.XtraEditors.SvgImageBox();
             this.txtPASS = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.svgImageBox2 = new DevExpress.XtraEditors.SvgImageBox();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -94,10 +98,11 @@ namespace VANPHONGPHAM
             // 
             // txtPASS
             // 
-            this.txtPASS.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPASS.Location = new System.Drawing.Point(70, 111);
+            this.txtPASS.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPASS.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPASS.Location = new System.Drawing.Point(41, 6);
             this.txtPASS.Name = "txtPASS";
-            this.txtPASS.Size = new System.Drawing.Size(288, 34);
+            this.txtPASS.Size = new System.Drawing.Size(244, 20);
             this.txtPASS.TabIndex = 4;
             this.txtPASS.UseSystemPasswordChar = true;
             this.txtPASS.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -111,6 +116,26 @@ namespace VANPHONGPHAM
             this.label2.TabIndex = 5;
             this.label2.Text = "Nhập mật khẩu để tiếp tục";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.svgImageBox2);
+            this.panel1.Controls.Add(this.txtPASS);
+            this.panel1.Location = new System.Drawing.Point(70, 110);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(288, 36);
+            this.panel1.TabIndex = 6;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // svgImageBox2
+            // 
+            this.svgImageBox2.Location = new System.Drawing.Point(3, 3);
+            this.svgImageBox2.Name = "svgImageBox2";
+            this.svgImageBox2.Size = new System.Drawing.Size(32, 30);
+            this.svgImageBox2.SizeMode = DevExpress.XtraEditors.SvgImageSizeMode.Squeeze;
+            this.svgImageBox2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageBox2.SvgImage")));
+            this.svgImageBox2.TabIndex = 5;
+            this.svgImageBox2.Text = "svgImageBox2";
+            // 
             // frmDelete
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -118,13 +143,14 @@ namespace VANPHONGPHAM
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 164);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtPASS);
             this.Controls.Add(this.svgImageBox1);
             this.Controls.Add(this.btnYes);
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.ckbDongY);
             this.Controls.Add(this.label1);
+            this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IconOptions.Image = global::VANPHONGPHAM.Properties.Resources.Nhiều_màu_sắc_Hình_khối_Thiết_kế___Nghệ_thuật_Biểu_trưng__3_;
             this.MaximizeBox = false;
@@ -134,6 +160,9 @@ namespace VANPHONGPHAM
             this.Text = "XÓA DỮ LIỆU BÁN HÀNG";
             this.Load += new System.EventHandler(this.frmDelete_Load);
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,5 +177,7 @@ namespace VANPHONGPHAM
         private DevExpress.XtraEditors.SvgImageBox svgImageBox1;
         private System.Windows.Forms.TextBox txtPASS;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
+        private DevExpress.XtraEditors.SvgImageBox svgImageBox2;
     }
 }

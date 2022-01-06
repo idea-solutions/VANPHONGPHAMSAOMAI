@@ -25,7 +25,7 @@ namespace DataLayer
         public string TENNHANVIEN { get; set; }
         public string DIACHI { get; set; }
         public string SDT { get; set; }
-        public bool GIOITINH { get; set; }
+        public string GIOITINH { get; set; }
         public System.DateTime NGAYSINH { get; set; }
         public string CMND_CCCD { get; set; }
         public string TENDANGNHAP { get; set; }

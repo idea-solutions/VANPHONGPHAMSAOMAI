@@ -45,14 +45,14 @@ namespace VANPHONGPHAM
         {
             panel8.Visible = t;
             panel5.Visible = t;
-            simpleButton1.Visible = t;
+            btnXacNhan.Visible = t;
             label7.Visible = t;
             label8.Visible = t;
         }
 
         void loadTaiKhoan()
         {
-            cmbTaiKhoan.DataSource = _nv.getItemQMK(txtUser.Text);
+            cmbTaiKhoan.DataSource = _nv.getItemQMK(txtSDT.Text);
             cmbTaiKhoan.DisplayMember = "TENDANGNHAP";
             cmbTaiKhoan.ValueMember = "MANHANVIEN";
         }
@@ -74,11 +74,10 @@ namespace VANPHONGPHAM
                 MessageBox.Show("Thông tin đã được xác thực thành công, mời bạn tạo lại mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 hide(false);
                 hide1(true);
-
             }
             else
             {
-                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Không thể thực hiện do sai thông tin, mời bạn thao tác lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

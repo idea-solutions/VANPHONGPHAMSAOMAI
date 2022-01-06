@@ -36,8 +36,10 @@ namespace VANPHONGPHAM
             this.btnYes = new System.Windows.Forms.Button();
             this.btnNo = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.svgImageBox2 = new DevExpress.XtraEditors.SvgImageBox();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // svgImageBox1
@@ -64,11 +66,10 @@ namespace VANPHONGPHAM
             // 
             this.txtPASS.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPASS.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPASS.Location = new System.Drawing.Point(8, 7);
+            this.txtPASS.Location = new System.Drawing.Point(43, 7);
             this.txtPASS.Name = "txtPASS";
-            this.txtPASS.Size = new System.Drawing.Size(251, 20);
+            this.txtPASS.Size = new System.Drawing.Size(211, 20);
             this.txtPASS.TabIndex = 9;
-            this.txtPASS.Text = "ẻt";
             this.txtPASS.UseSystemPasswordChar = true;
             this.txtPASS.TextChanged += new System.EventHandler(this.txtPASS_TextChanged);
             // 
@@ -94,11 +95,23 @@ namespace VANPHONGPHAM
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.svgImageBox2);
             this.panel1.Controls.Add(this.txtPASS);
             this.panel1.Location = new System.Drawing.Point(47, 98);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(257, 36);
             this.panel1.TabIndex = 10;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // svgImageBox2
+            // 
+            this.svgImageBox2.Location = new System.Drawing.Point(3, 3);
+            this.svgImageBox2.Name = "svgImageBox2";
+            this.svgImageBox2.Size = new System.Drawing.Size(32, 30);
+            this.svgImageBox2.SizeMode = DevExpress.XtraEditors.SvgImageSizeMode.Squeeze;
+            this.svgImageBox2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageBox2.SvgImage")));
+            this.svgImageBox2.TabIndex = 11;
+            this.svgImageBox2.Text = "svgImageBox2";
             // 
             // frmMK
             // 
@@ -123,6 +136,7 @@ namespace VANPHONGPHAM
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -135,5 +149,6 @@ namespace VANPHONGPHAM
         private System.Windows.Forms.Button btnYes;
         private System.Windows.Forms.Button btnNo;
         private System.Windows.Forms.Panel panel1;
+        private DevExpress.XtraEditors.SvgImageBox svgImageBox2;
     }
 }

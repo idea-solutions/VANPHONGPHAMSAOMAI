@@ -67,7 +67,7 @@ namespace VANPHONGPHAM
                 }
             }
             else
-                MessageBox.Show("Vui lòng điền đầy đủ đăng nhập và mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng điền đầy đủ tên đăng nhập và mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
         }
 

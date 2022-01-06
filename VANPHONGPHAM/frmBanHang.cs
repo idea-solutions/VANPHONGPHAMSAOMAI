@@ -29,6 +29,7 @@ namespace VANPHONGPHAM
         HOADON _hd;
         LOAIMATHANG _loaimh;
         MATHANG _mh;
+        NHANVIEN _nv;
         KHACHHANG _kh;
         bool _them;
         string _mamh;
@@ -100,6 +101,7 @@ namespace VANPHONGPHAM
             _loaimh = new LOAIMATHANG();
             _mh = new MATHANG();
             _kh = new KHACHHANG();
+            _nv = new NHANVIEN();
 
             listHDMH = new List<OBJHOADON_MATHANG>();
             loadData();
@@ -276,7 +278,6 @@ namespace VANPHONGPHAM
             simpleButton2.Enabled = true;
         }
 
-
         void saveData()
         {
             HOA_DON hd = new HOA_DON();
@@ -284,7 +285,7 @@ namespace VANPHONGPHAM
             if (_them)
             {
                 hd.NGAYLAP = DateTime.Now;
-                hd.MANHANVIEN = "NV02";
+                hd.MANHANVIEN = _nv.getItemByTDN(objMain._tendn).MANHANVIEN;
                 hd.MAKH = int.Parse(cmbKhachHang.SelectedValue.ToString());
                 var LuuHD = _hd.add(hd);
                 int _maHD = LuuHD.MAHOADON;
@@ -376,7 +377,7 @@ namespace VANPHONGPHAM
                 try
                 {
                     DateTime tungay = dateEditTuNgay.DateTime.Date;
-                    DateTime denngay = dateEditDenNgay.DateTime.Date.AddDays(1);
+                    DateTime denngay = dateEditDenNgay.DateTime.Date;
 
 
                     doc.SetParameterValue("@TUNGAY", tungay);

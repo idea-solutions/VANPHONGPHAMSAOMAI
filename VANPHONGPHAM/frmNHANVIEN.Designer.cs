@@ -38,12 +38,13 @@ namespace VANPHONGPHAM
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.cmbGioiTinh = new System.Windows.Forms.ComboBox();
             this.dtNgaySinh = new DevExpress.XtraEditors.DateEdit();
-            this.ckbGioiTinh = new System.Windows.Forms.CheckBox();
             this.ckbDisable = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNLMatKhau = new System.Windows.Forms.TextBox();
@@ -99,12 +100,13 @@ namespace VANPHONGPHAM
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.cmbGioiTinh);
             this.groupControl1.Controls.Add(this.dtNgaySinh);
-            this.groupControl1.Controls.Add(this.ckbGioiTinh);
             this.groupControl1.Controls.Add(this.ckbDisable);
             this.groupControl1.Controls.Add(this.label9);
             this.groupControl1.Controls.Add(this.label8);
             this.groupControl1.Controls.Add(this.label6);
+            this.groupControl1.Controls.Add(this.label10);
             this.groupControl1.Controls.Add(this.label3);
             this.groupControl1.Controls.Add(this.label4);
             this.groupControl1.Controls.Add(this.txtNLMatKhau);
@@ -126,6 +128,14 @@ namespace VANPHONGPHAM
             this.groupControl1.TabIndex = 12;
             this.groupControl1.Text = "Thông tin";
             // 
+            // cmbGioiTinh
+            // 
+            this.cmbGioiTinh.FormattingEnabled = true;
+            this.cmbGioiTinh.Location = new System.Drawing.Point(1093, 69);
+            this.cmbGioiTinh.Name = "cmbGioiTinh";
+            this.cmbGioiTinh.Size = new System.Drawing.Size(121, 24);
+            this.cmbGioiTinh.TabIndex = 6;
+            // 
             // dtNgaySinh
             // 
             this.dtNgaySinh.EditValue = new System.DateTime(2021, 12, 31, 13, 15, 7, 0);
@@ -138,20 +148,10 @@ namespace VANPHONGPHAM
             this.dtNgaySinh.Size = new System.Drawing.Size(176, 22);
             this.dtNgaySinh.TabIndex = 5;
             // 
-            // ckbGioiTinh
-            // 
-            this.ckbGioiTinh.AutoSize = true;
-            this.ckbGioiTinh.Location = new System.Drawing.Point(1093, 43);
-            this.ckbGioiTinh.Name = "ckbGioiTinh";
-            this.ckbGioiTinh.Size = new System.Drawing.Size(78, 21);
-            this.ckbGioiTinh.TabIndex = 3;
-            this.ckbGioiTinh.Text = "Giới tính";
-            this.ckbGioiTinh.UseVisualStyleBackColor = true;
-            // 
             // ckbDisable
             // 
             this.ckbDisable.AutoSize = true;
-            this.ckbDisable.Location = new System.Drawing.Point(1093, 72);
+            this.ckbDisable.Location = new System.Drawing.Point(1142, 101);
             this.ckbDisable.Name = "ckbDisable";
             this.ckbDisable.Size = new System.Drawing.Size(72, 21);
             this.ckbDisable.TabIndex = 2;
@@ -184,6 +184,15 @@ namespace VANPHONGPHAM
             this.label6.Size = new System.Drawing.Size(88, 17);
             this.label6.TabIndex = 0;
             this.label6.Text = "CMND/CCCD";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(1158, 46);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(56, 17);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Giới tính";
             // 
             // label3
             // 
@@ -336,7 +345,7 @@ namespace VANPHONGPHAM
             this.MANHANVIEN.Name = "MANHANVIEN";
             this.MANHANVIEN.Visible = true;
             this.MANHANVIEN.VisibleIndex = 1;
-            this.MANHANVIEN.Width = 99;
+            this.MANHANVIEN.Width = 96;
             // 
             // TENNHANVIEN
             // 
@@ -346,18 +355,18 @@ namespace VANPHONGPHAM
             this.TENNHANVIEN.Name = "TENNHANVIEN";
             this.TENNHANVIEN.Visible = true;
             this.TENNHANVIEN.VisibleIndex = 2;
-            this.TENNHANVIEN.Width = 205;
+            this.TENNHANVIEN.Width = 200;
             // 
             // DISABLE
             // 
             this.DISABLE.Caption = "DEL";
             this.DISABLE.FieldName = "VOHIEUHOA";
-            this.DISABLE.MaxWidth = 40;
+            this.DISABLE.MaxWidth = 50;
             this.DISABLE.MinWidth = 25;
             this.DISABLE.Name = "DISABLE";
             this.DISABLE.Visible = true;
             this.DISABLE.VisibleIndex = 0;
-            this.DISABLE.Width = 31;
+            this.DISABLE.Width = 45;
             // 
             // DIACHI
             // 
@@ -367,7 +376,7 @@ namespace VANPHONGPHAM
             this.DIACHI.Name = "DIACHI";
             this.DIACHI.Visible = true;
             this.DIACHI.VisibleIndex = 3;
-            this.DIACHI.Width = 300;
+            this.DIACHI.Width = 295;
             // 
             // SDT
             // 
@@ -377,7 +386,7 @@ namespace VANPHONGPHAM
             this.SDT.Name = "SDT";
             this.SDT.Visible = true;
             this.SDT.VisibleIndex = 4;
-            this.SDT.Width = 197;
+            this.SDT.Width = 193;
             // 
             // GIOITINH
             // 
@@ -387,7 +396,6 @@ namespace VANPHONGPHAM
             this.GIOITINH.Name = "GIOITINH";
             this.GIOITINH.Visible = true;
             this.GIOITINH.VisibleIndex = 5;
-            this.GIOITINH.Width = 78;
             // 
             // NGAYSINH
             // 
@@ -397,7 +405,7 @@ namespace VANPHONGPHAM
             this.NGAYSINH.Name = "NGAYSINH";
             this.NGAYSINH.Visible = true;
             this.NGAYSINH.VisibleIndex = 6;
-            this.NGAYSINH.Width = 124;
+            this.NGAYSINH.Width = 120;
             // 
             // CMND_CCCD
             // 
@@ -407,7 +415,7 @@ namespace VANPHONGPHAM
             this.CMND_CCCD.Name = "CMND_CCCD";
             this.CMND_CCCD.Visible = true;
             this.CMND_CCCD.VisibleIndex = 7;
-            this.CMND_CCCD.Width = 193;
+            this.CMND_CCCD.Width = 203;
             // 
             // MATKHAU
             // 
@@ -593,7 +601,6 @@ namespace VANPHONGPHAM
         #endregion
 
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private System.Windows.Forms.CheckBox ckbGioiTinh;
         private System.Windows.Forms.CheckBox ckbDisable;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -638,5 +645,7 @@ namespace VANPHONGPHAM
         private DevExpress.XtraBars.BarButtonItem btnCancel;
         private DevExpress.XtraBars.BarButtonItem btnPrint;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btn1;
+        private System.Windows.Forms.ComboBox cmbGioiTinh;
+        private System.Windows.Forms.Label label10;
     }
 }

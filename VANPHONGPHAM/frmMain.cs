@@ -20,6 +20,7 @@ namespace VANPHONGPHAM
             InitializeComponent();
         }
         public string _tendn;
+        bool kiemtra = false;
 
         private void btnLoaiHang_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
@@ -74,14 +75,8 @@ namespace VANPHONGPHAM
             label5.Text = DateTime.Now.ToLongTimeString();
 
             bool t = _nv.kiemtraQuyen(_tendn);
-            if (t)
-            {
-
-            }
-            else
-            {
+            if (!t)
                 quyenChucNang(false);
-            }
         }
 
         void quyenChucNang(bool t)
@@ -165,6 +160,27 @@ namespace VANPHONGPHAM
         {
             frmPhanQuyenND frm = new frmPhanQuyenND();
             frm.ShowDialog();
+        }
+
+        private void btnDangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if(dialogResult == DialogResult.Yes)
+            {
+                kiemtra = true;
+                this.Close();
+            }
+        }
+
+        private void frmMain_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            if(!kiemtra)
+                Application.Exit();
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            radialMenu1.ShowPopup(new Point(Top));
         }
     }
 }

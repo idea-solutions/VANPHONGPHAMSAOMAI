@@ -33,7 +33,7 @@ namespace VANPHONGPHAM
             this.btnExit = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.svgImageBox1 = new DevExpress.XtraEditors.SvgImageBox();
-            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.svgImageBox2 = new DevExpress.XtraEditors.SvgImageBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
@@ -56,14 +56,14 @@ namespace VANPHONGPHAM
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.svgImageBox10 = new DevExpress.XtraEditors.SvgImageBox();
+            this.btneyeMKXN = new DevExpress.XtraEditors.SvgImageBox();
             this.svgImageBox5 = new DevExpress.XtraEditors.SvgImageBox();
             this.txtXNMK = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.svgImageBox9 = new DevExpress.XtraEditors.SvgImageBox();
+            this.btneyeMK = new DevExpress.XtraEditors.SvgImageBox();
             this.svgImageBox8 = new DevExpress.XtraEditors.SvgImageBox();
             this.txtMK = new System.Windows.Forms.TextBox();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXacNhan = new DevExpress.XtraEditors.SimpleButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.dateNgaySinh = new DevExpress.XtraEditors.DateEdit();
             this.svgImageBox7 = new DevExpress.XtraEditors.SvgImageBox();
@@ -80,10 +80,10 @@ namespace VANPHONGPHAM
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peImage.Properties)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btneyeMKXN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox5)).BeginInit();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btneyeMK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox8)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties.CalendarTimeProperties)).BeginInit();
@@ -107,7 +107,7 @@ namespace VANPHONGPHAM
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.svgImageBox1);
-            this.panel1.Controls.Add(this.txtUser);
+            this.panel1.Controls.Add(this.txtSDT);
             this.panel1.Location = new System.Drawing.Point(511, 172);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(310, 39);
@@ -124,15 +124,15 @@ namespace VANPHONGPHAM
             this.svgImageBox1.TabIndex = 1;
             this.svgImageBox1.Text = "svgImageBox1";
             // 
-            // txtUser
+            // txtSDT
             // 
-            this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUser.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(40, 9);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(266, 21);
-            this.txtUser.TabIndex = 0;
-            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
+            this.txtSDT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSDT.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDT.Location = new System.Drawing.Point(40, 9);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(266, 21);
+            this.txtSDT.TabIndex = 0;
+            this.txtSDT.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
             // panel2
             // 
@@ -364,7 +364,7 @@ namespace VANPHONGPHAM
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.svgImageBox10);
+            this.panel5.Controls.Add(this.btneyeMKXN);
             this.panel5.Controls.Add(this.svgImageBox5);
             this.panel5.Controls.Add(this.txtXNMK);
             this.panel5.Location = new System.Drawing.Point(35, 231);
@@ -373,16 +373,16 @@ namespace VANPHONGPHAM
             this.panel5.TabIndex = 17;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // svgImageBox10
+            // btneyeMKXN
             // 
-            this.svgImageBox10.Location = new System.Drawing.Point(274, 4);
-            this.svgImageBox10.Name = "svgImageBox10";
-            this.svgImageBox10.Size = new System.Drawing.Size(32, 30);
-            this.svgImageBox10.SizeMode = DevExpress.XtraEditors.SvgImageSizeMode.Squeeze;
-            this.svgImageBox10.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageBox10.SvgImage")));
-            this.svgImageBox10.TabIndex = 1;
-            this.svgImageBox10.Text = "svgImageBox1";
-            this.svgImageBox10.Click += new System.EventHandler(this.svgImageBox10_Click);
+            this.btneyeMKXN.Location = new System.Drawing.Point(274, 4);
+            this.btneyeMKXN.Name = "btneyeMKXN";
+            this.btneyeMKXN.Size = new System.Drawing.Size(32, 30);
+            this.btneyeMKXN.SizeMode = DevExpress.XtraEditors.SvgImageSizeMode.Squeeze;
+            this.btneyeMKXN.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btneyeMKXN.SvgImage")));
+            this.btneyeMKXN.TabIndex = 1;
+            this.btneyeMKXN.Text = "svgImageBox1";
+            this.btneyeMKXN.Click += new System.EventHandler(this.svgImageBox10_Click);
             // 
             // svgImageBox5
             // 
@@ -408,7 +408,7 @@ namespace VANPHONGPHAM
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Controls.Add(this.svgImageBox9);
+            this.panel8.Controls.Add(this.btneyeMK);
             this.panel8.Controls.Add(this.svgImageBox8);
             this.panel8.Controls.Add(this.txtMK);
             this.panel8.Location = new System.Drawing.Point(35, 169);
@@ -417,16 +417,16 @@ namespace VANPHONGPHAM
             this.panel8.TabIndex = 18;
             this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // svgImageBox9
+            // btneyeMK
             // 
-            this.svgImageBox9.Location = new System.Drawing.Point(274, 4);
-            this.svgImageBox9.Name = "svgImageBox9";
-            this.svgImageBox9.Size = new System.Drawing.Size(32, 30);
-            this.svgImageBox9.SizeMode = DevExpress.XtraEditors.SvgImageSizeMode.Squeeze;
-            this.svgImageBox9.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageBox9.SvgImage")));
-            this.svgImageBox9.TabIndex = 1;
-            this.svgImageBox9.Text = "svgImageBox1";
-            this.svgImageBox9.Click += new System.EventHandler(this.svgImageBox9_Click);
+            this.btneyeMK.Location = new System.Drawing.Point(274, 4);
+            this.btneyeMK.Name = "btneyeMK";
+            this.btneyeMK.Size = new System.Drawing.Size(32, 30);
+            this.btneyeMK.SizeMode = DevExpress.XtraEditors.SvgImageSizeMode.Squeeze;
+            this.btneyeMK.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btneyeMK.SvgImage")));
+            this.btneyeMK.TabIndex = 1;
+            this.btneyeMK.Text = "svgImageBox1";
+            this.btneyeMK.Click += new System.EventHandler(this.svgImageBox9_Click);
             // 
             // svgImageBox8
             // 
@@ -449,19 +449,19 @@ namespace VANPHONGPHAM
             this.txtMK.UseSystemPasswordChar = true;
             this.txtMK.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMK_KeyDown);
             // 
-            // simpleButton1
+            // btnXacNhan
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(35, 294);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(310, 39);
-            this.simpleButton1.TabIndex = 15;
-            this.simpleButton1.Text = "XÁC NHẬN";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            this.simpleButton1.Paint += new System.Windows.Forms.PaintEventHandler(this.btnXacNhan_Paint);
+            this.btnXacNhan.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXacNhan.Appearance.Options.UseFont = true;
+            this.btnXacNhan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnXacNhan.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnXacNhan.Location = new System.Drawing.Point(35, 294);
+            this.btnXacNhan.Name = "btnXacNhan";
+            this.btnXacNhan.Size = new System.Drawing.Size(310, 39);
+            this.btnXacNhan.TabIndex = 15;
+            this.btnXacNhan.Text = "XÁC NHẬN";
+            this.btnXacNhan.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.btnXacNhan.Paint += new System.Windows.Forms.PaintEventHandler(this.btnXacNhan_Paint);
             // 
             // panel7
             // 
@@ -522,7 +522,7 @@ namespace VANPHONGPHAM
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(946, 531);
             this.Controls.Add(this.btnKiemTra);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnXacNhan);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel5);
@@ -564,11 +564,11 @@ namespace VANPHONGPHAM
             ((System.ComponentModel.ISupportInitialize)(this.peImage.Properties)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btneyeMKXN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox5)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btneyeMK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox8)).EndInit();
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties.CalendarTimeProperties)).EndInit();
@@ -583,7 +583,7 @@ namespace VANPHONGPHAM
         private DevExpress.XtraEditors.SimpleButton btnExit;
         private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraEditors.SvgImageBox svgImageBox1;
-        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraEditors.SvgImageBox svgImageBox2;
         private System.Windows.Forms.TextBox txtHoTen;
@@ -611,9 +611,9 @@ namespace VANPHONGPHAM
         private System.Windows.Forms.Panel panel8;
         private DevExpress.XtraEditors.SvgImageBox svgImageBox8;
         private System.Windows.Forms.TextBox txtMK;
-        private DevExpress.XtraEditors.SvgImageBox svgImageBox10;
-        private DevExpress.XtraEditors.SvgImageBox svgImageBox9;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SvgImageBox btneyeMKXN;
+        private DevExpress.XtraEditors.SvgImageBox btneyeMK;
+        private DevExpress.XtraEditors.SimpleButton btnXacNhan;
         private System.Windows.Forms.Panel panel7;
         private DevExpress.XtraEditors.DateEdit dateNgaySinh;
         private DevExpress.XtraEditors.SvgImageBox svgImageBox7;

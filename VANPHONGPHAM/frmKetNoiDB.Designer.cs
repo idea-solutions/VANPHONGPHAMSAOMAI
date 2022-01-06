@@ -30,17 +30,17 @@ namespace VANPHONGPHAM
         private void InitializeComponent()
         {
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.cboDatabase = new System.Windows.Forms.ComboBox();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnKiemtra = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtServer = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtServer = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnKiemtra = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.cboDatabase = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.SuspendLayout();
@@ -65,34 +65,65 @@ namespace VANPHONGPHAM
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Thông tin kết nối";
             // 
-            // cboDatabase
+            // label1
             // 
-            this.cboDatabase.FormattingEnabled = true;
-            this.cboDatabase.Location = new System.Drawing.Point(121, 128);
-            this.cboDatabase.Name = "cboDatabase";
-            this.cboDatabase.Size = new System.Drawing.Size(269, 24);
-            this.cboDatabase.TabIndex = 3;
-            this.cboDatabase.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cboDatabase_MouseClick);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(30, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Server";
             // 
-            // btnThoat
+            // txtServer
             // 
-            this.btnThoat.Location = new System.Drawing.Point(312, 187);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 40);
-            this.btnThoat.TabIndex = 2;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            this.txtServer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtServer.Location = new System.Drawing.Point(121, 44);
+            this.txtServer.Name = "txtServer";
+            this.txtServer.Size = new System.Drawing.Size(269, 23);
+            this.txtServer.TabIndex = 1;
             // 
-            // btnLuu
+            // label2
             // 
-            this.btnLuu.Location = new System.Drawing.Point(224, 187);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(75, 40);
-            this.btnLuu.TabIndex = 2;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(30, 75);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Usename";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUsername.Location = new System.Drawing.Point(121, 72);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(269, 23);
+            this.txtUsername.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(29, 104);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 17);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Password";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPassword.Location = new System.Drawing.Point(121, 100);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(269, 23);
+            this.txtPassword.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(30, 133);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 17);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Database";
             // 
             // btnKiemtra
             // 
@@ -104,65 +135,34 @@ namespace VANPHONGPHAM
             this.btnKiemtra.UseVisualStyleBackColor = true;
             this.btnKiemtra.Click += new System.EventHandler(this.btnKiemtra_Click);
             // 
-            // label4
+            // btnLuu
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 133);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 17);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Database";
+            this.btnLuu.Location = new System.Drawing.Point(224, 187);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(75, 40);
+            this.btnLuu.TabIndex = 2;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // txtPassword
+            // btnThoat
             // 
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPassword.Location = new System.Drawing.Point(121, 100);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(269, 23);
-            this.txtPassword.TabIndex = 1;
+            this.btnThoat.Location = new System.Drawing.Point(312, 187);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(75, 40);
+            this.btnThoat.TabIndex = 2;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // label3
+            // cboDatabase
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 104);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 17);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Password";
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsername.Location = new System.Drawing.Point(121, 72);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(269, 23);
-            this.txtUsername.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 75);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Usename";
-            // 
-            // txtServer
-            // 
-            this.txtServer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtServer.Location = new System.Drawing.Point(121, 44);
-            this.txtServer.Name = "txtServer";
-            this.txtServer.Size = new System.Drawing.Size(269, 23);
-            this.txtServer.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Server";
+            this.cboDatabase.FormattingEnabled = true;
+            this.cboDatabase.Location = new System.Drawing.Point(121, 128);
+            this.cboDatabase.Name = "cboDatabase";
+            this.cboDatabase.Size = new System.Drawing.Size(269, 24);
+            this.cboDatabase.TabIndex = 3;
+            this.cboDatabase.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cboDatabase_MouseClick);
             // 
             // frmKetNoiDB
             // 
@@ -171,6 +171,8 @@ namespace VANPHONGPHAM
             this.ClientSize = new System.Drawing.Size(434, 251);
             this.Controls.Add(this.groupControl1);
             this.IconOptions.Image = global::VANPHONGPHAM.Properties.Resources.Nhiều_màu_sắc_Hình_khối_Thiết_kế___Nghệ_thuật_Biểu_trưng__3_;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmKetNoiDB";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kết nối cơ sở dữ liệu";

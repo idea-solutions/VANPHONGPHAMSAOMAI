@@ -52,5 +52,11 @@ namespace VANPHONGPHAM
             else
                 btnYes.Enabled = false;
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            Panel p = sender as Panel;
+            ControlPaint.DrawBorder(e.Graphics, p.DisplayRectangle, Color.Blue, ButtonBorderStyle.Solid);
+        }
     }
 }

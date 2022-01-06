@@ -29,10 +29,12 @@ namespace VANPHONGPHAM
             loadData();
             btnChuyenlen.Click += BtnChuyen_Click;
             btnChuyenxuong.Click += BtnChuyenxuong_Click;
-            if (objMain._tendn != "ADMIN")
+            if (objMain._tendn == "ADMIN" || objMain._tendn=="admin")
             {
-                gcQL.Enabled = false;
+                //gcQL.Enabled = false;
             }
+            else
+                gcQL.Enabled = false;
         }
 
         public void loadData()

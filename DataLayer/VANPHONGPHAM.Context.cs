@@ -36,6 +36,7 @@ namespace DataLayer
         public virtual DbSet<MAT_HANG> MAT_HANG { get; set; }
         public virtual DbSet<NHA_CUNG_CAP> NHA_CUNG_CAP { get; set; }
         public virtual DbSet<NHAN_VIEN> NHAN_VIEN { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     
         [DbFunction("Entities", "FNMAT_HANG")]
         public virtual IQueryable<FNMAT_HANG_Result> FNMAT_HANG()

@@ -26,7 +26,6 @@ namespace VANPHONGPHAM
         {
             _cthd = new HOADONMATHANG();
             btnYes.Enabled = false;
-            btnNo.Enabled = false;
             ckbDongY.Checked = false;
             txtPASS.Visible = false;
             label2.Visible = false;
@@ -44,7 +43,6 @@ namespace VANPHONGPHAM
                 label2.Visible = false;
                 txtPASS.Visible = false;
                 btnYes.Enabled = false;
-                btnNo.Enabled = false;
             }
         }
 
@@ -68,13 +66,17 @@ namespace VANPHONGPHAM
             if (txtPASS.TextLength >= 8)
             {
                 btnYes.Enabled = true;
-                btnNo.Enabled = true;
             }
             else
             {
                 btnYes.Enabled = false;
-                btnNo.Enabled = false;
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            Panel p = sender as Panel;
+            ControlPaint.DrawBorder(e.Graphics, p.DisplayRectangle, Color.Blue, ButtonBorderStyle.Solid);
         }
     }
 }

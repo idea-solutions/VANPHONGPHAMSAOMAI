@@ -57,6 +57,10 @@ namespace VANPHONGPHAM
             _nv = new NHANVIEN();
             loadData();
             showHideControl(true);
+
+            cmbGioiTinh.Items.Add("Nam");
+            cmbGioiTinh.Items.Add("Nữ");
+            cmbGioiTinh.Items.Add("Khác");
         }
 
         private void Btn1_Click(object sender, EventArgs e)
@@ -90,7 +94,7 @@ namespace VANPHONGPHAM
             txtSDT.Enabled = t;
             dtNgaySinh.Enabled = t;
             txtTenDangNhap.Enabled = t;
-            ckbGioiTinh.Enabled = t;
+            cmbGioiTinh.Enabled = t;
             ckbDisable.Enabled = t;
         }
 
@@ -104,7 +108,7 @@ namespace VANPHONGPHAM
             txtSDT.Text = "";
             txtMatKhau.Text = "";
             txtNLMatKhau.Text = "";
-            ckbGioiTinh.Checked = false;
+            cmbGioiTinh.Text = "";
             ckbDisable.Checked = false;
         }
 
@@ -148,12 +152,13 @@ namespace VANPHONGPHAM
                     nv.TENNHANVIEN = txtTen.Text;
                     nv.DIACHI = txtDiaChi.Text;
                     nv.SDT = txtSDT.Text;
-                    nv.GIOITINH = ckbGioiTinh.Checked;
+                    nv.GIOITINH = cmbGioiTinh.Text;
                     nv.NGAYSINH = dtNgaySinh.DateTime;
                     nv.CMND_CCCD = txtCMND.Text;
                     nv.TENDANGNHAP = txtTenDangNhap.Text;
                     nv.MATKHAU = txtMatKhau.Text;
                     nv.VOHIEUHOA = ckbDisable.Checked;
+                    nv.LAQUANLY = false;
                     _nv.add(nv);
                 }
                 else
@@ -163,7 +168,7 @@ namespace VANPHONGPHAM
                     nv.TENNHANVIEN = txtTen.Text;
                     nv.DIACHI = txtDiaChi.Text;
                     nv.SDT = txtSDT.Text;
-                    nv.GIOITINH = ckbGioiTinh.Checked;
+                    nv.GIOITINH = cmbGioiTinh.Text;
                     nv.NGAYSINH = dtNgaySinh.DateTime;
                     nv.CMND_CCCD = txtCMND.Text;
                     //nv.TENDANGNHAP = txtTenDangNhap.Text;
@@ -204,7 +209,7 @@ namespace VANPHONGPHAM
                     //txtMatKhau.Text = gvDanhSach.GetFocusedRowCellValue("MATKHAU").ToString();
                     dtNgaySinh.Text = gvDanhSach.GetFocusedRowCellValue("NGAYSINH").ToString();
                     ckbDisable.Checked = bool.Parse(gvDanhSach.GetFocusedRowCellValue("VOHIEUHOA").ToString());
-                    ckbGioiTinh.Checked = bool.Parse(gvDanhSach.GetFocusedRowCellValue("GIOITINH").ToString());
+                    cmbGioiTinh.Text = gvDanhSach.GetFocusedRowCellValue("GIOITINH").ToString();
                 }
             }
         }

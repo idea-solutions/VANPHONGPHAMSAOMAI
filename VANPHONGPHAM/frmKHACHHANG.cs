@@ -55,16 +55,12 @@ namespace VANPHONGPHAM
         private void frmKHACHHANG_Load(object sender, EventArgs e)
         {
             
-            _kh = new KHACHHANG();
+            _kh = new KHACHHANG(); // tạo ra 1 đối tượng khách hàng mới
             loadData();
             showHideControl(true);
             _nv = new NHANVIEN();
             bool t = _nv.kiemtraQuyen(objMain._tendn);
-            if (t)
-            {
-
-            }
-            else
+            if (!t)
             {
                 btnAdd.Enabled = false;
                 btnEdit.Enabled = false;
@@ -134,7 +130,7 @@ namespace VANPHONGPHAM
             
             if (txtSDT.TextLength <= 10)
             {
-                if (_them)
+                if (_them == true)
                 {
                     KHACH_HANG kh = new KHACH_HANG();
                     kh.SDT = txtSDT.Text;
@@ -158,7 +154,7 @@ namespace VANPHONGPHAM
                 showHideControl(true);
             }
             else
-                MessageBox.Show("Vui lòng nhập đúng số điện thoại (10 ký tự)");
+                MessageBox.Show("Vui lòng nhập đúng số điện thoại (10 số)");
         }
 
 

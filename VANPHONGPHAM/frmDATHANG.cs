@@ -30,6 +30,7 @@ namespace VANPHONGPHAM
         DONDATHANG _ddh;
         MATHANG _mh;
         LOAIMATHANG _loaimh;
+        NHANVIEN _nv;
         bool _them;
         string _mamh;
 
@@ -37,6 +38,7 @@ namespace VANPHONGPHAM
         frmMain objMain = (frmMain)Application.OpenForms["frmMain"];
         private void frmDATHANG_Load(object sender, EventArgs e)
         {
+            _nv = new NHANVIEN();
             _ddhmh = new DONDATHANGMATHANG();
             _ncc = new NHACUNGCAP();
             dateEditTuNgay.EditValue = GetFirstDayOfMonth(DateTime.Now);
@@ -266,7 +268,7 @@ namespace VANPHONGPHAM
             if (_them)
             {
                 ddh.NGAYDAT = DateTime.Now;
-                ddh.MANV = "NV02";
+                ddh.MANV = _nv.getItemByTDN(objMain._tendn).MANHANVIEN;
                 ddh.MANCC = cmbNhaCungCap.SelectedValue.ToString();
                 var LuuDDH = _ddh.add(ddh);
                 int _maDDH = LuuDDH.MADDH;
@@ -367,45 +369,40 @@ namespace VANPHONGPHAM
 
         private void XuatReport(string _reportName, string _tieude)
         {
-            if (_mamh != null || _mamh == null)
+            Form frm = new Form();
+            CrystalReportViewer Crv = new CrystalReportViewer();
+            Crv.ShowGroupTreeButton = false;
+            Crv.ShowParameterPanelButton = false;
+            Crv.ToolPanelView = ToolPanelViewType.None;
+            TableLogOnInfo Thongtin;
+            ReportDocument doc = new ReportDocument();
+            doc.Load(System.Windows.Forms.Application.StartupPath + "\\Reports\\" + _reportName + @".rpt");
+            Thongtin = doc.Database.Tables[0].LogOnInfo;
+            Thongtin.ConnectionInfo.ServerName = myFun._srv;
+            Thongtin.ConnectionInfo.UserID = myFun._us;
+            Thongtin.ConnectionInfo.Password = myFun._pw;
+            Thongtin.ConnectionInfo.DatabaseName = myFun._db;
+            doc.Database.Tables[0].ApplyLogOnInfo(Thongtin);
+            try
             {
-                Form frm = new Form();
-                CrystalReportViewer Crv = new CrystalReportViewer();
-                Crv.ShowGroupTreeButton = false;
-                Crv.ShowParameterPanelButton = false;
-                Crv.ToolPanelView = ToolPanelViewType.None;
-                TableLogOnInfo Thongtin;
-                ReportDocument doc = new ReportDocument();
-                doc.Load(System.Windows.Forms.Application.StartupPath + "\\Reports\\" + _reportName + @".rpt");
-                Thongtin = doc.Database.Tables[0].LogOnInfo;
-                Thongtin.ConnectionInfo.ServerName = myFun._srv;
-                Thongtin.ConnectionInfo.UserID = myFun._us;
-                Thongtin.ConnectionInfo.Password = myFun._pw;
-                Thongtin.ConnectionInfo.DatabaseName = myFun._db;
-                doc.Database.Tables[0].ApplyLogOnInfo(Thongtin);
-                try
-                {
-                    DateTime tungay = dateEditTuNgay.DateTime.Date;
-                    DateTime denngay = dateEditDenNgay.DateTime.Date;
+                DateTime tungay = dateEditTuNgay.DateTime.Date;
+                DateTime denngay = dateEditDenNgay.DateTime.Date;
 
-                    // thông báo
-                    doc.SetParameterValue("@TUNGAY", tungay);
-                    doc.SetParameterValue("@DENNGAY", denngay);
-                    Crv.Dock = DockStyle.Fill;
-                    Crv.ReportSource = doc;
-                    frm.Controls.Add(Crv);
-                    Crv.Refresh();
-                    frm.Text = _tieude;
-                    frm.WindowState = FormWindowState.Maximized;
-                    frm.ShowDialog();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi: " + ex.Message);
-                }
+                // thông báo
+                doc.SetParameterValue("@TUNGAY", tungay);
+                doc.SetParameterValue("@DENNGAY", denngay);
+                Crv.Dock = DockStyle.Fill;
+                Crv.ReportSource = doc;
+                frm.Controls.Add(Crv);
+                Crv.Refresh();
+                frm.Text = _tieude;
+                frm.WindowState = FormWindowState.Maximized;
+                frm.ShowDialog();
             }
-            else
-                MessageBox.Show("Không có dữ liệu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
         }
     }
 }

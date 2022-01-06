@@ -18,7 +18,34 @@ namespace BusinessLayer
 
         public List<NHAN_VIEN> getAll()
         {
-            return db.NHAN_VIEN.OrderBy(x => x.TENNHANVIEN).ToList();
+            var lst = db.NHAN_VIEN.ToList();
+
+            List<NHAN_VIEN> lstNV = new List<NHAN_VIEN>();
+            NHAN_VIEN objNV;
+
+            foreach (var item in lst)
+            {
+                if (item.TENDANGNHAP == "ADMIN" || item.TENDANGNHAP == "admin")
+                {
+                }
+                else
+                {
+                    objNV = new NHAN_VIEN();
+                    objNV.MANHANVIEN = item.MANHANVIEN;
+                    objNV.TENNHANVIEN = item.TENNHANVIEN;
+                    objNV.SDT = item.SDT;
+                    objNV.NGAYSINH = item.NGAYSINH;
+                    objNV.DIACHI = item.DIACHI;
+                    objNV.TENDANGNHAP = item.TENDANGNHAP;
+                    objNV.MATKHAU = item.MATKHAU;
+                    objNV.GIOITINH = item.GIOITINH;
+                    objNV.VOHIEUHOA = item.VOHIEUHOA;
+                    objNV.LAQUANLY = item.LAQUANLY;
+                    objNV.CMND_CCCD = item.CMND_CCCD;
+                    lstNV.Add(objNV);
+                }
+            }
+            return lstNV.OrderBy(x => x.TENNHANVIEN).ToList();
         }
 
         public NHAN_VIEN getItem(string manv)
@@ -30,6 +57,12 @@ namespace BusinessLayer
         {
             return db.NHAN_VIEN.FirstOrDefault(x => x.TENDANGNHAP == user && x.MATKHAU == pass);
         }
+
+        public NHAN_VIEN getItemByTDN(string tendangnhap)
+        {
+            return db.NHAN_VIEN.FirstOrDefault(x => x.TENDANGNHAP == tendangnhap);
+        }
+
         public NHAN_VIEN getItemQMK(DateTime ngaysinh, string cmnd, string ten, string diachi)
         {
             return db.NHAN_VIEN.FirstOrDefault(x => x.NGAYSINH == ngaysinh && x.CMND_CCCD == cmnd && x.TENNHANVIEN == ten && x.DIACHI == diachi);
@@ -54,7 +87,10 @@ namespace BusinessLayer
 
             foreach (var item in lst)
             {
-                if (item.TENDANGNHAP != "ADMIN")
+                if (item.TENDANGNHAP == "ADMIN" || item.TENDANGNHAP == "admin")
+                {
+                }
+                else
                 {
                     objNV = new NHAN_VIEN();
                     objNV.MANHANVIEN = item.MANHANVIEN;

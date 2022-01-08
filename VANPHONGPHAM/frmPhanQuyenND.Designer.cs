@@ -86,17 +86,21 @@ namespace VANPHONGPHAM
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.grNV);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(998, 760);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1182, 760);
             this.splitContainerControl1.SplitterPosition = 382;
             this.splitContainerControl1.TabIndex = 0;
             // 
             // groupControl1
             // 
+            this.groupControl1.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.groupControl1.Appearance.Options.UseFont = true;
+            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.gcQL);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(998, 382);
+            this.groupControl1.Size = new System.Drawing.Size(1182, 382);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "Nhân viên Quản lý";
             // 
@@ -108,7 +112,7 @@ namespace VANPHONGPHAM
             this.gcQL.Name = "gcQL";
             this.gcQL.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnChuyenxuong});
-            this.gcQL.Size = new System.Drawing.Size(994, 352);
+            this.gcQL.Size = new System.Drawing.Size(1178, 352);
             this.gcQL.TabIndex = 0;
             this.gcQL.UseDisabledStatePainter = false;
             this.gcQL.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -117,6 +121,10 @@ namespace VANPHONGPHAM
             // 
             // gvQL
             // 
+            this.gvQL.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.gvQL.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gvQL.Appearance.Row.Font = new System.Drawing.Font("Segoe UI Variable Small", 10.2F);
+            this.gvQL.Appearance.Row.Options.UseFont = true;
             this.gvQL.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn2,
             this.gridColumn3,
@@ -213,11 +221,15 @@ namespace VANPHONGPHAM
             // 
             // grNV
             // 
+            this.grNV.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.grNV.Appearance.Options.UseFont = true;
+            this.grNV.AppearanceCaption.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.grNV.AppearanceCaption.Options.UseFont = true;
             this.grNV.Controls.Add(this.gcNV);
             this.grNV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grNV.Location = new System.Drawing.Point(0, 0);
             this.grNV.Name = "grNV";
-            this.grNV.Size = new System.Drawing.Size(998, 366);
+            this.grNV.Size = new System.Drawing.Size(1182, 366);
             this.grNV.TabIndex = 3;
             this.grNV.Text = "Nhân viên bán hàng";
             // 
@@ -229,7 +241,7 @@ namespace VANPHONGPHAM
             this.gcNV.Name = "gcNV";
             this.gcNV.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnChuyenlen});
-            this.gcNV.Size = new System.Drawing.Size(994, 336);
+            this.gcNV.Size = new System.Drawing.Size(1178, 336);
             this.gcNV.TabIndex = 0;
             this.gcNV.UseDisabledStatePainter = false;
             this.gcNV.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -238,6 +250,10 @@ namespace VANPHONGPHAM
             // 
             // gvNV
             // 
+            this.gvNV.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.gvNV.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gvNV.Appearance.Row.Font = new System.Drawing.Font("Segoe UI Variable Small", 10.2F);
+            this.gvNV.Appearance.Row.Options.UseFont = true;
             this.gvNV.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn8,
@@ -327,8 +343,9 @@ namespace VANPHONGPHAM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(998, 760);
+            this.ClientSize = new System.Drawing.Size(1182, 760);
             this.Controls.Add(this.splitContainerControl1);
+            this.IconOptions.Image = global::VANPHONGPHAM.Properties.Resources.Nhiều_màu_sắc_Hình_khối_Thiết_kế___Nghệ_thuật_Biểu_trưng__3_;
             this.Name = "frmPhanQuyenND";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PHÂN QUYỀN NGƯỜI DÙNG";

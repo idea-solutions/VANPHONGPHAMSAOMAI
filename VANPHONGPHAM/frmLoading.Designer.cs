@@ -70,7 +70,7 @@ namespace VANPHONGPHAM
             this.peImage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.peImage.Properties.ZoomAcceleration = 100D;
             this.peImage.Properties.ZoomPercent = 10D;
-            this.peImage.Size = new System.Drawing.Size(668, 400);
+            this.peImage.Size = new System.Drawing.Size(651, 403);
             this.peImage.TabIndex = 11;
             // 
             // lbTime

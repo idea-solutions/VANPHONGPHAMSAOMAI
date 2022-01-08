@@ -62,10 +62,13 @@ namespace VANPHONGPHAM
             bool t = _nv.kiemtraQuyen(objMain._tendn);
             if (!t)
             {
-                btnAdd.Enabled = false;
-                btnEdit.Enabled = false;
-                btnDelete.Enabled = false;
+                //btnAdd.Enabled = false;
+                //btnEdit.Enabled = false;
+                //btnDelete.Enabled = false;
             }
+            cmbGioiTinh.Items.Add("Nam");
+            cmbGioiTinh.Items.Add("Nữ");
+            cmbGioiTinh.Items.Add("Khác");
         }
 
         private void loadData()
@@ -87,7 +90,7 @@ namespace VANPHONGPHAM
         {
             txtTen.Enabled = t;
             txtSDT.Enabled = t;
-            ckbGioiTinh.Enabled = t;
+            cmbGioiTinh.Enabled = t;
             ckbDisable.Enabled = t;
         }
 
@@ -95,7 +98,7 @@ namespace VANPHONGPHAM
         {
             txtTen.Text = "";
             txtSDT.Text = "";
-            ckbGioiTinh.Checked = false;
+            cmbGioiTinh.Text = "";
             ckbDisable.Checked = false;
         }
 
@@ -136,14 +139,14 @@ namespace VANPHONGPHAM
                     kh.SDT = txtSDT.Text;
                     kh.TENKH = txtTen.Text;
                     kh.VOHIEUHOA = ckbDisable.Checked;
-                    kh.GIOITINH = ckbGioiTinh.Checked;
+                    kh.GIOITINH = cmbGioiTinh.Text;
                     _kh.add(kh);
                 }
                 else
                 {
                     KHACH_HANG kh = _kh.getItem(_makh);
                     kh.SDT = txtSDT.Text;
-                    kh.GIOITINH = ckbGioiTinh.Checked;
+                    kh.GIOITINH = cmbGioiTinh.Text;
                     kh.TENKH = txtTen.Text;
                     kh.VOHIEUHOA = ckbDisable.Checked;
                     _kh.update(kh);
@@ -175,7 +178,7 @@ namespace VANPHONGPHAM
                     txtSDT.Text = gvDanhSach.GetFocusedRowCellValue("SDT").ToString();
                     txtTen.Text = gvDanhSach.GetFocusedRowCellValue("TENKH").ToString();
                     ckbDisable.Checked = bool.Parse(gvDanhSach.GetFocusedRowCellValue("VOHIEUHOA").ToString());
-                    ckbGioiTinh.Checked = bool.Parse(gvDanhSach.GetFocusedRowCellValue("GIOITINH").ToString());
+                    cmbGioiTinh.Text = gvDanhSach.GetFocusedRowCellValue("GIOITINH").ToString();
                 }
             }
         }

@@ -47,7 +47,7 @@ namespace VANPHONGPHAM
             // peImage
             // 
             this.peImage.EditValue = ((object)(resources.GetObject("peImage.EditValue")));
-            this.peImage.Location = new System.Drawing.Point(0, -3);
+            this.peImage.Location = new System.Drawing.Point(-9, -20);
             this.peImage.Margin = new System.Windows.Forms.Padding(4);
             this.peImage.Name = "peImage";
             this.peImage.Properties.AllowFocused = false;
@@ -56,7 +56,7 @@ namespace VANPHONGPHAM
             this.peImage.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.peImage.Properties.ShowMenu = false;
             this.peImage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.peImage.Size = new System.Drawing.Size(608, 354);
+            this.peImage.Size = new System.Drawing.Size(612, 372);
             this.peImage.TabIndex = 9;
             // 
             // frmloaddulieu

@@ -49,7 +49,7 @@
           </Key>
           <Property Name="MAKH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TENKH" Type="nvarchar" MaxLength="30" Nullable="false" />
-          <Property Name="GIOITINH" Type="bit" Nullable="false" />
+          <Property Name="GIOITINH" Type="nvarchar" MaxLength="5" Nullable="false" />
           <Property Name="SDT" Type="varchar" MaxLength="10" />
           <Property Name="VOHIEUHOA" Type="bit" Nullable="false" />
         </EntityType>
@@ -319,6 +319,16 @@
             </CollectionType>
           </ReturnType>
         </Function>
+        <Function Name="FNTHONGKEDOANHTHU" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="Ngay" Type="nvarchar" MaxLength="30" />
+                <Property Name="TongTien" Type="float" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
         <Function Name="HOADON" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="NGAY" Type="datetime" Mode="In" />
         </Function>
@@ -455,6 +465,7 @@
             <End Role="LOAI_MAT_HANG" EntitySet="LOAI_MAT_HANG" />
             <End Role="MAT_HANG" EntitySet="MAT_HANG" />
           </AssociationSet>
+          <FunctionImport Name="FNTHONGKEDOANHTHU" IsComposable="true" ReturnType="Collection(VANPHONGPHAM.FNTHONGKEDOANHTHU_Result)" />
           </EntityContainer>
         <ComplexType Name="FNMAT_HANG_Result">
           <Property Type="String" Name="MAMH" Nullable="false" MaxLength="5" />
@@ -596,7 +607,7 @@
           </Key>
           <Property Name="MAKH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TENKH" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="GIOITINH" Type="Boolean" Nullable="false" />
+          <Property Name="GIOITINH" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
           <Property Name="SDT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="VOHIEUHOA" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="HOA_DON" Relationship="VANPHONGPHAM.FK_HOA_DON_KHACH_HANG" FromRole="KHACH_HANG" ToRole="HOA_DON" />
@@ -773,6 +784,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <ComplexType Name="FNTHONGKEDOANHTHU_Result">
+          <Property Type="String" Name="Ngay" Nullable="true" MaxLength="30" />
+          <Property Type="Double" Name="TongTien" Nullable="true" />
+        </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1030,6 +1045,14 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="FNTHONGKEDOANHTHU" FunctionName="VANPHONGPHAM.Store.FNTHONGKEDOANHTHU">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="VANPHONGPHAM.FNTHONGKEDOANHTHU_Result">
+                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

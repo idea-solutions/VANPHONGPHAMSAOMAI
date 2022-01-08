@@ -55,7 +55,7 @@ namespace BusinessLayer
 
         public NHAN_VIEN getItemDN(string user, string pass)
         {
-            return db.NHAN_VIEN.FirstOrDefault(x => x.TENDANGNHAP == user && x.MATKHAU == pass);
+            return db.NHAN_VIEN.FirstOrDefault(x => x.TENDANGNHAP == user && x.MATKHAU == pass && x.VOHIEUHOA == false);
         }
 
         public NHAN_VIEN getItemByTDN(string tendangnhap)

@@ -33,7 +33,8 @@ namespace VANPHONGPHAM
 
         private void ckbDongY_CheckedChanged(object sender, EventArgs e)
         {
-            if(ckbDongY.Checked == true)
+            
+            if (ckbDongY.Checked == true)
             {
                 txtPASS.Visible = true;
                 label2.Visible = true;
@@ -76,7 +77,13 @@ namespace VANPHONGPHAM
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             Panel p = sender as Panel;
-            ControlPaint.DrawBorder(e.Graphics, p.DisplayRectangle, Color.Blue, ButtonBorderStyle.Solid);
+            ControlPaint.DrawBorder(e.Graphics, p.DisplayRectangle, Color.Red, ButtonBorderStyle.Solid);
+        }
+
+        private void panel_Paint2(object sender, PaintEventArgs e)
+        {
+            Panel p = sender as Panel;
+            ControlPaint.DrawBorder(e.Graphics, p.DisplayRectangle, Color.Red, ButtonBorderStyle.Solid);
         }
     }
 }

@@ -41,15 +41,6 @@ namespace VANPHONGPHAM
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            if (txtUser.TextLength <= 0)
-            {
-                lbTaikhoan.Visible = true;
-            }
-
-            if (txtPass.TextLength <= 0)
-            {
-                lbMatkhau.Visible = true;
-            }
             if(txtPass.TextLength!=0 && txtUser.TextLength != 0)
             {
                 var nv = _nv.getItemDN(txtUser.Text, txtPass.Text);

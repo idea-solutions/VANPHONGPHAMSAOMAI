@@ -150,5 +150,11 @@ namespace DataLayer
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<KHACHHANG_Result>("KHACHHANG");
         }
+    
+        [DbFunction("Entities", "FNTHONGKEDOANHTHU")]
+        public virtual IQueryable<FNTHONGKEDOANHTHU_Result> FNTHONGKEDOANHTHU()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<FNTHONGKEDOANHTHU_Result>("[Entities].[FNTHONGKEDOANHTHU]()");
+        }
     }
 }

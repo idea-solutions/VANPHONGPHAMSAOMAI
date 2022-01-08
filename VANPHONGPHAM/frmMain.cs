@@ -53,7 +53,7 @@ namespace VANPHONGPHAM
         }
 
         THONGKE _thongke;
-        Series series = new Series("", ViewType.Pie); // tròn
+        Series series = new Series("", ViewType.Spline); // tròn
         Series series1 = new Series("", ViewType.Bar); // cột
         Series series2 = new Series("", ViewType.Bar); // cột
 
@@ -75,8 +75,6 @@ namespace VANPHONGPHAM
             label5.Text = DateTime.Now.ToLongTimeString();
 
             bool t = _nv.kiemtraQuyen(_tendn);
-            if (!t)
-                quyenChucNang(false);
         }
 
         void quyenChucNang(bool t)
@@ -96,14 +94,17 @@ namespace VANPHONGPHAM
             lstKH = new List<OBJTHONGKEKHACHHANG>();
             lstKH = _thongke.thongKeKhachHang();
 
+            List<OBJTHONGKEDOANHTHU> lstDThu;
+            lstDThu = new List<OBJTHONGKEDOANHTHU>();
+            lstDThu = _thongke.thongKeDoanhThu();
 
             List<OBJTHONGKEBANHANG> lstBH;
             lstBH= new List<OBJTHONGKEBANHANG>();
             lstBH = _thongke.thongKeBanHang();
             series.Points.Clear();
-            foreach (var item in lstMH)
+            foreach (var item in lstDThu)
             {
-                series.Points.Add(new SeriesPoint(item.TENLOAI, item.SOLUONG));
+                series.Points.Add(new SeriesPoint(item.Ngay, item.ThanhTien));
             }
             foreach (var item in lstBH)
             {
@@ -178,9 +179,16 @@ namespace VANPHONGPHAM
                 Application.Exit();
         }
 
-        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btnDoiMk_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            radialMenu1.ShowPopup(new Point(Top));
+            frmDoiMK frm = new frmDoiMK();
+            frm.ShowDialog();
+        }
+
+        private void btnThongTin_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmThongTinNhanVien frm = new frmThongTinNhanVien();
+            frm.ShowDialog();
         }
     }
 }

@@ -51,6 +51,7 @@ namespace VANPHONGPHAM
                 BeginInvoke(new MethodInvoker(delegate { cal(_Width, gvDanhSach); })); // Tăng kích thước nếu text vượt quá
             }
         }
+        frmMain frm = (frmMain)Application.OpenForms["frmMain"];
 
         private void frmNHANVIEN_Load(object sender, EventArgs e)
         {
@@ -61,6 +62,17 @@ namespace VANPHONGPHAM
             cmbGioiTinh.Items.Add("Nam");
             cmbGioiTinh.Items.Add("Nữ");
             cmbGioiTinh.Items.Add("Khác");
+
+            if (frm._tendn == "ADMIN" || frm._tendn == "admin")
+            {
+            }
+            else
+            {
+                btnDelete.Enabled = false;
+                btnEdit.Enabled = false;
+            }
+
+            showInfo(false);
         }
 
         private void Btn1_Click(object sender, EventArgs e)
@@ -81,6 +93,16 @@ namespace VANPHONGPHAM
             btnDelete.Enabled = t;
             btnSave.Enabled = !t;
             btnCancel.Enabled = !t;
+        }
+
+        void showInfo(bool t)
+        {
+            txtMatKhau.Visible = t;
+            txtNLMatKhau.Visible = t;
+            txtTenDangNhap.Visible = t;
+            label7.Visible = t;
+            label8.Visible = t;
+            label9.Visible = t;
         }
 
         void enable(bool t)
@@ -119,6 +141,8 @@ namespace VANPHONGPHAM
             enable(true);
             reset(true);
             ckbDisable.Enabled = false;
+            showInfo(true);
+
         }
 
         private void btnSua_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -179,6 +203,8 @@ namespace VANPHONGPHAM
                 _them = false;
                 loadData();
                 enable(false);
+                showInfo(false);
+
             }
             else
             {
@@ -191,6 +217,7 @@ namespace VANPHONGPHAM
             _them = false;
             showHideControl(true);
             enable(false);
+            showInfo(false);
         }
 
         private void gvDanhSach_Click(object sender, EventArgs e)
@@ -205,9 +232,10 @@ namespace VANPHONGPHAM
                     txtDiaChi.Text = gvDanhSach.GetFocusedRowCellValue("DIACHI").ToString();
                     txtSDT.Text = gvDanhSach.GetFocusedRowCellValue("SDT").ToString();
                     txtCMND.Text = gvDanhSach.GetFocusedRowCellValue("CMND_CCCD").ToString();
-                    txtTenDangNhap.Text = gvDanhSach.GetFocusedRowCellValue("TENDANGNHAP").ToString();
+                    //txtTenDangNhap.Text = gvDanhSach.GetFocusedRowCellValue("TENDANGNHAP").ToString();
                     //txtMatKhau.Text = gvDanhSach.GetFocusedRowCellValue("MATKHAU").ToString();
-                    dtNgaySinh.Text = gvDanhSach.GetFocusedRowCellValue("NGAYSINH").ToString();
+                    DateTime a = DateTime.Parse(gvDanhSach.GetFocusedRowCellValue("NGAYSINH").ToString());
+                    dtNgaySinh.Text = a.ToString("dd/MM/yyyy");
                     ckbDisable.Checked = bool.Parse(gvDanhSach.GetFocusedRowCellValue("VOHIEUHOA").ToString());
                     cmbGioiTinh.Text = gvDanhSach.GetFocusedRowCellValue("GIOITINH").ToString();
                 }

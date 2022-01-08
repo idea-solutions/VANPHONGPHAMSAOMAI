@@ -65,6 +65,7 @@
     <Compile Include="OBJLOAIMATHANG.cs" />
     <Compile Include="OBJMATHANG.cs" />
     <Compile Include="OBJTHONGKEBANHANG.cs" />
+    <Compile Include="OBJTHONGKEDOANHTHU.cs" />
     <Compile Include="OBJTHONGKEKHACHHANG.cs" />
     <Compile Include="OBJTHONGKELOAIMH.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

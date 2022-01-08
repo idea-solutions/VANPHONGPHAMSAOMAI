@@ -113,7 +113,7 @@ namespace VANPHONGPHAM
                     try
                     {
                         _nv.updateMK(cmbTaiKhoan.Text, txtXNMK.Text);
-                        DialogResult rs = MessageBox.Show("Đổi mật khẩu thành công, mời bạn quay lại trang đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        DialogResult rs = MessageBox.Show("Đổi mật khẩu thành công, mời bạn quay lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         if(rs == DialogResult.OK)
                         {
                             this.Close();

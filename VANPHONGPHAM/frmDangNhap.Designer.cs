@@ -58,7 +58,7 @@ namespace VANPHONGPHAM
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.svgImageBox1);
             this.panel1.Controls.Add(this.txtUser);
-            this.panel1.Location = new System.Drawing.Point(136, 95);
+            this.panel1.Location = new System.Drawing.Point(94, 201);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(310, 39);
             this.panel1.TabIndex = 0;
@@ -77,11 +77,13 @@ namespace VANPHONGPHAM
             // txtUser
             // 
             this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUser.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(40, 9);
+            this.txtUser.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtUser.Location = new System.Drawing.Point(40, 7);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(266, 21);
+            this.txtUser.Size = new System.Drawing.Size(266, 23);
             this.txtUser.TabIndex = 0;
+            this.txtUser.Text = "admin";
             this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUser_KeyDown);
             // 
@@ -91,7 +93,7 @@ namespace VANPHONGPHAM
             this.panel2.Controls.Add(this.btnShow);
             this.panel2.Controls.Add(this.svgImageBox2);
             this.panel2.Controls.Add(this.txtPass);
-            this.panel2.Location = new System.Drawing.Point(136, 154);
+            this.panel2.Location = new System.Drawing.Point(94, 267);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(310, 39);
             this.panel2.TabIndex = 0;
@@ -121,11 +123,13 @@ namespace VANPHONGPHAM
             // txtPass
             // 
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPass.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.txtPass.Location = new System.Drawing.Point(39, 7);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(230, 21);
+            this.txtPass.Size = new System.Drawing.Size(230, 23);
             this.txtPass.TabIndex = 0;
+            this.txtPass.Text = "admin12345";
             this.txtPass.UseSystemPasswordChar = true;
             this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
             this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
@@ -133,7 +137,8 @@ namespace VANPHONGPHAM
             // btnDangNhap
             // 
             this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnDangNhap.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.Font = new System.Drawing.Font("Segoe UI Variable Text", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnDangNhap.Location = new System.Drawing.Point(-5, -5);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(320, 54);
@@ -146,10 +151,10 @@ namespace VANPHONGPHAM
             // 
             this.btnQuenMK.AutoSize = true;
             this.btnQuenMK.BackColor = System.Drawing.Color.Transparent;
-            this.btnQuenMK.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuenMK.Location = new System.Drawing.Point(329, 281);
+            this.btnQuenMK.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuenMK.Location = new System.Drawing.Point(287, 387);
             this.btnQuenMK.Name = "btnQuenMK";
-            this.btnQuenMK.Size = new System.Drawing.Size(117, 18);
+            this.btnQuenMK.Size = new System.Drawing.Size(122, 20);
             this.btnQuenMK.TabIndex = 3;
             this.btnQuenMK.Text = "Quên mật khẩu?";
             this.btnQuenMK.Click += new System.EventHandler(this.btnQuenMK_Click);
@@ -157,7 +162,7 @@ namespace VANPHONGPHAM
             // panel3
             // 
             this.panel3.Controls.Add(this.btnDangNhap);
-            this.panel3.Location = new System.Drawing.Point(136, 232);
+            this.panel3.Location = new System.Drawing.Point(94, 338);
             this.panel3.Margin = new System.Windows.Forms.Padding(5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(310, 44);
@@ -167,22 +172,26 @@ namespace VANPHONGPHAM
             // lbTaikhoan
             // 
             this.lbTaikhoan.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.lbTaikhoan.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTaikhoan.Appearance.ForeColor = System.Drawing.Color.Red;
             this.lbTaikhoan.Appearance.Options.UseBackColor = true;
+            this.lbTaikhoan.Appearance.Options.UseFont = true;
             this.lbTaikhoan.Appearance.Options.UseForeColor = true;
-            this.lbTaikhoan.Location = new System.Drawing.Point(344, 135);
+            this.lbTaikhoan.Location = new System.Drawing.Point(293, 241);
             this.lbTaikhoan.Name = "lbTaikhoan";
-            this.lbTaikhoan.Size = new System.Drawing.Size(100, 17);
+            this.lbTaikhoan.Size = new System.Drawing.Size(111, 20);
             this.lbTaikhoan.TabIndex = 14;
             this.lbTaikhoan.Text = "*Nhập tài khoản";
             // 
             // lbMatkhau
             // 
+            this.lbMatkhau.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMatkhau.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.lbMatkhau.Appearance.Options.UseFont = true;
             this.lbMatkhau.Appearance.Options.UseForeColor = true;
-            this.lbMatkhau.Location = new System.Drawing.Point(344, 194);
+            this.lbMatkhau.Location = new System.Drawing.Point(293, 307);
             this.lbMatkhau.Name = "lbMatkhau";
-            this.lbMatkhau.Size = new System.Drawing.Size(102, 17);
+            this.lbMatkhau.Size = new System.Drawing.Size(111, 20);
             this.lbMatkhau.TabIndex = 15;
             this.lbMatkhau.Text = "*Nhập mật khẩu";
             // 
@@ -191,8 +200,9 @@ namespace VANPHONGPHAM
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.ImageOptions.Image")));
             this.btnExit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnExit.Location = new System.Drawing.Point(535, 12);
+            this.btnExit.Location = new System.Drawing.Point(875, 12);
             this.btnExit.Name = "btnExit";
+            this.btnExit.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnExit.Size = new System.Drawing.Size(38, 38);
             this.btnExit.TabIndex = 1;
             this.btnExit.Click += new System.EventHandler(this.btnAddnew_Click);
@@ -200,7 +210,7 @@ namespace VANPHONGPHAM
             // peImage
             // 
             this.peImage.EditValue = ((object)(resources.GetObject("peImage.EditValue")));
-            this.peImage.Location = new System.Drawing.Point(-98, -58);
+            this.peImage.Location = new System.Drawing.Point(-1, 0);
             this.peImage.Margin = new System.Windows.Forms.Padding(4);
             this.peImage.Name = "peImage";
             this.peImage.Properties.AllowFocused = false;
@@ -209,7 +219,7 @@ namespace VANPHONGPHAM
             this.peImage.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.peImage.Properties.ShowMenu = false;
             this.peImage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.peImage.Size = new System.Drawing.Size(798, 563);
+            this.peImage.Size = new System.Drawing.Size(936, 525);
             this.peImage.TabIndex = 10;
             // 
             // frmDangNhap
@@ -218,7 +228,7 @@ namespace VANPHONGPHAM
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(591, 443);
+            this.ClientSize = new System.Drawing.Size(925, 527);
             this.Controls.Add(this.lbMatkhau);
             this.Controls.Add(this.lbTaikhoan);
             this.Controls.Add(this.panel3);

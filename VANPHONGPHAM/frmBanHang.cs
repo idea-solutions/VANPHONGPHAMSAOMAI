@@ -106,7 +106,6 @@ namespace VANPHONGPHAM
             listHDMH = new List<OBJHOADON_MATHANG>();
             loadData();
             enable(false);
-            lbThoiGian.Text = DateTime.Now.ToString();
             tabControl.SelectedTabPage = tabBanHang;
 
             showHideControl(true);
@@ -118,7 +117,9 @@ namespace VANPHONGPHAM
             timer1.Enabled = true;
             timer1.Start();
             label7.Text = DateTime.Now.ToLongTimeString();
-            
+            lbThoiGian.Text = DateTime.Now.ToLongTimeString();
+            btnIn.Enabled = false;
+            label9.Text = DateTime.Now.ToShortDateString();
         }
 
         private void dateEditTuNgay_DateTimeChanged(object sender, EventArgs e)
@@ -195,14 +196,12 @@ namespace VANPHONGPHAM
                         item.SOLUONG = item.SOLUONG + 1;
                         item.THANHTIEN = item.SOLUONG * item.DONGIA;
                         loadCTHD();
-                        lbThanhTien.Text = double.Parse(gvDanhSachMuaHang.Columns["THANHTIEN"].SummaryItem.SummaryValue.ToString()).ToString("N0") + " ₫";
                         return ;
                     }
                 }
                 listHDMH.Add(cthd);
             }
             loadCTHD();
-            lbThanhTien.Text = double.Parse(gvDanhSachMuaHang.Columns["THANHTIEN"].SummaryItem.SummaryValue.ToString()).ToString("N0") + " ₫";
         }
         void loadCTHD()
         {
@@ -230,7 +229,6 @@ namespace VANPHONGPHAM
                 }
             }
             gvDanhSachMuaHang.UpdateTotalSummary();
-            lbThanhTien.Text = double.Parse(gvDanhSachMuaHang.Columns["THANHTIEN"].SummaryItem.SummaryValue.ToString()).ToString("N0") + " ₫";
         }
 
 
@@ -254,7 +252,6 @@ namespace VANPHONGPHAM
         void reset(bool t)
         {
             cmbKhachHang.SelectedIndex = 0;
-            lbThanhTien.Text = "0 ₫";
             gcDanhSachMuaHang.DataSource = _hdmh.getAll(0);
         }
 
@@ -275,8 +272,8 @@ namespace VANPHONGPHAM
             showHideControl(true);
             enable(false);
             objMain.loadChart();
-            simpleButton2.Enabled = true;
-        }
+            btnIn.Enabled = true;
+            listHDMH.Clear();       }
 
         void saveData()
         {
@@ -318,7 +315,6 @@ namespace VANPHONGPHAM
         private void gcDanhSachMuaHang_Click(object sender, EventArgs e)
         {
             _mamh = gvDanhSachMuaHang.GetFocusedRowCellValue("MAMH").ToString();
-            lbThanhTien.Text = double.Parse(gvDanhSachMuaHang.Columns["THANHTIEN"].SummaryItem.SummaryValue.ToString()).ToString("N0") + " ₫";
         }
 
         private void btnXoaMH_Click(object sender, EventArgs e)
@@ -326,7 +322,6 @@ namespace VANPHONGPHAM
             if (gvDanhSachMuaHang.RowCount > 0)
             {
                 gvDanhSachMuaHang.DeleteSelectedRows();
-                lbThanhTien.Text = double.Parse(gvDanhSachMuaHang.Columns["THANHTIEN"].SummaryItem.SummaryValue.ToString()).ToString("N0") + " ₫";
 
                 listHDMH.RemoveAll(r => r.MAMH == _mamh);
 
@@ -338,6 +333,8 @@ namespace VANPHONGPHAM
         {
             string a = "";
             label7.Text = DateTime.Now.ToLongTimeString();
+            lbThoiGian.Text = DateTime.Now.ToLongTimeString();
+
             if (DateTime.Now.Hour > 5 && DateTime.Now.Hour <= 10)
                 a = "Good morning";
             else if (DateTime.Now.Hour > 10 && DateTime.Now.Hour <= 17)

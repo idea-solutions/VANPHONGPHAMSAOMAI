@@ -22,7 +22,7 @@ namespace DataLayer
     
         public int MAKH { get; set; }
         public string TENKH { get; set; }
-        public bool GIOITINH { get; set; }
+        public string GIOITINH { get; set; }
         public string SDT { get; set; }
         public bool VOHIEUHOA { get; set; }
     

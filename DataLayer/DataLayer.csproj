@@ -92,6 +92,9 @@
     <Compile Include="FNMAT_HANG_Result.cs">
       <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
     </Compile>
+    <Compile Include="FNTHONGKEDOANHTHU_Result.cs">
+      <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
+    </Compile>
     <Compile Include="HOADON_MATHANG.cs">
       <DependentUpon>VANPHONGPHAM.tt</DependentUpon>
     </Compile>

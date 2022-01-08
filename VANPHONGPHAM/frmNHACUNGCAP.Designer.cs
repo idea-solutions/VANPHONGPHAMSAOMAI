@@ -77,6 +77,8 @@ namespace VANPHONGPHAM
             // 
             // groupControl1
             // 
+            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.txtMa);
             this.groupControl1.Controls.Add(this.txtEmail);
             this.groupControl1.Controls.Add(this.label5);
@@ -92,68 +94,75 @@ namespace VANPHONGPHAM
             this.groupControl1.Location = new System.Drawing.Point(0, 510);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1083, 120);
+            this.groupControl1.Size = new System.Drawing.Size(1237, 120);
             this.groupControl1.TabIndex = 13;
             this.groupControl1.Text = "Thông tin";
             // 
             // txtMa
             // 
-            this.txtMa.Location = new System.Drawing.Point(124, 35);
+            this.txtMa.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtMa.Location = new System.Drawing.Point(154, 36);
             this.txtMa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMa.Name = "txtMa";
-            this.txtMa.Size = new System.Drawing.Size(141, 23);
+            this.txtMa.Size = new System.Drawing.Size(141, 30);
             this.txtMa.TabIndex = 7;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(647, 68);
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtEmail.Location = new System.Drawing.Point(785, 67);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(346, 23);
+            this.txtEmail.Size = new System.Drawing.Size(317, 30);
             this.txtEmail.TabIndex = 6;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(5, 36);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 17);
+            this.label5.Size = new System.Drawing.Size(143, 22);
             this.label5.TabIndex = 8;
             this.label5.Text = "Mã nhà cung cấp";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(596, 74);
+            this.label3.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(720, 72);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 17);
+            this.label3.Size = new System.Drawing.Size(59, 22);
             this.label3.TabIndex = 5;
             this.label3.Text = "EMAIL";
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(647, 35);
+            this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtDiaChi.Location = new System.Drawing.Point(785, 33);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(424, 23);
+            this.txtDiaChi.Size = new System.Drawing.Size(424, 30);
             this.txtDiaChi.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(593, 41);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(717, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 17);
+            this.label1.Size = new System.Drawing.Size(62, 22);
             this.label1.TabIndex = 3;
             this.label1.Text = "Địa chỉ";
             // 
             // ckbDisable
             // 
             this.ckbDisable.AutoSize = true;
-            this.ckbDisable.Location = new System.Drawing.Point(999, 70);
+            this.ckbDisable.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.ckbDisable.Location = new System.Drawing.Point(1121, 71);
             this.ckbDisable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ckbDisable.Name = "ckbDisable";
-            this.ckbDisable.Size = new System.Drawing.Size(72, 21);
+            this.ckbDisable.Size = new System.Drawing.Size(88, 26);
             this.ckbDisable.TabIndex = 2;
             this.ckbDisable.Text = "Disable";
             this.ckbDisable.UseVisualStyleBackColor = true;
@@ -161,34 +170,38 @@ namespace VANPHONGPHAM
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 74);
+            this.label4.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(31, 75);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 17);
+            this.label4.Size = new System.Drawing.Size(117, 22);
             this.label4.TabIndex = 0;
             this.label4.Text = "Nhà cung cấp";
             // 
             // txtTen
             // 
-            this.txtTen.Location = new System.Drawing.Point(124, 68);
+            this.txtTen.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtTen.Location = new System.Drawing.Point(154, 70);
             this.txtTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(440, 23);
+            this.txtTen.Size = new System.Drawing.Size(463, 30);
             this.txtTen.TabIndex = 1;
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(364, 35);
+            this.txtSDT.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtSDT.Location = new System.Drawing.Point(417, 36);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(200, 23);
+            this.txtSDT.Size = new System.Drawing.Size(200, 30);
             this.txtSDT.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(271, 38);
+            this.label2.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(301, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 17);
+            this.label2.Size = new System.Drawing.Size(110, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Số điện thoại";
             // 
@@ -200,7 +213,7 @@ namespace VANPHONGPHAM
             this.gcDanhSach.MainView = this.gvDanhSach;
             this.gcDanhSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gcDanhSach.Name = "gcDanhSach";
-            this.gcDanhSach.Size = new System.Drawing.Size(1083, 465);
+            this.gcDanhSach.Size = new System.Drawing.Size(1237, 465);
             this.gcDanhSach.TabIndex = 12;
             this.gcDanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDanhSach});
@@ -208,6 +221,10 @@ namespace VANPHONGPHAM
             // 
             // gvDanhSach
             // 
+            this.gvDanhSach.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.gvDanhSach.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gvDanhSach.Appearance.Row.Font = new System.Drawing.Font("Segoe UI Variable Small", 10.2F);
+            this.gvDanhSach.Appearance.Row.Options.UseFont = true;
             this.gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.TENNCC,
             this.DISABLE,
@@ -230,18 +247,18 @@ namespace VANPHONGPHAM
             this.TENNCC.Name = "TENNCC";
             this.TENNCC.Visible = true;
             this.TENNCC.VisibleIndex = 2;
-            this.TENNCC.Width = 148;
+            this.TENNCC.Width = 249;
             // 
             // DISABLE
             // 
             this.DISABLE.Caption = "DEL";
             this.DISABLE.FieldName = "VOHIEUHOA";
-            this.DISABLE.MaxWidth = 34;
+            this.DISABLE.MaxWidth = 50;
             this.DISABLE.MinWidth = 21;
             this.DISABLE.Name = "DISABLE";
             this.DISABLE.Visible = true;
             this.DISABLE.VisibleIndex = 0;
-            this.DISABLE.Width = 28;
+            this.DISABLE.Width = 50;
             // 
             // SDT
             // 
@@ -251,7 +268,7 @@ namespace VANPHONGPHAM
             this.SDT.Name = "SDT";
             this.SDT.Visible = true;
             this.SDT.VisibleIndex = 3;
-            this.SDT.Width = 101;
+            this.SDT.Width = 141;
             // 
             // DIACHI
             // 
@@ -260,7 +277,7 @@ namespace VANPHONGPHAM
             this.DIACHI.Name = "DIACHI";
             this.DIACHI.Visible = true;
             this.DIACHI.VisibleIndex = 4;
-            this.DIACHI.Width = 118;
+            this.DIACHI.Width = 166;
             // 
             // EMAIL
             // 
@@ -269,7 +286,7 @@ namespace VANPHONGPHAM
             this.EMAIL.Name = "EMAIL";
             this.EMAIL.Visible = true;
             this.EMAIL.VisibleIndex = 5;
-            this.EMAIL.Width = 182;
+            this.EMAIL.Width = 270;
             // 
             // MANCC
             // 
@@ -278,7 +295,7 @@ namespace VANPHONGPHAM
             this.MANCC.Name = "MANCC";
             this.MANCC.Visible = true;
             this.MANCC.VisibleIndex = 1;
-            this.MANCC.Width = 108;
+            this.MANCC.Width = 177;
             // 
             // barManager1
             // 
@@ -321,6 +338,14 @@ namespace VANPHONGPHAM
             this.btnAdd.Caption = "Thêm";
             this.btnAdd.Id = 0;
             this.btnAdd.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAdd.ImageOptions.SvgImage")));
+            this.btnAdd.ItemAppearance.Disabled.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.ItemAppearance.Disabled.Options.UseFont = true;
+            this.btnAdd.ItemAppearance.Hovered.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.ItemAppearance.Hovered.Options.UseFont = true;
+            this.btnAdd.ItemAppearance.Normal.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.ItemAppearance.Normal.Options.UseFont = true;
+            this.btnAdd.ItemAppearance.Pressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.ItemAppearance.Pressed.Options.UseFont = true;
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnAdd.Size = new System.Drawing.Size(0, 36);
@@ -331,6 +356,14 @@ namespace VANPHONGPHAM
             this.btnEdit.Caption = "Sửa";
             this.btnEdit.Id = 1;
             this.btnEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEdit.ImageOptions.SvgImage")));
+            this.btnEdit.ItemAppearance.Disabled.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnEdit.ItemAppearance.Disabled.Options.UseFont = true;
+            this.btnEdit.ItemAppearance.Hovered.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnEdit.ItemAppearance.Hovered.Options.UseFont = true;
+            this.btnEdit.ItemAppearance.Normal.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnEdit.ItemAppearance.Normal.Options.UseFont = true;
+            this.btnEdit.ItemAppearance.Pressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnEdit.ItemAppearance.Pressed.Options.UseFont = true;
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSua_Click);
@@ -340,6 +373,14 @@ namespace VANPHONGPHAM
             this.btnDelete.Caption = "Xóa";
             this.btnDelete.Id = 2;
             this.btnDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete.ImageOptions.SvgImage")));
+            this.btnDelete.ItemAppearance.Disabled.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ItemAppearance.Disabled.Options.UseFont = true;
+            this.btnDelete.ItemAppearance.Hovered.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ItemAppearance.Hovered.Options.UseFont = true;
+            this.btnDelete.ItemAppearance.Normal.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ItemAppearance.Normal.Options.UseFont = true;
+            this.btnDelete.ItemAppearance.Pressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ItemAppearance.Pressed.Options.UseFont = true;
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXoa_Click);
@@ -350,6 +391,14 @@ namespace VANPHONGPHAM
             this.btnSave.Id = 3;
             this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
             this.btnSave.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.LargeImage")));
+            this.btnSave.ItemAppearance.Disabled.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnSave.ItemAppearance.Disabled.Options.UseFont = true;
+            this.btnSave.ItemAppearance.Hovered.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnSave.ItemAppearance.Hovered.Options.UseFont = true;
+            this.btnSave.ItemAppearance.Normal.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnSave.ItemAppearance.Normal.Options.UseFont = true;
+            this.btnSave.ItemAppearance.Pressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnSave.ItemAppearance.Pressed.Options.UseFont = true;
             this.btnSave.Name = "btnSave";
             this.btnSave.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLuu_Click);
@@ -360,6 +409,14 @@ namespace VANPHONGPHAM
             this.btnCancel.Id = 4;
             this.btnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.ImageOptions.Image")));
             this.btnCancel.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.ImageOptions.LargeImage")));
+            this.btnCancel.ItemAppearance.Disabled.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ItemAppearance.Disabled.Options.UseFont = true;
+            this.btnCancel.ItemAppearance.Hovered.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ItemAppearance.Hovered.Options.UseFont = true;
+            this.btnCancel.ItemAppearance.Normal.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ItemAppearance.Normal.Options.UseFont = true;
+            this.btnCancel.ItemAppearance.Pressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ItemAppearance.Pressed.Options.UseFont = true;
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnCancel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBoQua_Click);
@@ -370,6 +427,14 @@ namespace VANPHONGPHAM
             this.barButtonItem1.Id = 5;
             this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
             this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.barButtonItem1.ItemAppearance.Disabled.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.barButtonItem1.ItemAppearance.Disabled.Options.UseFont = true;
+            this.barButtonItem1.ItemAppearance.Hovered.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.barButtonItem1.ItemAppearance.Hovered.Options.UseFont = true;
+            this.barButtonItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.barButtonItem1.ItemAppearance.Normal.Options.UseFont = true;
+            this.barButtonItem1.ItemAppearance.Pressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.barButtonItem1.ItemAppearance.Pressed.Options.UseFont = true;
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
@@ -380,7 +445,7 @@ namespace VANPHONGPHAM
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1083, 45);
+            this.barDockControlTop.Size = new System.Drawing.Size(1237, 45);
             // 
             // barDockControlBottom
             // 
@@ -388,7 +453,7 @@ namespace VANPHONGPHAM
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 630);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1083, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1237, 0);
             // 
             // barDockControlLeft
             // 
@@ -402,7 +467,7 @@ namespace VANPHONGPHAM
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1083, 45);
+            this.barDockControlRight.Location = new System.Drawing.Point(1237, 45);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 585);
             // 
@@ -410,7 +475,7 @@ namespace VANPHONGPHAM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1083, 630);
+            this.ClientSize = new System.Drawing.Size(1237, 630);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gcDanhSach);
             this.Controls.Add(this.barDockControlLeft);

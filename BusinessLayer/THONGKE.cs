@@ -58,15 +58,46 @@ namespace BusinessLayer
             List<OBJTHONGKEKHACHHANG> lst = new List<OBJTHONGKEKHACHHANG>();
             var lstTKKH = db.FNKHACHHANGGROUP(DateTime.Now).ToList();
 
-            foreach (var item in lstTKKH)
+            //foreach (var item in lstTKKH)
+            //{
+            //    if (item.TENKH != "A_KHÁCH_LẺ")
+            //    {
+            //        objTKKH = new OBJTHONGKEKHACHHANG();
+            //        objTKKH.TENKH = item.TENKH;
+            //        objTKKH.THANHTIEN = item.THANHTIEN;
+            //        lst.Add(objTKKH);
+            //    }
+            //}
+            int dem = 1;
+            for (int i = 0; i < lstTKKH.Count; i++)
             {
-                if (item.TENKH != "A_KHÁCH_LẺ")
+                if (lstTKKH[i].TENKH != "A_KHÁCH_LẺ")
                 {
                     objTKKH = new OBJTHONGKEKHACHHANG();
-                    objTKKH.TENKH = item.TENKH;
-                    objTKKH.THANHTIEN = item.THANHTIEN;
+                    objTKKH.TENKH = lstTKKH[i].TENKH;
+                    objTKKH.THANHTIEN = lstTKKH[i].THANHTIEN;
                     lst.Add(objTKKH);
+                    dem++;
                 }
+                if (dem > 5)
+                    break;
+            }
+
+            return lst;
+        }
+
+        public List<OBJTHONGKEDOANHTHU> thongKeDoanhThu()
+        {
+            OBJTHONGKEDOANHTHU objTKDT;
+            List<OBJTHONGKEDOANHTHU> lst = new List<OBJTHONGKEDOANHTHU>();
+            var lstTKKH = db.FNTHONGKEDOANHTHU().ToList();
+
+            foreach (var item in lstTKKH)
+            {
+                objTKDT = new OBJTHONGKEDOANHTHU();
+                objTKDT.Ngay = item.Ngay;
+                objTKDT.ThanhTien = item.TongTien;
+                lst.Add(objTKDT);
             }
             return lst;
         }

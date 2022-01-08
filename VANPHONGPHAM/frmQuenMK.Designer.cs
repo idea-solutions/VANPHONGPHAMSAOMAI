@@ -127,10 +127,10 @@ namespace VANPHONGPHAM
             // txtSDT
             // 
             this.txtSDT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSDT.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDT.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.Location = new System.Drawing.Point(40, 9);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(266, 21);
+            this.txtSDT.Size = new System.Drawing.Size(266, 23);
             this.txtSDT.TabIndex = 0;
             this.txtSDT.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
@@ -158,10 +158,10 @@ namespace VANPHONGPHAM
             // txtHoTen
             // 
             this.txtHoTen.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtHoTen.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoTen.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
             this.txtHoTen.Location = new System.Drawing.Point(40, 9);
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(266, 21);
+            this.txtHoTen.Size = new System.Drawing.Size(266, 23);
             this.txtHoTen.TabIndex = 0;
             this.txtHoTen.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtHoTen_KeyDown);
             // 
@@ -169,10 +169,11 @@ namespace VANPHONGPHAM
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(238)))), ((int)(((byte)(254)))));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Variable Small", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(511, 149);
+            this.label1.Location = new System.Drawing.Point(511, 147);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 17);
+            this.label1.Size = new System.Drawing.Size(230, 22);
             this.label1.TabIndex = 14;
             this.label1.Text = "*Vui lòng nhập số điện thoại";
             // 
@@ -180,10 +181,11 @@ namespace VANPHONGPHAM
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(238)))), ((int)(((byte)(254)))));
+            this.label2.Font = new System.Drawing.Font("Segoe UI Variable Small", 10.2F);
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(32, 149);
+            this.label2.Location = new System.Drawing.Point(32, 145);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 17);
+            this.label2.Size = new System.Drawing.Size(69, 22);
             this.label2.TabIndex = 14;
             this.label2.Text = "*Họ tên";
             // 
@@ -192,7 +194,7 @@ namespace VANPHONGPHAM
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.svgImageBox6);
             this.panel6.Controls.Add(this.txtDiaChi);
-            this.panel6.Location = new System.Drawing.Point(35, 231);
+            this.panel6.Location = new System.Drawing.Point(35, 236);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(310, 39);
             this.panel6.TabIndex = 13;
@@ -211,10 +213,10 @@ namespace VANPHONGPHAM
             // txtDiaChi
             // 
             this.txtDiaChi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDiaChi.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
             this.txtDiaChi.Location = new System.Drawing.Point(40, 9);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(266, 21);
+            this.txtDiaChi.Size = new System.Drawing.Size(266, 23);
             this.txtDiaChi.TabIndex = 0;
             this.txtDiaChi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDiaChi_KeyDown);
             // 
@@ -222,10 +224,11 @@ namespace VANPHONGPHAM
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Variable Small", 10.2F);
             this.label3.ForeColor = System.Drawing.Color.Red;
             this.label3.Location = new System.Drawing.Point(32, 211);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 17);
+            this.label3.Size = new System.Drawing.Size(69, 22);
             this.label3.TabIndex = 14;
             this.label3.Text = "*Địa chỉ";
             // 
@@ -233,10 +236,11 @@ namespace VANPHONGPHAM
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Variable Small", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(32, 273);
+            this.label4.Location = new System.Drawing.Point(32, 278);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 17);
+            this.label4.Size = new System.Drawing.Size(95, 22);
             this.label4.TabIndex = 14;
             this.label4.Text = "*Ngày sinh";
             // 
@@ -245,7 +249,7 @@ namespace VANPHONGPHAM
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.svgImageBox3);
             this.panel3.Controls.Add(this.txtCMND);
-            this.panel3.Location = new System.Drawing.Point(35, 355);
+            this.panel3.Location = new System.Drawing.Point(35, 370);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(310, 39);
             this.panel3.TabIndex = 13;
@@ -264,10 +268,10 @@ namespace VANPHONGPHAM
             // txtCMND
             // 
             this.txtCMND.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCMND.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCMND.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCMND.Location = new System.Drawing.Point(40, 9);
             this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(266, 21);
+            this.txtCMND.Size = new System.Drawing.Size(266, 23);
             this.txtCMND.TabIndex = 0;
             this.txtCMND.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCMND_KeyDown);
             // 
@@ -275,10 +279,11 @@ namespace VANPHONGPHAM
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Variable Small", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(32, 335);
+            this.label5.Location = new System.Drawing.Point(32, 345);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 17);
+            this.label5.Size = new System.Drawing.Size(145, 22);
             this.label5.TabIndex = 14;
             this.label5.Text = "*Số CMND/CCCD";
             // 
@@ -287,7 +292,7 @@ namespace VANPHONGPHAM
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.cmbTaiKhoan);
             this.panel4.Controls.Add(this.svgImageBox4);
-            this.panel4.Location = new System.Drawing.Point(511, 237);
+            this.panel4.Location = new System.Drawing.Point(511, 242);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(310, 39);
             this.panel4.TabIndex = 13;
@@ -296,11 +301,11 @@ namespace VANPHONGPHAM
             // cmbTaiKhoan
             // 
             this.cmbTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbTaiKhoan.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTaiKhoan.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTaiKhoan.FormattingEnabled = true;
             this.cmbTaiKhoan.Location = new System.Drawing.Point(42, 5);
             this.cmbTaiKhoan.Name = "cmbTaiKhoan";
-            this.cmbTaiKhoan.Size = new System.Drawing.Size(265, 29);
+            this.cmbTaiKhoan.Size = new System.Drawing.Size(265, 30);
             this.cmbTaiKhoan.TabIndex = 2;
             // 
             // svgImageBox4
@@ -317,17 +322,18 @@ namespace VANPHONGPHAM
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Variable Small", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(511, 214);
+            this.label6.Location = new System.Drawing.Point(511, 217);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 17);
+            this.label6.Size = new System.Drawing.Size(135, 22);
             this.label6.TabIndex = 14;
             this.label6.Text = "*Chọn tài khoản";
             // 
             // peImage
             // 
             this.peImage.EditValue = ((object)(resources.GetObject("peImage.EditValue")));
-            this.peImage.Location = new System.Drawing.Point(-3, -5);
+            this.peImage.Location = new System.Drawing.Point(-1, -10);
             this.peImage.Margin = new System.Windows.Forms.Padding(4);
             this.peImage.Name = "peImage";
             this.peImage.Properties.AllowFocused = false;
@@ -343,10 +349,11 @@ namespace VANPHONGPHAM
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(238)))), ((int)(((byte)(254)))));
+            this.label7.Font = new System.Drawing.Font("Segoe UI Variable Small", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(32, 211);
+            this.label7.Location = new System.Drawing.Point(32, 212);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(135, 17);
+            this.label7.Size = new System.Drawing.Size(166, 22);
             this.label7.TabIndex = 19;
             this.label7.Text = "*Xác nhận mật khẩu";
             // 
@@ -354,10 +361,11 @@ namespace VANPHONGPHAM
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(238)))), ((int)(((byte)(254)))));
+            this.label8.Font = new System.Drawing.Font("Segoe UI Variable Small", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(32, 149);
+            this.label8.Location = new System.Drawing.Point(32, 145);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(136, 17);
+            this.label8.Size = new System.Drawing.Size(172, 22);
             this.label8.TabIndex = 20;
             this.label8.Text = "*Nhập mật khẩu mới";
             // 
@@ -367,7 +375,7 @@ namespace VANPHONGPHAM
             this.panel5.Controls.Add(this.btneyeMKXN);
             this.panel5.Controls.Add(this.svgImageBox5);
             this.panel5.Controls.Add(this.txtXNMK);
-            this.panel5.Location = new System.Drawing.Point(35, 231);
+            this.panel5.Location = new System.Drawing.Point(35, 236);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(310, 39);
             this.panel5.TabIndex = 17;
@@ -397,10 +405,10 @@ namespace VANPHONGPHAM
             // txtXNMK
             // 
             this.txtXNMK.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtXNMK.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtXNMK.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtXNMK.Location = new System.Drawing.Point(40, 9);
             this.txtXNMK.Name = "txtXNMK";
-            this.txtXNMK.Size = new System.Drawing.Size(230, 21);
+            this.txtXNMK.Size = new System.Drawing.Size(230, 23);
             this.txtXNMK.TabIndex = 0;
             this.txtXNMK.UseSystemPasswordChar = true;
             this.txtXNMK.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtXNMK_KeyDown);
@@ -441,21 +449,21 @@ namespace VANPHONGPHAM
             // txtMK
             // 
             this.txtMK.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMK.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMK.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMK.Location = new System.Drawing.Point(40, 9);
             this.txtMK.Name = "txtMK";
-            this.txtMK.Size = new System.Drawing.Size(230, 21);
+            this.txtMK.Size = new System.Drawing.Size(230, 23);
             this.txtMK.TabIndex = 0;
             this.txtMK.UseSystemPasswordChar = true;
             this.txtMK.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMK_KeyDown);
             // 
             // btnXacNhan
             // 
-            this.btnXacNhan.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXacNhan.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Text", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacNhan.Appearance.Options.UseFont = true;
-            this.btnXacNhan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnXacNhan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXacNhan.ImageOptions.Image")));
             this.btnXacNhan.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnXacNhan.Location = new System.Drawing.Point(35, 294);
+            this.btnXacNhan.Location = new System.Drawing.Point(35, 303);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(310, 39);
             this.btnXacNhan.TabIndex = 15;
@@ -468,7 +476,7 @@ namespace VANPHONGPHAM
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Controls.Add(this.dateNgaySinh);
             this.panel7.Controls.Add(this.svgImageBox7);
-            this.panel7.Location = new System.Drawing.Point(35, 293);
+            this.panel7.Location = new System.Drawing.Point(35, 303);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(310, 39);
             this.panel7.TabIndex = 21;
@@ -479,7 +487,7 @@ namespace VANPHONGPHAM
             this.dateNgaySinh.EditValue = null;
             this.dateNgaySinh.Location = new System.Drawing.Point(42, 6);
             this.dateNgaySinh.Name = "dateNgaySinh";
-            this.dateNgaySinh.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateNgaySinh.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
             this.dateNgaySinh.Properties.Appearance.Options.UseFont = true;
             this.dateNgaySinh.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.dateNgaySinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -502,11 +510,11 @@ namespace VANPHONGPHAM
             // 
             // btnKiemTra
             // 
-            this.btnKiemTra.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKiemTra.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Text", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKiemTra.Appearance.Options.UseFont = true;
             this.btnKiemTra.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKiemTra.ImageOptions.Image")));
             this.btnKiemTra.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnKiemTra.Location = new System.Drawing.Point(35, 411);
+            this.btnKiemTra.Location = new System.Drawing.Point(35, 424);
             this.btnKiemTra.Name = "btnKiemTra";
             this.btnKiemTra.Size = new System.Drawing.Size(310, 39);
             this.btnKiemTra.TabIndex = 22;
@@ -521,16 +529,13 @@ namespace VANPHONGPHAM
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(946, 531);
-            this.Controls.Add(this.btnKiemTra);
-            this.Controls.Add(this.btnXacNhan);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnKiemTra);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
@@ -540,7 +545,10 @@ namespace VANPHONGPHAM
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.panel7);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.peImage);
+            this.Controls.Add(this.btnXacNhan);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IconOptions.Image = global::VANPHONGPHAM.Properties.Resources.Nhiều_màu_sắc_Hình_khối_Thiết_kế___Nghệ_thuật_Biểu_trưng__3_;
             this.Name = "frmQuenMK";

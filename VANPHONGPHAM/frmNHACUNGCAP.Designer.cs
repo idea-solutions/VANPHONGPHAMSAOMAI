@@ -113,7 +113,7 @@ namespace VANPHONGPHAM
             this.txtEmail.Location = new System.Drawing.Point(785, 67);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(317, 30);
+            this.txtEmail.Size = new System.Drawing.Size(278, 30);
             this.txtEmail.TabIndex = 6;
             // 
             // label5
@@ -159,12 +159,12 @@ namespace VANPHONGPHAM
             // 
             this.ckbDisable.AutoSize = true;
             this.ckbDisable.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.ckbDisable.Location = new System.Drawing.Point(1121, 71);
+            this.ckbDisable.Location = new System.Drawing.Point(1069, 72);
             this.ckbDisable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ckbDisable.Name = "ckbDisable";
-            this.ckbDisable.Size = new System.Drawing.Size(88, 26);
+            this.ckbDisable.Size = new System.Drawing.Size(147, 26);
             this.ckbDisable.TabIndex = 2;
-            this.ckbDisable.Text = "Disable";
+            this.ckbDisable.Text = "Ngừng hợp tác";
             this.ckbDisable.UseVisualStyleBackColor = true;
             // 
             // label4
@@ -405,7 +405,7 @@ namespace VANPHONGPHAM
             // 
             // btnCancel
             // 
-            this.btnCancel.Caption = "Bỏ Quả";
+            this.btnCancel.Caption = "Bỏ Qua";
             this.btnCancel.Id = 4;
             this.btnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.ImageOptions.Image")));
             this.btnCancel.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.ImageOptions.LargeImage")));

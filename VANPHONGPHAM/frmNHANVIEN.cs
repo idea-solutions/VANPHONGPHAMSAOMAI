@@ -24,6 +24,7 @@ namespace VANPHONGPHAM
             InitializeComponent();
         }
 
+        frmMain frm = (frmMain)Application.OpenForms["frmMain"];
         NHANVIEN _nv;
         bool _them;
         string _manv;
@@ -51,7 +52,6 @@ namespace VANPHONGPHAM
                 BeginInvoke(new MethodInvoker(delegate { cal(_Width, gvDanhSach); })); // Tăng kích thước nếu text vượt quá
             }
         }
-        frmMain frm = (frmMain)Application.OpenForms["frmMain"];
 
         private void frmNHANVIEN_Load(object sender, EventArgs e)
         {
@@ -62,6 +62,13 @@ namespace VANPHONGPHAM
             cmbGioiTinh.Items.Add("Nam");
             cmbGioiTinh.Items.Add("Nữ");
             cmbGioiTinh.Items.Add("Khác");
+            txtMa.MaxLength = 4;
+            txtDiaChi.MaxLength = 50;
+            txtCMND.MaxLength = 12;
+            txtMatKhau.MaxLength = 20;
+            txtNLMatKhau.MaxLength = 20;
+            txtTen.MaxLength = 30;
+            txtSDT.MaxLength = 10;
 
             if (frm._tendn == "ADMIN" || frm._tendn == "admin")
             {
@@ -166,50 +173,88 @@ namespace VANPHONGPHAM
 
         private void btnLuu_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (txtMa.TextLength <= 5)
+            if (txtMa.TextLength != 0 && txtCMND.TextLength!=0 && txtDiaChi.TextLength!=0&& txtTenDangNhap.TextLength!=0 && txtSDT.TextLength!=0&& txtMatKhau.TextLength!=0&& txtNLMatKhau.TextLength != 0 && dtNgaySinh.Text != "")
             {
-                showHideControl(true);
-                if (_them)
+                if (txtMa.TextLength == 4)
                 {
-                    NHAN_VIEN nv = new NHAN_VIEN();
-                    nv.MANHANVIEN = txtMa.Text;
-                    nv.TENNHANVIEN = txtTen.Text;
-                    nv.DIACHI = txtDiaChi.Text;
-                    nv.SDT = txtSDT.Text;
-                    nv.GIOITINH = cmbGioiTinh.Text;
-                    nv.NGAYSINH = dtNgaySinh.DateTime;
-                    nv.CMND_CCCD = txtCMND.Text;
-                    nv.TENDANGNHAP = txtTenDangNhap.Text;
-                    nv.MATKHAU = txtMatKhau.Text;
-                    nv.VOHIEUHOA = ckbDisable.Checked;
-                    nv.LAQUANLY = false;
-                    _nv.add(nv);
+                    if (txtSDT.TextLength == 10)
+                    {
+                        if(txtCMND.TextLength==12 || txtCMND.TextLength == 9)
+                        {
+                            if(cmbGioiTinh.Text == "Nam" || cmbGioiTinh.Text == "Nữ" && cmbGioiTinh.Text == "Khác")
+                            {
+                                if (txtMatKhau.TextLength >= 8)
+                                {
+                                    if(txtNLMatKhau.Text == txtMatKhau.Text)
+                                    {
+                                        var nvkt = _nv.getItem(txtMa.Text);
+                                        if (nvkt == null)
+                                        {
+                                            showHideControl(true);
+                                            if (_them)
+                                            {
+                                                NHAN_VIEN nv = new NHAN_VIEN();
+                                                nv.MANHANVIEN = txtMa.Text;
+                                                nv.TENNHANVIEN = txtTen.Text;
+                                                nv.DIACHI = txtDiaChi.Text;
+                                                nv.SDT = txtSDT.Text;
+                                                nv.GIOITINH = cmbGioiTinh.Text;
+                                                nv.NGAYSINH = dtNgaySinh.DateTime;
+                                                nv.CMND_CCCD = txtCMND.Text;
+                                                nv.TENDANGNHAP = txtTenDangNhap.Text;
+                                                nv.MATKHAU = txtMatKhau.Text;
+                                                nv.VOHIEUHOA = ckbDisable.Checked;
+                                                nv.LAQUANLY = false;
+                                                _nv.add(nv);
+                                                MessageBox.Show("Thêm mới nhân viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                                _them = false;
+                                                loadData();
+                                                enable(false);
+                                                showInfo(false);
+                                            }
+                                            else
+                                            {
+                                                NHAN_VIEN nv = _nv.getItem(_manv);
+                                                nv.TENNHANVIEN = txtTen.Text;
+                                                nv.DIACHI = txtDiaChi.Text;
+                                                nv.SDT = txtSDT.Text;
+                                                nv.GIOITINH = cmbGioiTinh.Text;
+                                                nv.NGAYSINH = dtNgaySinh.DateTime;
+                                                nv.CMND_CCCD = txtCMND.Text;
+                                                nv.MATKHAU = txtMatKhau.Text;
+                                                nv.VOHIEUHOA = ckbDisable.Checked;
+                                                _nv.update(nv);
+                                                MessageBox.Show("Cập nhật nhân viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                                _them = false;
+                                                loadData();
+                                                enable(false);
+                                                showInfo(false);
+                                            }
+                                        }
+                                        else
+                                            MessageBox.Show("Nhân viên đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    }
+                                    else
+                                        MessageBox.Show("Mật khẩu nhập lại phải trùng nhau", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                }
+                                else
+                                    MessageBox.Show("Mật khẩu quá ngắn, vui lòng tạo lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                            else
+                                MessageBox.Show("Vui lòng chọn lại giới tính", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else
+                            MessageBox.Show("Vui lòng nhập lại số CMND (9 hoặc 12 chữ số)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                        MessageBox.Show("Vui lòng nhập lại số điện thoại (10 số)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
-                {
-                    NHAN_VIEN nv = _nv.getItem(_manv);
-                    //nv.MANHANVIEN = txtMa.Text;
-                    nv.TENNHANVIEN = txtTen.Text;
-                    nv.DIACHI = txtDiaChi.Text;
-                    nv.SDT = txtSDT.Text;
-                    nv.GIOITINH = cmbGioiTinh.Text;
-                    nv.NGAYSINH = dtNgaySinh.DateTime;
-                    nv.CMND_CCCD = txtCMND.Text;
-                    //nv.TENDANGNHAP = txtTenDangNhap.Text;
-                    nv.MATKHAU = txtMatKhau.Text;
-                    nv.VOHIEUHOA = ckbDisable.Checked;
-                    _nv.update(nv);
-                }
-                _them = false;
-                loadData();
-                enable(false);
-                showInfo(false);
-
-            }
+                    MessageBox.Show("Vui lòng nhập lại mã nhà nhân viên (4 ký tự)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
             else
-            {
-                MessageBox.Show("Vui lòng nhập đúng (tối đa 5 ký tự)");
-            }
+                MessageBox.Show("Vui lòng điền đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
         }
 
         private void btnBoQua_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

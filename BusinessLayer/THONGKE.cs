@@ -71,7 +71,7 @@ namespace BusinessLayer
             int dem = 1;
             for (int i = 0; i < lstTKKH.Count; i++)
             {
-                if (lstTKKH[i].TENKH != "A_KHÁCH_LẺ")
+                if (lstTKKH[i].TENKH != "_Khách Lẻ")
                 {
                     objTKKH = new OBJTHONGKEKHACHHANG();
                     objTKKH.TENKH = lstTKKH[i].TENKH;

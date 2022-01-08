@@ -32,11 +32,11 @@ namespace VANPHONGPHAM
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::VANPHONGPHAM.frmloaddulieu), true, true);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDATHANG));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -448,7 +448,7 @@ namespace VANPHONGPHAM
             // 
             this.tabBanHang.Controls.Add(this.splitContainerControl1);
             this.tabBanHang.Name = "tabBanHang";
-            this.tabBanHang.Size = new System.Drawing.Size(1916, 960);
+            this.tabBanHang.Size = new System.Drawing.Size(1916, 955);
             this.tabBanHang.Text = "ĐẶT HÀNG";
             // 
             // splitContainerControl1
@@ -460,7 +460,7 @@ namespace VANPHONGPHAM
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.splitContainerControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1916, 960);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1916, 955);
             this.splitContainerControl1.SplitterPosition = 339;
             this.splitContainerControl1.TabIndex = 8;
             // 
@@ -470,7 +470,7 @@ namespace VANPHONGPHAM
             this.gcDanhSachSP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcDanhSachSP.Location = new System.Drawing.Point(0, 0);
             this.gcDanhSachSP.Name = "gcDanhSachSP";
-            this.gcDanhSachSP.Size = new System.Drawing.Size(339, 960);
+            this.gcDanhSachSP.Size = new System.Drawing.Size(339, 955);
             this.gcDanhSachSP.TabIndex = 0;
             this.gcDanhSachSP.Text = "Danh sách Sản Phẩm";
             // 
@@ -480,7 +480,7 @@ namespace VANPHONGPHAM
             this.gcDanhSachMH.Location = new System.Drawing.Point(2, 28);
             this.gcDanhSachMH.MainView = this.gvDanhSachMH;
             this.gcDanhSachMH.Name = "gcDanhSachMH";
-            this.gcDanhSachMH.Size = new System.Drawing.Size(335, 930);
+            this.gcDanhSachMH.Size = new System.Drawing.Size(335, 925);
             this.gcDanhSachMH.TabIndex = 9;
             this.gcDanhSachMH.UseDisabledStatePainter = false;
             this.gcDanhSachMH.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -544,7 +544,7 @@ namespace VANPHONGPHAM
             this.TENMH.Name = "TENMH";
             this.TENMH.Visible = true;
             this.TENMH.VisibleIndex = 0;
-            this.TENMH.Width = 179;
+            this.TENMH.Width = 214;
             // 
             // GIABAN
             // 
@@ -562,7 +562,7 @@ namespace VANPHONGPHAM
             this.DVT.Name = "DVT";
             this.DVT.Visible = true;
             this.DVT.VisibleIndex = 1;
-            this.DVT.Width = 128;
+            this.DVT.Width = 93;
             // 
             // MOTA
             // 
@@ -587,7 +587,7 @@ namespace VANPHONGPHAM
             this.splitContainerControl2.Panel2.Controls.Add(this.groupControl3);
             this.splitContainerControl2.Panel2.Controls.Add(this.groupControl2);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(1565, 960);
+            this.splitContainerControl2.Size = new System.Drawing.Size(1565, 955);
             this.splitContainerControl2.SplitterPosition = 86;
             this.splitContainerControl2.TabIndex = 0;
             // 
@@ -646,7 +646,7 @@ namespace VANPHONGPHAM
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 725);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(1565, 137);
+            this.groupControl3.Size = new System.Drawing.Size(1565, 132);
             this.groupControl3.TabIndex = 5;
             this.groupControl3.Text = "Thành tiền";
             // 
@@ -826,9 +826,9 @@ namespace VANPHONGPHAM
             // btnXoa
             // 
             this.btnXoa.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             this.btnXoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 

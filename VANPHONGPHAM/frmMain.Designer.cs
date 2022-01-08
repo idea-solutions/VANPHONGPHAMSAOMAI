@@ -850,7 +850,7 @@ namespace VANPHONGPHAM
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(660, 46);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Biểu đồ doanh thu 30 ngày gần nhất";
+            this.label3.Text = "Biểu đồ doanh thu 7 ngày gần nhất";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label3.UseCompatibleTextRendering = true;
             // 
@@ -962,8 +962,6 @@ namespace VANPHONGPHAM
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
-        private DevExpress.XtraCharts.ChartControl chartControl2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label6;
         private DevExpress.XtraNavBar.NavBarItem navBarItem2;
@@ -977,6 +975,8 @@ namespace VANPHONGPHAM
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
         private DevExpress.XtraNavBar.NavBarItem btnThongTin;
+        private System.Windows.Forms.Label label4;
+        private DevExpress.XtraCharts.ChartControl chartControl2;
     }
 }
 

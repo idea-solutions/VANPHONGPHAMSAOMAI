@@ -33,6 +33,7 @@ namespace VANPHONGPHAM
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::VANPHONGPHAM.frmloaddulieu), true, true);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMATHANG));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.cmbDVT = new System.Windows.Forms.ComboBox();
             this.btnAddnew = new DevExpress.XtraEditors.SimpleButton();
             this.txtMoTa = new System.Windows.Forms.RichTextBox();
             this.txtGiaBan = new System.Windows.Forms.NumericUpDown();
@@ -44,7 +45,6 @@ namespace VANPHONGPHAM
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtTen = new System.Windows.Forms.TextBox();
-            this.txtDVT = new System.Windows.Forms.TextBox();
             this.txtMa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gcDanhSach = new DevExpress.XtraGrid.GridControl();
@@ -91,6 +91,7 @@ namespace VANPHONGPHAM
             // 
             this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
+            this.groupControl1.Controls.Add(this.cmbDVT);
             this.groupControl1.Controls.Add(this.btnAddnew);
             this.groupControl1.Controls.Add(this.txtMoTa);
             this.groupControl1.Controls.Add(this.txtGiaBan);
@@ -102,7 +103,6 @@ namespace VANPHONGPHAM
             this.groupControl1.Controls.Add(this.label6);
             this.groupControl1.Controls.Add(this.label4);
             this.groupControl1.Controls.Add(this.txtTen);
-            this.groupControl1.Controls.Add(this.txtDVT);
             this.groupControl1.Controls.Add(this.txtMa);
             this.groupControl1.Controls.Add(this.label1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -111,6 +111,15 @@ namespace VANPHONGPHAM
             this.groupControl1.Size = new System.Drawing.Size(1341, 165);
             this.groupControl1.TabIndex = 9;
             this.groupControl1.Text = "Thông tin mặt hàng";
+            // 
+            // cmbDVT
+            // 
+            this.cmbDVT.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.cmbDVT.FormattingEnabled = true;
+            this.cmbDVT.Location = new System.Drawing.Point(506, 79);
+            this.cmbDVT.Name = "cmbDVT";
+            this.cmbDVT.Size = new System.Drawing.Size(209, 30);
+            this.cmbDVT.TabIndex = 12;
             // 
             // btnAddnew
             // 
@@ -176,7 +185,7 @@ namespace VANPHONGPHAM
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(458, 74);
+            this.label5.Location = new System.Drawing.Point(458, 82);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 22);
             this.label5.TabIndex = 0;
@@ -229,14 +238,6 @@ namespace VANPHONGPHAM
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(343, 30);
             this.txtTen.TabIndex = 1;
-            // 
-            // txtDVT
-            // 
-            this.txtDVT.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtDVT.Location = new System.Drawing.Point(506, 75);
-            this.txtDVT.Name = "txtDVT";
-            this.txtDVT.Size = new System.Drawing.Size(150, 30);
-            this.txtDVT.TabIndex = 1;
             // 
             // txtMa
             // 
@@ -325,7 +326,7 @@ namespace VANPHONGPHAM
             this.MAMH.Name = "MAMH";
             this.MAMH.Visible = true;
             this.MAMH.VisibleIndex = 2;
-            this.MAMH.Width = 188;
+            this.MAMH.Width = 153;
             // 
             // TENMH
             // 
@@ -335,7 +336,7 @@ namespace VANPHONGPHAM
             this.TENMH.Name = "TENMH";
             this.TENMH.Visible = true;
             this.TENMH.VisibleIndex = 3;
-            this.TENMH.Width = 296;
+            this.TENMH.Width = 307;
             // 
             // GIABAN
             // 
@@ -347,7 +348,7 @@ namespace VANPHONGPHAM
             this.GIABAN.Name = "GIABAN";
             this.GIABAN.Visible = true;
             this.GIABAN.VisibleIndex = 4;
-            this.GIABAN.Width = 155;
+            this.GIABAN.Width = 161;
             // 
             // DVT
             // 
@@ -357,7 +358,7 @@ namespace VANPHONGPHAM
             this.DVT.Name = "DVT";
             this.DVT.Visible = true;
             this.DVT.VisibleIndex = 5;
-            this.DVT.Width = 129;
+            this.DVT.Width = 134;
             // 
             // MOTA
             // 
@@ -367,7 +368,7 @@ namespace VANPHONGPHAM
             this.MOTA.Name = "MOTA";
             this.MOTA.Visible = true;
             this.MOTA.VisibleIndex = 6;
-            this.MOTA.Width = 314;
+            this.MOTA.Width = 327;
             // 
             // bar4
             // 
@@ -652,7 +653,6 @@ namespace VANPHONGPHAM
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtDVT;
         private DevExpress.XtraEditors.SimpleButton btnAddnew;
         private DevExpress.XtraBars.Bar bar4;
         private DevExpress.XtraBars.Bar bar1;
@@ -672,5 +672,6 @@ namespace VANPHONGPHAM
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarButtonItem btnPrint;
+        private System.Windows.Forms.ComboBox cmbDVT;
     }
 }

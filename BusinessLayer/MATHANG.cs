@@ -37,7 +37,7 @@ namespace BusinessLayer
                 objMatHang.TENLOAIMH = loaimh.TENLOAI;
                 lstmatHangFull.Add(objMatHang);
             }
-            return lstmatHangFull.OrderBy(x => x.TENMH).ToList();
+            return lstmatHangFull.OrderBy(x => x.MALOAI).ToList();
         }
 
         public MAT_HANG getItem(string mamh)
@@ -67,7 +67,7 @@ namespace BusinessLayer
                 objMatHang.TENLOAIMH = loaimh.TENLOAI;
                 lstmatHangFull.Add(objMatHang);
             }
-            return lstmatHangFull.Where(x=>x.MALOAI == maloai).OrderBy(x => x.TENMH).ToList();
+            return lstmatHangFull.Where(x=>x.MALOAI == maloai).OrderBy(x => x.MALOAI).ToList();
         }
 
         public void add(MAT_HANG mh)

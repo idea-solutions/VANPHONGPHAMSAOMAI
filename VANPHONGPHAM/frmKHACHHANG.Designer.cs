@@ -103,9 +103,9 @@ namespace VANPHONGPHAM
             this.ckbDisable.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
             this.ckbDisable.Location = new System.Drawing.Point(828, 40);
             this.ckbDisable.Name = "ckbDisable";
-            this.ckbDisable.Size = new System.Drawing.Size(88, 26);
+            this.ckbDisable.Size = new System.Drawing.Size(85, 26);
             this.ckbDisable.TabIndex = 2;
-            this.ckbDisable.Text = "Disable";
+            this.ckbDisable.Text = "Ngừng";
             this.ckbDisable.UseVisualStyleBackColor = true;
             // 
             // label4

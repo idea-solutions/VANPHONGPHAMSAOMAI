@@ -23,8 +23,10 @@ namespace VANPHONGPHAM
         {
             InitializeComponent();
         }
-
+        frmBanHang objBANHANG = (frmBanHang)Application.OpenForms["frmBanHang"];
+        frmMain objMain = (frmMain)Application.OpenForms["frmMain"];
         KHACHHANG _kh;
+        NHANVIEN _nv;
         bool _them;
         public int _makh = 0;
         bool cal(Int32 _Width, GridView _view)
@@ -51,7 +53,7 @@ namespace VANPHONGPHAM
                 BeginInvoke(new MethodInvoker(delegate { cal(_Width, gvDanhSach); })); // Tăng kích thước nếu text vượt quá
             }
         }
-        NHANVIEN _nv;
+        
         private void frmKHACHHANG_Load(object sender, EventArgs e)
         {
             
@@ -61,14 +63,12 @@ namespace VANPHONGPHAM
             _nv = new NHANVIEN();
             bool t = _nv.kiemtraQuyen(objMain._tendn);
             if (!t)
-            {
-                //btnAdd.Enabled = false;
-                //btnEdit.Enabled = false;
-                //btnDelete.Enabled = false;
-            }
+            {}
             cmbGioiTinh.Items.Add("Nam");
             cmbGioiTinh.Items.Add("Nữ");
             cmbGioiTinh.Items.Add("Khác");
+            txtSDT.MaxLength = 10;
+            txtTen.MaxLength = 30;
         }
 
         private void loadData()
@@ -123,6 +123,7 @@ namespace VANPHONGPHAM
             if (MessageBox.Show("Bạn có chắc chắn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 _kh.disable(_makh);
+                MessageBox.Show("Xóa khách hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             reset(true);
             loadData();
@@ -131,35 +132,51 @@ namespace VANPHONGPHAM
         private void btnLuu_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             
-            if (txtSDT.TextLength <= 10)
+            if (txtTen.TextLength != 0 && cmbGioiTinh.Text != "")
             {
-                if (_them == true)
+                if(txtSDT.TextLength == 0 || txtSDT.TextLength == 10)
                 {
-                    KHACH_HANG kh = new KHACH_HANG();
-                    kh.SDT = txtSDT.Text;
-                    kh.TENKH = txtTen.Text;
-                    kh.VOHIEUHOA = ckbDisable.Checked;
-                    kh.GIOITINH = cmbGioiTinh.Text;
-                    _kh.add(kh);
+                    if (_them == true)
+                    {
+                        var khachhang = _kh.getItem(txtTen.Text, txtSDT.Text, cmbGioiTinh.Text);
+                        if (khachhang == null)
+                        {
+                            KHACH_HANG kh = new KHACH_HANG();
+                            kh.SDT = txtSDT.Text;
+                            kh.TENKH = txtTen.Text;
+                            kh.VOHIEUHOA = ckbDisable.Checked;
+                            kh.GIOITINH = cmbGioiTinh.Text;
+                            _kh.add(kh);
+                            _them = false;
+                            loadData();
+                            enable(false);
+                            showHideControl(true);
+                            MessageBox.Show("Thêm khách hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                            MessageBox.Show("Khách hàng đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        KHACH_HANG kh = _kh.getItem(_makh);
+                        kh.SDT = txtSDT.Text;
+                        kh.GIOITINH = cmbGioiTinh.Text;
+                        kh.TENKH = txtTen.Text;
+                        kh.VOHIEUHOA = ckbDisable.Checked;
+                        _kh.update(kh);
+                        _them = false;
+                        loadData();
+                        enable(false);
+                        showHideControl(true);
+                        MessageBox.Show("Cập nhật khách hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 else
-                {
-                    KHACH_HANG kh = _kh.getItem(_makh);
-                    kh.SDT = txtSDT.Text;
-                    kh.GIOITINH = cmbGioiTinh.Text;
-                    kh.TENKH = txtTen.Text;
-                    kh.VOHIEUHOA = ckbDisable.Checked;
-                    _kh.update(kh);
-                }
-                _them = false;
-                loadData();
-                enable(false);
-                showHideControl(true);
+                    MessageBox.Show("Vui lòng nhập lại số điện thoại(10 số)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
-                MessageBox.Show("Vui lòng nhập đúng số điện thoại (10 số)");
+                MessageBox.Show("Vui lòng điền đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
-
 
         private void btnBoQua_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -172,7 +189,7 @@ namespace VANPHONGPHAM
         {
             if (gvDanhSach.RowCount > 0)
             {
-                if (gvDanhSach.GetFocusedRowCellValue("MAKH") != null)
+                if (gvDanhSach.GetFocusedRowCellValue("MAKH") != null && gvDanhSach.GetFocusedRowCellValue("MAKH").ToString()!="1007")
                 {
                     _makh = int.Parse(gvDanhSach.GetFocusedRowCellValue("MAKH").ToString());
                     txtSDT.Text = gvDanhSach.GetFocusedRowCellValue("SDT").ToString();
@@ -180,11 +197,13 @@ namespace VANPHONGPHAM
                     ckbDisable.Checked = bool.Parse(gvDanhSach.GetFocusedRowCellValue("VOHIEUHOA").ToString());
                     cmbGioiTinh.Text = gvDanhSach.GetFocusedRowCellValue("GIOITINH").ToString();
                 }
+                else
+                {
+                    _makh = int.Parse(gvDanhSach.GetFocusedRowCellValue("MAKH").ToString());
+                    txtTen.Text = gvDanhSach.GetFocusedRowCellValue("TENKH").ToString();
+                }    
             }
         }
-
-        frmBanHang objBANHANG = (frmBanHang)Application.OpenForms["frmBanHang"];
-        frmMain objMain = (frmMain)Application.OpenForms["frmMain"];
 
         private void gvDanhSach_DoubleClick(object sender, EventArgs e)
         {

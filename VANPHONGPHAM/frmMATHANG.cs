@@ -24,8 +24,10 @@ namespace VANPHONGPHAM
         {
             InitializeComponent();
         }
-        private
 
+        NHANVIEN _nv;
+        frmLOAIMATHANG objLOAIMATHANG = (frmLOAIMATHANG)Application.OpenForms["frmLOAIMATHANG"];
+        frmMain objMain = (frmMain)Application.OpenForms["frmMain"];
         LOAIMATHANG _loaimh;
         MATHANG _mh;
         bool _them;
@@ -42,10 +44,12 @@ namespace VANPHONGPHAM
             btnEdit.Enabled = t;
             btnAdd.Enabled = t;
         }
-        NHANVIEN _nv;
 
         private void frmMATHANG_Load(object sender, EventArgs e)
         {
+            txtMa.MaxLength = 5;
+            txtTen.MaxLength = 50;
+            cmbDVT.MaxLength = 10;
             _nv = new NHANVIEN();
             _loaimh = new LOAIMATHANG();
             _mh = new MATHANG();
@@ -63,8 +67,15 @@ namespace VANPHONGPHAM
                 btnEdit.Enabled = false;
                 btnDelete.Enabled = false;
             }
+            cmbDVT.Items.Add("Hộp");
+            cmbDVT.Items.Add("Chiếc");
+            cmbDVT.Items.Add("Đôi");
+            cmbDVT.Items.Add("Lọ");
+            cmbDVT.Items.Add("Gói");
+            cmbDVT.Items.Add("Tờ");
+            cmbDVT.Items.Add("Bộ");
         }
-
+        
         private void loadData()
         {
             
@@ -72,7 +83,7 @@ namespace VANPHONGPHAM
             loadLoaiMH();
             gcDanhSach.DataSource = _mh.getAll();
         }
-        frmMain objMain = (frmMain)Application.OpenForms["frmMain"];
+        
         public void loadLoaiMH()
         {
             cmbLoaiMH.DataSource = _loaimh.getAll();
@@ -101,7 +112,7 @@ namespace VANPHONGPHAM
             txtTen.Enabled = t;
             txtMa.Enabled = t;
             txtGiaBan.Enabled = t;
-            txtDVT.Enabled = t;
+            cmbDVT.Enabled = t;
             txtMoTa.Enabled = t;
             ckbDisable.Enabled = t;
         }
@@ -111,7 +122,7 @@ namespace VANPHONGPHAM
             txtTen.Text = "";
             txtMa.Text = "";
             txtGiaBan.Text = "";
-            txtDVT.Text = "";
+            cmbDVT.Text = "";
             txtMoTa.Text = "";
             ckbDisable.Checked = false;
         }
@@ -131,7 +142,7 @@ namespace VANPHONGPHAM
                     txtMa.Text = gvDanhSach.GetFocusedRowCellValue("MAMH").ToString();
                     txtTen.Text = gvDanhSach.GetFocusedRowCellValue("TENMH").ToString();
                     txtGiaBan.Text = gvDanhSach.GetFocusedRowCellValue("GIABAN").ToString();
-                    txtDVT.Text = gvDanhSach.GetFocusedRowCellValue("DVT").ToString();
+                    cmbDVT.Text = gvDanhSach.GetFocusedRowCellValue("DVT").ToString();
                     txtMoTa.Text = gvDanhSach.GetFocusedRowCellValue("MOTA").ToString();
                     cmbLoaiMH.Text = gvDanhSach.GetFocusedRowCellValue("TENLOAIMH").ToString();
                     ckbDisable.Checked = bool.Parse(gvDanhSach.GetFocusedRowCellValue("VOHIEUHOA").ToString());
@@ -158,7 +169,7 @@ namespace VANPHONGPHAM
                 BeginInvoke(new MethodInvoker(delegate { cal(_Width, gvDanhSach); })); // Tăng kích thước nếu text vượt quá
             }
         }
-        frmLOAIMATHANG objLOAIMATHANG = (frmLOAIMATHANG)Application.OpenForms["frmLOAIMATHANG"];
+
         private void btnAddnew_Click(object sender, EventArgs e)
         {
             frmLOAIMATHANG frm = new frmLOAIMATHANG();
@@ -179,6 +190,7 @@ namespace VANPHONGPHAM
             showHideControl(false);
             _them = false;
             enable(true);
+            txtMa.Enabled = false;
         }
 
         private void btnDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -186,6 +198,7 @@ namespace VANPHONGPHAM
             if (MessageBox.Show("Bạn có chắc chắn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 _mh.disable(_mamh);
+                MessageBox.Show("Xóa mặt hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             reset(true);
             loadData();
@@ -193,41 +206,57 @@ namespace VANPHONGPHAM
 
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (txtMa.TextLength <= 5)
+            if (txtMa.TextLength > 0 && txtGiaBan.Value > 0 && cmbDVT.Text !=""&& txtTen.Text != "")
             {
-                showHideControl(true);
-                if (_them)
+                if (txtMa.TextLength == 5)
                 {
-                    MAT_HANG mh = new MAT_HANG();
-                    mh.MAMH = txtMa.Text;
-                    mh.TENMH = txtTen.Text;
-                    mh.GIABAN = int.Parse(txtGiaBan.Text);
-                    mh.DVT = txtDVT.Text;
-                    mh.MALOAI = cmbLoaiMH.SelectedValue.ToString();
-                    mh.MOTA = txtMoTa.Text;
-                    mh.VOHIEUHOA = ckbDisable.Checked;
-                    _mh.add(mh);
+                    MAT_HANG kiemtramh;
+                    kiemtramh = _mh.getItem(txtMa.Text);
+                    if (_them)
+                    {
+                        if (kiemtramh == null)
+                        {
+                            showHideControl(true);
+                            MAT_HANG mh = new MAT_HANG();
+                            mh.MAMH = txtMa.Text;
+                            mh.TENMH = txtTen.Text;
+                            mh.GIABAN = int.Parse(txtGiaBan.Text);
+                            mh.DVT = cmbDVT.Text;
+                            mh.MALOAI = cmbLoaiMH.SelectedValue.ToString();
+                            mh.MOTA = txtMoTa.Text;
+                            mh.VOHIEUHOA = ckbDisable.Checked;
+                            _mh.add(mh);
+                            MessageBox.Show("Thêm mới mặt hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            _them = false;
+                            loadData();
+                            enable(false);
+                        }
+                        else
+                            MessageBox.Show("Mã mặt hàng đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        MAT_HANG mh = _mh.getItem(_mamh);
+                        mh.MAMH = txtMa.Text;
+                        mh.TENMH = txtTen.Text;
+                        mh.GIABAN = int.Parse(txtGiaBan.Text);
+                        mh.DVT = cmbDVT.Text;
+                        mh.MALOAI = cmbLoaiMH.SelectedValue.ToString();
+                        mh.MOTA = txtMoTa.Text;
+                        mh.VOHIEUHOA = ckbDisable.Checked;
+                        _mh.update(mh);
+                        MessageBox.Show("Cập nhật mặt hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        _them = false;
+                        loadData();
+                        enable(false);
+                    }
+                    
                 }
                 else
-                {
-                    MAT_HANG mh = _mh.getItem(_mamh);
-                    mh.MAMH = txtMa.Text;
-                    mh.TENMH = txtTen.Text;
-                    mh.GIABAN = int.Parse(txtGiaBan.Text);
-                    mh.DVT = txtDVT.Text;
-                    mh.MALOAI = cmbLoaiMH.SelectedValue.ToString();
-                    mh.MOTA = txtMoTa.Text;
-                    mh.VOHIEUHOA = ckbDisable.Checked;
-                    _mh.update(mh);
-                }
-                _them = false;
-                loadData();
-                enable(false);
+                    MessageBox.Show("Vui lòng nhập lại mã mặt hàng (5 ký tự)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
-            {
-                MessageBox.Show("Vui lòng nhập đúng (tối đa 5 ký tự)");
-            }
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             objMain.loadChart();
         }
 

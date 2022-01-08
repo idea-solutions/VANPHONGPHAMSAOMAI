@@ -406,7 +406,7 @@ namespace VANPHONGPHAM
             this.IconOptions.Image = global::VANPHONGPHAM.Properties.Resources.Nhiều_màu_sắc_Hình_khối_Thiết_kế___Nghệ_thuật_Biểu_trưng__3_;
             this.Name = "frmLOAIMATHANG";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Danh mục Loại Mặt Hàng";
+            this.Text = "Danh mục Nhóm Mặt Hàng";
             this.Load += new System.EventHandler(this.frmLOAIMATHANG_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhSach)).EndInit();

@@ -27,23 +27,27 @@ namespace VANPHONGPHAM
         LOAIMATHANG _loaimh;
         bool _them;
         string _maloaimh;
+        NHANVIEN _nv;
+        frmMATHANG objMATHANG = (frmMATHANG)Application.OpenForms["frmMATHANG"];
+        frmMain objMain = (frmMain)Application.OpenForms["frmMain"];
+
         bool cal(Int32 _Width, GridView _view)
         {
             _view.IndicatorWidth = _view.IndicatorWidth < _Width ? _Width : _view.IndicatorWidth;
             return true;
         }
-        NHANVIEN _nv;
+
         private void frmLOAIMATHANG_Load(object sender, EventArgs e)
         {
+
+            txtMa.MaxLength = 5;
+            txtTen.MaxLength = 50;
             _loaimh = new LOAIMATHANG();
             loadData();
             showHideControl(true);
             _nv = new NHANVIEN();
             bool t = _nv.kiemtraQuyen(objMain._tendn);
-            if (t)
-            {
-
-            }
+            if (t){}
             else
             {
                 btnAdd.Enabled = false;
@@ -115,8 +119,6 @@ namespace VANPHONGPHAM
             }
         }
 
-        frmMATHANG objMATHANG = (frmMATHANG)Application.OpenForms["frmMATHANG"];
-
         private void gvDanhSach_DoubleClick(object sender, EventArgs e)
         {
             if(objMATHANG == null || objMATHANG.IsDisposed) //null là chưa được khởi tạo. IsDisposed là khởi tạo rồi nhưng đang bị ẩn
@@ -149,6 +151,7 @@ namespace VANPHONGPHAM
             showHideControl(false);
             _them = false;
             enable(true);
+            txtMa.Enabled = false;
         }
 
         private void btnDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -156,24 +159,34 @@ namespace VANPHONGPHAM
             if (MessageBox.Show("Bạn có chắc chắn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 _loaimh.disable(_maloaimh);
+                MessageBox.Show("Xóa mặt hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             reset(true);
             loadData();
         }
-        frmMain objMain = (frmMain)Application.OpenForms["frmMain"];
 
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (txtMa.TextLength <= 5)
+            if (txtMa.TextLength > 0 && txtTen.Text != "")
             {
-                showHideControl(true);
                 if (_them)
                 {
-                    LOAI_MAT_HANG loaimh = new LOAI_MAT_HANG();
-                    loaimh.MALOAI = txtMa.Text;
-                    loaimh.TENLOAI = txtTen.Text;
-                    loaimh.VOHIEUHOA = ckbDisable.Checked;
-                    _loaimh.add(loaimh);
+                    var nhommh = _loaimh.getItem(txtMa.Text);
+                    if (nhommh == null)
+                    {
+                        showHideControl(true);
+                        LOAI_MAT_HANG loaimh = new LOAI_MAT_HANG();
+                        loaimh.MALOAI = txtMa.Text;
+                        loaimh.TENLOAI = txtTen.Text;
+                        loaimh.VOHIEUHOA = ckbDisable.Checked;
+                        _loaimh.add(loaimh);
+                        MessageBox.Show("Thêm mới mặt hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        _them = false;
+                        loadData();
+                        enable(false);
+                    }
+                    else
+                        MessageBox.Show("Mã nhóm mặt hàng đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -181,15 +194,14 @@ namespace VANPHONGPHAM
                     loaimh.TENLOAI = txtTen.Text;
                     loaimh.VOHIEUHOA = ckbDisable.Checked;
                     _loaimh.update(loaimh);
+                    MessageBox.Show("Cập nhật mặt hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    _them = false;
+                    loadData();
+                    enable(false);
                 }
-                _them = false;
-                loadData();
-                enable(false);
             }
             else
-            {
-                MessageBox.Show("Vui lòng nhập đúng (tối đa 5 ký tự)");
-            }
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             objMain.loadChart();
         }
 

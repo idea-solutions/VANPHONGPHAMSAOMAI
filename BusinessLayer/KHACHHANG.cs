@@ -25,6 +25,11 @@ namespace BusinessLayer
             return db.KHACH_HANG.FirstOrDefault(x => x.MAKH == makh);
         }
 
+        public KHACH_HANG getItem(string tenkh, string sdt, string gioitinh)
+        {
+            return db.KHACH_HANG.FirstOrDefault(x => x.TENKH == tenkh && x.SDT == sdt && x.GIOITINH == gioitinh);
+        }
+
         public void add(KHACH_HANG kh)
         {
             try

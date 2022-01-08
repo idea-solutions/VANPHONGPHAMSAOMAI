@@ -27,6 +27,10 @@ namespace VANPHONGPHAM
         NHACUNGCAP _ncc;
         bool _them;
         string _mancc;
+        frmMain objMain = (frmMain)Application.OpenForms["frmMain"];
+        NHANVIEN _nv;
+        frmDATHANG objDATHANG = (frmDATHANG)Application.OpenForms["frmDATHANG"];
+
         bool cal(Int32 _Width, GridView _view)
         {
             _view.IndicatorWidth = _view.IndicatorWidth < _Width ? _Width : _view.IndicatorWidth;
@@ -51,8 +55,7 @@ namespace VANPHONGPHAM
                 BeginInvoke(new MethodInvoker(delegate { cal(_Width, gvDanhSach); })); // Tăng kích thước nếu text vượt quá
             }
         }
-        frmMain objMain = (frmMain)Application.OpenForms["frmMain"];
-        NHANVIEN _nv;
+
         private void frmNHACUNGCAP_Load(object sender, EventArgs e)
         {
             _ncc = new NHACUNGCAP();
@@ -70,6 +73,10 @@ namespace VANPHONGPHAM
                 btnEdit.Enabled = false;
                 btnDelete.Enabled = false;
             }
+            txtMa.MaxLength = 5;
+            txtTen.MaxLength = 50;
+            txtEmail.MaxLength = 30;
+            txtSDT.MaxLength = 10;
         }
 
         private void loadData()
@@ -137,42 +144,66 @@ namespace VANPHONGPHAM
         private void btnLuu_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
-            if (txtMa.TextLength <= 5)
+            if (txtMa.TextLength !=0 && txtTen.TextLength!=0 && txtSDT.TextLength!=0&& txtEmail.TextLength != 0 && txtDiaChi.TextLength != 0)
             {
-                if (txtSDT.TextLength == 10)
+                if (txtMa.TextLength == 5)
                 {
-                    if (_them)
+                    if (txtSDT.TextLength == 10)
                     {
-                        NHA_CUNG_CAP ncc = new NHA_CUNG_CAP();
-                        ncc.MANCC = txtMa.Text;
-                        ncc.TENNCC = txtTen.Text;
-                        ncc.SDT = txtSDT.Text;
-                        ncc.DIACHI = txtDiaChi.Text;
-                        ncc.EMAIL = txtEmail.Text;
-                        ncc.VOHIEUHOA = ckbDisable.Checked;
-                        _ncc.add(ncc);
+                        string email = txtEmail.Text;
+                        if (email.ToLower().IndexOf('@') != -1)
+                        {
+                            var ncckt = _ncc.getItem(txtMa.Text);
+                            if (ncckt == null)
+                            {
+                                if (_them)
+                                {
+                                    NHA_CUNG_CAP ncc = new NHA_CUNG_CAP();
+                                    ncc.MANCC = txtMa.Text;
+                                    ncc.TENNCC = txtTen.Text;
+                                    ncc.SDT = txtSDT.Text;
+                                    ncc.DIACHI = txtDiaChi.Text;
+                                    ncc.EMAIL = txtEmail.Text;
+                                    ncc.VOHIEUHOA = ckbDisable.Checked;
+                                    _ncc.add(ncc);
+                                    MessageBox.Show("Thêm nhà cung cấp thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    _them = false;
+                                    loadData();
+                                    enable(false);
+                                    showHideControl(true);
+                                }
+                                else
+                                {
+                                    NHA_CUNG_CAP ncc = _ncc.getItem(_mancc);
+                                    ncc.MANCC = txtMa.Text;
+                                    ncc.DIACHI = txtDiaChi.Text;
+                                    ncc.SDT = txtSDT.Text;
+                                    ncc.EMAIL = txtEmail.Text;
+                                    ncc.TENNCC = txtTen.Text;
+                                    ncc.VOHIEUHOA = ckbDisable.Checked;
+                                    _ncc.update(ncc);
+                                    MessageBox.Show("Cập nhật nhà cung cấp thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    _them = false;
+                                    loadData();
+                                    enable(false);
+                                    showHideControl(true);
+                                }
+                            }
+                            else
+                                MessageBox.Show("Nhà cung cấp đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else
+                            MessageBox.Show("Vui lòng nhập đúng email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
-                    {
-                        NHA_CUNG_CAP ncc = _ncc.getItem(_mancc);
-                        ncc.MANCC = txtMa.Text;
-                        ncc.DIACHI = txtDiaChi.Text;
-                        ncc.SDT = txtSDT.Text;
-                        ncc.EMAIL = txtEmail.Text;
-                        ncc.TENNCC = txtTen.Text;
-                        ncc.VOHIEUHOA = ckbDisable.Checked;
-                        _ncc.update(ncc);
-                    }
-                    _them = false;
-                    loadData();
-                    enable(false);
-                    showHideControl(true);
+                        MessageBox.Show("Vui lòng nhập lại số điện thoại (10 số)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
-                    MessageBox.Show("Vui lòng nhập đúng số điện thoai (10 ký tự)");
+                    MessageBox.Show("Vui lòng nhập lại mã nhà cung cấp (4 ký tự)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else
+                MessageBox.Show("Vui lòng điền đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
-
 
         private void btnBoQua_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -202,8 +233,6 @@ namespace VANPHONGPHAM
                 }
             }
         }
-
-        frmDATHANG objDATHANG = (frmDATHANG)Application.OpenForms["frmDATHANG"];
 
         private void gvDanhSach_DoubleClick(object sender, EventArgs e)
         {

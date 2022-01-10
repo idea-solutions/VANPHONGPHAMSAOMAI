@@ -22,73 +22,64 @@ namespace VANPHONGPHAM
         public string _tendn;
         bool kiemtra = false;
 
-        private void btnLoaiHang_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
+        private void btnLoaiHang_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e){
             frmLOAIMATHANG frm = new frmLOAIMATHANG();
             frm.Show();
         }
 
-        private void btnMatHang_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
+        private void btnMatHang_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e){
             frmMATHANG frm = new frmMATHANG();
             frm.Show();
         }
 
-        private void btnKhachHang_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-            frmKHACHHANG frm = new frmKHACHHANG();
+        private void btnKhachHang_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e){
+            frmKhachHang frm = new frmKhachHang();
             frm.Show();
         }
 
-        private void btnNhanVien_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
+        private void btnNhanVien_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e){
             frmNHANVIEN frm = new frmNHANVIEN();
             frm.Show();
         }
 
-        private void btnNCC_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
+        private void btnNCC_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e){
             frmNHACUNGCAP frm = new frmNHACUNGCAP();
             frm.Show();
         }
 
         THONGKE _thongke;
-        Series series = new Series("", ViewType.Spline); // tròn
-        Series series1 = new Series("", ViewType.Bar); // cột
+        Series series = new Series("", ViewType.Spline); // cột
+        Series series1 = new Series("", ViewType.Bar); // sóng
         Series series2 = new Series("", ViewType.Bar); // cột
+        Series series12 = new Series("", ViewType.Bar); // cột
 
-        frmDangNhap objDN = (frmDangNhap)Application.OpenForms["frmDangNhap"];
         NHANVIEN _nv;
-        public void frmMain_Load(object sender, EventArgs e)
-        {
+        public void frmMain_Load(object sender, EventArgs e){
             _nv = new NHANVIEN();
             _thongke = new THONGKE();
             loadChart();
-            chartControl1.Series.Add(series);
-            chartControl3.Series.Add(series1);
             chartControl2.Series.Add(series2);
-            series.Label.TextPattern = "{A}: {VP: p0}";
-            //series1.Label.TextPattern = "{A}: {VP: p0}";
-            //
+
+            chartControl1.Series.Add(series12);
+            chartControl1.Series.Add(series);
+            
+            chartControl3.Series.Add(series1);
+
             timer1.Enabled = true;
             timer1.Start();
             label5.Text = DateTime.Now.ToLongTimeString();
 
             bool t = _nv.kiemtraQuyen(_tendn);
+            if (!t)
+                quyenChucNang(false);
         }
 
-        void quyenChucNang(bool t)
-        {
-            btnDelete.Visible = t;
+        void quyenChucNang(bool t){
             btnDatHang.Enabled = t;
             navBarGroup4.Visible = t;
         }
 
-        public void loadChart()
-        {
-            List<OBJTHONGKELOAIMH> lstMH;
-            lstMH= new List<OBJTHONGKELOAIMH>();
-            lstMH = _thongke.thongKeMatHang();
+        public void loadChart(){
 
             List<OBJTHONGKEKHACHHANG> lstKH;
             lstKH = new List<OBJTHONGKEKHACHHANG>();
@@ -102,46 +93,34 @@ namespace VANPHONGPHAM
             lstBH= new List<OBJTHONGKEBANHANG>();
             lstBH = _thongke.thongKeBanHang();
             series.Points.Clear();
-            foreach (var item in lstDThu)
-            {
+            foreach (var item in lstDThu){
+                series12.Points.Add(new SeriesPoint(item.Ngay, item.ThanhTien));
                 series.Points.Add(new SeriesPoint(item.Ngay, item.ThanhTien));
             }
-            foreach (var item in lstBH)
-            {
+            foreach (var item in lstBH){
                 series1.Points.Add(new SeriesPoint(item.TENMH, item.SOLUONG));
             }
 
-            foreach (var item in lstKH)
-            {
+            foreach (var item in lstKH){
                 series2.Points.Add(new SeriesPoint(item.TENKH, item.THANHTIEN));
             }
         }
 
-        private void btnBanHang_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
+        private void btnBanHang_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
             frmBanHang frm = new frmBanHang();
             frm.Show();
         }
 
-        private void btnDelete_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-            frmDelete frm = new frmDelete();
-            frm.Show();
-        }
-
-        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
-        {
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e){
             Application.Exit();
         }
 
-        private void btnDatHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            frmDATHANG frm = new frmDATHANG();
+        private void btnDatHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
+            frmDatHang frm = new frmDatHang();
             frm.Show();
         }
         public int i = 10;
-        private void timer1_Tick(object sender, EventArgs e)
-        {
+        private void timer1_Tick(object sender, EventArgs e){
             string a = "";
             label5.Text = DateTime.Now.ToLongTimeString();
             if (DateTime.Now.Hour > 5 && DateTime.Now.Hour <= 10)
@@ -152,41 +131,35 @@ namespace VANPHONGPHAM
                 a = "Good evening";
             label6.Text = a + "! Văn phòng phẩm Sao Mai kính chúc quý khách một ngày tốt lành!";
             label6.Left += i;
-            if (label6.Left >= this.Width - 500 || label6.Left <= -750)
+            if (label6.Left >= this.Width || label6.Left <= -750)
                 i = -i;
             label6.Left += i;
         }
 
-        private void navBarItem2_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
+        private void navBarItem2_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e){
             frmPhanQuyenND frm = new frmPhanQuyenND();
             frm.ShowDialog();
         }
 
-        private void btnDangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
+        private void btnDangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
             DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if(dialogResult == DialogResult.Yes)
-            {
+            if(dialogResult == DialogResult.Yes){
                 kiemtra = true;
                 this.Close();
             }
         }
 
-        private void frmMain_FormClosing_1(object sender, FormClosingEventArgs e)
-        {
+        private void frmMain_FormClosing_1(object sender, FormClosingEventArgs e){
             if(!kiemtra)
                 Application.Exit();
         }
 
-        private void btnDoiMk_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
+        private void btnDoiMk_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e){
             frmDoiMK frm = new frmDoiMK();
             frm.ShowDialog();
         }
 
-        private void btnThongTin_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
+        private void btnThongTin_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e){
             frmThongTinNhanVien frm = new frmThongTinNhanVien();
             frm.ShowDialog();
         }

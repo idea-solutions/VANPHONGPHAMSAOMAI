@@ -98,7 +98,7 @@
           <Property Name="TENDANGNHAP" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="MATKHAU" Type="varchar" MaxLength="16" Nullable="false" />
           <Property Name="VOHIEUHOA" Type="bit" Nullable="false" />
-          <Property Name="LAQUANLY" Type="bit" />
+          <Property Name="LAQUANLY" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -329,6 +329,16 @@
             </CollectionType>
           </ReturnType>
         </Function>
+        <Function Name="FNTHONGKEDOANHTHUDESC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="Ngay" Type="nvarchar" MaxLength="30" />
+                <Property Name="TongTien" Type="float" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
         <Function Name="HOADON" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="NGAY" Type="datetime" Mode="In" />
         </Function>
@@ -466,6 +476,7 @@
             <End Role="MAT_HANG" EntitySet="MAT_HANG" />
           </AssociationSet>
           <FunctionImport Name="FNTHONGKEDOANHTHU" IsComposable="true" ReturnType="Collection(VANPHONGPHAM.FNTHONGKEDOANHTHU_Result)" />
+          <FunctionImport Name="FNTHONGKEDOANHTHUDESC" IsComposable="true" ReturnType="Collection(VANPHONGPHAM.FNTHONGKEDOANHTHUDESC_Result)" />
           </EntityContainer>
         <ComplexType Name="FNMAT_HANG_Result">
           <Property Type="String" Name="MAMH" Nullable="false" MaxLength="5" />
@@ -662,7 +673,7 @@
           <Property Name="TENDANGNHAP" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="MATKHAU" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
           <Property Name="VOHIEUHOA" Type="Boolean" Nullable="false" />
-          <Property Name="LAQUANLY" Type="Boolean" />
+          <Property Name="LAQUANLY" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="DON_DAT_HANG" Relationship="VANPHONGPHAM.FK_DON_DAT_HANG_NHAN_VIEN" FromRole="NHAN_VIEN" ToRole="DON_DAT_HANG" />
           <NavigationProperty Name="HOA_DON" Relationship="VANPHONGPHAM.FK__HOA_DON__MANHANV__38996AB5" FromRole="NHAN_VIEN" ToRole="HOA_DON" />
         </EntityType>
@@ -785,6 +796,10 @@
           </ReferentialConstraint>
         </Association>
         <ComplexType Name="FNTHONGKEDOANHTHU_Result">
+          <Property Type="String" Name="Ngay" Nullable="true" MaxLength="30" />
+          <Property Type="Double" Name="TongTien" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="FNTHONGKEDOANHTHUDESC_Result">
           <Property Type="String" Name="Ngay" Nullable="true" MaxLength="30" />
           <Property Type="Double" Name="TongTien" Nullable="true" />
         </ComplexType>
@@ -1048,6 +1063,14 @@
           <FunctionImportMapping FunctionImportName="FNTHONGKEDOANHTHU" FunctionName="VANPHONGPHAM.Store.FNTHONGKEDOANHTHU">
             <ResultMapping>
               <ComplexTypeMapping TypeName="VANPHONGPHAM.FNTHONGKEDOANHTHU_Result">
+                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="FNTHONGKEDOANHTHUDESC" FunctionName="VANPHONGPHAM.Store.FNTHONGKEDOANHTHUDESC">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="VANPHONGPHAM.FNTHONGKEDOANHTHUDESC_Result">
                 <ScalarProperty Name="Ngay" ColumnName="Ngay" />
                 <ScalarProperty Name="TongTien" ColumnName="TongTien" />
               </ComplexTypeMapping>

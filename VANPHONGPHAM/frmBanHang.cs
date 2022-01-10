@@ -19,8 +19,7 @@ namespace VANPHONGPHAM
 {
     public partial class frmBanHang : DevExpress.XtraEditors.XtraForm
     {
-        public frmBanHang()
-        {
+        public frmBanHang(){
             InitializeComponent();
         }
 
@@ -34,24 +33,19 @@ namespace VANPHONGPHAM
         bool _them;
         string _mamh;
 
-        frmKHACHHANG objKHACHHANG = (frmKHACHHANG)Application.OpenForms["frmKHACHHANG"];
+        frmKhachHang objKHACHHANG = (frmKhachHang)Application.OpenForms["frmKHACHHANG"];
         frmMain objMain = (frmMain)Application.OpenForms["frmMain"];
-        bool cal(Int32 _Width, GridView _view)
-        {
+        bool cal(Int32 _Width, GridView _view){
             _view.IndicatorWidth = _view.IndicatorWidth < _Width ? _Width : _view.IndicatorWidth;
             return true;
         }
-        private void gvDanhSach_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
-        {
-            if (e.Info.IsRowIndicator) //Nếu là dòng Indicator
-            {
-                if (e.RowHandle < 0)
-                {
+        private void gvDanhSach_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e){
+            if (e.Info.IsRowIndicator){
+                if (e.RowHandle < 0){
                     e.Info.ImageIndex = 0;
                     e.Info.DisplayText = string.Empty;
                 }
-                else
-                {
+                else{
                     e.Info.ImageIndex = -1; //Nếu hiển thị
                     e.Info.DisplayText = (e.RowHandle + 1).ToString(); //Số thứ tự tăng dần
                 }
@@ -61,17 +55,13 @@ namespace VANPHONGPHAM
             }
         }
 
-        private void gvDanhSachMH_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
-        {
-            if (e.Info.IsRowIndicator) //Nếu là dòng Indicator
-            {
-                if (e.RowHandle < 0)
-                {
+        private void gvDanhSachMH_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e){
+            if (e.Info.IsRowIndicator){
+                if (e.RowHandle < 0){
                     e.Info.ImageIndex = 0;
                     e.Info.DisplayText = string.Empty;
                 }
-                else
-                {
+                else{
                     e.Info.ImageIndex = -1; //Nếu hiển thị
                     e.Info.DisplayText = (e.RowHandle + 1).ToString(); //Số thứ tự tăng dần
                 }
@@ -83,17 +73,27 @@ namespace VANPHONGPHAM
 
         private void gvDanhSachMuaHang_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
         {
-
+            if (e.Info.IsRowIndicator){
+                if (e.RowHandle < 0){
+                    e.Info.ImageIndex = 0;
+                    e.Info.DisplayText = string.Empty;
+                }
+                else{
+                    e.Info.ImageIndex = -1; //Nếu hiển thị
+                    e.Info.DisplayText = (e.RowHandle + 1).ToString(); //Số thứ tự tăng dần
+                }
+                SizeF sizeF = e.Graphics.MeasureString(e.Info.DisplayText, e.Appearance.Font); //Lây kích thước của vùng hiển thị Text
+                Int32 _Width = Convert.ToInt32(sizeF.Width) + 20;
+                BeginInvoke(new MethodInvoker(delegate { cal(_Width, gvDanhSachMuaHang); })); // Tăng kích thước nếu text vượt quá
+            }
         }
-        public static DateTime GetFirstDayOfMonth(DateTime dtInput)
-        {
+        public static DateTime GetFirstDayOfMonth(DateTime dtInput){
             DateTime dtResult = dtInput;
             dtResult = dtResult.AddDays((-dtResult.Day) + 1);
             return dtResult;
         }
 
-        private void frmBanHang_Load(object sender, EventArgs e)
-        {
+        private void frmBanHang_Load(object sender, EventArgs e){
             dateEditTuNgay.EditValue = GetFirstDayOfMonth(DateTime.Now);
             dateEditDenNgay.EditValue = DateTime.Now;
             _hdmh = new HOADONMATHANG();
@@ -122,64 +122,53 @@ namespace VANPHONGPHAM
             label9.Text = DateTime.Now.ToShortDateString();
         }
 
-        private void dateEditTuNgay_DateTimeChanged(object sender, EventArgs e)
-        {
-            if (dateEditDenNgay.DateTime < dateEditTuNgay.DateTime)
-            {
+        private void dateEditTuNgay_DateTimeChanged(object sender, EventArgs e){
+            if (dateEditDenNgay.DateTime < dateEditTuNgay.DateTime){
                 MessageBox.Show("Vui lòng chọn lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else
-            {
+            else{
                 gvDanhSach.ExpandAllGroups();
                 gcDanhSach.DataSource = _hdmh.getAllByDate(dateEditTuNgay.DateTime.Date, dateEditDenNgay.DateTime.Date.AddDays(1));
             }
             gvDanhSachMuaHang.UpdateTotalSummary();
         }
 
-        void loadData()
-        {
+        void loadData(){
             loadDS();
             loadMH();
             loadKH();
         }
 
-        void loadDS()
-        {
+        void loadDS(){
             gcDanhSach.DataSource = _hdmh.getAll();
         }
 
-        void loadMH()
-        {
+        void loadMH(){
             gcDanhSachMH.DataSource = _mh.getAll();
         }
 
-        public void loadKH()
-        {
+        public void loadKH(){
             cmbKhachHang.DataSource = _kh.getAll();
             cmbKhachHang.DisplayMember = "TENKH";
             cmbKhachHang.ValueMember = "MAKH";
         }
 
-        public void setKhachHang(int idkh)
-        {
+        public void setKhachHang(int idkh){
             var kh = _kh.getItem(idkh);
             cmbKhachHang.SelectedValue = kh.MAKH;
             cmbKhachHang.Text = kh.TENKH;
         }
 
-        private void btnAddnew_Click(object sender, EventArgs e)
-        {
-            frmKHACHHANG frm = new frmKHACHHANG();
+        private void btnAddnew_Click(object sender, EventArgs e){
+            frmKhachHang frm = new frmKhachHang();
             frm.ShowDialog();
         }
        
 
-        private void gcDanhSachMH_DoubleClick(object sender, EventArgs e)
-        {
+        private void gcDanhSachMH_DoubleClick(object sender, EventArgs e){
             cmbKhachHang.Enabled = false;
             btnAddnew.Enabled = false;
-            if (gvDanhSachMH.GetFocusedRowCellValue("MAMH") != null)
-            {
+            if (gvDanhSachMH.GetFocusedRowCellValue("MAMH") != null){
                 OBJHOADON_MATHANG cthd = new OBJHOADON_MATHANG();
                 cthd.MAMH = gvDanhSachMH.GetFocusedRowCellValue("MAMH").ToString();
                 cthd.TENMH = gvDanhSachMH.GetFocusedRowCellValue("TENMH").ToString();
@@ -189,10 +178,8 @@ namespace VANPHONGPHAM
                 cthd.TENKH = cmbKhachHang.Text;
 
                 cthd.DONGIA = long.Parse(gvDanhSachMH.GetFocusedRowCellValue("GIABAN").ToString());
-                foreach (var item in listHDMH)
-                {
-                    if(item.MAMH == cthd.MAMH)
-                    {
+                foreach (var item in listHDMH){
+                    if(item.MAMH == cthd.MAMH){
                         item.SOLUONG = item.SOLUONG + 1;
                         item.THANHTIEN = item.SOLUONG * item.DONGIA;
                         loadCTHD();
@@ -203,28 +190,22 @@ namespace VANPHONGPHAM
             }
             loadCTHD();
         }
-        void loadCTHD()
-        {
+        void loadCTHD(){
             List<OBJHOADON_MATHANG> lsHD = new List<OBJHOADON_MATHANG>();
-            foreach (var item in listHDMH)
-            {
+            foreach (var item in listHDMH){
                 lsHD.Add(item);
             }
             gcDanhSachMuaHang.DataSource = lsHD;
         }
 
-        private void gvDanhSachMuaHang_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
-        {
-            if (e.Column.FieldName == "SOLUONG")
-            {
+        private void gvDanhSachMuaHang_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e){
+            if (e.Column.FieldName == "SOLUONG"){
                 int sl = int.Parse(e.Value.ToString());
-                if (sl != 0)
-                {
+                if (sl != 0){
                     double gia = double.Parse(gvDanhSachMuaHang.GetRowCellValue(gvDanhSachMuaHang.FocusedRowHandle, "DONGIA").ToString());
                     gvDanhSachMuaHang.SetRowCellValue(gvDanhSachMuaHang.FocusedRowHandle, "THANHTIEN", sl * gia);
                 }
-                else
-                {
+                else{
                     gvDanhSachMuaHang.SetRowCellValue(gvDanhSachMuaHang.FocusedRowHandle, "THANHTIEN", 0);
                 }
             }
@@ -232,40 +213,33 @@ namespace VANPHONGPHAM
         }
 
 
-        void showHideControl(bool t)
-        {
+        void showHideControl(bool t){
             btnThem.Enabled = t;
             btnLuu.Enabled = !t;
             btnBoQua.Enabled = !t;
             btnXoaMH.Enabled = !t;
         }
 
-        public void enable(bool t)
-        {
+        public void enable(bool t){
             cmbKhachHang.Enabled = t;
             gcDanhSachMH.Enabled = t;
             gcDanhSachMuaHang.Enabled = t;
             btnAddnew.Enabled = t;
-
         }
 
-        void reset(bool t)
-        {
+        void reset(bool t){
             cmbKhachHang.SelectedIndex = 0;
             gcDanhSachMuaHang.DataSource = _hdmh.getAll(0);
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
-        {
+        private void btnThem_Click(object sender, EventArgs e){
             _them = true;
             reset(true);
             enable(true);
             showHideControl(false);
-
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
+        private void btnLuu_Click(object sender, EventArgs e){
             _them = true;
             saveData();
             loadData();
@@ -273,21 +247,19 @@ namespace VANPHONGPHAM
             enable(false);
             objMain.loadChart();
             btnIn.Enabled = true;
-            listHDMH.Clear();       }
+            listHDMH.Clear();       
+        }
 
-        void saveData()
-        {
+        void saveData(){
             HOA_DON hd = new HOA_DON();
             
-            if (_them)
-            {
+            if (_them){
                 hd.NGAYLAP = DateTime.Now;
                 hd.MANHANVIEN = _nv.getItemByTDN(objMain._tendn).MANHANVIEN;
                 hd.MAKH = int.Parse(cmbKhachHang.SelectedValue.ToString());
                 var LuuHD = _hd.add(hd);
                 int _maHD = LuuHD.MAHOADON;
-                for (int i = 0; i < gvDanhSachMuaHang.RowCount; i++)
-                {
+                for (int i = 0; i < gvDanhSachMuaHang.RowCount; i++){
                     HOADON_MATHANG hdmh = new HOADON_MATHANG();
                     hdmh.MAHD = _maHD;
                     hdmh.MAMH = gvDanhSachMuaHang.GetRowCellValue(i, "MAMH").ToString();
@@ -299,26 +271,23 @@ namespace VANPHONGPHAM
         }
 
 
-        private void btnBoQua_Click(object sender, EventArgs e)
-        {
+        private void btnBoQua_Click(object sender, EventArgs e){
             tabControl.SelectedTabPage = tabDanhSach;
             reset(true);
             enable(false);
             showHideControl(true);
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
+        private void btnThoat_Click(object sender, EventArgs e){
             this.Close();
         }
 
-        private void gcDanhSachMuaHang_Click(object sender, EventArgs e)
-        {
-            _mamh = gvDanhSachMuaHang.GetFocusedRowCellValue("MAMH").ToString();
+        private void gcDanhSachMuaHang_Click(object sender, EventArgs e){
+            if (gvDanhSachMuaHang.GetFocusedRowCellValue("MAMH") != null)
+                _mamh = gvDanhSachMuaHang.GetFocusedRowCellValue("MAMH").ToString();
         }
 
-        private void btnXoaMH_Click(object sender, EventArgs e)
-        {
+        private void btnXoaMH_Click(object sender, EventArgs e){
             if (gvDanhSachMuaHang.RowCount > 0)
             {
                 gvDanhSachMuaHang.DeleteSelectedRows();
@@ -329,8 +298,7 @@ namespace VANPHONGPHAM
             }
         }
         public int i = 10;
-        private void timer1_Tick(object sender, EventArgs e)
-        {
+        private void timer1_Tick(object sender, EventArgs e){
             string a = "";
             label7.Text = DateTime.Now.ToLongTimeString();
             lbThoiGian.Text = DateTime.Now.ToLongTimeString();
@@ -341,22 +309,19 @@ namespace VANPHONGPHAM
                 a = "Good afternoon";
             else
                 a = "Good evening";
-            label6.Text = a + "! Văn phòng phẩm Sao Mai kính chúc quý khách một ngày tốt lành!";
-            label6.Left += i;
-            if (label6.Left >= this.Width - 500 || label6.Left <= -750)
+            label8.Text = a + "! Văn phòng phẩm Sao Mai kính chúc quý khách một ngày tốt lành!";
+            label8.Left += i;
+            if (label8.Left >= this.Width || label8.Left <= -750)
                 i = -i;
-            label6.Left += i;
+            label8.Left += i;
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
+        private void simpleButton1_Click(object sender, EventArgs e){
             XuatReport("ReportBH", "DANH SÁCH THỐNG KÊ BÁN HÀNG");
         }
 
-        private void XuatReport(string _reportName, string _tieude)
-        {
-            if (_mamh != null || _mamh == null)
-            {
+        private void XuatReport(string _reportName, string _tieude){
+            if (_mamh != null || _mamh == null){
                 Form frm = new Form();
                 CrystalReportViewer Crv = new CrystalReportViewer();
                 Crv.ShowGroupTreeButton = false;
@@ -371,11 +336,9 @@ namespace VANPHONGPHAM
                 Thongtin.ConnectionInfo.Password = myFun._pw;
                 Thongtin.ConnectionInfo.DatabaseName = myFun._db;
                 doc.Database.Tables[0].ApplyLogOnInfo(Thongtin);
-                try
-                {
+                try{
                     DateTime tungay = dateEditTuNgay.DateTime.Date;
                     DateTime denngay = dateEditDenNgay.DateTime.Date;
-
 
                     doc.SetParameterValue("@TUNGAY", tungay);
                     doc.SetParameterValue("@DENNGAY", denngay);
@@ -387,8 +350,7 @@ namespace VANPHONGPHAM
                     frm.WindowState = FormWindowState.Maximized;
                     frm.ShowDialog();
                 }
-                catch (Exception ex)
-                {
+                catch (Exception ex){
                     MessageBox.Show("Lỗi: " + ex.Message);
                 }
             }
@@ -396,8 +358,7 @@ namespace VANPHONGPHAM
                 MessageBox.Show("Không có dữ liệu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void btnIN_Click(object sender, EventArgs e)
-        {
+        private void btnIN_Click(object sender, EventArgs e){
             XuatReportHD("ReportHD", "IN HÓA ĐƠN");
             tabControl.SelectedTabPage = tabDanhSach;
             reset(true);
@@ -405,10 +366,8 @@ namespace VANPHONGPHAM
         }
 
         DateTime ngay = DateTime.Now;
-        private void XuatReportHD(string _reportName, string _tieude)
-        {
-            if (_mamh != null || _mamh == null)
-            {
+        private void XuatReportHD(string _reportName, string _tieude){
+            if (_mamh != null || _mamh == null){
                 Form frm = new Form();
                 CrystalReportViewer Crv = new CrystalReportViewer();
                 Crv.ShowGroupTreeButton = false;
@@ -423,8 +382,7 @@ namespace VANPHONGPHAM
                 Thongtin.ConnectionInfo.Password = myFun._pw;
                 Thongtin.ConnectionInfo.DatabaseName = myFun._db;
                 doc.Database.Tables[0].ApplyLogOnInfo(Thongtin);
-                try
-                {
+                try{
                     DateTime tungay = dateEditTuNgay.DateTime.Date;
                     DateTime denngay = dateEditDenNgay.DateTime.Date;
 
@@ -438,8 +396,7 @@ namespace VANPHONGPHAM
                     frm.WindowState = FormWindowState.Maximized;
                     frm.ShowDialog();
                 }
-                catch (Exception ex)
-                {
+                catch (Exception ex){
                     MessageBox.Show("Lỗi: " + ex.Message);
                 }
             }

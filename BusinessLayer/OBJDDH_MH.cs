@@ -7,8 +7,7 @@ using DataLayer;
 
 namespace BusinessLayer
 {
-    public class OBJDDH_MH
-    {
+    public class OBJDDH_MH{
         public int MADDH { get; set; }
         public string MAMH { get; set; }
         public string TENNCC { get; set; }

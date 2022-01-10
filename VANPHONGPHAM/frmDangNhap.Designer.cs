@@ -82,7 +82,7 @@ namespace VANPHONGPHAM
             this.txtUser.Location = new System.Drawing.Point(40, 7);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(266, 23);
-            this.txtUser.TabIndex = 0;
+            this.txtUser.TabIndex = 1;
             this.txtUser.Text = "admin";
             this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUser_KeyDown);
@@ -128,7 +128,7 @@ namespace VANPHONGPHAM
             this.txtPass.Location = new System.Drawing.Point(39, 7);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(230, 23);
-            this.txtPass.TabIndex = 0;
+            this.txtPass.TabIndex = 3;
             this.txtPass.Text = "admin12345";
             this.txtPass.UseSystemPasswordChar = true;
             this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
@@ -237,6 +237,7 @@ namespace VANPHONGPHAM
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.peImage);
+            this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmDangNhap.IconOptions.Image")));
             this.MaximizeBox = false;

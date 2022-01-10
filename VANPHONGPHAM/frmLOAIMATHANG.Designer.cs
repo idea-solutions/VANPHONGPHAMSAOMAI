@@ -75,7 +75,7 @@ namespace VANPHONGPHAM
             this.gcDanhSach.Location = new System.Drawing.Point(0, 45);
             this.gcDanhSach.MainView = this.gvDanhSach;
             this.gcDanhSach.Name = "gcDanhSach";
-            this.gcDanhSach.Size = new System.Drawing.Size(901, 390);
+            this.gcDanhSach.Size = new System.Drawing.Size(1198, 532);
             this.gcDanhSach.TabIndex = 5;
             this.gcDanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDanhSach});
@@ -154,9 +154,9 @@ namespace VANPHONGPHAM
             this.groupControl1.Controls.Add(this.txtMa);
             this.groupControl1.Controls.Add(this.label1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(0, 435);
+            this.groupControl1.Location = new System.Drawing.Point(0, 577);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(901, 89);
+            this.groupControl1.Size = new System.Drawing.Size(1198, 83);
             this.groupControl1.TabIndex = 6;
             this.groupControl1.Text = "Thông tin";
             // 
@@ -357,15 +357,15 @@ namespace VANPHONGPHAM
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(901, 45);
+            this.barDockControlTop.Size = new System.Drawing.Size(1198, 45);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 524);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 660);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(901, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1198, 0);
             // 
             // barDockControlLeft
             // 
@@ -373,15 +373,15 @@ namespace VANPHONGPHAM
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 45);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 479);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 615);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(901, 45);
+            this.barDockControlRight.Location = new System.Drawing.Point(1198, 45);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 479);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 615);
             // 
             // btnPrint
             // 
@@ -396,7 +396,7 @@ namespace VANPHONGPHAM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(901, 524);
+            this.ClientSize = new System.Drawing.Size(1198, 660);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gcDanhSach);
             this.Controls.Add(this.barDockControlLeft);

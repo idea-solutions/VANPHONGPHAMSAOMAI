@@ -8,23 +8,18 @@ using DataLayer;
 namespace BusinessLayer
 {
     
-    public class THONGKE
-    {
+    public class THONGKE{
         Entities db;
-        public THONGKE()
-        {
+        public THONGKE(){
             db = Entities.CreateEntities();
         }
-        public List<OBJTHONGKELOAIMH> thongKeMatHang()
-        {
+        public List<OBJTHONGKELOAIMH> thongKeMatHang(){
             string a = "";
             OBJTHONGKELOAIMH objloaimh; 
             List<OBJTHONGKELOAIMH> lst = new List<OBJTHONGKELOAIMH>();
             var lstLoaiMH =  db.FNLOAIMAT_HANG().ToList();
-            foreach (var item in lstLoaiMH)
-            {
-                if(item.MALOAI != a)
-                {
+            foreach (var item in lstLoaiMH){
+                if(item.MALOAI != a){
                     objloaimh = new OBJTHONGKELOAIMH();
                     objloaimh.MALOAI = item.MALOAI;
                     a = objloaimh.MALOAI;
@@ -36,14 +31,12 @@ namespace BusinessLayer
             return lst;
         }
 
-        public List<OBJTHONGKEBANHANG> thongKeBanHang()
-        {
+        public List<OBJTHONGKEBANHANG> thongKeBanHang(){
             OBJTHONGKEBANHANG objTKBH;
             List<OBJTHONGKEBANHANG> lst = new List<OBJTHONGKEBANHANG>();
             var lstTKBH = db.FNBANHANGByTIMEGROUPMH(DateTime.Now).ToList();
 
-            foreach (var item in lstTKBH)
-            {
+            foreach (var item in lstTKBH){
                 objTKBH = new OBJTHONGKEBANHANG();
                 objTKBH.TENMH = item.TENMH;
                 objTKBH.SOLUONG = item.SOLUONG;
@@ -52,27 +45,14 @@ namespace BusinessLayer
             return lst;
         }
 
-        public List<OBJTHONGKEKHACHHANG> thongKeKhachHang()
-        {
+        public List<OBJTHONGKEKHACHHANG> thongKeKhachHang(){
             OBJTHONGKEKHACHHANG objTKKH;
             List<OBJTHONGKEKHACHHANG> lst = new List<OBJTHONGKEKHACHHANG>();
             var lstTKKH = db.FNKHACHHANGGROUP(DateTime.Now).ToList();
 
-            //foreach (var item in lstTKKH)
-            //{
-            //    if (item.TENKH != "A_KHÁCH_LẺ")
-            //    {
-            //        objTKKH = new OBJTHONGKEKHACHHANG();
-            //        objTKKH.TENKH = item.TENKH;
-            //        objTKKH.THANHTIEN = item.THANHTIEN;
-            //        lst.Add(objTKKH);
-            //    }
-            //}
             int dem = 1;
-            for (int i = 0; i < lstTKKH.Count; i++)
-            {
-                if (lstTKKH[i].TENKH != "_Khách Lẻ")
-                {
+            for (int i = 0; i < lstTKKH.Count; i++){
+                if (lstTKKH[i].TENKH != "_Khách Lẻ"){
                     objTKKH = new OBJTHONGKEKHACHHANG();
                     objTKKH.TENKH = lstTKKH[i].TENKH;
                     objTKKH.THANHTIEN = lstTKKH[i].THANHTIEN;
@@ -86,14 +66,12 @@ namespace BusinessLayer
             return lst;
         }
 
-        public List<OBJTHONGKEDOANHTHU> thongKeDoanhThu()
-        {
+        public List<OBJTHONGKEDOANHTHU> thongKeDoanhThu(){
             OBJTHONGKEDOANHTHU objTKDT;
             List<OBJTHONGKEDOANHTHU> lst = new List<OBJTHONGKEDOANHTHU>();
-            var lstTKKH = db.FNTHONGKEDOANHTHU().ToList();
+            var lstTKKH = db.FNTHONGKEDOANHTHUDESC().ToList();
 
-            foreach (var item in lstTKKH)
-            {
+            foreach (var item in lstTKKH){
                 objTKDT = new OBJTHONGKEDOANHTHU();
                 objTKDT.Ngay = item.Ngay;
                 objTKDT.ThanhTien = item.TongTien;

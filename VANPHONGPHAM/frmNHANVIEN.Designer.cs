@@ -31,12 +31,12 @@ namespace VANPHONGPHAM
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::VANPHONGPHAM.frmloaddulieu), true, true);
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNHANVIEN));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.cmbGioiTinh = new System.Windows.Forms.ComboBox();
             this.dtNgaySinh = new DevExpress.XtraEditors.DateEdit();
@@ -124,9 +124,9 @@ namespace VANPHONGPHAM
             this.groupControl1.Controls.Add(this.txtMa);
             this.groupControl1.Controls.Add(this.label1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(0, 435);
+            this.groupControl1.Location = new System.Drawing.Point(0, 501);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1376, 165);
+            this.groupControl1.Size = new System.Drawing.Size(1198, 159);
             this.groupControl1.TabIndex = 12;
             this.groupControl1.Text = "Thông tin";
             // 
@@ -336,7 +336,7 @@ namespace VANPHONGPHAM
             this.gcDanhSach.Name = "gcDanhSach";
             this.gcDanhSach.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btn1});
-            this.gcDanhSach.Size = new System.Drawing.Size(1376, 390);
+            this.gcDanhSach.Size = new System.Drawing.Size(1198, 456);
             this.gcDanhSach.TabIndex = 11;
             this.gcDanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDanhSach});
@@ -373,7 +373,7 @@ namespace VANPHONGPHAM
             this.MANHANVIEN.Name = "MANHANVIEN";
             this.MANHANVIEN.Visible = true;
             this.MANHANVIEN.VisibleIndex = 1;
-            this.MANHANVIEN.Width = 150;
+            this.MANHANVIEN.Width = 142;
             // 
             // TENNHANVIEN
             // 
@@ -383,7 +383,7 @@ namespace VANPHONGPHAM
             this.TENNHANVIEN.Name = "TENNHANVIEN";
             this.TENNHANVIEN.Visible = true;
             this.TENNHANVIEN.VisibleIndex = 2;
-            this.TENNHANVIEN.Width = 202;
+            this.TENNHANVIEN.Width = 192;
             // 
             // DISABLE
             // 
@@ -394,7 +394,7 @@ namespace VANPHONGPHAM
             this.DISABLE.Name = "DISABLE";
             this.DISABLE.Visible = true;
             this.DISABLE.VisibleIndex = 0;
-            this.DISABLE.Width = 47;
+            this.DISABLE.Width = 44;
             // 
             // DIACHI
             // 
@@ -404,7 +404,7 @@ namespace VANPHONGPHAM
             this.DIACHI.Name = "DIACHI";
             this.DIACHI.Visible = true;
             this.DIACHI.VisibleIndex = 3;
-            this.DIACHI.Width = 267;
+            this.DIACHI.Width = 254;
             // 
             // SDT
             // 
@@ -414,7 +414,7 @@ namespace VANPHONGPHAM
             this.SDT.Name = "SDT";
             this.SDT.Visible = true;
             this.SDT.VisibleIndex = 4;
-            this.SDT.Width = 179;
+            this.SDT.Width = 170;
             // 
             // GIOITINH
             // 
@@ -424,7 +424,7 @@ namespace VANPHONGPHAM
             this.GIOITINH.Name = "GIOITINH";
             this.GIOITINH.Visible = true;
             this.GIOITINH.VisibleIndex = 5;
-            this.GIOITINH.Width = 92;
+            this.GIOITINH.Width = 91;
             // 
             // NGAYSINH
             // 
@@ -434,7 +434,7 @@ namespace VANPHONGPHAM
             this.NGAYSINH.Name = "NGAYSINH";
             this.NGAYSINH.Visible = true;
             this.NGAYSINH.VisibleIndex = 6;
-            this.NGAYSINH.Width = 162;
+            this.NGAYSINH.Width = 151;
             // 
             // CMND_CCCD
             // 
@@ -444,7 +444,7 @@ namespace VANPHONGPHAM
             this.CMND_CCCD.Name = "CMND_CCCD";
             this.CMND_CCCD.Visible = true;
             this.CMND_CCCD.VisibleIndex = 7;
-            this.CMND_CCCD.Width = 128;
+            this.CMND_CCCD.Width = 124;
             // 
             // MATKHAU
             // 
@@ -465,9 +465,9 @@ namespace VANPHONGPHAM
             // btn1
             // 
             this.btn1.AutoHeight = false;
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
             this.btn1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btn1.Name = "btn1";
             this.btn1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -619,15 +619,15 @@ namespace VANPHONGPHAM
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1376, 45);
+            this.barDockControlTop.Size = new System.Drawing.Size(1198, 45);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 600);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 660);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1376, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1198, 0);
             // 
             // barDockControlLeft
             // 
@@ -635,21 +635,21 @@ namespace VANPHONGPHAM
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 45);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 555);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 615);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1376, 45);
+            this.barDockControlRight.Location = new System.Drawing.Point(1198, 45);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 555);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 615);
             // 
             // frmNHANVIEN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1376, 600);
+            this.ClientSize = new System.Drawing.Size(1198, 660);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gcDanhSach);
             this.Controls.Add(this.barDockControlLeft);

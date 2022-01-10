@@ -52,7 +52,6 @@ namespace VANPHONGPHAM
             this.cmbTaiKhoan = new System.Windows.Forms.ComboBox();
             this.svgImageBox4 = new DevExpress.XtraEditors.SvgImageBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.peImage = new DevExpress.XtraEditors.PictureEdit();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -68,6 +67,7 @@ namespace VANPHONGPHAM
             this.dateNgaySinh = new DevExpress.XtraEditors.DateEdit();
             this.svgImageBox7 = new DevExpress.XtraEditors.SvgImageBox();
             this.btnKiemTra = new DevExpress.XtraEditors.SimpleButton();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -78,7 +78,6 @@ namespace VANPHONGPHAM
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox3)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.peImage.Properties)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btneyeMKXN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox5)).BeginInit();
@@ -96,7 +95,7 @@ namespace VANPHONGPHAM
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.ImageOptions.Image")));
             this.btnExit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnExit.Location = new System.Drawing.Point(896, 12);
+            this.btnExit.Location = new System.Drawing.Point(875, 12);
             this.btnExit.Name = "btnExit";
             this.btnExit.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnExit.Size = new System.Drawing.Size(38, 38);
@@ -168,7 +167,7 @@ namespace VANPHONGPHAM
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(238)))), ((int)(((byte)(254)))));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Variable Small", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(511, 147);
@@ -330,25 +329,10 @@ namespace VANPHONGPHAM
             this.label6.TabIndex = 14;
             this.label6.Text = "*Chọn tài khoản";
             // 
-            // peImage
-            // 
-            this.peImage.EditValue = ((object)(resources.GetObject("peImage.EditValue")));
-            this.peImage.Location = new System.Drawing.Point(-1, -10);
-            this.peImage.Margin = new System.Windows.Forms.Padding(4);
-            this.peImage.Name = "peImage";
-            this.peImage.Properties.AllowFocused = false;
-            this.peImage.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.peImage.Properties.Appearance.Options.UseBackColor = true;
-            this.peImage.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.peImage.Properties.ShowMenu = false;
-            this.peImage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.peImage.Size = new System.Drawing.Size(954, 541);
-            this.peImage.TabIndex = 16;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(238)))), ((int)(((byte)(254)))));
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI Variable Small", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
             this.label7.Location = new System.Drawing.Point(32, 212);
@@ -360,7 +344,7 @@ namespace VANPHONGPHAM
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(238)))), ((int)(((byte)(254)))));
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI Variable Small", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Red;
             this.label8.Location = new System.Drawing.Point(32, 145);
@@ -522,13 +506,27 @@ namespace VANPHONGPHAM
             this.btnKiemTra.Click += new System.EventHandler(this.btnKiemTra_Click);
             this.btnKiemTra.Paint += new System.Windows.Forms.PaintEventHandler(this.btnKiemTra_Paint);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Variable Small Semibol", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(34, 111);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(317, 27);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Vui lòng nhập thông tin xác thực";
+            // 
             // frmQuenMK
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(946, 531);
+            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
+            this.BackgroundImageStore = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImageStore")));
+            this.ClientSize = new System.Drawing.Size(925, 527);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnKiemTra);
@@ -537,6 +535,7 @@ namespace VANPHONGPHAM
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel6);
@@ -544,11 +543,11 @@ namespace VANPHONGPHAM
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.panel7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.peImage);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.btnXacNhan);
+            this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IconOptions.Image = global::VANPHONGPHAM.Properties.Resources.Nhiều_màu_sắc_Hình_khối_Thiết_kế___Nghệ_thuật_Biểu_trưng__3_;
             this.Name = "frmQuenMK";
@@ -569,7 +568,6 @@ namespace VANPHONGPHAM
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.peImage.Properties)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btneyeMKXN)).EndInit();
@@ -610,7 +608,6 @@ namespace VANPHONGPHAM
         private DevExpress.XtraEditors.SvgImageBox svgImageBox4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbTaiKhoan;
-        private DevExpress.XtraEditors.PictureEdit peImage;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel5;
@@ -626,5 +623,6 @@ namespace VANPHONGPHAM
         private DevExpress.XtraEditors.DateEdit dateNgaySinh;
         private DevExpress.XtraEditors.SvgImageBox svgImageBox7;
         private DevExpress.XtraEditors.SimpleButton btnKiemTra;
+        private System.Windows.Forms.Label label9;
     }
 }

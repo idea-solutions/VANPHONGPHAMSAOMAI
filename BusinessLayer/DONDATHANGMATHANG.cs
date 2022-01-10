@@ -7,29 +7,24 @@ using DataLayer;
 
 namespace BusinessLayer
 {
-    public class DONDATHANGMATHANG
-    {
+    public class DONDATHANGMATHANG{
         Entities db;
-        public DONDATHANGMATHANG()
-        {
+        public DONDATHANGMATHANG(){
             db = Entities.CreateEntities();
         }
 
-        public List<DONDATHANG_MATHANG> getAll(int maddh)
-        {
+        public List<DONDATHANG_MATHANG> getAll(int maddh){
             return db.DONDATHANG_MATHANG.Where(x => x.MADDH == maddh).ToList();
         }
 
-        public List<OBJDDH_MH> getAll()
-        {
+        public List<OBJDDH_MH> getAll(){
 
             var lstDDHMH = db.DONDATHANG_MATHANG.ToList();
 
             List<OBJDDH_MH> lstDDHMHFull = new List<OBJDDH_MH>();
             OBJDDH_MH objDDHMH;
 
-            foreach (var item in lstDDHMH)
-            {
+            foreach (var item in lstDDHMH){
                 objDDHMH = new OBJDDH_MH();
 
                 var nvDDH = db.DON_DAT_HANG.FirstOrDefault(x => x.MADDH == item.MADDH); //lấy ra nv từ bảng DON_DAT_HANG
@@ -67,16 +62,14 @@ namespace BusinessLayer
             }
             return lstDDHMHFull.OrderBy(x => x.NGAYDAT).ToList();
         }
-        public List<OBJDDH_MH> getAllByDate(DateTime tungay, DateTime denngay)
-        {
+        public List<OBJDDH_MH> getAllByDate(DateTime tungay, DateTime denngay){
 
             var lstDDHMH = db.DONDATHANG_MATHANG.ToList();
 
             List<OBJDDH_MH> lstDDHMHFull = new List<OBJDDH_MH>();
             OBJDDH_MH objDDHMH;
 
-            foreach (var item in lstDDHMH)
-            {
+            foreach (var item in lstDDHMH){
                 objDDHMH = new OBJDDH_MH();
 
                 var nvDDH = db.DON_DAT_HANG.FirstOrDefault(x => x.MADDH == item.MADDH); //lấy ra nv từ bảng DON_DAT_HANG
@@ -113,34 +106,28 @@ namespace BusinessLayer
             }
             return lstDDHMHFull.Where(x => x.NGAYDAT >= tungay.AddDays(-1) && x.NGAYDAT <= denngay).OrderBy(x => x.NGAYDAT).ToList();
         }
-        public void deleteAll()
-        {
+        public void deleteAll(){
             var listDDH = db.DON_DAT_HANG.ToList();
             var lstDDHMH = db.DONDATHANG_MATHANG.ToList();
 
-            foreach (var item in lstDDHMH)
-            {
+            foreach (var item in lstDDHMH){
                 db.DONDATHANG_MATHANG.Remove(item);
                 db.SaveChanges();
             }
 
-            foreach (var item in listDDH)
-            {
+            foreach (var item in listDDH){
                 db.DON_DAT_HANG.Remove(item);
                 db.SaveChanges();
             }
         }
 
-        public DONDATHANG_MATHANG add(DONDATHANG_MATHANG ddhmh)
-        {
-            try
-            {
+        public DONDATHANG_MATHANG add(DONDATHANG_MATHANG ddhmh){
+            try{
                 db.DONDATHANG_MATHANG.Add(ddhmh);
                 db.SaveChanges();
                 return ddhmh;
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex){
                 throw new Exception("Có lỗi xảy ra trong quá trình xử lý dữ liệu. " + ex.Message);
             }
         }

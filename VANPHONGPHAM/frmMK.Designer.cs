@@ -44,7 +44,8 @@ namespace VANPHONGPHAM
             // 
             // svgImageBox1
             // 
-            this.svgImageBox1.Location = new System.Drawing.Point(47, 27);
+            this.svgImageBox1.BackColor = System.Drawing.Color.Transparent;
+            this.svgImageBox1.Location = new System.Drawing.Point(50, 27);
             this.svgImageBox1.Name = "svgImageBox1";
             this.svgImageBox1.Size = new System.Drawing.Size(48, 41);
             this.svgImageBox1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageBox1.SvgImage")));
@@ -54,10 +55,11 @@ namespace VANPHONGPHAM
             // label1
             // 
             this.label1.AllowDrop = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(101, 27);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(104, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(389, 41);
+            this.label1.Size = new System.Drawing.Size(389, 26);
             this.label1.TabIndex = 4;
             this.label1.Text = "Để thực hiện cấp quyền, bạn vui lòng xác nhận mật khẩu";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -75,6 +77,7 @@ namespace VANPHONGPHAM
             // 
             // btnYes
             // 
+            this.btnYes.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnYes.Location = new System.Drawing.Point(326, 98);
             this.btnYes.Name = "btnYes";
             this.btnYes.Size = new System.Drawing.Size(95, 36);
@@ -85,6 +88,7 @@ namespace VANPHONGPHAM
             // 
             // btnNo
             // 
+            this.btnNo.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNo.Location = new System.Drawing.Point(442, 98);
             this.btnNo.Name = "btnNo";
             this.btnNo.Size = new System.Drawing.Size(95, 36);
@@ -121,6 +125,8 @@ namespace VANPHONGPHAM
             this.Appearance.Options.UseForeColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
+            this.BackgroundImageStore = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImageStore")));
             this.ClientSize = new System.Drawing.Size(566, 188);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnYes);
@@ -129,6 +135,7 @@ namespace VANPHONGPHAM
             this.Controls.Add(this.label1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IconOptions.Image = global::VANPHONGPHAM.Properties.Resources.Nhiều_màu_sắc_Hình_khối_Thiết_kế___Nghệ_thuật_Biểu_trưng__3_;
             this.Name = "frmMK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMK";

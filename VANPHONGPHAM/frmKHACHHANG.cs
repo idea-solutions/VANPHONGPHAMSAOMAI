@@ -17,34 +17,26 @@ using CrystalDecisions.CrystalReports.Engine;
 
 namespace VANPHONGPHAM
 {
-    public partial class frmKHACHHANG : DevExpress.XtraEditors.XtraForm
+    public partial class frmKhachHang : DevExpress.XtraEditors.XtraForm
     {
-        public frmKHACHHANG()
-        {
+        public frmKhachHang(){
             InitializeComponent();
         }
         frmBanHang objBANHANG = (frmBanHang)Application.OpenForms["frmBanHang"];
-        frmMain objMain = (frmMain)Application.OpenForms["frmMain"];
         KHACHHANG _kh;
-        NHANVIEN _nv;
         bool _them;
         public int _makh = 0;
-        bool cal(Int32 _Width, GridView _view)
-        {
+        bool cal(Int32 _Width, GridView _view){
             _view.IndicatorWidth = _view.IndicatorWidth < _Width ? _Width : _view.IndicatorWidth;
             return true;
         }
-        private void gvDanhSach_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
-        {
-            if (e.Info.IsRowIndicator) //Nếu là dòng Indicator
-            {
-                if (e.RowHandle < 0)
-                {
+        private void gvDanhSach_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e){
+            if (e.Info.IsRowIndicator){
+                if (e.RowHandle < 0){
                     e.Info.ImageIndex = 0;
                     e.Info.DisplayText = string.Empty;
                 }
-                else
-                {
+                else{
                     e.Info.ImageIndex = -1; //Nếu hiển thị
                     e.Info.DisplayText = (e.RowHandle + 1).ToString(); //Số thứ tự tăng dần
                 }
@@ -54,16 +46,10 @@ namespace VANPHONGPHAM
             }
         }
         
-        private void frmKHACHHANG_Load(object sender, EventArgs e)
-        {
-            
+        private void frmKHACHHANG_Load(object sender, EventArgs e){
             _kh = new KHACHHANG(); // tạo ra 1 đối tượng khách hàng mới
             loadData();
             showHideControl(true);
-            _nv = new NHANVIEN();
-            bool t = _nv.kiemtraQuyen(objMain._tendn);
-            if (!t)
-            {}
             cmbGioiTinh.Items.Add("Nam");
             cmbGioiTinh.Items.Add("Nữ");
             cmbGioiTinh.Items.Add("Khác");
@@ -71,14 +57,12 @@ namespace VANPHONGPHAM
             txtTen.MaxLength = 30;
         }
 
-        private void loadData()
-        {
+        private void loadData(){
             gcDanhSach.DataSource = _kh.getAll();
             enable(false);            
         }
 
-        void showHideControl(bool t)
-        {
+        void showHideControl(bool t){
             btnAdd.Enabled = t;
             btnEdit.Enabled = t;
             btnDelete.Enabled = t;
@@ -86,24 +70,21 @@ namespace VANPHONGPHAM
             btnCancel.Enabled = !t;
         }
 
-        void enable(bool t)
-        {
+        void enable(bool t){
             txtTen.Enabled = t;
             txtSDT.Enabled = t;
             cmbGioiTinh.Enabled = t;
             ckbDisable.Enabled = t;
         }
 
-        void reset(bool t)
-        {
+        void reset(bool t){
             txtTen.Text = "";
             txtSDT.Text = "";
             cmbGioiTinh.Text = "";
             ckbDisable.Checked = false;
         }
 
-        private void btnThem_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
+        private void btnThem_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
             showHideControl(false);
             _them = true;
             enable(true);
@@ -111,17 +92,14 @@ namespace VANPHONGPHAM
             ckbDisable.Enabled = false;
         }
 
-        private void btnSua_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
+        private void btnSua_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
             showHideControl(false);
             _them = false;
             enable(true);
         }
 
-        private void btnXoa_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if (MessageBox.Show("Bạn có chắc chắn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
+        private void btnXoa_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
+            if (MessageBox.Show("Bạn có chắc chắn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes){
                 _kh.disable(_makh);
                 MessageBox.Show("Xóa khách hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -129,18 +107,12 @@ namespace VANPHONGPHAM
             loadData();
         }
 
-        private void btnLuu_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            
-            if (txtTen.TextLength != 0 && cmbGioiTinh.Text != "")
-            {
-                if(txtSDT.TextLength == 0 || txtSDT.TextLength == 10)
-                {
-                    if (_them == true)
-                    {
+        private void btnLuu_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
+            if (txtTen.TextLength != 0 && cmbGioiTinh.Text != ""){
+                if(txtSDT.TextLength == 0 || txtSDT.TextLength == 10){
+                    if (_them == true){
                         var khachhang = _kh.getItem(txtTen.Text, txtSDT.Text, cmbGioiTinh.Text);
-                        if (khachhang == null)
-                        {
+                        if (khachhang == null){
                             KHACH_HANG kh = new KHACH_HANG();
                             kh.SDT = txtSDT.Text;
                             kh.TENKH = txtTen.Text;
@@ -156,8 +128,7 @@ namespace VANPHONGPHAM
                         else
                             MessageBox.Show("Khách hàng đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                    else
-                    {
+                    else{
                         KHACH_HANG kh = _kh.getItem(_makh);
                         kh.SDT = txtSDT.Text;
                         kh.GIOITINH = cmbGioiTinh.Text;
@@ -178,44 +149,35 @@ namespace VANPHONGPHAM
                 MessageBox.Show("Vui lòng điền đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-        private void btnBoQua_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
+        private void btnBoQua_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
             _them = false;
             showHideControl(true);
             enable(false);
         }
 
-        private void gvDanhSach_Click(object sender, EventArgs e)
-        {
-            if (gvDanhSach.RowCount > 0)
-            {
-                if (gvDanhSach.GetFocusedRowCellValue("MAKH") != null && gvDanhSach.GetFocusedRowCellValue("MAKH").ToString()!="1007")
-                {
+        private void gvDanhSach_Click(object sender, EventArgs e){
+            if (gvDanhSach.RowCount > 0){
+                if (gvDanhSach.GetFocusedRowCellValue("MAKH") != null && gvDanhSach.GetFocusedRowCellValue("MAKH").ToString()!="1007"){
                     _makh = int.Parse(gvDanhSach.GetFocusedRowCellValue("MAKH").ToString());
                     txtSDT.Text = gvDanhSach.GetFocusedRowCellValue("SDT").ToString();
                     txtTen.Text = gvDanhSach.GetFocusedRowCellValue("TENKH").ToString();
                     ckbDisable.Checked = bool.Parse(gvDanhSach.GetFocusedRowCellValue("VOHIEUHOA").ToString());
                     cmbGioiTinh.Text = gvDanhSach.GetFocusedRowCellValue("GIOITINH").ToString();
                 }
-                else
-                {
+                else{
                     _makh = int.Parse(gvDanhSach.GetFocusedRowCellValue("MAKH").ToString());
                     txtTen.Text = gvDanhSach.GetFocusedRowCellValue("TENKH").ToString();
                 }    
             }
         }
 
-        private void gvDanhSach_DoubleClick(object sender, EventArgs e)
-        {
-            if (objBANHANG == null || objBANHANG.IsDisposed) //null là chưa được khởi tạo. IsDisposed là khởi tạo rồi nhưng đang bị ẩn
-            {
+        private void gvDanhSach_DoubleClick(object sender, EventArgs e){
+            if (objBANHANG == null || objBANHANG.IsDisposed){
                 frmBanHang frm = new frmBanHang();
                 frm.Show();
             }
-            else
-            {
-                if (gvDanhSach.GetFocusedRowCellValue("MAKH") != null)
-                {
+            else{
+                if (gvDanhSach.GetFocusedRowCellValue("MAKH") != null){
                     objBANHANG.loadKH();
                     objBANHANG.setKhachHang(int.Parse(gvDanhSach.GetFocusedRowCellValue("MAKH").ToString()));
                     this.Close();
@@ -223,13 +185,11 @@ namespace VANPHONGPHAM
             }
         }
 
-        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
             XuatReport("ReportKH", "DANH MỤC KHÁCH HÀNG");
         }
 
-        private void XuatReport(string _reportName, string _tieude)
-        {
+        private void XuatReport(string _reportName, string _tieude){
             Form frm = new Form();
             CrystalReportViewer Crv = new CrystalReportViewer();
             Crv.ShowGroupTreeButton = false;
@@ -244,8 +204,7 @@ namespace VANPHONGPHAM
             Thongtin.ConnectionInfo.Password = myFun._pw;
             Thongtin.ConnectionInfo.DatabaseName = myFun._db;
             doc.Database.Tables[0].ApplyLogOnInfo(Thongtin);
-            try
-            {
+            try{
                 Crv.Dock = DockStyle.Fill;
                 Crv.ReportSource = doc;
                 frm.Controls.Add(Crv);
@@ -254,8 +213,7 @@ namespace VANPHONGPHAM
                 frm.WindowState = FormWindowState.Maximized;
                 frm.ShowDialog();
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex){
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
         }

@@ -7,8 +7,7 @@ using DataLayer;
 
 namespace BusinessLayer
 {
-    public class OBJHOADON_MATHANG
-    {
+    public class OBJHOADON_MATHANG{
         // từ bảng HOADON_MUAHAN
         public int MAHOADON { get; set; }
         public DateTime NGAYLAP { get; set; }

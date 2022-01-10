@@ -9,62 +9,50 @@ namespace BusinessLayer
     public class NHACUNGCAP
     {
         Entities db;
-        public NHACUNGCAP()
-        {
+        public NHACUNGCAP(){
             db = Entities.CreateEntities();
         }
 
-        public List<NHA_CUNG_CAP> getAll()
-        {
+        public List<NHA_CUNG_CAP> getAll(){
             return db.NHA_CUNG_CAP.OrderBy(x => x.TENNCC).ToList();
         }
 
-        public NHA_CUNG_CAP getItem(String mancc)
-        {
+        public NHA_CUNG_CAP getItem(String mancc){
             return db.NHA_CUNG_CAP.FirstOrDefault(x => x.MANCC == mancc);
         }
 
-        public void add(NHA_CUNG_CAP ncc)
-        {
-            try
-            {
+        public void add(NHA_CUNG_CAP ncc){
+            try{
                 db.NHA_CUNG_CAP.Add(ncc);
                 db.SaveChanges();
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex){
                 throw new Exception("Có lỗi xảy ra trong quá trình xử lý dữ liệu. " + ex.Message);
             }
         }
 
-        public void update(NHA_CUNG_CAP ncc)
-        {
+        public void update(NHA_CUNG_CAP ncc){
             NHA_CUNG_CAP _ncc = db.NHA_CUNG_CAP.FirstOrDefault(x => x.MANCC == ncc.MANCC);
             _ncc.TENNCC = ncc.TENNCC;
             _ncc.SDT = ncc.SDT;
             _ncc.DIACHI = ncc.DIACHI;
             _ncc.EMAIL = ncc.EMAIL;
             _ncc.VOHIEUHOA = ncc.VOHIEUHOA;
-            try
-            {
+            try{
                 db.SaveChanges();
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex){
                 throw new Exception("Có lỗi xảy ra trong quá trình xử lý dữ liệu. " + ex.Message);
             }
         }
 
-        public void disable(string mancc)
-        {
+        public void disable(string mancc){
             NHA_CUNG_CAP ncc = db.NHA_CUNG_CAP.FirstOrDefault(x => x.MANCC == mancc);
             ncc.VOHIEUHOA = true;
-            try
-            {
+            try{
                 db.SaveChanges();
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex){
                 throw new Exception("Có lỗi xảy ra trong quá trình xử lý dữ liệu. " + ex.Message);
             }
         }

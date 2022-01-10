@@ -15,8 +15,7 @@ namespace VANPHONGPHAM
 {
     public partial class frmThongTinNhanVien : DevExpress.XtraEditors.XtraForm
     {
-        public frmThongTinNhanVien()
-        {
+        public frmThongTinNhanVien(){
             InitializeComponent();
         }
 
@@ -24,8 +23,7 @@ namespace VANPHONGPHAM
         frmMain frmMain = (frmMain)Application.OpenForms["frmMain"];
         string _manv;
         bool _thaydoi;
-        private void frmThongTinNhanVien_Load(object sender, EventArgs e)
-        {
+        private void frmThongTinNhanVien_Load(object sender, EventArgs e){
             _nv = new NHANVIEN();
             _manv = _nv.getItemByTDN(frmMain._tendn).MANHANVIEN.ToString();
             btnBoQua.Visible = false;
@@ -34,11 +32,9 @@ namespace VANPHONGPHAM
             cmGT.Items.Add("Nữ");
             cmGT.Items.Add("Khác");
             showThongTin();
-            //enable(false);
         }
 
-        void enable(bool t)
-        {
+        void enable(bool t){
             txtMa.Enabled = t;
             txtHoTen.Enabled = t;
             txtCMND.Enabled = t;
@@ -48,8 +44,7 @@ namespace VANPHONGPHAM
             dateNgaySinh.Enabled = t;
         }
 
-        void showThongTin()
-        {
+        void showThongTin(){
             txtTenDN.Text = _nv.getItem(_manv).TENDANGNHAP.ToString();
             txtMa.Text = _manv;
             txtHoTen.Text = _nv.getItem(_manv).TENNHANVIEN.ToString();
@@ -60,29 +55,23 @@ namespace VANPHONGPHAM
             dateNgaySinh.Text = _nv.getItem(_manv).NGAYSINH.ToString("dd/MM/yyyy");
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
+        private void btnExit_Click(object sender, EventArgs e){
             this.Close();
         }
 
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
+        private void panel6_Paint(object sender, PaintEventArgs e){
             Panel p = sender as Panel;
             ControlPaint.DrawBorder(e.Graphics, p.DisplayRectangle, Color.Blue, ButtonBorderStyle.Solid);
         }
 
-        private void btnDongY_Paint(object sender, PaintEventArgs e)
-        {
+        private void btnDongY_Paint(object sender, PaintEventArgs e){
             SimpleButton p = sender as SimpleButton;
             ControlPaint.DrawBorder(e.Graphics, p.DisplayRectangle, Color.Blue, ButtonBorderStyle.Solid);
         }
 
-        private void btnDongY_Click(object sender, EventArgs e)
-        {
-            if (_thaydoi)
-            {
+        private void btnDongY_Click(object sender, EventArgs e){
+            if (_thaydoi){
                 NHAN_VIEN nv = _nv.getItem(_manv);
-                //nv.MANHANVIEN = txtMa.Text;
                 nv.TENNHANVIEN = txtHoTen.Text;
                 nv.DIACHI = txtDiaChi.Text;
                 nv.SDT = txtSDT.Text;
@@ -97,23 +86,20 @@ namespace VANPHONGPHAM
             }
         }
 
-        private void btnKiemTra_Click(object sender, EventArgs e)
-        {
+        private void btnKiemTra_Click(object sender, EventArgs e){
             btnBoQua.Visible = true;
             btnDongY.Visible = true;
             _thaydoi = true;
             btnKiemTra.Visible = false;
         }
 
-        private void btnBoQua_Click(object sender, EventArgs e)
-        {
+        private void btnBoQua_Click(object sender, EventArgs e){
             btnKiemTra.Visible = true;
             btnBoQua.Visible = false;
             btnDongY.Visible = false;
         }
 
-        private void txtThayDoiMK_Click(object sender, EventArgs e)
-        {
+        private void txtThayDoiMK_Click(object sender, EventArgs e){
             frmDoiMK frm = new frmDoiMK();
             frm.ShowDialog();
         }

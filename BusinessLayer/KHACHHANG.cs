@@ -7,55 +7,44 @@ using DataLayer;
 
 namespace BusinessLayer
 {
-    public class KHACHHANG
-    {
+    public class KHACHHANG{
         Entities db;
-        public KHACHHANG()
-        {
+        public KHACHHANG(){
             db = Entities.CreateEntities();
         }
 
-        public List<KHACH_HANG> getAll()
-        {
+        public List<KHACH_HANG> getAll(){
             return db.KHACH_HANG.OrderBy(x => x.TENKH).ToList(); // trả về danh sách khách hàng sắp xếp theo tên
         }
 
-        public KHACH_HANG getItem(int makh)
-        {
+        public KHACH_HANG getItem(int makh){
             return db.KHACH_HANG.FirstOrDefault(x => x.MAKH == makh);
         }
 
-        public KHACH_HANG getItem(string tenkh, string sdt, string gioitinh)
-        {
+        public KHACH_HANG getItem(string tenkh, string sdt, string gioitinh){
             return db.KHACH_HANG.FirstOrDefault(x => x.TENKH == tenkh && x.SDT == sdt && x.GIOITINH == gioitinh);
         }
 
-        public void add(KHACH_HANG kh)
-        {
-            try
-            {
+        public void add(KHACH_HANG kh){
+            try{
                 db.KHACH_HANG.Add(kh);
                 db.SaveChanges();
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex){
                 throw new Exception("Có lỗi xảy ra trong quá trình xử lý dữ liệu. " + ex.Message);
             }
         }
 
-        public void update(KHACH_HANG kh)
-        {
+        public void update(KHACH_HANG kh){
             KHACH_HANG _kh = db.KHACH_HANG.FirstOrDefault(x => x.MAKH == kh.MAKH);
             _kh.TENKH = kh.TENKH;
             _kh.SDT = kh.SDT;
             _kh.GIOITINH = kh.GIOITINH;
             _kh.VOHIEUHOA = kh.VOHIEUHOA;
-            try
-            {
+            try{
                 db.SaveChanges();
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex){
                 throw new Exception("Có lỗi xảy ra trong quá trình xử lý dữ liệu. " + ex.Message);
             }
         }
@@ -64,12 +53,10 @@ namespace BusinessLayer
         {
             KHACH_HANG kh = db.KHACH_HANG.FirstOrDefault(x => x.MAKH == makh);
             kh.VOHIEUHOA = true;
-            try
-            {
+            try{
                 db.SaveChanges();
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex){
                 throw new Exception("Có lỗi xảy ra trong quá trình xử lý dữ liệu. " + ex.Message);
             }
         }

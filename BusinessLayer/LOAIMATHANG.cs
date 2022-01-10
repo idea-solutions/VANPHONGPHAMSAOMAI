@@ -20,24 +20,32 @@ namespace BusinessLayer
             return db.LOAI_MAT_HANG.OrderBy(x => x.TENLOAI).ToList();
         }
 
-        public List<OBJLOAIMATHANG> getAll1()
+        public List<OBJLOAIMATHANG> getAllFullShow()
         {
+            // lấy ra list loại mặt hàng
             var listLoaiMatHang = db.LOAI_MAT_HANG.ToList();
 
+            //tạo ra list mới đầy đủ
             List<OBJLOAIMATHANG> lstloaiMatHangFull = new List<OBJLOAIMATHANG>();
+            
+            // khai báo đối tượng loại mh có đầy đủ tt
             OBJLOAIMATHANG objLoaiMatHang;
 
             foreach (var item in listLoaiMatHang)
             {
+                // tạo ra 1 đối tượng loại mh đầy đủ tt
                 objLoaiMatHang = new OBJLOAIMATHANG();
                 objLoaiMatHang.MALOAI = item.MALOAI;
                 objLoaiMatHang.TENLOAI = item.TENLOAI;
                 objLoaiMatHang.VOHIEUHOA = item.VOHIEUHOA;
 
+                // tính số lượng
                 int soLuong = db.MAT_HANG.Count(x => x.MALOAI == item.MALOAI);
                 objLoaiMatHang.SOLUONG = soLuong;
+                // sau khi thêm dữ liệu xong thì add vào list
                 lstloaiMatHangFull.Add(objLoaiMatHang);
             }
+            // trả về
             return lstloaiMatHangFull.OrderBy(x => x.TENLOAI).ToList();
         }
 
@@ -64,31 +72,25 @@ namespace BusinessLayer
             }
         }
 
-        public void update(LOAI_MAT_HANG loaimh)
-        {
+        public void update(LOAI_MAT_HANG loaimh){
             LOAI_MAT_HANG _loaimh = db.LOAI_MAT_HANG.FirstOrDefault(x => x.MALOAI == loaimh.MALOAI);
-            _loaimh.TENLOAI = loaimh.TENLOAI;
-            _loaimh.VOHIEUHOA = loaimh.VOHIEUHOA;
-            try
-            {
+            try{
+                _loaimh.TENLOAI = loaimh.TENLOAI;
+                _loaimh.VOHIEUHOA = loaimh.VOHIEUHOA;
                 db.SaveChanges();
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex){
                 throw new Exception("Có lỗi xảy ra trong quá trình xử lý dữ liệu. " + ex.Message);
             }
         }
 
-        public void disable(string maloaimh)
-        {
+        public void disable(string maloaimh){
             LOAI_MAT_HANG loaimh = db.LOAI_MAT_HANG.FirstOrDefault(x => x.MALOAI == maloaimh);
             loaimh.VOHIEUHOA = true;
-            try
-            {
+            try{
                 db.SaveChanges();
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex){
                 throw new Exception("Có lỗi xảy ra trong quá trình xử lý dữ liệu. " + ex.Message);
             }
         }

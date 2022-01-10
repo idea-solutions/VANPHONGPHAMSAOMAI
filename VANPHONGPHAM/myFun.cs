@@ -9,33 +9,26 @@ using CrystalDecisions.Windows.Forms;
 
 namespace VANPHONGPHAM
 {
-    public class myFun
-    {
+    public class myFun{
         public static string _srv;
         public static string _us;
         public static string _pw;
         public static string _db;
         static SqlConnection con = new SqlConnection();
-        public static void taoKetNoi()
-        {
+        public static void taoKetNoi(){
             con.ConnectionString = Program.connoi;
-            try
-            {
+            try{
                 con.Open();
             }
-            catch (Exception)
-            {
-
+            catch (Exception){
             }
         }
 
-        public static void dongKetNoi()
-        {
+        public static void dongKetNoi(){
             con.Close();
         }
 
-        public static DataTable laydulieu(string qr)
-        {
+        public static DataTable laydulieu(string qr){
             taoKetNoi();
             DataTable data = new DataTable();
             SqlDataAdapter dtap = new SqlDataAdapter();
@@ -45,17 +38,8 @@ namespace VANPHONGPHAM
             return data;
         }
 
-        public static DateTime GetFirstDayInMonth(int year, int month)
-        {
+        public static DateTime GetFirstDayInMonth(int year, int month){
             return new DateTime(year, month, 1);
-        } 
-
-        public static void XuatReport(string khoa, string _reportName, string _tieude)
-        {
-            if (khoa != null)
-            {
-                
-            }
         }
     }
 }

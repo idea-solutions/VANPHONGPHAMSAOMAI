@@ -7,8 +7,7 @@ using DataLayer;
 
 namespace BusinessLayer
 {
-    public class OBJTHONGKEKHACHHANG
-    {
+    public class OBJTHONGKEKHACHHANG{
         public string TENKH { get; set; }
         public double? THANHTIEN { get; set; }
     }

@@ -32,7 +32,6 @@ namespace VANPHONGPHAM
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::VANPHONGPHAM.frmLoading), true, true);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            this.btnDelete = new DevExpress.XtraNavBar.NavBarItem();
             this.btnDoiMk = new DevExpress.XtraNavBar.NavBarItem();
             this.btnMatHang = new DevExpress.XtraNavBar.NavBarItem();
             this.btnKhachHang = new DevExpress.XtraNavBar.NavBarItem();
@@ -60,9 +59,6 @@ namespace VANPHONGPHAM
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.btnPhanQuyen = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.btnThongTin = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
@@ -70,65 +66,73 @@ namespace VANPHONGPHAM
             this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
-            this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.label1 = new System.Windows.Forms.Label();
-            this.peImage = new DevExpress.XtraEditors.PictureEdit();
-            this.splitContainerControl3 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.chartControl2 = new DevExpress.XtraCharts.ChartControl();
-            this.splitContainerControl4 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.chartControl3 = new DevExpress.XtraCharts.ChartControl();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.btnPhanQuyen = new DevExpress.XtraNavBar.NavBarControl();
+            this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup6 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup7 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarGroup8 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
+            this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
+            this.chartControl3 = new DevExpress.XtraCharts.ChartControl();
+            this.chartControl2 = new DevExpress.XtraCharts.ChartControl();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
+            this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnPhanQuyen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
-            this.splitContainerControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.peImage.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl3)).BeginInit();
-            this.splitContainerControl3.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl4)).BeginInit();
-            this.splitContainerControl4.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl3)).BeginInit();
-            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
+            this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             this.SuspendLayout();
             // 
             // splashScreenManager1
             // 
             splashScreenManager1.ClosingDelay = 500;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnDelete.Appearance.Options.UseFont = true;
-            this.btnDelete.Appearance.Options.UseForeColor = true;
-            this.btnDelete.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.btnDelete.AppearanceHotTracked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnDelete.AppearanceHotTracked.Options.UseFont = true;
-            this.btnDelete.AppearanceHotTracked.Options.UseForeColor = true;
-            this.btnDelete.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.btnDelete.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnDelete.AppearancePressed.Options.UseFont = true;
-            this.btnDelete.AppearancePressed.Options.UseForeColor = true;
-            this.btnDelete.Caption = "Xóa dữ liệu bán hàng";
-            this.btnDelete.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.LargeImage")));
-            this.btnDelete.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.SmallImage")));
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Visible = false;
-            this.btnDelete.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnDelete_LinkClicked);
             // 
             // btnDoiMk
             // 
@@ -164,7 +168,7 @@ namespace VANPHONGPHAM
             this.btnMatHang.AppearancePressed.ForeColor = System.Drawing.Color.Black;
             this.btnMatHang.AppearancePressed.Options.UseFont = true;
             this.btnMatHang.AppearancePressed.Options.UseForeColor = true;
-            this.btnMatHang.Caption = "Danh mục Mặt hàng";
+            this.btnMatHang.Caption = "Danh mục Hàng hóa";
             this.btnMatHang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnMatHang.ImageOptions.LargeImage")));
             this.btnMatHang.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnMatHang.ImageOptions.SmallImage")));
             this.btnMatHang.Name = "btnMatHang";
@@ -375,15 +379,15 @@ namespace VANPHONGPHAM
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1798, 45);
+            this.barDockControlTop.Size = new System.Drawing.Size(1364, 45);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 960);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 728);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1798, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1364, 0);
             // 
             // barDockControlLeft
             // 
@@ -391,15 +395,15 @@ namespace VANPHONGPHAM
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 45);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 915);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 683);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1798, 45);
+            this.barDockControlRight.Location = new System.Drawing.Point(1364, 45);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 915);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 683);
             // 
             // barButtonItem2
             // 
@@ -475,78 +479,31 @@ namespace VANPHONGPHAM
             // panel1
             // 
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
-            this.panel1.Location = new System.Drawing.Point(0, 931);
+            this.panel1.Location = new System.Drawing.Point(0, 699);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1798, 29);
+            this.panel1.Size = new System.Drawing.Size(1364, 29);
             this.panel1.TabIndex = 7;
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel5.Controls.Add(this.label6);
-            this.panel5.Location = new System.Drawing.Point(284, 0);
+            this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1440, 29);
+            this.panel5.Size = new System.Drawing.Size(1918, 29);
             this.panel5.TabIndex = 9;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.label6.Location = new System.Drawing.Point(3, 3);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(357, 22);
+            this.label6.Size = new System.Drawing.Size(650, 22);
             this.label6.TabIndex = 10;
             this.label6.Text = "Chào mừng đến với văn phòng phẩm sao mai";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label5.Location = new System.Drawing.Point(1776, 3);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 22);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "label5";
-            // 
-            // splitContainerControl1
-            // 
-            this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 45);
-            this.splitContainerControl1.Name = "splitContainerControl1";
-            this.splitContainerControl1.Panel1.Controls.Add(this.btnPhanQuyen);
-            this.splitContainerControl1.Panel1.Text = "Panel1";
-            this.splitContainerControl1.Panel2.Controls.Add(this.splitContainerControl2);
-            this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1798, 886);
-            this.splitContainerControl1.SplitterPosition = 338;
-            this.splitContainerControl1.TabIndex = 8;
-            // 
-            // btnPhanQuyen
-            // 
-            this.btnPhanQuyen.ActiveGroup = this.navBarGroup1;
-            this.btnPhanQuyen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPhanQuyen.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnPhanQuyen.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
-            this.navBarGroup1,
-            this.navBarGroup2,
-            this.navBarGroup3,
-            this.navBarGroup4});
-            this.btnPhanQuyen.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
-            this.btnLoaiMH,
-            this.navBarItem2,
-            this.btnThongTin});
-            this.btnPhanQuyen.Location = new System.Drawing.Point(0, 0);
-            this.btnPhanQuyen.Name = "btnPhanQuyen";
-            this.btnPhanQuyen.OptionsNavPane.ExpandedWidth = 338;
-            this.btnPhanQuyen.Size = new System.Drawing.Size(338, 886);
-            this.btnPhanQuyen.TabIndex = 0;
-            this.btnPhanQuyen.Text = "navBarControl1";
             // 
             // navBarGroup1
             // 
@@ -569,7 +526,6 @@ namespace VANPHONGPHAM
             this.navBarGroup1.Caption = "TÀI KHOẢN";
             this.navBarGroup1.Expanded = true;
             this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnDelete),
             new DevExpress.XtraNavBar.NavBarItemLink(this.btnDoiMk),
             new DevExpress.XtraNavBar.NavBarItemLink(this.btnThongTin)});
             this.navBarGroup1.Name = "navBarGroup1";
@@ -592,7 +548,6 @@ namespace VANPHONGPHAM
             this.btnThongTin.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThongTin.ImageOptions.LargeImage")));
             this.btnThongTin.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnThongTin.ImageOptions.SmallImage")));
             this.btnThongTin.Name = "btnThongTin";
-            this.btnThongTin.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnThongTin_LinkClicked);
             // 
             // navBarGroup2
             // 
@@ -637,7 +592,6 @@ namespace VANPHONGPHAM
             this.btnLoaiMH.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLoaiMH.ImageOptions.LargeImage")));
             this.btnLoaiMH.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnLoaiMH.ImageOptions.SmallImage")));
             this.btnLoaiMH.Name = "btnLoaiMH";
-            this.btnLoaiMH.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnLoaiHang_LinkClicked);
             // 
             // navBarGroup3
             // 
@@ -707,171 +661,501 @@ namespace VANPHONGPHAM
             this.navBarItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarItem2.ImageOptions.LargeImage")));
             this.navBarItem2.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem2.ImageOptions.SmallImage")));
             this.navBarItem2.Name = "navBarItem2";
-            this.navBarItem2.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem2_LinkClicked);
             // 
-            // splitContainerControl2
+            // layoutControl1
             // 
-            this.splitContainerControl2.Appearance.BackColor = System.Drawing.Color.White;
-            this.splitContainerControl2.Appearance.Options.UseBackColor = true;
-            this.splitContainerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl2.Horizontal = false;
-            this.splitContainerControl2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerControl2.Name = "splitContainerControl2";
-            this.splitContainerControl2.Panel1.Controls.Add(this.label1);
-            this.splitContainerControl2.Panel1.Controls.Add(this.peImage);
-            this.splitContainerControl2.Panel1.Text = "Panel1";
-            this.splitContainerControl2.Panel2.Controls.Add(this.splitContainerControl3);
-            this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(1448, 886);
-            this.splitContainerControl2.SplitterPosition = 104;
-            this.splitContainerControl2.TabIndex = 2;
+            this.layoutControl1.Controls.Add(this.splitContainerControl1);
+            this.layoutControl1.Controls.Add(this.pictureEdit1);
+            this.layoutControl1.Controls.Add(this.separatorControl1);
+            this.layoutControl1.Controls.Add(this.label5);
+            this.layoutControl1.Controls.Add(this.label1);
+            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl1.Location = new System.Drawing.Point(0, 45);
+            this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1108, 318, 812, 500);
+            this.layoutControl1.Root = this.Root;
+            this.layoutControl1.Size = new System.Drawing.Size(1364, 654);
+            this.layoutControl1.TabIndex = 13;
+            this.layoutControl1.Text = "layoutControl1";
             // 
-            // label1
+            // splitContainerControl1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(148, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(795, 53);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "PHẦN MỀM QUẢN LÝ VĂN PHÒNG PHẨM";
+            this.splitContainerControl1.Location = new System.Drawing.Point(12, 86);
+            this.splitContainerControl1.Name = "splitContainerControl1";
+            this.splitContainerControl1.Panel1.Controls.Add(this.btnPhanQuyen);
+            this.splitContainerControl1.Panel1.Text = "Panel1";
+            this.splitContainerControl1.Panel2.Controls.Add(this.layoutControl2);
+            this.splitContainerControl1.Panel2.Text = "Panel2";
+            this.splitContainerControl1.Size = new System.Drawing.Size(1340, 556);
+            this.splitContainerControl1.SplitterPosition = 303;
+            this.splitContainerControl1.TabIndex = 17;
             // 
-            // peImage
+            // btnPhanQuyen
             // 
-            this.peImage.EditValue = ((object)(resources.GetObject("peImage.EditValue")));
-            this.peImage.Location = new System.Drawing.Point(924, -88);
-            this.peImage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.peImage.Name = "peImage";
-            this.peImage.Properties.AllowFocused = false;
-            this.peImage.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.peImage.Properties.Appearance.Options.UseBackColor = true;
-            this.peImage.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.peImage.Properties.ShowMenu = false;
-            this.peImage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.peImage.Size = new System.Drawing.Size(438, 273);
-            this.peImage.TabIndex = 11;
+            this.btnPhanQuyen.ActiveGroup = this.navBarGroup5;
+            this.btnPhanQuyen.Appearance.Background.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPhanQuyen.Appearance.Background.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnPhanQuyen.Appearance.Background.Options.UseBackColor = true;
+            this.btnPhanQuyen.Appearance.Background.Options.UseForeColor = true;
+            this.btnPhanQuyen.Appearance.Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPhanQuyen.Appearance.Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnPhanQuyen.Appearance.Button.Options.UseBackColor = true;
+            this.btnPhanQuyen.Appearance.Button.Options.UseForeColor = true;
+            this.btnPhanQuyen.Appearance.ButtonDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnPhanQuyen.Appearance.ButtonDisabled.Options.UseBackColor = true;
+            this.btnPhanQuyen.Appearance.ButtonHotTracked.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPhanQuyen.Appearance.ButtonHotTracked.Options.UseBackColor = true;
+            this.btnPhanQuyen.Appearance.ButtonPressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPhanQuyen.Appearance.ButtonPressed.Options.UseBackColor = true;
+            this.btnPhanQuyen.Appearance.GroupBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPhanQuyen.Appearance.GroupBackground.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnPhanQuyen.Appearance.GroupBackground.Options.UseBackColor = true;
+            this.btnPhanQuyen.Appearance.GroupBackground.Options.UseForeColor = true;
+            this.btnPhanQuyen.Appearance.GroupHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPhanQuyen.Appearance.GroupHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnPhanQuyen.Appearance.GroupHeader.Options.UseBackColor = true;
+            this.btnPhanQuyen.Appearance.GroupHeader.Options.UseForeColor = true;
+            this.btnPhanQuyen.Appearance.GroupHeaderActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPhanQuyen.Appearance.GroupHeaderActive.Options.UseBackColor = true;
+            this.btnPhanQuyen.Appearance.GroupHeaderHotTracked.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPhanQuyen.Appearance.GroupHeaderHotTracked.Options.UseBackColor = true;
+            this.btnPhanQuyen.Appearance.GroupHeaderPressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPhanQuyen.Appearance.GroupHeaderPressed.Options.UseBackColor = true;
+            this.btnPhanQuyen.Appearance.Item.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPhanQuyen.Appearance.Item.Options.UseBackColor = true;
+            this.btnPhanQuyen.Appearance.ItemActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPhanQuyen.Appearance.ItemActive.Options.UseBackColor = true;
+            this.btnPhanQuyen.Appearance.ItemHotTracked.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPhanQuyen.Appearance.ItemHotTracked.Options.UseBackColor = true;
+            this.btnPhanQuyen.Appearance.ItemPressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPhanQuyen.Appearance.ItemPressed.Options.UseBackColor = true;
+            this.btnPhanQuyen.Appearance.NavigationPaneHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPhanQuyen.Appearance.NavigationPaneHeader.Options.UseBackColor = true;
+            this.btnPhanQuyen.BackColor = System.Drawing.Color.White;
+            this.btnPhanQuyen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPhanQuyen.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnPhanQuyen.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
+            this.navBarGroup5,
+            this.navBarGroup6,
+            this.navBarGroup7,
+            this.navBarGroup8});
+            this.btnPhanQuyen.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
+            this.navBarItem3,
+            this.navBarItem4,
+            this.navBarItem1});
+            this.btnPhanQuyen.Location = new System.Drawing.Point(0, 0);
+            this.btnPhanQuyen.Name = "btnPhanQuyen";
+            this.btnPhanQuyen.OptionsNavPane.ExpandedWidth = 303;
+            this.btnPhanQuyen.Size = new System.Drawing.Size(303, 556);
+            this.btnPhanQuyen.TabIndex = 18;
+            this.btnPhanQuyen.Text = "navBarControl1";
             // 
-            // splitContainerControl3
+            // navBarGroup5
             // 
-            this.splitContainerControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl3.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerControl3.Name = "splitContainerControl3";
-            this.splitContainerControl3.Panel1.Controls.Add(this.label4);
-            this.splitContainerControl3.Panel1.Controls.Add(this.panel3);
-            this.splitContainerControl3.Panel1.Text = "Panel1";
-            this.splitContainerControl3.Panel2.Controls.Add(this.splitContainerControl4);
-            this.splitContainerControl3.Panel2.Text = "Panel2";
-            this.splitContainerControl3.Size = new System.Drawing.Size(1448, 770);
-            this.splitContainerControl3.SplitterPosition = 736;
-            this.splitContainerControl3.TabIndex = 1;
+            this.navBarGroup5.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.2F, System.Drawing.FontStyle.Bold);
+            this.navBarGroup5.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.navBarGroup5.Appearance.Options.UseFont = true;
+            this.navBarGroup5.Appearance.Options.UseForeColor = true;
+            this.navBarGroup5.AppearanceBackground.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navBarGroup5.AppearanceBackground.ForeColor = System.Drawing.Color.Red;
+            this.navBarGroup5.AppearanceBackground.Options.UseFont = true;
+            this.navBarGroup5.AppearanceBackground.Options.UseForeColor = true;
+            this.navBarGroup5.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.navBarGroup5.AppearanceHotTracked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.navBarGroup5.AppearanceHotTracked.Options.UseFont = true;
+            this.navBarGroup5.AppearanceHotTracked.Options.UseForeColor = true;
+            this.navBarGroup5.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.navBarGroup5.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.navBarGroup5.AppearancePressed.Options.UseFont = true;
+            this.navBarGroup5.AppearancePressed.Options.UseForeColor = true;
+            this.navBarGroup5.Caption = "TÀI KHOẢN";
+            this.navBarGroup5.Expanded = true;
+            this.navBarGroup5.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.btnDoiMk),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1)});
+            this.navBarGroup5.Name = "navBarGroup5";
             // 
-            // label4
+            // navBarItem1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label4.Location = new System.Drawing.Point(3, 8);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(648, 32);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Biểu đồ top 5 khách hàng chi trả nhiều nhất trong tháng";
+            this.navBarItem1.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.navBarItem1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.navBarItem1.Appearance.Options.UseFont = true;
+            this.navBarItem1.Appearance.Options.UseForeColor = true;
+            this.navBarItem1.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.navBarItem1.AppearanceHotTracked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.navBarItem1.AppearanceHotTracked.Options.UseFont = true;
+            this.navBarItem1.AppearanceHotTracked.Options.UseForeColor = true;
+            this.navBarItem1.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.navBarItem1.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.navBarItem1.AppearancePressed.Options.UseFont = true;
+            this.navBarItem1.AppearancePressed.Options.UseForeColor = true;
+            this.navBarItem1.Caption = "Thông tin cá nhân";
+            this.navBarItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarItem1.ImageOptions.LargeImage")));
+            this.navBarItem1.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem1.ImageOptions.SmallImage")));
+            this.navBarItem1.Name = "navBarItem1";
+            this.navBarItem1.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnThongTin_LinkClicked);
             // 
-            // panel3
+            // navBarGroup6
             // 
-            this.panel3.Controls.Add(this.chartControl2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 16);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(736, 754);
-            this.panel3.TabIndex = 0;
+            this.navBarGroup6.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navBarGroup6.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.navBarGroup6.Appearance.Options.UseFont = true;
+            this.navBarGroup6.Appearance.Options.UseForeColor = true;
+            this.navBarGroup6.AppearanceBackground.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navBarGroup6.AppearanceBackground.ForeColor = System.Drawing.Color.Red;
+            this.navBarGroup6.AppearanceBackground.Options.UseFont = true;
+            this.navBarGroup6.AppearanceBackground.Options.UseForeColor = true;
+            this.navBarGroup6.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.navBarGroup6.AppearanceHotTracked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.navBarGroup6.AppearanceHotTracked.Options.UseFont = true;
+            this.navBarGroup6.AppearanceHotTracked.Options.UseForeColor = true;
+            this.navBarGroup6.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.navBarGroup6.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.navBarGroup6.AppearancePressed.Options.UseFont = true;
+            this.navBarGroup6.AppearancePressed.Options.UseForeColor = true;
+            this.navBarGroup6.Caption = "QUẢN LÝ HÀNG HÓA";
+            this.navBarGroup6.Expanded = true;
+            this.navBarGroup6.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.btnMatHang),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem3)});
+            this.navBarGroup6.Name = "navBarGroup6";
             // 
-            // chartControl2
+            // navBarItem3
             // 
-            this.chartControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chartControl2.Legend.Name = "Default Legend";
-            this.chartControl2.Location = new System.Drawing.Point(0, 0);
-            this.chartControl2.Name = "chartControl2";
-            this.chartControl2.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartControl2.Size = new System.Drawing.Size(736, 754);
-            this.chartControl2.TabIndex = 0;
+            this.navBarItem3.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.navBarItem3.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.navBarItem3.Appearance.Options.UseFont = true;
+            this.navBarItem3.Appearance.Options.UseForeColor = true;
+            this.navBarItem3.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.navBarItem3.AppearanceHotTracked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.navBarItem3.AppearanceHotTracked.Options.UseFont = true;
+            this.navBarItem3.AppearanceHotTracked.Options.UseForeColor = true;
+            this.navBarItem3.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.navBarItem3.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.navBarItem3.AppearancePressed.Options.UseFont = true;
+            this.navBarItem3.AppearancePressed.Options.UseForeColor = true;
+            this.navBarItem3.Caption = "Danh mục Nhóm hàng hóa";
+            this.navBarItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarItem3.ImageOptions.LargeImage")));
+            this.navBarItem3.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem3.ImageOptions.SmallImage")));
+            this.navBarItem3.Name = "navBarItem3";
+            this.navBarItem3.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnLoaiHang_LinkClicked);
             // 
-            // splitContainerControl4
+            // navBarGroup7
             // 
-            this.splitContainerControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl4.Horizontal = false;
-            this.splitContainerControl4.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerControl4.Name = "splitContainerControl4";
-            this.splitContainerControl4.Panel1.Controls.Add(this.panel2);
-            this.splitContainerControl4.Panel1.Controls.Add(this.label2);
-            this.splitContainerControl4.Panel1.Text = "Panel1";
-            this.splitContainerControl4.Panel2.Controls.Add(this.label3);
-            this.splitContainerControl4.Panel2.Controls.Add(this.panel4);
-            this.splitContainerControl4.Panel2.Text = "Panel2";
-            this.splitContainerControl4.Size = new System.Drawing.Size(700, 770);
-            this.splitContainerControl4.SplitterPosition = 410;
-            this.splitContainerControl4.TabIndex = 0;
+            this.navBarGroup7.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.2F, System.Drawing.FontStyle.Bold);
+            this.navBarGroup7.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.navBarGroup7.Appearance.Options.UseFont = true;
+            this.navBarGroup7.Appearance.Options.UseForeColor = true;
+            this.navBarGroup7.AppearanceBackground.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navBarGroup7.AppearanceBackground.ForeColor = System.Drawing.Color.Red;
+            this.navBarGroup7.AppearanceBackground.Options.UseFont = true;
+            this.navBarGroup7.AppearanceBackground.Options.UseForeColor = true;
+            this.navBarGroup7.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.navBarGroup7.AppearanceHotTracked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.navBarGroup7.AppearanceHotTracked.Options.UseFont = true;
+            this.navBarGroup7.AppearanceHotTracked.Options.UseForeColor = true;
+            this.navBarGroup7.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.navBarGroup7.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.navBarGroup7.AppearancePressed.Options.UseFont = true;
+            this.navBarGroup7.AppearancePressed.Options.UseForeColor = true;
+            this.navBarGroup7.Caption = "QUẢN LÝ ĐỐI TÁC";
+            this.navBarGroup7.Expanded = true;
+            this.navBarGroup7.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.btnKhachHang),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.btnNCC)});
+            this.navBarGroup7.Name = "navBarGroup7";
             // 
-            // panel2
+            // navBarGroup8
             // 
-            this.panel2.Controls.Add(this.chartControl3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 45);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(700, 365);
-            this.panel2.TabIndex = 7;
+            this.navBarGroup8.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.2F, System.Drawing.FontStyle.Bold);
+            this.navBarGroup8.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.navBarGroup8.Appearance.Options.UseFont = true;
+            this.navBarGroup8.Appearance.Options.UseForeColor = true;
+            this.navBarGroup8.AppearanceBackground.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navBarGroup8.AppearanceBackground.ForeColor = System.Drawing.Color.Red;
+            this.navBarGroup8.AppearanceBackground.Options.UseFont = true;
+            this.navBarGroup8.AppearanceBackground.Options.UseForeColor = true;
+            this.navBarGroup8.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.navBarGroup8.AppearanceHotTracked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.navBarGroup8.AppearanceHotTracked.Options.UseFont = true;
+            this.navBarGroup8.AppearanceHotTracked.Options.UseForeColor = true;
+            this.navBarGroup8.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.navBarGroup8.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.navBarGroup8.AppearancePressed.Options.UseFont = true;
+            this.navBarGroup8.AppearancePressed.Options.UseForeColor = true;
+            this.navBarGroup8.Caption = "QUẢN LÝ NHÂN VIÊN";
+            this.navBarGroup8.Expanded = true;
+            this.navBarGroup8.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.btnNhanVien),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem4)});
+            this.navBarGroup8.Name = "navBarGroup8";
             // 
-            // chartControl3
+            // navBarItem4
             // 
-            this.chartControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chartControl3.Legend.Name = "Default Legend";
-            this.chartControl3.Location = new System.Drawing.Point(0, 0);
-            this.chartControl3.Name = "chartControl3";
-            this.chartControl3.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartControl3.Size = new System.Drawing.Size(700, 365);
-            this.chartControl3.TabIndex = 6;
+            this.navBarItem4.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.navBarItem4.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.navBarItem4.Appearance.Options.UseFont = true;
+            this.navBarItem4.Appearance.Options.UseForeColor = true;
+            this.navBarItem4.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.navBarItem4.AppearanceHotTracked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.navBarItem4.AppearanceHotTracked.Options.UseFont = true;
+            this.navBarItem4.AppearanceHotTracked.Options.UseForeColor = true;
+            this.navBarItem4.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.navBarItem4.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.navBarItem4.AppearancePressed.Options.UseFont = true;
+            this.navBarItem4.AppearancePressed.Options.UseForeColor = true;
+            this.navBarItem4.Caption = "Phân quyền người dùng";
+            this.navBarItem4.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarItem4.ImageOptions.LargeImage")));
+            this.navBarItem4.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem4.ImageOptions.SmallImage")));
+            this.navBarItem4.Name = "navBarItem4";
+            this.navBarItem4.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem2_LinkClicked);
             // 
-            // label2
+            // layoutControl2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label2.Location = new System.Drawing.Point(3, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(519, 32);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Biểu đồ top 5 mặt hàng bán chạy trong ngày";
+            this.layoutControl2.Controls.Add(this.label9);
+            this.layoutControl2.Controls.Add(this.label8);
+            this.layoutControl2.Controls.Add(this.label7);
+            this.layoutControl2.Controls.Add(this.chartControl1);
+            this.layoutControl2.Controls.Add(this.chartControl3);
+            this.layoutControl2.Controls.Add(this.chartControl2);
+            this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl2.Name = "layoutControl2";
+            this.layoutControl2.Root = this.layoutControlGroup1;
+            this.layoutControl2.Size = new System.Drawing.Size(1025, 556);
+            this.layoutControl2.TabIndex = 0;
+            this.layoutControl2.Text = "layoutControl2";
             // 
-            // label3
+            // label9
             // 
-            this.label3.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label3.Location = new System.Drawing.Point(3, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(660, 46);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Biểu đồ doanh thu 7 ngày gần nhất";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.UseCompatibleTextRendering = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(501, 295);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(512, 25);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Biểu đồ doanh thu 7 ngày gần nhất";
             // 
-            // panel4
+            // label8
             // 
-            this.panel4.Controls.Add(this.chartControl1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 23);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(700, 325);
-            this.panel4.TabIndex = 0;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(501, 12);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(512, 25);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Biểu đồ top 5 mặt hàng bán chạy trong ngày";
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(12, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(485, 25);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Biểu đồ top 5 khách hàng thanh toán nhiều nhất tháng";
             // 
             // chartControl1
             // 
-            this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartControl1.Legend.Name = "Default Legend";
-            this.chartControl1.Location = new System.Drawing.Point(0, 0);
+            this.chartControl1.Location = new System.Drawing.Point(501, 324);
             this.chartControl1.Name = "chartControl1";
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartControl1.Size = new System.Drawing.Size(700, 325);
-            this.chartControl1.TabIndex = 1;
+            this.chartControl1.Size = new System.Drawing.Size(512, 220);
+            this.chartControl1.TabIndex = 6;
+            // 
+            // chartControl3
+            // 
+            this.chartControl3.Legend.Name = "Default Legend";
+            this.chartControl3.Location = new System.Drawing.Point(501, 41);
+            this.chartControl3.Name = "chartControl3";
+            this.chartControl3.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            this.chartControl3.Size = new System.Drawing.Size(512, 250);
+            this.chartControl3.TabIndex = 5;
+            // 
+            // chartControl2
+            // 
+            this.chartControl2.Legend.Name = "Default Legend";
+            this.chartControl2.Location = new System.Drawing.Point(12, 41);
+            this.chartControl2.Name = "chartControl2";
+            this.chartControl2.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            this.chartControl2.Size = new System.Drawing.Size(485, 503);
+            this.chartControl2.TabIndex = 4;
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem2,
+            this.layoutControlItem13,
+            this.layoutControlItem3,
+            this.layoutControlItem1,
+            this.layoutControlItem14,
+            this.layoutControlItem15});
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1025, 556);
+            this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.chartControl2;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 29);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(489, 507);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
+            // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.Control = this.chartControl3;
+            this.layoutControlItem13.Location = new System.Drawing.Point(489, 29);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(516, 254);
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem13.TextVisible = false;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.chartControl1;
+            this.layoutControlItem3.Location = new System.Drawing.Point(489, 312);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(516, 224);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.label7;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(489, 29);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
+            // 
+            // layoutControlItem14
+            // 
+            this.layoutControlItem14.Control = this.label8;
+            this.layoutControlItem14.Location = new System.Drawing.Point(489, 0);
+            this.layoutControlItem14.Name = "layoutControlItem14";
+            this.layoutControlItem14.Size = new System.Drawing.Size(516, 29);
+            this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem14.TextVisible = false;
+            // 
+            // layoutControlItem15
+            // 
+            this.layoutControlItem15.Control = this.label9;
+            this.layoutControlItem15.Location = new System.Drawing.Point(489, 283);
+            this.layoutControlItem15.Name = "layoutControlItem15";
+            this.layoutControlItem15.Size = new System.Drawing.Size(516, 29);
+            this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem15.TextVisible = false;
+            // 
+            // pictureEdit1
+            // 
+            this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
+            this.pictureEdit1.Location = new System.Drawing.Point(881, 12);
+            this.pictureEdit1.MenuManager = this.barManager1;
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.pictureEdit1.Size = new System.Drawing.Size(212, 46);
+            this.pictureEdit1.StyleController = this.layoutControl1;
+            this.pictureEdit1.TabIndex = 15;
+            // 
+            // separatorControl1
+            // 
+            this.separatorControl1.BackColor = System.Drawing.Color.Transparent;
+            this.separatorControl1.LineThickness = 2;
+            this.separatorControl1.Location = new System.Drawing.Point(12, 62);
+            this.separatorControl1.Name = "separatorControl1";
+            this.separatorControl1.Size = new System.Drawing.Size(1340, 20);
+            this.separatorControl1.TabIndex = 14;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(1097, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(255, 46);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Time";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Variable Text", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label1.Location = new System.Drawing.Point(12, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(865, 46);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "PHẦN MỀM QUẢN LÝ VĂN PHÒNG PHẨM";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // Root
+            // 
+            this.Root.AppearanceGroup.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Root.AppearanceGroup.Options.UseBackColor = true;
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem5,
+            this.layoutControlItem10,
+            this.layoutControlItem11,
+            this.layoutControlItem9,
+            this.layoutControlItem12});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(1364, 654);
+            this.Root.TextVisible = false;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.label1;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(869, 50);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.label5;
+            this.layoutControlItem10.Location = new System.Drawing.Point(1085, 0);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(259, 50);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem10.TextVisible = false;
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.separatorControl1;
+            this.layoutControlItem11.Location = new System.Drawing.Point(0, 50);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(1344, 24);
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem11.TextVisible = false;
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.pictureEdit1;
+            this.layoutControlItem9.Location = new System.Drawing.Point(869, 0);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(216, 50);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem9.TextVisible = false;
+            // 
+            // layoutControlItem12
+            // 
+            this.layoutControlItem12.Control = this.splitContainerControl1;
+            this.layoutControlItem12.Location = new System.Drawing.Point(0, 74);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(1344, 560);
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem12.TextVisible = false;
             // 
             // frmMain
             // 
@@ -882,8 +1166,8 @@ namespace VANPHONGPHAM
             this.Appearance.Options.UseForeColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1798, 960);
-            this.Controls.Add(this.splitContainerControl1);
+            this.ClientSize = new System.Drawing.Size(1364, 728);
+            this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -900,25 +1184,32 @@ namespace VANPHONGPHAM
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
+            this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnPhanQuyen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).EndInit();
-            this.splitContainerControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.peImage.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl3)).EndInit();
-            this.splitContainerControl3.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl4)).EndInit();
-            this.splitContainerControl4.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl3)).EndInit();
-            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
+            this.layoutControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -929,7 +1220,6 @@ namespace VANPHONGPHAM
         private DevExpress.XtraNavBar.NavBarItem btnKhachHang;
         private DevExpress.XtraNavBar.NavBarItem btnNCC;
         private DevExpress.XtraNavBar.NavBarItem btnNhanVien;
-        private DevExpress.XtraNavBar.NavBarItem btnDelete;
         private DevExpress.XtraNavBar.NavBarItem btnDoiMk;
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar bar2;
@@ -941,30 +1231,9 @@ namespace VANPHONGPHAM
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarButtonItem btnDatHang;
         private System.Windows.Forms.Timer timer1;
-        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
-        private DevExpress.XtraNavBar.NavBarControl btnPhanQuyen;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
-        private DevExpress.XtraNavBar.NavBarItem btnLoaiMH;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup3;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup4;
-        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl2;
-        private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.PictureEdit peImage;
-        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl3;
-        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl4;
-        private System.Windows.Forms.Panel panel2;
-        private DevExpress.XtraCharts.ChartControl chartControl3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel4;
-        private DevExpress.XtraCharts.ChartControl chartControl1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label6;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem2;
         private DevExpress.XtraBars.BarButtonItem btnDangXuat;
         private DevExpress.XtraBars.BarButtonItem btnND;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
@@ -974,9 +1243,47 @@ namespace VANPHONGPHAM
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup Root;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
         private DevExpress.XtraNavBar.NavBarItem btnThongTin;
-        private System.Windows.Forms.Label label4;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
+        private DevExpress.XtraNavBar.NavBarItem btnLoaiMH;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup3;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup4;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem2;
+        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private System.Windows.Forms.Label label5;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private DevExpress.XtraEditors.SeparatorControl separatorControl1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraNavBar.NavBarControl btnPhanQuyen;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup5;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem1;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup6;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem3;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup7;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup8;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem4;
+        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
+        private DevExpress.XtraLayout.LayoutControl layoutControl2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private DevExpress.XtraCharts.ChartControl chartControl1;
+        private DevExpress.XtraCharts.ChartControl chartControl3;
         private DevExpress.XtraCharts.ChartControl chartControl2;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
     }
 }
 

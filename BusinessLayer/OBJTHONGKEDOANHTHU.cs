@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    public class OBJTHONGKEDOANHTHU
-    {
+    public class OBJTHONGKEDOANHTHU{
         public string Ngay { get; set; }
         public double? ThanhTien { get; set; }
     }

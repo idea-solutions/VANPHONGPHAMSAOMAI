@@ -106,9 +106,9 @@ namespace VANPHONGPHAM
             this.groupControl1.Controls.Add(this.txtMa);
             this.groupControl1.Controls.Add(this.label1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(0, 435);
+            this.groupControl1.Location = new System.Drawing.Point(0, 504);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1341, 165);
+            this.groupControl1.Size = new System.Drawing.Size(1198, 156);
             this.groupControl1.TabIndex = 9;
             this.groupControl1.Text = "Thông tin mặt hàng";
             // 
@@ -116,7 +116,7 @@ namespace VANPHONGPHAM
             // 
             this.cmbDVT.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
             this.cmbDVT.FormattingEnabled = true;
-            this.cmbDVT.Location = new System.Drawing.Point(506, 79);
+            this.cmbDVT.Location = new System.Drawing.Point(454, 79);
             this.cmbDVT.Name = "cmbDVT";
             this.cmbDVT.Size = new System.Drawing.Size(209, 30);
             this.cmbDVT.TabIndex = 12;
@@ -126,7 +126,7 @@ namespace VANPHONGPHAM
             this.btnAddnew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAddnew.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddnew.ImageOptions.Image")));
             this.btnAddnew.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnAddnew.Location = new System.Drawing.Point(342, 34);
+            this.btnAddnew.Location = new System.Drawing.Point(311, 34);
             this.btnAddnew.Name = "btnAddnew";
             this.btnAddnew.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnAddnew.Size = new System.Drawing.Size(38, 38);
@@ -137,9 +137,9 @@ namespace VANPHONGPHAM
             // 
             this.txtMoTa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMoTa.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtMoTa.Location = new System.Drawing.Point(934, 39);
+            this.txtMoTa.Location = new System.Drawing.Point(882, 42);
             this.txtMoTa.Name = "txtMoTa";
-            this.txtMoTa.Size = new System.Drawing.Size(395, 114);
+            this.txtMoTa.Size = new System.Drawing.Size(304, 109);
             this.txtMoTa.TabIndex = 10;
             this.txtMoTa.Text = "";
             // 
@@ -158,7 +158,7 @@ namespace VANPHONGPHAM
             0,
             0});
             this.txtGiaBan.Name = "txtGiaBan";
-            this.txtGiaBan.Size = new System.Drawing.Size(189, 30);
+            this.txtGiaBan.Size = new System.Drawing.Size(164, 30);
             this.txtGiaBan.TabIndex = 4;
             // 
             // cmbLoaiMH
@@ -167,14 +167,14 @@ namespace VANPHONGPHAM
             this.cmbLoaiMH.FormattingEnabled = true;
             this.cmbLoaiMH.Location = new System.Drawing.Point(147, 37);
             this.cmbLoaiMH.Name = "cmbLoaiMH";
-            this.cmbLoaiMH.Size = new System.Drawing.Size(189, 30);
+            this.cmbLoaiMH.Size = new System.Drawing.Size(164, 30);
             this.cmbLoaiMH.TabIndex = 3;
             // 
             // ckbDisable
             // 
             this.ckbDisable.AutoSize = true;
             this.ckbDisable.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.ckbDisable.Location = new System.Drawing.Point(761, 79);
+            this.ckbDisable.Location = new System.Drawing.Point(709, 79);
             this.ckbDisable.Name = "ckbDisable";
             this.ckbDisable.Size = new System.Drawing.Size(88, 26);
             this.ckbDisable.TabIndex = 2;
@@ -185,7 +185,7 @@ namespace VANPHONGPHAM
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(458, 82);
+            this.label5.Location = new System.Drawing.Point(406, 82);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 22);
             this.label5.TabIndex = 0;
@@ -215,7 +215,7 @@ namespace VANPHONGPHAM
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(873, 40);
+            this.label6.Location = new System.Drawing.Point(821, 41);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 22);
             this.label6.TabIndex = 0;
@@ -225,7 +225,7 @@ namespace VANPHONGPHAM
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(416, 40);
+            this.label4.Location = new System.Drawing.Point(364, 40);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 22);
             this.label4.TabIndex = 0;
@@ -234,7 +234,7 @@ namespace VANPHONGPHAM
             // txtTen
             // 
             this.txtTen.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtTen.Location = new System.Drawing.Point(506, 39);
+            this.txtTen.Location = new System.Drawing.Point(454, 39);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(343, 30);
             this.txtTen.TabIndex = 1;
@@ -244,7 +244,7 @@ namespace VANPHONGPHAM
             this.txtMa.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
             this.txtMa.Location = new System.Drawing.Point(147, 75);
             this.txtMa.Name = "txtMa";
-            this.txtMa.Size = new System.Drawing.Size(189, 30);
+            this.txtMa.Size = new System.Drawing.Size(164, 30);
             this.txtMa.TabIndex = 1;
             // 
             // label1
@@ -263,7 +263,7 @@ namespace VANPHONGPHAM
             this.gcDanhSach.Location = new System.Drawing.Point(0, 45);
             this.gcDanhSach.MainView = this.gvDanhSach;
             this.gcDanhSach.Name = "gcDanhSach";
-            this.gcDanhSach.Size = new System.Drawing.Size(1341, 390);
+            this.gcDanhSach.Size = new System.Drawing.Size(1198, 459);
             this.gcDanhSach.TabIndex = 8;
             this.gcDanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDanhSach});
@@ -574,15 +574,15 @@ namespace VANPHONGPHAM
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1341, 45);
+            this.barDockControlTop.Size = new System.Drawing.Size(1198, 45);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 600);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 660);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1341, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1198, 0);
             // 
             // barDockControlLeft
             // 
@@ -590,21 +590,21 @@ namespace VANPHONGPHAM
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 45);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 555);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 615);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1341, 45);
+            this.barDockControlRight.Location = new System.Drawing.Point(1198, 45);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 555);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 615);
             // 
             // frmMATHANG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1341, 600);
+            this.ClientSize = new System.Drawing.Size(1198, 660);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gcDanhSach);
             this.Controls.Add(this.barDockControlLeft);

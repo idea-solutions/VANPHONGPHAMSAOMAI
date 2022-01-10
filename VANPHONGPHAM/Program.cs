@@ -17,16 +17,14 @@ namespace VANPHONGPHAM
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
-        {
+        static void Main(){
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
 
-            if (File.Exists("connectdb.dba"))
-            {
+            if (File.Exists("connectdb.dba")){
                 string conStr = "";
                 //Doc file connect
                 BinaryFormatter bf = new BinaryFormatter();

@@ -19,8 +19,7 @@ namespace VANPHONGPHAM
 {
     public partial class frmNHANVIEN : DevExpress.XtraEditors.XtraForm
     {
-        public frmNHANVIEN()
-        {
+        public frmNHANVIEN(){
             InitializeComponent();
         }
 
@@ -28,22 +27,17 @@ namespace VANPHONGPHAM
         NHANVIEN _nv;
         bool _them;
         string _manv;
-        bool cal(Int32 _Width, GridView _view)
-        {
+        bool cal(Int32 _Width, GridView _view){
             _view.IndicatorWidth = _view.IndicatorWidth < _Width ? _Width : _view.IndicatorWidth;
             return true;
         }
-        private void gvDanhSach_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
-        {
-            if (e.Info.IsRowIndicator) //Nếu là dòng Indicator
-            {
-                if (e.RowHandle < 0)
-                {
+        private void gvDanhSach_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e){
+            if (e.Info.IsRowIndicator){
+                if (e.RowHandle < 0){
                     e.Info.ImageIndex = 0;
                     e.Info.DisplayText = string.Empty;
                 }
-                else
-                {
+                else{
                     e.Info.ImageIndex = -1; //Nếu hiển thị
                     e.Info.DisplayText = (e.RowHandle + 1).ToString(); //Số thứ tự tăng dần
                 }
@@ -53,8 +47,7 @@ namespace VANPHONGPHAM
             }
         }
 
-        private void frmNHANVIEN_Load(object sender, EventArgs e)
-        {
+        private void frmNHANVIEN_Load(object sender, EventArgs e){
             _nv = new NHANVIEN();
             loadData();
             showHideControl(true);
@@ -70,11 +63,8 @@ namespace VANPHONGPHAM
             txtTen.MaxLength = 30;
             txtSDT.MaxLength = 10;
 
-            if (frm._tendn == "ADMIN" || frm._tendn == "admin")
-            {
-            }
-            else
-            {
+            if (frm._tendn == "ADMIN" || frm._tendn == "admin"){}
+            else{
                 btnDelete.Enabled = false;
                 btnEdit.Enabled = false;
             }
@@ -82,19 +72,12 @@ namespace VANPHONGPHAM
             showInfo(false);
         }
 
-        private void Btn1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("true");
-        }
-
-        private void loadData()
-        {
+        private void loadData(){
             gcDanhSach.DataSource = _nv.getAll();
             enable(false);
         }
 
-        void showHideControl(bool t)
-        {
+        void showHideControl(bool t){
             btnAdd.Enabled = t;
             btnEdit.Enabled = t;
             btnDelete.Enabled = t;
@@ -102,8 +85,7 @@ namespace VANPHONGPHAM
             btnCancel.Enabled = !t;
         }
 
-        void showInfo(bool t)
-        {
+        void showInfo(bool t){
             txtMatKhau.Visible = t;
             txtNLMatKhau.Visible = t;
             txtTenDangNhap.Visible = t;
@@ -112,8 +94,7 @@ namespace VANPHONGPHAM
             label9.Visible = t;
         }
 
-        void enable(bool t)
-        {
+        void enable(bool t){
             txtTen.Enabled = t;
             txtMa.Enabled = t;
             txtCMND.Enabled = t;
@@ -127,8 +108,7 @@ namespace VANPHONGPHAM
             ckbDisable.Enabled = t;
         }
 
-        void reset(bool t)
-        {
+        void reset(bool t){
             txtTen.Text = "";
             txtMa.Text = "";
             txtCMND.Text = "";
@@ -141,8 +121,7 @@ namespace VANPHONGPHAM
             ckbDisable.Checked = false;
         }
 
-        private void btnThem_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
+        private void btnThem_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
             showHideControl(false);
             _them = true;
             enable(true);
@@ -152,8 +131,7 @@ namespace VANPHONGPHAM
 
         }
 
-        private void btnSua_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
+        private void btnSua_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
             showHideControl(false);
             _them = false;
             enable(true);
@@ -161,38 +139,26 @@ namespace VANPHONGPHAM
             txtTenDangNhap.Enabled = false;
         }
 
-        private void btnXoa_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if (MessageBox.Show("Bạn có chắc chắn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
+        private void btnXoa_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
+            if (MessageBox.Show("Bạn có chắc chắn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes){
                 _nv.disable(_manv);
             }
             reset(true);
             loadData();
         }
 
-        private void btnLuu_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if (txtMa.TextLength != 0 && txtCMND.TextLength!=0 && txtDiaChi.TextLength!=0&& txtTenDangNhap.TextLength!=0 && txtSDT.TextLength!=0&& txtMatKhau.TextLength!=0&& txtNLMatKhau.TextLength != 0 && dtNgaySinh.Text != "")
-            {
-                if (txtMa.TextLength == 4)
-                {
-                    if (txtSDT.TextLength == 10)
-                    {
-                        if(txtCMND.TextLength==12 || txtCMND.TextLength == 9)
-                        {
-                            if(cmbGioiTinh.Text == "Nam" || cmbGioiTinh.Text == "Nữ" && cmbGioiTinh.Text == "Khác")
-                            {
-                                if (txtMatKhau.TextLength >= 8)
-                                {
-                                    if(txtNLMatKhau.Text == txtMatKhau.Text)
-                                    {
+        private void btnLuu_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
+            if (txtMa.TextLength != 0 && txtCMND.TextLength!=0 && txtDiaChi.TextLength!=0&& txtTenDangNhap.TextLength!=0 && txtSDT.TextLength!=0&& txtMatKhau.TextLength!=0&& txtNLMatKhau.TextLength != 0 && dtNgaySinh.Text != ""){
+                if (txtMa.TextLength == 4){
+                    if (txtSDT.TextLength == 10){
+                        if(txtCMND.TextLength==12 || txtCMND.TextLength == 9){
+                            if(cmbGioiTinh.Text == "Nam" || cmbGioiTinh.Text == "Nữ" && cmbGioiTinh.Text == "Khác"){
+                                if (txtMatKhau.TextLength >= 8){
+                                    if(txtNLMatKhau.Text == txtMatKhau.Text){
                                         var nvkt = _nv.getItem(txtMa.Text);
-                                        if (nvkt == null)
-                                        {
+                                        if (nvkt == null){
                                             showHideControl(true);
-                                            if (_them)
-                                            {
+                                            if (_them){
                                                 NHAN_VIEN nv = new NHAN_VIEN();
                                                 nv.MANHANVIEN = txtMa.Text;
                                                 nv.TENNHANVIEN = txtTen.Text;
@@ -212,8 +178,7 @@ namespace VANPHONGPHAM
                                                 enable(false);
                                                 showInfo(false);
                                             }
-                                            else
-                                            {
+                                            else{
                                                 NHAN_VIEN nv = _nv.getItem(_manv);
                                                 nv.TENNHANVIEN = txtTen.Text;
                                                 nv.DIACHI = txtDiaChi.Text;
@@ -257,28 +222,22 @@ namespace VANPHONGPHAM
 
         }
 
-        private void btnBoQua_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
+        private void btnBoQua_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
             _them = false;
             showHideControl(true);
             enable(false);
             showInfo(false);
         }
 
-        private void gvDanhSach_Click(object sender, EventArgs e)
-        {
-            if (gvDanhSach.RowCount > 0)
-            {
-                if (gvDanhSach.GetFocusedRowCellValue("MANHANVIEN") != null)
-                {
+        private void gvDanhSach_Click(object sender, EventArgs e){
+            if (gvDanhSach.RowCount > 0){
+                if (gvDanhSach.GetFocusedRowCellValue("MANHANVIEN") != null){
                     _manv = gvDanhSach.GetFocusedRowCellValue("MANHANVIEN").ToString();
                     txtMa.Text = gvDanhSach.GetFocusedRowCellValue("MANHANVIEN").ToString();
                     txtTen.Text = gvDanhSach.GetFocusedRowCellValue("TENNHANVIEN").ToString();
                     txtDiaChi.Text = gvDanhSach.GetFocusedRowCellValue("DIACHI").ToString();
                     txtSDT.Text = gvDanhSach.GetFocusedRowCellValue("SDT").ToString();
                     txtCMND.Text = gvDanhSach.GetFocusedRowCellValue("CMND_CCCD").ToString();
-                    //txtTenDangNhap.Text = gvDanhSach.GetFocusedRowCellValue("TENDANGNHAP").ToString();
-                    //txtMatKhau.Text = gvDanhSach.GetFocusedRowCellValue("MATKHAU").ToString();
                     DateTime a = DateTime.Parse(gvDanhSach.GetFocusedRowCellValue("NGAYSINH").ToString());
                     dtNgaySinh.Text = a.ToString("dd/MM/yyyy");
                     ckbDisable.Checked = bool.Parse(gvDanhSach.GetFocusedRowCellValue("VOHIEUHOA").ToString());
@@ -287,15 +246,12 @@ namespace VANPHONGPHAM
             }
         }
 
-        private void btnPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
+        private void btnPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
             XuatReport("ReportNV", "DANH SÁCH NHÂN VIÊN");
         }
 
-        private void XuatReport(string _reportName, string _tieude)
-        {
-            if (_manv != null || _manv == null)
-            {
+        private void XuatReport(string _reportName, string _tieude){
+            if (_manv != null || _manv == null){
                 Form frm = new Form();
                 CrystalReportViewer Crv = new CrystalReportViewer();
                 Crv.ShowGroupTreeButton = false;
@@ -310,8 +266,7 @@ namespace VANPHONGPHAM
                 Thongtin.ConnectionInfo.Password = myFun._pw;
                 Thongtin.ConnectionInfo.DatabaseName = myFun._db;
                 doc.Database.Tables[0].ApplyLogOnInfo(Thongtin);
-                try
-                {
+                try{
                     Crv.Dock = DockStyle.Fill;
                     Crv.ReportSource = doc;
                     frm.Controls.Add(Crv);
@@ -320,8 +275,7 @@ namespace VANPHONGPHAM
                     frm.WindowState = FormWindowState.Maximized;
                     frm.ShowDialog();
                 }
-                catch (Exception ex)
-                {
+                catch (Exception ex){
                     MessageBox.Show("Lỗi: " + ex.Message);
                 }
             }

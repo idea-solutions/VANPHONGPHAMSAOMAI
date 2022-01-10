@@ -20,33 +20,28 @@ namespace VANPHONGPHAM
 {
     public partial class frmMATHANG : DevExpress.XtraEditors.XtraForm
     {
-        public frmMATHANG()
-        {
+        public frmMATHANG(){
             InitializeComponent();
         }
 
         NHANVIEN _nv;
-        frmLOAIMATHANG objLOAIMATHANG = (frmLOAIMATHANG)Application.OpenForms["frmLOAIMATHANG"];
         frmMain objMain = (frmMain)Application.OpenForms["frmMain"];
         LOAIMATHANG _loaimh;
         MATHANG _mh;
         bool _them;
         string _mamh;
-        bool cal(Int32 _Width, GridView _view)
-        {
+        bool cal(Int32 _Width, GridView _view){
             _view.IndicatorWidth = _view.IndicatorWidth < _Width ? _Width : _view.IndicatorWidth;
             return true;
         }
 
-        void quyenChucNang(bool t)
-        {
+        void quyenChucNang(bool t){
             btnDelete.Enabled = t;
             btnEdit.Enabled = t;
             btnAdd.Enabled = t;
         }
 
-        private void frmMATHANG_Load(object sender, EventArgs e)
-        {
+        private void frmMATHANG_Load(object sender, EventArgs e){
             txtMa.MaxLength = 5;
             txtTen.MaxLength = 50;
             cmbDVT.MaxLength = 10;
@@ -57,49 +52,39 @@ namespace VANPHONGPHAM
             gvDanhSach.ExpandAllGroups();
             showHideControl(true);
             bool t = _nv.kiemtraQuyen(objMain._tendn);
-            if (t)
-            {
-
+            if (t){ }
+            else{
+                quyenChucNang(false);
             }
-            else
-            {
-                btnAdd.Enabled = false;
-                btnEdit.Enabled = false;
-                btnDelete.Enabled = false;
-            }
-            cmbDVT.Items.Add("Hộp");
+            cmbDVT.Items.Add("Bộ");
+            cmbDVT.Items.Add("Cái");
             cmbDVT.Items.Add("Chiếc");
             cmbDVT.Items.Add("Đôi");
-            cmbDVT.Items.Add("Lọ");
             cmbDVT.Items.Add("Gói");
+            cmbDVT.Items.Add("Hộp");
+            cmbDVT.Items.Add("Lọ");
             cmbDVT.Items.Add("Tờ");
-            cmbDVT.Items.Add("Bộ");
         }
-        
-        private void loadData()
-        {
-            
+
+        private void loadData(){
             enable(false);
             loadLoaiMH();
             gcDanhSach.DataSource = _mh.getAll();
         }
         
-        public void loadLoaiMH()
-        {
+        public void loadLoaiMH(){
             cmbLoaiMH.DataSource = _loaimh.getAll();
             cmbLoaiMH.DisplayMember = "TENLOAI";
             cmbLoaiMH.ValueMember = "MALOAI";
         }
 
-        public void setLoaiMH(string maMH)
-        {
+        public void setLoaiMH(string maMH){
             var mh = _loaimh.getItem(maMH);
             cmbLoaiMH.SelectedValue = mh.MALOAI;
             cmbLoaiMH.Text = mh.TENLOAI;
         }
 
-        void showHideControl(bool t)
-        {
+        void showHideControl(bool t){
             btnAdd.Enabled = t;
             btnEdit.Enabled = t;
             btnDelete.Enabled = t;
@@ -107,8 +92,7 @@ namespace VANPHONGPHAM
             btnCancel.Enabled = !t;
         }
 
-        public void enable(bool t)
-        {
+        public void enable(bool t){
             txtTen.Enabled = t;
             txtMa.Enabled = t;
             txtGiaBan.Enabled = t;
@@ -117,8 +101,7 @@ namespace VANPHONGPHAM
             ckbDisable.Enabled = t;
         }
 
-        void reset(bool t)
-        {
+        void reset(bool t){
             txtTen.Text = "";
             txtMa.Text = "";
             txtGiaBan.Text = "";
@@ -127,17 +110,13 @@ namespace VANPHONGPHAM
             ckbDisable.Checked = false;
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
+        private void btnThoat_Click(object sender, EventArgs e){
             this.Close();
         }
 
-        private void gvDanhSach_Click(object sender, EventArgs e)
-        {
-            if (gvDanhSach.RowCount > 0)
-            {
-                if(gvDanhSach.GetFocusedRowCellValue("MAMH") != null)
-                {
+        private void gvDanhSach_Click(object sender, EventArgs e){
+            if (gvDanhSach.RowCount > 0){
+                if(gvDanhSach.GetFocusedRowCellValue("MAMH") != null){
                     _mamh = gvDanhSach.GetFocusedRowCellValue("MAMH").ToString();
                     txtMa.Text = gvDanhSach.GetFocusedRowCellValue("MAMH").ToString();
                     txtTen.Text = gvDanhSach.GetFocusedRowCellValue("TENMH").ToString();
@@ -150,17 +129,13 @@ namespace VANPHONGPHAM
             }
         }
 
-        private void gvDanhSach_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
-        {
-            if (e.Info.IsRowIndicator) //Nếu là dòng Indicator
-            {
-                if (e.RowHandle < 0)
-                {
+        private void gvDanhSach_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e){
+            if (e.Info.IsRowIndicator) {
+                if (e.RowHandle < 0){
                     e.Info.ImageIndex = 0;
                     e.Info.DisplayText = string.Empty;
                 }
-                else
-                {
+                else{
                     e.Info.ImageIndex = -1; //Nếu hiển thị
                     e.Info.DisplayText = (e.RowHandle + 1).ToString(); //Số thứ tự tăng dần
                 }
@@ -170,14 +145,12 @@ namespace VANPHONGPHAM
             }
         }
 
-        private void btnAddnew_Click(object sender, EventArgs e)
-        {
+        private void btnAddnew_Click(object sender, EventArgs e){
             frmLOAIMATHANG frm = new frmLOAIMATHANG();
             frm.ShowDialog();
         }
 
-        private void btnAdd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
+        private void btnAdd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
             showHideControl(false);
             _them = true;
             enable(true);
@@ -185,18 +158,15 @@ namespace VANPHONGPHAM
             ckbDisable.Enabled = false;
         }
 
-        private void btnEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
+        private void btnEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
             showHideControl(false);
             _them = false;
             enable(true);
             txtMa.Enabled = false;
         }
 
-        private void btnDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if (MessageBox.Show("Bạn có chắc chắn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
+        private void btnDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
+            if (MessageBox.Show("Bạn có chắc chắn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes){
                 _mh.disable(_mamh);
                 MessageBox.Show("Xóa mặt hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -204,18 +174,13 @@ namespace VANPHONGPHAM
             loadData();
         }
 
-        private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if (txtMa.TextLength > 0 && txtGiaBan.Value > 0 && cmbDVT.Text !=""&& txtTen.Text != "")
-            {
-                if (txtMa.TextLength == 5)
-                {
+        private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
+            if (txtMa.TextLength > 0 && txtGiaBan.Value > 0 && cmbDVT.Text !=""&& txtTen.Text != ""){
+                if (txtMa.TextLength == 5){
                     MAT_HANG kiemtramh;
                     kiemtramh = _mh.getItem(txtMa.Text);
-                    if (_them)
-                    {
-                        if (kiemtramh == null)
-                        {
+                    if (_them){
+                        if (kiemtramh == null){
                             showHideControl(true);
                             MAT_HANG mh = new MAT_HANG();
                             mh.MAMH = txtMa.Text;
@@ -230,12 +195,12 @@ namespace VANPHONGPHAM
                             _them = false;
                             loadData();
                             enable(false);
+                            showHideControl(true);
                         }
                         else
                             MessageBox.Show("Mã mặt hàng đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                    else
-                    {
+                    else{
                         MAT_HANG mh = _mh.getItem(_mamh);
                         mh.MAMH = txtMa.Text;
                         mh.TENMH = txtTen.Text;
@@ -249,8 +214,8 @@ namespace VANPHONGPHAM
                         _them = false;
                         loadData();
                         enable(false);
+                        showHideControl(true);
                     }
-                    
                 }
                 else
                     MessageBox.Show("Vui lòng nhập lại mã mặt hàng (5 ký tự)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -260,20 +225,17 @@ namespace VANPHONGPHAM
             objMain.loadChart();
         }
 
-        private void btnCancel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
+        private void btnCancel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
             _them = false;
             showHideControl(true);
             enable(false);
         }
 
-        private void btnPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
+        private void btnPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
             XuatReport("ReportMH", "DANH MỤC LOẠI MẶT HÀNG");
         }
 
-        private void XuatReport(string _reportName, string _tieude)
-        {
+        private void XuatReport(string _reportName, string _tieude){
             Form frm = new Form();
             CrystalReportViewer Crv = new CrystalReportViewer();
             Crv.ShowGroupTreeButton = false;
@@ -288,8 +250,7 @@ namespace VANPHONGPHAM
             Thongtin.ConnectionInfo.Password = myFun._pw;
             Thongtin.ConnectionInfo.DatabaseName = myFun._db;
             doc.Database.Tables[0].ApplyLogOnInfo(Thongtin);
-            try
-            {
+            try{
                 //doc.SetParameterValue("maloaimh", _maloaimh);
                 Crv.Dock = DockStyle.Fill;
                 Crv.ReportSource = doc;
@@ -299,8 +260,7 @@ namespace VANPHONGPHAM
                 frm.WindowState = FormWindowState.Maximized;
                 frm.ShowDialog();
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex){
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
         }

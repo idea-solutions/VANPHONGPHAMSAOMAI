@@ -7,15 +7,12 @@ using System.Threading.Tasks;
 
 namespace DataLayer
 {
-    public class Encryptor
-    {
-        public static string Encrypt(string toEncrypt, string key, bool useHashing)
-        {
+    public class Encryptor{
+        public static string Encrypt(string toEncrypt, string key, bool useHashing){
             byte[] keyArray;
             byte[] toEncryptArray = UTF8Encoding.UTF8.GetBytes(toEncrypt);
 
-            if (useHashing)
-            {
+            if (useHashing){
                 MD5CryptoServiceProvider hashmd5 = new MD5CryptoServiceProvider();
                 keyArray = hashmd5.ComputeHash(UTF8Encoding.UTF8.GetBytes(key));
             }
@@ -32,13 +29,11 @@ namespace DataLayer
 
             return Convert.ToBase64String(resultArray, 0, resultArray.Length);
         }
-        public static string Decrypt(string toDecrypt, string key, bool useHashing)
-        {
+        public static string Decrypt(string toDecrypt, string key, bool useHashing){
             byte[] keyArray;
             byte[] toEncryptArray = Convert.FromBase64String(toDecrypt);
 
-            if (useHashing)
-            {
+            if (useHashing){
                 MD5CryptoServiceProvider hashmd5 = new MD5CryptoServiceProvider();
                 keyArray = hashmd5.ComputeHash(UTF8Encoding.UTF8.GetBytes(key));
             }

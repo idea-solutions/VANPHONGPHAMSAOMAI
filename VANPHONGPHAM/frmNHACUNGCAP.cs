@@ -19,8 +19,7 @@ namespace VANPHONGPHAM
 {
     public partial class frmNHACUNGCAP : DevExpress.XtraEditors.XtraForm
     {
-        public frmNHACUNGCAP()
-        {
+        public frmNHACUNGCAP(){
             InitializeComponent();
         }
 
@@ -29,24 +28,19 @@ namespace VANPHONGPHAM
         string _mancc;
         frmMain objMain = (frmMain)Application.OpenForms["frmMain"];
         NHANVIEN _nv;
-        frmDATHANG objDATHANG = (frmDATHANG)Application.OpenForms["frmDATHANG"];
+        frmDatHang objDATHANG = (frmDatHang)Application.OpenForms["frmDATHANG"];
 
-        bool cal(Int32 _Width, GridView _view)
-        {
+        bool cal(Int32 _Width, GridView _view){
             _view.IndicatorWidth = _view.IndicatorWidth < _Width ? _Width : _view.IndicatorWidth;
             return true;
         }
-        private void gvDanhSach_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
-        {
-            if (e.Info.IsRowIndicator) //Nếu là dòng Indicator
-            {
-                if (e.RowHandle < 0)
-                {
+        private void gvDanhSach_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e){
+            if (e.Info.IsRowIndicator){
+                if (e.RowHandle < 0){
                     e.Info.ImageIndex = 0;
                     e.Info.DisplayText = string.Empty;
                 }
-                else
-                {
+                else{
                     e.Info.ImageIndex = -1; //Nếu hiển thị
                     e.Info.DisplayText = (e.RowHandle + 1).ToString(); //Số thứ tự tăng dần
                 }
@@ -56,19 +50,13 @@ namespace VANPHONGPHAM
             }
         }
 
-        private void frmNHACUNGCAP_Load(object sender, EventArgs e)
-        {
+        private void frmNHACUNGCAP_Load(object sender, EventArgs e){
             _ncc = new NHACUNGCAP();
             loadData();
             showHideControl(true);
             _nv = new NHANVIEN();
             bool t = _nv.kiemtraQuyen(objMain._tendn);
-            if (t)
-            {
-
-            }
-            else
-            {
+            if (!t){
                 btnAdd.Enabled = false;
                 btnEdit.Enabled = false;
                 btnDelete.Enabled = false;
@@ -79,14 +67,12 @@ namespace VANPHONGPHAM
             txtSDT.MaxLength = 10;
         }
 
-        private void loadData()
-        {
+        private void loadData(){
             gcDanhSach.DataSource = _ncc.getAll();
             enable(false);
         }
 
-        void showHideControl(bool t)
-        {
+        void showHideControl(bool t){
             btnAdd.Enabled = t;
             btnEdit.Enabled = t;
             btnDelete.Enabled = t;
@@ -94,8 +80,7 @@ namespace VANPHONGPHAM
             btnCancel.Enabled = !t;
         }
 
-        void enable(bool t)
-        {
+        void enable(bool t){
             txtMa.Enabled = t;
             txtTen.Enabled = t;
             txtSDT.Enabled = t;
@@ -104,8 +89,7 @@ namespace VANPHONGPHAM
             ckbDisable.Enabled = t;
         }
 
-        void reset(bool t)
-        {
+        void reset(bool t){
             txtMa.Text = "";
             txtTen.Text = "";
             txtSDT.Text = "";
@@ -114,8 +98,7 @@ namespace VANPHONGPHAM
             ckbDisable.Checked = false;
         }
 
-        private void btnThem_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
+        private void btnThem_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
             showHideControl(false);
             _them = true;
             enable(true);
@@ -123,16 +106,14 @@ namespace VANPHONGPHAM
             ckbDisable.Enabled = false;
         }
 
-        private void btnSua_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
+        private void btnSua_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
             showHideControl(false);
             _them = false;
             enable(true);
             txtMa.Enabled = false;
         }
 
-        private void btnXoa_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
+        private void btnXoa_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
             if (MessageBox.Show("Bạn có chắc chắn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 _ncc.disable(_mancc);
@@ -141,23 +122,16 @@ namespace VANPHONGPHAM
             loadData();
         }
 
-        private void btnLuu_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
+        private void btnLuu_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
 
-            if (txtMa.TextLength !=0 && txtTen.TextLength!=0 && txtSDT.TextLength!=0&& txtEmail.TextLength != 0 && txtDiaChi.TextLength != 0)
-            {
-                if (txtMa.TextLength == 5)
-                {
-                    if (txtSDT.TextLength == 10)
-                    {
+            if (txtMa.TextLength !=0 && txtTen.TextLength!=0 && txtSDT.TextLength!=0&& txtEmail.TextLength != 0 && txtDiaChi.TextLength != 0){
+                if (txtMa.TextLength == 5){
+                    if (txtSDT.TextLength == 10){
                         string email = txtEmail.Text;
-                        if (email.ToLower().IndexOf('@') != -1)
-                        {
+                        if (email.ToLower().IndexOf('@') != -1){
                             var ncckt = _ncc.getItem(txtMa.Text);
-                            if (ncckt == null)
-                            {
-                                if (_them)
-                                {
+                            if (ncckt == null){
+                                if (_them){
                                     NHA_CUNG_CAP ncc = new NHA_CUNG_CAP();
                                     ncc.MANCC = txtMa.Text;
                                     ncc.TENNCC = txtTen.Text;
@@ -172,8 +146,7 @@ namespace VANPHONGPHAM
                                     enable(false);
                                     showHideControl(true);
                                 }
-                                else
-                                {
+                                else{
                                     NHA_CUNG_CAP ncc = _ncc.getItem(_mancc);
                                     ncc.MANCC = txtMa.Text;
                                     ncc.DIACHI = txtDiaChi.Text;
@@ -205,24 +178,19 @@ namespace VANPHONGPHAM
                 MessageBox.Show("Vui lòng điền đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-        private void btnBoQua_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
+        private void btnBoQua_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
             _them = false;
             showHideControl(true);
             enable(false);
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
+        private void btnThoat_Click(object sender, EventArgs e){
             this.Close();
         }
 
-        private void gvDanhSach_Click(object sender, EventArgs e)
-        {
-            if (gvDanhSach.RowCount > 0)
-            {
-                if (gvDanhSach.GetFocusedRowCellValue("MANCC") != null)
-                {
+        private void gvDanhSach_Click(object sender, EventArgs e){
+            if (gvDanhSach.RowCount > 0){
+                if (gvDanhSach.GetFocusedRowCellValue("MANCC") != null){
                     _mancc = gvDanhSach.GetFocusedRowCellValue("MANCC").ToString();
                     txtMa.Text = gvDanhSach.GetFocusedRowCellValue("MANCC").ToString();
                     txtSDT.Text = gvDanhSach.GetFocusedRowCellValue("SDT").ToString();
@@ -234,17 +202,13 @@ namespace VANPHONGPHAM
             }
         }
 
-        private void gvDanhSach_DoubleClick(object sender, EventArgs e)
-        {
-            if (objDATHANG == null || objDATHANG.IsDisposed) //null là chưa được khởi tạo. IsDisposed là khởi tạo rồi nhưng đang bị ẩn
-            {
-                frmDATHANG frm = new frmDATHANG();
+        private void gvDanhSach_DoubleClick(object sender, EventArgs e){
+            if (objDATHANG == null || objDATHANG.IsDisposed){
+                frmDatHang frm = new frmDatHang();
                 frm.Show();
             }
-            else
-            {
-                if (gvDanhSach.GetFocusedRowCellValue("MANCC") != null)
-                {
+            else{
+                if (gvDanhSach.GetFocusedRowCellValue("MANCC") != null){
                     objDATHANG.loadNCC();
                     objDATHANG.setNhaCungCap(gvDanhSach.GetFocusedRowCellValue("MANCC").ToString());
                     this.Close();
@@ -252,15 +216,12 @@ namespace VANPHONGPHAM
             }
         }
 
-        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
             XuatReport("ReportNCC", "DANH MỤC NHÀ CUNG CẤP");
         }
 
-        private void XuatReport(string _reportName, string _tieude)
-        {
-            if (_mancc != null || _mancc == null)
-            {
+        private void XuatReport(string _reportName, string _tieude){
+            if (_mancc != null || _mancc == null){
                 Form frm = new Form();
                 CrystalReportViewer Crv = new CrystalReportViewer();
                 Crv.ShowGroupTreeButton = false;
@@ -275,8 +236,7 @@ namespace VANPHONGPHAM
                 Thongtin.ConnectionInfo.Password = myFun._pw;
                 Thongtin.ConnectionInfo.DatabaseName = myFun._db;
                 doc.Database.Tables[0].ApplyLogOnInfo(Thongtin);
-                try
-                {
+                try{
                     //doc.SetParameterValue("maloaimh", _maloaimh);
                     Crv.Dock = DockStyle.Fill;
                     Crv.ReportSource = doc;
@@ -286,8 +246,7 @@ namespace VANPHONGPHAM
                     frm.WindowState = FormWindowState.Maximized;
                     frm.ShowDialog();
                 }
-                catch (Exception ex)
-                {
+                catch (Exception ex){
                     MessageBox.Show("Lỗi: " + ex.Message);
                 }
             }

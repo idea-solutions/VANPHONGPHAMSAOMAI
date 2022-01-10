@@ -9,50 +9,43 @@ using System.Threading.Tasks;
 namespace DataLayer
 {
     [Serializable]
-    public class connect
-    {
+    public class connect{
         public string servername;
 
-        public string Servername
-        {
+        public string Servername{
             get { return servername; }
             set { servername = value; }
         }
 
         public string username;
 
-        public string Username
-        {
+        public string Username{
             get { return username; }
             set { username = value; }
         }
 
         public string passwd;
 
-        public string Passwd
-        {
+        public string Passwd{
             get { return passwd; }
             set { passwd = value; }
         }
 
         public string database;
 
-        public string Database
-        {
+        public string Database{
             get { return database; }
             set { database = value; }
         }
 
-        public connect(string _servername, string _username, string _passwd, string _database)
-        {
+        public connect(string _servername, string _username, string _passwd, string _database){
             this.servername = _servername;
             this.username = _username;
             this.passwd = _passwd;
             this.database = _database;
         }
 
-        public void SaveFile()
-        {
+        public void SaveFile(){
             if (File.Exists("connectdb.dba"))
                 File.Delete("connectdb.dba");
             FileStream fs = File.Open("connectdb.dba", FileMode.OpenOrCreate, FileAccess.Write);

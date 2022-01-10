@@ -1,7 +1,7 @@
 ﻿
 namespace VANPHONGPHAM
 {
-    partial class frmKHACHHANG
+    partial class frmKhachHang
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@ namespace VANPHONGPHAM
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::VANPHONGPHAM.frmloaddulieu), true, true);
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKHACHHANG));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKhachHang));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.cmbGioiTinh = new System.Windows.Forms.ComboBox();
             this.ckbDisable = new System.Windows.Forms.CheckBox();

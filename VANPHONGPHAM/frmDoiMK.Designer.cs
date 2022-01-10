@@ -69,7 +69,7 @@ namespace VANPHONGPHAM
             this.btnXacNhan.Location = new System.Drawing.Point(53, 374);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(310, 39);
-            this.btnXacNhan.TabIndex = 21;
+            this.btnXacNhan.TabIndex = 0;
             this.btnXacNhan.Text = "XÁC NHẬN";
             this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             this.btnXacNhan.Paint += new System.Windows.Forms.PaintEventHandler(this.btnXacNhan_Paint);
@@ -195,7 +195,7 @@ namespace VANPHONGPHAM
             this.lbMatkhau.Location = new System.Drawing.Point(53, 118);
             this.lbMatkhau.Name = "lbMatkhau";
             this.lbMatkhau.Size = new System.Drawing.Size(127, 22);
-            this.lbMatkhau.TabIndex = 27;
+            this.lbMatkhau.TabIndex = 0;
             this.lbMatkhau.Text = "*Nhập mật khẩu";
             // 
             // panel2
@@ -261,7 +261,6 @@ namespace VANPHONGPHAM
             this.btnExit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnExit.Location = new System.Drawing.Point(369, 12);
             this.btnExit.Name = "btnExit";
-            this.btnExit.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnExit.Size = new System.Drawing.Size(38, 38);
             this.btnExit.TabIndex = 1;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -296,6 +295,7 @@ namespace VANPHONGPHAM
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.peImage);
+            this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IconOptions.Image = global::VANPHONGPHAM.Properties.Resources.Nhiều_màu_sắc_Hình_khối_Thiết_kế___Nghệ_thuật_Biểu_trưng__3_;
             this.Name = "frmDoiMK";

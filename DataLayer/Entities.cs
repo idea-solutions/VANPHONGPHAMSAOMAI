@@ -15,12 +15,11 @@ namespace DataLayer
     public partial class Entities
     {
         private Entities(DbConnection connectionString, bool contextOwnsConnection = true)
-            : base(connectionString, contextOwnsConnection) { }
-        public static Entities CreateEntities(bool contextOwnsConnection = true)
-        {
+            : base(connectionString, contextOwnsConnection){ }
+
+        public static Entities CreateEntities(bool contextOwnsConnection = true){
             //Doc file connect
             BinaryFormatter bf = new BinaryFormatter();
-            
             FileStream fs = File.Open("connectdb.dba", FileMode.Open, FileAccess.Read);
             connect cp = (connect)bf.Deserialize(fs);
 

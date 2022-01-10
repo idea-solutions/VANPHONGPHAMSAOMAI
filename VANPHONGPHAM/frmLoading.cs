@@ -26,8 +26,6 @@ namespace VANPHONGPHAM
 
         #endregion
 
-        public enum SplashScreenCommand
-        {
-        }
+        public enum SplashScreenCommand{}
     }
 }

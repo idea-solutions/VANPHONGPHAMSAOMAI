@@ -9,30 +9,24 @@ using DataLayer;
 
 namespace BusinessLayer
 {
-    public class HOADONMATHANG
-    {
+    public class HOADONMATHANG{
         Entities db;
-        public HOADONMATHANG()
-        {
+        public HOADONMATHANG(){
             db = Entities.CreateEntities();
         }
 
 
-        public List<HOADON_MATHANG> getAll(int mahd)
-        {
+        public List<HOADON_MATHANG> getAll(int mahd){
             return db.HOADON_MATHANG.Where(x=> x.MAHD == mahd).ToList();
         }
 
-        public List<OBJHOADON_MATHANG> getAll()
-        {
-            
+        public List<OBJHOADON_MATHANG> getAll(){
             var lstHDMH = db.HOADON_MATHANG.ToList();
 
             List<OBJHOADON_MATHANG> lstHDMHFull = new List<OBJHOADON_MATHANG>();
             OBJHOADON_MATHANG objHDMH;
 
-            foreach (var item in lstHDMH)
-            {
+            foreach (var item in lstHDMH){
                 objHDMH = new OBJHOADON_MATHANG();
 
                 var nvHD = db.HOA_DON.FirstOrDefault(x => x.MAHOADON == item.MAHD); //lấy ra nv từ bảng HOA_DON
@@ -70,15 +64,13 @@ namespace BusinessLayer
             return lstHDMHFull.OrderBy(x => x.NGAYLAP).ToList();
         }
 
-        public List<OBJHOADON_MATHANG> getAllByDate(DateTime tungay, DateTime denngay)
-        {
+        public List<OBJHOADON_MATHANG> getAllByDate(DateTime tungay, DateTime denngay){
             var lstHDMH = db.HOADON_MATHANG.ToList();
 
             List<OBJHOADON_MATHANG> lstHDMHFull = new List<OBJHOADON_MATHANG>();
             OBJHOADON_MATHANG objHDMH;
 
-            foreach (var item in lstHDMH)
-            {
+            foreach (var item in lstHDMH){
                 objHDMH = new OBJHOADON_MATHANG();
 
                 var nvHD = db.HOA_DON.FirstOrDefault(x => x.MAHOADON == item.MAHD); //lấy ra nv từ bảng HOA_DON
@@ -116,34 +108,28 @@ namespace BusinessLayer
             return lstHDMHFull.Where(x=> x.NGAYLAP>=tungay.AddDays(-1) && x.NGAYLAP<=denngay).OrderBy(x => x.NGAYLAP).ToList();
         }
         
-        public void deleteAll()
-        {
+        public void deleteAll(){
             var listHD = db.HOA_DON.ToList();
             var lstHDMH = db.HOADON_MATHANG.ToList();
             
-            foreach (var item in lstHDMH)
-            {
+            foreach (var item in lstHDMH){
                 db.HOADON_MATHANG.Remove(item);
                 db.SaveChanges();
             }
 
-            foreach (var item in listHD)
-            {
+            foreach (var item in listHD){
                 db.HOA_DON.Remove(item);
                 db.SaveChanges();
             }
         }
 
-        public HOADON_MATHANG add(HOADON_MATHANG cthd)
-        {
-            try
-            {
+        public HOADON_MATHANG add(HOADON_MATHANG cthd){
+            try{
                 db.HOADON_MATHANG.Add(cthd);
                 db.SaveChanges();
                 return cthd;
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex){
                 throw new Exception("Có lỗi xảy ra trong quá trình xử lý dữ liệu. " + ex.Message);
             }
         }

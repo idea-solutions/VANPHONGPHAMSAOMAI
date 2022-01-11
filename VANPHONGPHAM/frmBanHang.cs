@@ -276,6 +276,7 @@ namespace VANPHONGPHAM
             reset(true);
             enable(false);
             showHideControl(true);
+            listHDMH.Clear();
         }
 
         private void btnThoat_Click(object sender, EventArgs e){

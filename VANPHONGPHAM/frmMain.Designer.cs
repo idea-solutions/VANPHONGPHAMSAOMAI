@@ -42,6 +42,11 @@ namespace VANPHONGPHAM
             this.btnBanHang = new DevExpress.XtraBars.BarButtonItem();
             this.btnDatHang = new DevExpress.XtraBars.BarButtonItem();
             this.btnDangXuat = new DevExpress.XtraBars.BarButtonItem();
+            this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
+            this.btnHD = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -55,10 +60,13 @@ namespace VANPHONGPHAM
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnHoTro = new DevExpress.XtraBars.BarButtonItem();
+            this.btnHelp = new DevExpress.XtraBars.BarButtonItem();
+            this.barLinkContainerItem1 = new DevExpress.XtraBars.BarLinkContainerItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.btnThongTin = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
@@ -102,7 +110,6 @@ namespace VANPHONGPHAM
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -137,17 +144,11 @@ namespace VANPHONGPHAM
             // btnDoiMk
             // 
             this.btnDoiMk.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btnDoiMk.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnDoiMk.Appearance.Options.UseFont = true;
-            this.btnDoiMk.Appearance.Options.UseForeColor = true;
             this.btnDoiMk.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.btnDoiMk.AppearanceHotTracked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnDoiMk.AppearanceHotTracked.Options.UseFont = true;
-            this.btnDoiMk.AppearanceHotTracked.Options.UseForeColor = true;
             this.btnDoiMk.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.btnDoiMk.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnDoiMk.AppearancePressed.Options.UseFont = true;
-            this.btnDoiMk.AppearancePressed.Options.UseForeColor = true;
             this.btnDoiMk.Caption = "Thay đổi mật khẩu";
             this.btnDoiMk.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDoiMk.ImageOptions.LargeImage")));
             this.btnDoiMk.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnDoiMk.ImageOptions.SmallImage")));
@@ -157,17 +158,11 @@ namespace VANPHONGPHAM
             // btnMatHang
             // 
             this.btnMatHang.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btnMatHang.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnMatHang.Appearance.Options.UseFont = true;
-            this.btnMatHang.Appearance.Options.UseForeColor = true;
             this.btnMatHang.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.btnMatHang.AppearanceHotTracked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnMatHang.AppearanceHotTracked.Options.UseFont = true;
-            this.btnMatHang.AppearanceHotTracked.Options.UseForeColor = true;
             this.btnMatHang.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.btnMatHang.AppearancePressed.ForeColor = System.Drawing.Color.Black;
             this.btnMatHang.AppearancePressed.Options.UseFont = true;
-            this.btnMatHang.AppearancePressed.Options.UseForeColor = true;
             this.btnMatHang.Caption = "Danh mục Hàng hóa";
             this.btnMatHang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnMatHang.ImageOptions.LargeImage")));
             this.btnMatHang.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnMatHang.ImageOptions.SmallImage")));
@@ -177,17 +172,11 @@ namespace VANPHONGPHAM
             // btnKhachHang
             // 
             this.btnKhachHang.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btnKhachHang.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnKhachHang.Appearance.Options.UseFont = true;
-            this.btnKhachHang.Appearance.Options.UseForeColor = true;
             this.btnKhachHang.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.btnKhachHang.AppearanceHotTracked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnKhachHang.AppearanceHotTracked.Options.UseFont = true;
-            this.btnKhachHang.AppearanceHotTracked.Options.UseForeColor = true;
             this.btnKhachHang.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.btnKhachHang.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnKhachHang.AppearancePressed.Options.UseFont = true;
-            this.btnKhachHang.AppearancePressed.Options.UseForeColor = true;
             this.btnKhachHang.Caption = "Danh mục Khách Hàng";
             this.btnKhachHang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnKhachHang.ImageOptions.LargeImage")));
             this.btnKhachHang.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnKhachHang.ImageOptions.SmallImage")));
@@ -197,17 +186,11 @@ namespace VANPHONGPHAM
             // btnNCC
             // 
             this.btnNCC.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btnNCC.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnNCC.Appearance.Options.UseFont = true;
-            this.btnNCC.Appearance.Options.UseForeColor = true;
             this.btnNCC.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.btnNCC.AppearanceHotTracked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnNCC.AppearanceHotTracked.Options.UseFont = true;
-            this.btnNCC.AppearanceHotTracked.Options.UseForeColor = true;
             this.btnNCC.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.btnNCC.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnNCC.AppearancePressed.Options.UseFont = true;
-            this.btnNCC.AppearancePressed.Options.UseForeColor = true;
             this.btnNCC.Caption = "Danh mục Nhà Cung Cấp";
             this.btnNCC.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNCC.ImageOptions.LargeImage")));
             this.btnNCC.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnNCC.ImageOptions.SmallImage")));
@@ -217,21 +200,13 @@ namespace VANPHONGPHAM
             // btnNhanVien
             // 
             this.btnNhanVien.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btnNhanVien.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnNhanVien.Appearance.Options.UseFont = true;
-            this.btnNhanVien.Appearance.Options.UseForeColor = true;
             this.btnNhanVien.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhanVien.AppearanceDisabled.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnNhanVien.AppearanceDisabled.Options.UseFont = true;
-            this.btnNhanVien.AppearanceDisabled.Options.UseForeColor = true;
             this.btnNhanVien.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.btnNhanVien.AppearanceHotTracked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnNhanVien.AppearanceHotTracked.Options.UseFont = true;
-            this.btnNhanVien.AppearanceHotTracked.Options.UseForeColor = true;
             this.btnNhanVien.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.btnNhanVien.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnNhanVien.AppearancePressed.Options.UseFont = true;
-            this.btnNhanVien.AppearancePressed.Options.UseForeColor = true;
             this.btnNhanVien.Caption = "Quản lý Nhân Viên";
             this.btnNhanVien.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.ImageOptions.LargeImage")));
             this.btnNhanVien.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.ImageOptions.SmallImage")));
@@ -259,9 +234,17 @@ namespace VANPHONGPHAM
             this.barButtonItem6,
             this.barButtonItem1,
             this.barButtonItem7,
-            this.barButtonItem8});
+            this.barButtonItem8,
+            this.btnHoTro,
+            this.btnHelp,
+            this.skinDropDownButtonItem1,
+            this.barSubItem1,
+            this.btnHD,
+            this.barButtonItem10,
+            this.barButtonItem11,
+            this.barLinkContainerItem1});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 16;
+            this.barManager1.MaxItemId = 24;
             // 
             // bar2
             // 
@@ -274,7 +257,9 @@ namespace VANPHONGPHAM
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnBanHang),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnDatHang),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnDangXuat)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnDangXuat),
+            new DevExpress.XtraBars.LinkPersistInfo(this.skinDropDownButtonItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem1)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
@@ -286,21 +271,13 @@ namespace VANPHONGPHAM
             this.btnBanHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnBanHang.ImageOptions.Image")));
             this.btnBanHang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnBanHang.ImageOptions.LargeImage")));
             this.btnBanHang.ItemAppearance.Disabled.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnBanHang.ItemAppearance.Disabled.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnBanHang.ItemAppearance.Disabled.Options.UseFont = true;
-            this.btnBanHang.ItemAppearance.Disabled.Options.UseForeColor = true;
             this.btnBanHang.ItemAppearance.Hovered.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.btnBanHang.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnBanHang.ItemAppearance.Hovered.Options.UseFont = true;
-            this.btnBanHang.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.btnBanHang.ItemAppearance.Normal.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBanHang.ItemAppearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnBanHang.ItemAppearance.Normal.Options.UseFont = true;
-            this.btnBanHang.ItemAppearance.Normal.Options.UseForeColor = true;
             this.btnBanHang.ItemAppearance.Pressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBanHang.ItemAppearance.Pressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnBanHang.ItemAppearance.Pressed.Options.UseFont = true;
-            this.btnBanHang.ItemAppearance.Pressed.Options.UseForeColor = true;
             this.btnBanHang.Name = "btnBanHang";
             this.btnBanHang.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnBanHang.Size = new System.Drawing.Size(0, 36);
@@ -313,21 +290,13 @@ namespace VANPHONGPHAM
             this.btnDatHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDatHang.ImageOptions.Image")));
             this.btnDatHang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDatHang.ImageOptions.LargeImage")));
             this.btnDatHang.ItemAppearance.Disabled.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnDatHang.ItemAppearance.Disabled.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnDatHang.ItemAppearance.Disabled.Options.UseFont = true;
-            this.btnDatHang.ItemAppearance.Disabled.Options.UseForeColor = true;
             this.btnDatHang.ItemAppearance.Hovered.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.btnDatHang.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnDatHang.ItemAppearance.Hovered.Options.UseFont = true;
-            this.btnDatHang.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.btnDatHang.ItemAppearance.Normal.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnDatHang.ItemAppearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnDatHang.ItemAppearance.Normal.Options.UseFont = true;
-            this.btnDatHang.ItemAppearance.Normal.Options.UseForeColor = true;
             this.btnDatHang.ItemAppearance.Pressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.btnDatHang.ItemAppearance.Pressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnDatHang.ItemAppearance.Pressed.Options.UseFont = true;
-            this.btnDatHang.ItemAppearance.Pressed.Options.UseForeColor = true;
             this.btnDatHang.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDatHang.ItemInMenuAppearance.Hovered.Options.UseFont = true;
             this.btnDatHang.Name = "btnDatHang";
@@ -346,17 +315,11 @@ namespace VANPHONGPHAM
             this.btnDangXuat.ItemAppearance.Disabled.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.ItemAppearance.Disabled.Options.UseFont = true;
             this.btnDangXuat.ItemAppearance.Hovered.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.btnDangXuat.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnDangXuat.ItemAppearance.Hovered.Options.UseFont = true;
-            this.btnDangXuat.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.btnDangXuat.ItemAppearance.Normal.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnDangXuat.ItemAppearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnDangXuat.ItemAppearance.Normal.Options.UseFont = true;
-            this.btnDangXuat.ItemAppearance.Normal.Options.UseForeColor = true;
             this.btnDangXuat.ItemAppearance.Pressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.btnDangXuat.ItemAppearance.Pressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnDangXuat.ItemAppearance.Pressed.Options.UseFont = true;
-            this.btnDangXuat.ItemAppearance.Pressed.Options.UseForeColor = true;
             this.btnDangXuat.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.ItemInMenuAppearance.Hovered.ForeColor = System.Drawing.Color.Blue;
             this.btnDangXuat.ItemInMenuAppearance.Hovered.Options.UseFont = true;
@@ -372,6 +335,83 @@ namespace VANPHONGPHAM
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnDangXuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDangXuat_ItemClick);
+            // 
+            // skinDropDownButtonItem1
+            // 
+            this.skinDropDownButtonItem1.AccessibleName = "GIAO DIỆN";
+            this.skinDropDownButtonItem1.Id = 18;
+            this.skinDropDownButtonItem1.ItemAppearance.Hovered.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.skinDropDownButtonItem1.ItemAppearance.Hovered.Options.UseFont = true;
+            this.skinDropDownButtonItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.skinDropDownButtonItem1.ItemAppearance.Normal.Options.UseFont = true;
+            this.skinDropDownButtonItem1.ItemAppearance.Pressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.skinDropDownButtonItem1.ItemAppearance.Pressed.Options.UseFont = true;
+            this.skinDropDownButtonItem1.Name = "skinDropDownButtonItem1";
+            this.skinDropDownButtonItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Caption = "TRỢ GIÚP";
+            this.barSubItem1.Id = 19;
+            this.barSubItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem1.ImageOptions.Image")));
+            this.barSubItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barSubItem1.ImageOptions.LargeImage")));
+            this.barSubItem1.ItemAppearance.Hovered.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.barSubItem1.ItemAppearance.Hovered.Options.UseFont = true;
+            this.barSubItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.barSubItem1.ItemAppearance.Normal.Options.UseFont = true;
+            this.barSubItem1.ItemAppearance.Pressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.barSubItem1.ItemAppearance.Pressed.Options.UseFont = true;
+            this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnHD, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem10),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem11)});
+            this.barSubItem1.Name = "barSubItem1";
+            this.barSubItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // btnHD
+            // 
+            this.btnHD.Caption = "Hướng dẫn sử dụng";
+            this.btnHD.Id = 20;
+            this.btnHD.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHD.ImageOptions.Image")));
+            this.btnHD.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnHD.ImageOptions.LargeImage")));
+            this.btnHD.ItemAppearance.Hovered.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.btnHD.ItemAppearance.Hovered.Options.UseFont = true;
+            this.btnHD.ItemAppearance.Normal.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnHD.ItemAppearance.Normal.Options.UseFont = true;
+            this.btnHD.ItemAppearance.Pressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.btnHD.ItemAppearance.Pressed.Options.UseFont = true;
+            this.btnHD.Name = "btnHD";
+            this.btnHD.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHD_ItemClick);
+            // 
+            // barButtonItem10
+            // 
+            this.barButtonItem10.Caption = "Hỗ trợ kỹ thuật";
+            this.barButtonItem10.Id = 21;
+            this.barButtonItem10.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.Image")));
+            this.barButtonItem10.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.LargeImage")));
+            this.barButtonItem10.ItemAppearance.Hovered.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.barButtonItem10.ItemAppearance.Hovered.Options.UseFont = true;
+            this.barButtonItem10.ItemAppearance.Normal.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.barButtonItem10.ItemAppearance.Normal.Options.UseFont = true;
+            this.barButtonItem10.ItemAppearance.Pressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.barButtonItem10.ItemAppearance.Pressed.Options.UseFont = true;
+            this.barButtonItem10.Name = "barButtonItem10";
+            this.barButtonItem10.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem10_ItemClick);
+            // 
+            // barButtonItem11
+            // 
+            this.barButtonItem11.Caption = "Thông tin về phần mềm";
+            this.barButtonItem11.Id = 22;
+            this.barButtonItem11.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem11.ImageOptions.Image")));
+            this.barButtonItem11.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem11.ImageOptions.LargeImage")));
+            this.barButtonItem11.ItemAppearance.Hovered.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.barButtonItem11.ItemAppearance.Hovered.Options.UseFont = true;
+            this.barButtonItem11.ItemAppearance.Normal.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.barButtonItem11.ItemAppearance.Normal.Options.UseFont = true;
+            this.barButtonItem11.ItemAppearance.Pressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.barButtonItem11.ItemAppearance.Pressed.Options.UseFont = true;
+            this.barButtonItem11.Name = "barButtonItem11";
+            this.barButtonItem11.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem11_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -471,6 +511,37 @@ namespace VANPHONGPHAM
             this.barButtonItem8.Id = 14;
             this.barButtonItem8.Name = "barButtonItem8";
             // 
+            // btnHoTro
+            // 
+            this.btnHoTro.Caption = "HỖ TRỢ";
+            this.btnHoTro.Id = 16;
+            this.btnHoTro.Name = "btnHoTro";
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.btnHelp.Caption = "HỖ TRỢ";
+            this.btnHelp.Id = 17;
+            this.btnHelp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHelp.ImageOptions.Image")));
+            this.btnHelp.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnHelp.ImageOptions.LargeImage")));
+            this.btnHelp.ImageToTextAlignment = DevExpress.XtraBars.BarItemImageToTextAlignment.AfterText;
+            this.btnHelp.ItemAppearance.Hovered.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.btnHelp.ItemAppearance.Hovered.Options.UseFont = true;
+            this.btnHelp.ItemAppearance.Normal.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnHelp.ItemAppearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnHelp.ItemAppearance.Normal.Options.UseFont = true;
+            this.btnHelp.ItemAppearance.Normal.Options.UseForeColor = true;
+            this.btnHelp.ItemAppearance.Pressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.btnHelp.ItemAppearance.Pressed.Options.UseFont = true;
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // barLinkContainerItem1
+            // 
+            this.barLinkContainerItem1.Caption = "barLinkContainerItem1";
+            this.barLinkContainerItem1.Id = 23;
+            this.barLinkContainerItem1.Name = "barLinkContainerItem1";
+            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -478,6 +549,8 @@ namespace VANPHONGPHAM
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
@@ -486,24 +559,23 @@ namespace VANPHONGPHAM
             this.panel1.Size = new System.Drawing.Size(1364, 29);
             this.panel1.TabIndex = 7;
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel5.Controls.Add(this.label6);
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1918, 29);
-            this.panel5.TabIndex = 9;
-            // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.label6.Location = new System.Drawing.Point(3, 3);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(650, 22);
+            this.label6.Size = new System.Drawing.Size(1361, 22);
             this.label6.TabIndex = 10;
             this.label6.Text = "Chào mừng đến với văn phòng phẩm sao mai";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.Location = new System.Drawing.Point(612, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1306, 29);
+            this.panel5.TabIndex = 9;
             // 
             // navBarGroup1
             // 
@@ -680,57 +752,21 @@ namespace VANPHONGPHAM
             // 
             // splitContainerControl1
             // 
-            this.splitContainerControl1.Location = new System.Drawing.Point(12, 86);
+            this.splitContainerControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.splitContainerControl1.Appearance.Options.UseBackColor = true;
+            this.splitContainerControl1.Location = new System.Drawing.Point(12, 85);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.btnPhanQuyen);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.layoutControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1340, 556);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1340, 557);
             this.splitContainerControl1.SplitterPosition = 303;
             this.splitContainerControl1.TabIndex = 17;
             // 
             // btnPhanQuyen
             // 
             this.btnPhanQuyen.ActiveGroup = this.navBarGroup5;
-            this.btnPhanQuyen.Appearance.Background.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnPhanQuyen.Appearance.Background.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnPhanQuyen.Appearance.Background.Options.UseBackColor = true;
-            this.btnPhanQuyen.Appearance.Background.Options.UseForeColor = true;
-            this.btnPhanQuyen.Appearance.Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnPhanQuyen.Appearance.Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnPhanQuyen.Appearance.Button.Options.UseBackColor = true;
-            this.btnPhanQuyen.Appearance.Button.Options.UseForeColor = true;
-            this.btnPhanQuyen.Appearance.ButtonDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnPhanQuyen.Appearance.ButtonDisabled.Options.UseBackColor = true;
-            this.btnPhanQuyen.Appearance.ButtonHotTracked.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnPhanQuyen.Appearance.ButtonHotTracked.Options.UseBackColor = true;
-            this.btnPhanQuyen.Appearance.ButtonPressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnPhanQuyen.Appearance.ButtonPressed.Options.UseBackColor = true;
-            this.btnPhanQuyen.Appearance.GroupBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnPhanQuyen.Appearance.GroupBackground.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnPhanQuyen.Appearance.GroupBackground.Options.UseBackColor = true;
-            this.btnPhanQuyen.Appearance.GroupBackground.Options.UseForeColor = true;
-            this.btnPhanQuyen.Appearance.GroupHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnPhanQuyen.Appearance.GroupHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnPhanQuyen.Appearance.GroupHeader.Options.UseBackColor = true;
-            this.btnPhanQuyen.Appearance.GroupHeader.Options.UseForeColor = true;
-            this.btnPhanQuyen.Appearance.GroupHeaderActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnPhanQuyen.Appearance.GroupHeaderActive.Options.UseBackColor = true;
-            this.btnPhanQuyen.Appearance.GroupHeaderHotTracked.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnPhanQuyen.Appearance.GroupHeaderHotTracked.Options.UseBackColor = true;
-            this.btnPhanQuyen.Appearance.GroupHeaderPressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnPhanQuyen.Appearance.GroupHeaderPressed.Options.UseBackColor = true;
-            this.btnPhanQuyen.Appearance.Item.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnPhanQuyen.Appearance.Item.Options.UseBackColor = true;
-            this.btnPhanQuyen.Appearance.ItemActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnPhanQuyen.Appearance.ItemActive.Options.UseBackColor = true;
-            this.btnPhanQuyen.Appearance.ItemHotTracked.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnPhanQuyen.Appearance.ItemHotTracked.Options.UseBackColor = true;
-            this.btnPhanQuyen.Appearance.ItemPressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnPhanQuyen.Appearance.ItemPressed.Options.UseBackColor = true;
-            this.btnPhanQuyen.Appearance.NavigationPaneHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnPhanQuyen.Appearance.NavigationPaneHeader.Options.UseBackColor = true;
             this.btnPhanQuyen.BackColor = System.Drawing.Color.White;
             this.btnPhanQuyen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPhanQuyen.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
@@ -746,28 +782,20 @@ namespace VANPHONGPHAM
             this.btnPhanQuyen.Location = new System.Drawing.Point(0, 0);
             this.btnPhanQuyen.Name = "btnPhanQuyen";
             this.btnPhanQuyen.OptionsNavPane.ExpandedWidth = 303;
-            this.btnPhanQuyen.Size = new System.Drawing.Size(303, 556);
+            this.btnPhanQuyen.Size = new System.Drawing.Size(303, 557);
             this.btnPhanQuyen.TabIndex = 18;
             this.btnPhanQuyen.Text = "navBarControl1";
             // 
             // navBarGroup5
             // 
             this.navBarGroup5.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.2F, System.Drawing.FontStyle.Bold);
-            this.navBarGroup5.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.navBarGroup5.Appearance.Options.UseFont = true;
-            this.navBarGroup5.Appearance.Options.UseForeColor = true;
             this.navBarGroup5.AppearanceBackground.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.navBarGroup5.AppearanceBackground.ForeColor = System.Drawing.Color.Red;
             this.navBarGroup5.AppearanceBackground.Options.UseFont = true;
-            this.navBarGroup5.AppearanceBackground.Options.UseForeColor = true;
             this.navBarGroup5.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.navBarGroup5.AppearanceHotTracked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.navBarGroup5.AppearanceHotTracked.Options.UseFont = true;
-            this.navBarGroup5.AppearanceHotTracked.Options.UseForeColor = true;
             this.navBarGroup5.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.navBarGroup5.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.navBarGroup5.AppearancePressed.Options.UseFont = true;
-            this.navBarGroup5.AppearancePressed.Options.UseForeColor = true;
             this.navBarGroup5.Caption = "TÀI KHOẢN";
             this.navBarGroup5.Expanded = true;
             this.navBarGroup5.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
@@ -778,17 +806,11 @@ namespace VANPHONGPHAM
             // navBarItem1
             // 
             this.navBarItem1.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
-            this.navBarItem1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.navBarItem1.Appearance.Options.UseFont = true;
-            this.navBarItem1.Appearance.Options.UseForeColor = true;
             this.navBarItem1.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.navBarItem1.AppearanceHotTracked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.navBarItem1.AppearanceHotTracked.Options.UseFont = true;
-            this.navBarItem1.AppearanceHotTracked.Options.UseForeColor = true;
             this.navBarItem1.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.navBarItem1.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.navBarItem1.AppearancePressed.Options.UseFont = true;
-            this.navBarItem1.AppearancePressed.Options.UseForeColor = true;
             this.navBarItem1.Caption = "Thông tin cá nhân";
             this.navBarItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarItem1.ImageOptions.LargeImage")));
             this.navBarItem1.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem1.ImageOptions.SmallImage")));
@@ -798,21 +820,13 @@ namespace VANPHONGPHAM
             // navBarGroup6
             // 
             this.navBarGroup6.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.navBarGroup6.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.navBarGroup6.Appearance.Options.UseFont = true;
-            this.navBarGroup6.Appearance.Options.UseForeColor = true;
             this.navBarGroup6.AppearanceBackground.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.navBarGroup6.AppearanceBackground.ForeColor = System.Drawing.Color.Red;
             this.navBarGroup6.AppearanceBackground.Options.UseFont = true;
-            this.navBarGroup6.AppearanceBackground.Options.UseForeColor = true;
             this.navBarGroup6.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.navBarGroup6.AppearanceHotTracked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.navBarGroup6.AppearanceHotTracked.Options.UseFont = true;
-            this.navBarGroup6.AppearanceHotTracked.Options.UseForeColor = true;
             this.navBarGroup6.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.navBarGroup6.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.navBarGroup6.AppearancePressed.Options.UseFont = true;
-            this.navBarGroup6.AppearancePressed.Options.UseForeColor = true;
             this.navBarGroup6.Caption = "QUẢN LÝ HÀNG HÓA";
             this.navBarGroup6.Expanded = true;
             this.navBarGroup6.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
@@ -823,17 +837,11 @@ namespace VANPHONGPHAM
             // navBarItem3
             // 
             this.navBarItem3.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
-            this.navBarItem3.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.navBarItem3.Appearance.Options.UseFont = true;
-            this.navBarItem3.Appearance.Options.UseForeColor = true;
             this.navBarItem3.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.navBarItem3.AppearanceHotTracked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.navBarItem3.AppearanceHotTracked.Options.UseFont = true;
-            this.navBarItem3.AppearanceHotTracked.Options.UseForeColor = true;
             this.navBarItem3.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.navBarItem3.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.navBarItem3.AppearancePressed.Options.UseFont = true;
-            this.navBarItem3.AppearancePressed.Options.UseForeColor = true;
             this.navBarItem3.Caption = "Danh mục Nhóm hàng hóa";
             this.navBarItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarItem3.ImageOptions.LargeImage")));
             this.navBarItem3.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem3.ImageOptions.SmallImage")));
@@ -843,21 +851,13 @@ namespace VANPHONGPHAM
             // navBarGroup7
             // 
             this.navBarGroup7.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.2F, System.Drawing.FontStyle.Bold);
-            this.navBarGroup7.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.navBarGroup7.Appearance.Options.UseFont = true;
-            this.navBarGroup7.Appearance.Options.UseForeColor = true;
             this.navBarGroup7.AppearanceBackground.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.navBarGroup7.AppearanceBackground.ForeColor = System.Drawing.Color.Red;
             this.navBarGroup7.AppearanceBackground.Options.UseFont = true;
-            this.navBarGroup7.AppearanceBackground.Options.UseForeColor = true;
             this.navBarGroup7.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.navBarGroup7.AppearanceHotTracked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.navBarGroup7.AppearanceHotTracked.Options.UseFont = true;
-            this.navBarGroup7.AppearanceHotTracked.Options.UseForeColor = true;
             this.navBarGroup7.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.navBarGroup7.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.navBarGroup7.AppearancePressed.Options.UseFont = true;
-            this.navBarGroup7.AppearancePressed.Options.UseForeColor = true;
             this.navBarGroup7.Caption = "QUẢN LÝ ĐỐI TÁC";
             this.navBarGroup7.Expanded = true;
             this.navBarGroup7.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
@@ -868,21 +868,13 @@ namespace VANPHONGPHAM
             // navBarGroup8
             // 
             this.navBarGroup8.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.2F, System.Drawing.FontStyle.Bold);
-            this.navBarGroup8.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.navBarGroup8.Appearance.Options.UseFont = true;
-            this.navBarGroup8.Appearance.Options.UseForeColor = true;
             this.navBarGroup8.AppearanceBackground.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.navBarGroup8.AppearanceBackground.ForeColor = System.Drawing.Color.Red;
             this.navBarGroup8.AppearanceBackground.Options.UseFont = true;
-            this.navBarGroup8.AppearanceBackground.Options.UseForeColor = true;
             this.navBarGroup8.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.navBarGroup8.AppearanceHotTracked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.navBarGroup8.AppearanceHotTracked.Options.UseFont = true;
-            this.navBarGroup8.AppearanceHotTracked.Options.UseForeColor = true;
             this.navBarGroup8.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.navBarGroup8.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.navBarGroup8.AppearancePressed.Options.UseFont = true;
-            this.navBarGroup8.AppearancePressed.Options.UseForeColor = true;
             this.navBarGroup8.Caption = "QUẢN LÝ NHÂN VIÊN";
             this.navBarGroup8.Expanded = true;
             this.navBarGroup8.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
@@ -893,17 +885,11 @@ namespace VANPHONGPHAM
             // navBarItem4
             // 
             this.navBarItem4.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
-            this.navBarItem4.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.navBarItem4.Appearance.Options.UseFont = true;
-            this.navBarItem4.Appearance.Options.UseForeColor = true;
             this.navBarItem4.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.navBarItem4.AppearanceHotTracked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.navBarItem4.AppearanceHotTracked.Options.UseFont = true;
-            this.navBarItem4.AppearanceHotTracked.Options.UseForeColor = true;
             this.navBarItem4.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.navBarItem4.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.navBarItem4.AppearancePressed.Options.UseFont = true;
-            this.navBarItem4.AppearancePressed.Options.UseForeColor = true;
             this.navBarItem4.Caption = "Phân quyền người dùng";
             this.navBarItem4.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarItem4.ImageOptions.LargeImage")));
             this.navBarItem4.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem4.ImageOptions.SmallImage")));
@@ -922,7 +908,7 @@ namespace VANPHONGPHAM
             this.layoutControl2.Location = new System.Drawing.Point(0, 0);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup1;
-            this.layoutControl2.Size = new System.Drawing.Size(1025, 556);
+            this.layoutControl2.Size = new System.Drawing.Size(1025, 557);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -958,8 +944,16 @@ namespace VANPHONGPHAM
             this.chartControl1.Legend.Name = "Default Legend";
             this.chartControl1.Location = new System.Drawing.Point(501, 324);
             this.chartControl1.Name = "chartControl1";
+            this.chartControl1.PaletteName = "Palette 1";
+            this.chartControl1.PaletteRepository.Add("Palette 1", new DevExpress.XtraCharts.Palette("Palette 1", DevExpress.XtraCharts.PaletteScaleMode.Repeat, new DevExpress.XtraCharts.PaletteEntry[] {
+                new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(156)))), ((int)(((byte)(206))))), System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(156)))), ((int)(((byte)(206)))))),
+                new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(89))))), System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(89)))))),
+                new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(104)))), ((int)(((byte)(107))))), System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(104)))), ((int)(((byte)(107)))))),
+                new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(83)))), ((int)(((byte)(87))))), System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))))),
+                new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(79)))), ((int)(((byte)(83))))), System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(79)))), ((int)(((byte)(83)))))),
+                new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(66)))), ((int)(((byte)(70))))), System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(66)))), ((int)(((byte)(70))))))}));
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartControl1.Size = new System.Drawing.Size(512, 220);
+            this.chartControl1.Size = new System.Drawing.Size(512, 221);
             this.chartControl1.TabIndex = 6;
             // 
             // chartControl3
@@ -967,6 +961,11 @@ namespace VANPHONGPHAM
             this.chartControl3.Legend.Name = "Default Legend";
             this.chartControl3.Location = new System.Drawing.Point(501, 41);
             this.chartControl3.Name = "chartControl3";
+            this.chartControl3.PaletteName = "Palette 2";
+            this.chartControl3.PaletteRepository.Add("Palette 1", new DevExpress.XtraCharts.Palette("Palette 1", DevExpress.XtraCharts.PaletteScaleMode.Repeat, new DevExpress.XtraCharts.PaletteEntry[] {
+                new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(225)))), ((int)(((byte)(210))))), System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(225)))), ((int)(((byte)(210))))))}));
+            this.chartControl3.PaletteRepository.Add("Palette 2", new DevExpress.XtraCharts.Palette("Palette 2", DevExpress.XtraCharts.PaletteScaleMode.Repeat, new DevExpress.XtraCharts.PaletteEntry[] {
+                new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(170)))), ((int)(((byte)(153))))), System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(170)))), ((int)(((byte)(153))))))}));
             this.chartControl3.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
             this.chartControl3.Size = new System.Drawing.Size(512, 250);
             this.chartControl3.TabIndex = 5;
@@ -976,8 +975,11 @@ namespace VANPHONGPHAM
             this.chartControl2.Legend.Name = "Default Legend";
             this.chartControl2.Location = new System.Drawing.Point(12, 41);
             this.chartControl2.Name = "chartControl2";
+            this.chartControl2.PaletteName = "Palette 1";
+            this.chartControl2.PaletteRepository.Add("Palette 1", new DevExpress.XtraCharts.Palette("Palette 1", DevExpress.XtraCharts.PaletteScaleMode.Repeat, new DevExpress.XtraCharts.PaletteEntry[] {
+                new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128))))), System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128))))))}));
             this.chartControl2.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartControl2.Size = new System.Drawing.Size(485, 503);
+            this.chartControl2.Size = new System.Drawing.Size(485, 504);
             this.chartControl2.TabIndex = 4;
             // 
             // layoutControlGroup1
@@ -992,7 +994,7 @@ namespace VANPHONGPHAM
             this.layoutControlItem14,
             this.layoutControlItem15});
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1025, 556);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1025, 557);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem2
@@ -1000,7 +1002,7 @@ namespace VANPHONGPHAM
             this.layoutControlItem2.Control = this.chartControl2;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 29);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(489, 507);
+            this.layoutControlItem2.Size = new System.Drawing.Size(489, 508);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -1018,7 +1020,7 @@ namespace VANPHONGPHAM
             this.layoutControlItem3.Control = this.chartControl1;
             this.layoutControlItem3.Location = new System.Drawing.Point(489, 312);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(516, 224);
+            this.layoutControlItem3.Size = new System.Drawing.Size(516, 225);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -1055,12 +1057,12 @@ namespace VANPHONGPHAM
             this.pictureEdit1.Location = new System.Drawing.Point(881, 12);
             this.pictureEdit1.MenuManager = this.barManager1;
             this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.pictureEdit1.Size = new System.Drawing.Size(212, 46);
+            this.pictureEdit1.Size = new System.Drawing.Size(212, 45);
             this.pictureEdit1.StyleController = this.layoutControl1;
             this.pictureEdit1.TabIndex = 15;
             // 
@@ -1068,18 +1070,19 @@ namespace VANPHONGPHAM
             // 
             this.separatorControl1.BackColor = System.Drawing.Color.Transparent;
             this.separatorControl1.LineThickness = 2;
-            this.separatorControl1.Location = new System.Drawing.Point(12, 62);
+            this.separatorControl1.Location = new System.Drawing.Point(12, 61);
             this.separatorControl1.Name = "separatorControl1";
             this.separatorControl1.Size = new System.Drawing.Size(1340, 20);
             this.separatorControl1.TabIndex = 14;
             // 
             // label5
             // 
-            this.label5.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.label5.Location = new System.Drawing.Point(1097, 12);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(255, 46);
+            this.label5.Size = new System.Drawing.Size(255, 45);
             this.label5.TabIndex = 12;
             this.label5.Text = "Time";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1091,7 +1094,7 @@ namespace VANPHONGPHAM
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(865, 46);
+            this.label1.Size = new System.Drawing.Size(865, 45);
             this.label1.TabIndex = 8;
             this.label1.Text = "PHẦN MỀM QUẢN LÝ VĂN PHÒNG PHẨM";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1117,7 +1120,7 @@ namespace VANPHONGPHAM
             this.layoutControlItem5.Control = this.label1;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(869, 50);
+            this.layoutControlItem5.Size = new System.Drawing.Size(869, 49);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
@@ -1126,14 +1129,14 @@ namespace VANPHONGPHAM
             this.layoutControlItem10.Control = this.label5;
             this.layoutControlItem10.Location = new System.Drawing.Point(1085, 0);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(259, 50);
+            this.layoutControlItem10.Size = new System.Drawing.Size(259, 49);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextVisible = false;
             // 
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.separatorControl1;
-            this.layoutControlItem11.Location = new System.Drawing.Point(0, 50);
+            this.layoutControlItem11.Location = new System.Drawing.Point(0, 49);
             this.layoutControlItem11.Name = "layoutControlItem11";
             this.layoutControlItem11.Size = new System.Drawing.Size(1344, 24);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
@@ -1144,16 +1147,16 @@ namespace VANPHONGPHAM
             this.layoutControlItem9.Control = this.pictureEdit1;
             this.layoutControlItem9.Location = new System.Drawing.Point(869, 0);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(216, 50);
+            this.layoutControlItem9.Size = new System.Drawing.Size(216, 49);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
             // 
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.splitContainerControl1;
-            this.layoutControlItem12.Location = new System.Drawing.Point(0, 74);
+            this.layoutControlItem12.Location = new System.Drawing.Point(0, 73);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(1344, 560);
+            this.layoutControlItem12.Size = new System.Drawing.Size(1344, 561);
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
             // 
@@ -1184,7 +1187,6 @@ namespace VANPHONGPHAM
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
@@ -1284,6 +1286,14 @@ namespace VANPHONGPHAM
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private DevExpress.XtraBars.BarButtonItem btnHelp;
+        private DevExpress.XtraBars.BarButtonItem btnHoTro;
+        private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem1;
+        private DevExpress.XtraBars.BarSubItem barSubItem1;
+        private DevExpress.XtraBars.BarButtonItem btnHD;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem10;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem11;
+        private DevExpress.XtraBars.BarLinkContainerItem barLinkContainerItem1;
     }
 }
 

@@ -131,7 +131,6 @@ namespace VANPHONGPHAM
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(375, 25);
             this.txtUsername.TabIndex = 9;
-            this.txtUsername.Text = "sa";
             // 
             // label2
             // 
@@ -152,7 +151,6 @@ namespace VANPHONGPHAM
             this.txtServer.Name = "txtServer";
             this.txtServer.Size = new System.Drawing.Size(399, 25);
             this.txtServer.TabIndex = 10;
-            this.txtServer.Text = "ZENBOOK-UX435EA";
             // 
             // label1
             // 

@@ -163,5 +163,24 @@ namespace VANPHONGPHAM
             frmThongTinNhanVien frm = new frmThongTinNhanVien();
             frm.ShowDialog();
         }
+
+        private void btnHD_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string doc = System.Windows.Forms.Application.StartupPath + "\\Documents\\" + "Huongdan" + @".pdf";
+            System.Diagnostics.Process.Start(doc);
+        }
+
+        private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            MessageBox.Show("Để yêu cầu hỗ trợ quý khách có thể liên hệ bộ phận hỗ trợ theo:\nSố điện thoại: 0964732241 \nEmail: vanphongpham1911@gmail.com\nXin cảm ơn!", "Trợ giúp", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        
+        private void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            MessageBox.Show("Van Phong Pham Sao Mai v1.0\n" +
+                "Phần mềm được phát triển bởi Nhóm 1:\n" +
+                "Nguyễn Phú Đức\nNguyễn Tứ\nLê Cẩm Thúy\nTrần Thanh Thảo", "Thông tin về phần mềm", MessageBoxButtons.OK,MessageBoxIcon.Information);
+            
+        }
     }
 }

@@ -114,6 +114,7 @@ namespace VANPHONGPHAM
             // 
             // cmbDVT
             // 
+            this.cmbDVT.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cmbDVT.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
             this.cmbDVT.FormattingEnabled = true;
             this.cmbDVT.Location = new System.Drawing.Point(454, 79);
@@ -135,6 +136,7 @@ namespace VANPHONGPHAM
             // 
             // txtMoTa
             // 
+            this.txtMoTa.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtMoTa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMoTa.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
             this.txtMoTa.Location = new System.Drawing.Point(882, 42);
@@ -145,6 +147,7 @@ namespace VANPHONGPHAM
             // 
             // txtGiaBan
             // 
+            this.txtGiaBan.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtGiaBan.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
             this.txtGiaBan.Increment = new decimal(new int[] {
             500,
@@ -163,6 +166,7 @@ namespace VANPHONGPHAM
             // 
             // cmbLoaiMH
             // 
+            this.cmbLoaiMH.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cmbLoaiMH.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
             this.cmbLoaiMH.FormattingEnabled = true;
             this.cmbLoaiMH.Location = new System.Drawing.Point(147, 37);
@@ -233,6 +237,7 @@ namespace VANPHONGPHAM
             // 
             // txtTen
             // 
+            this.txtTen.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtTen.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
             this.txtTen.Location = new System.Drawing.Point(454, 39);
             this.txtTen.Name = "txtTen";
@@ -241,6 +246,7 @@ namespace VANPHONGPHAM
             // 
             // txtMa
             // 
+            this.txtMa.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtMa.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
             this.txtMa.Location = new System.Drawing.Point(147, 75);
             this.txtMa.Name = "txtMa";

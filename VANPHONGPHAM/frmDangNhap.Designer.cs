@@ -83,7 +83,6 @@ namespace VANPHONGPHAM
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(266, 23);
             this.txtUser.TabIndex = 1;
-            this.txtUser.Text = "admin";
             this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUser_KeyDown);
             // 
@@ -129,7 +128,6 @@ namespace VANPHONGPHAM
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(230, 23);
             this.txtPass.TabIndex = 3;
-            this.txtPass.Text = "admin12345";
             this.txtPass.UseSystemPasswordChar = true;
             this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
             this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);

@@ -210,7 +210,7 @@ namespace VANPHONGPHAM
             // 
             // separatorControl1
             // 
-            this.separatorControl1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.separatorControl1.BackColor = System.Drawing.Color.Transparent;
             this.separatorControl1.LineThickness = 2;
             this.separatorControl1.Location = new System.Drawing.Point(12, 70);
             this.separatorControl1.Name = "separatorControl1";
@@ -234,7 +234,7 @@ namespace VANPHONGPHAM
             this.pictureEdit4.EditValue = ((object)(resources.GetObject("pictureEdit4.EditValue")));
             this.pictureEdit4.Location = new System.Drawing.Point(856, 12);
             this.pictureEdit4.Name = "pictureEdit4";
-            this.pictureEdit4.Properties.Appearance.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureEdit4.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit4.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit4.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit4.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
@@ -476,7 +476,9 @@ namespace VANPHONGPHAM
             this.dateEditDenNgay.EditValue = new System.DateTime(2022, 1, 3, 0, 0, 0, 0);
             this.dateEditDenNgay.Location = new System.Drawing.Point(334, 35);
             this.dateEditDenNgay.Name = "dateEditDenNgay";
+            this.dateEditDenNgay.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.dateEditDenNgay.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.dateEditDenNgay.Properties.Appearance.Options.UseBackColor = true;
             this.dateEditDenNgay.Properties.Appearance.Options.UseFont = true;
             this.dateEditDenNgay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -490,7 +492,9 @@ namespace VANPHONGPHAM
             this.dateEditTuNgay.EditValue = null;
             this.dateEditTuNgay.Location = new System.Drawing.Point(88, 35);
             this.dateEditTuNgay.Name = "dateEditTuNgay";
+            this.dateEditTuNgay.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.dateEditTuNgay.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
+            this.dateEditTuNgay.Properties.Appearance.Options.UseBackColor = true;
             this.dateEditTuNgay.Properties.Appearance.Options.UseFont = true;
             this.dateEditTuNgay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});

@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataLayer;
-
 namespace BusinessLayer
 {
     public class KHACHHANG{
         Entities db;
+
         public KHACHHANG(){
             db = Entities.CreateEntities();
         }

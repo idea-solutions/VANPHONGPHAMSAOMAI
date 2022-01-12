@@ -54,6 +54,16 @@ namespace BusinessLayer
             return db.NHAN_VIEN.FirstOrDefault(x => x.TENDANGNHAP == tendangnhap);
         }
 
+        public NHAN_VIEN getItemBySDT(string sdt)
+        {
+            return db.NHAN_VIEN.FirstOrDefault(x => x.SDT == sdt);
+        }
+
+        public NHAN_VIEN getItemByCMND(string cmnd)
+        {
+            return db.NHAN_VIEN.FirstOrDefault(x => x.CMND_CCCD == cmnd);
+        }
+
         public NHAN_VIEN getItemQMK(DateTime ngaysinh, string cmnd, string ten, string diachi){
             return db.NHAN_VIEN.FirstOrDefault(x => x.NGAYSINH == ngaysinh && x.CMND_CCCD == cmnd && x.TENNHANVIEN == ten && x.DIACHI == diachi);
         }

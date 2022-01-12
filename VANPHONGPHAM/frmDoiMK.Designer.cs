@@ -69,7 +69,7 @@ namespace VANPHONGPHAM
             this.btnXacNhan.Location = new System.Drawing.Point(53, 374);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(310, 39);
-            this.btnXacNhan.TabIndex = 0;
+            this.btnXacNhan.TabIndex = 1;
             this.btnXacNhan.Text = "XÁC NHẬN";
             this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             this.btnXacNhan.Paint += new System.Windows.Forms.PaintEventHandler(this.btnXacNhan_Paint);
@@ -262,7 +262,7 @@ namespace VANPHONGPHAM
             this.btnExit.Location = new System.Drawing.Point(369, 12);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(38, 38);
-            this.btnExit.TabIndex = 1;
+            this.btnExit.TabIndex = 0;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // peImage
@@ -278,7 +278,7 @@ namespace VANPHONGPHAM
             this.peImage.Properties.ShowMenu = false;
             this.peImage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.peImage.Size = new System.Drawing.Size(598, 966);
-            this.peImage.TabIndex = 29;
+            this.peImage.TabIndex = 0;
             // 
             // frmDoiMK
             // 

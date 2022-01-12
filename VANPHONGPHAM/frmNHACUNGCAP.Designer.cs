@@ -132,9 +132,9 @@ namespace VANPHONGPHAM
             this.label3.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(697, 72);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 22);
+            this.label3.Size = new System.Drawing.Size(51, 22);
             this.label3.TabIndex = 5;
-            this.label3.Text = "EMAIL";
+            this.label3.Text = "Email";
             // 
             // txtDiaChi
             // 

@@ -53,6 +53,7 @@ namespace VANPHONGPHAM
             cmbGioiTinh.Items.Add("Nam");
             cmbGioiTinh.Items.Add("Nữ");
             cmbGioiTinh.Items.Add("Khác");
+            cmbGioiTinh.Text = "Nam";
             txtSDT.MaxLength = 10;
             txtTen.MaxLength = 30;
         }
@@ -82,6 +83,7 @@ namespace VANPHONGPHAM
             txtSDT.Text = "";
             cmbGioiTinh.Text = "";
             ckbDisable.Checked = false;
+            cmbGioiTinh.Text = "Nam";
         }
 
         private void btnThem_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e){

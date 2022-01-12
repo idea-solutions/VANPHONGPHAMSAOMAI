@@ -134,7 +134,7 @@ namespace VANPHONGPHAM
             // 
             this.cmbGioiTinh.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
             this.cmbGioiTinh.FormattingEnabled = true;
-            this.cmbGioiTinh.Location = new System.Drawing.Point(1205, 77);
+            this.cmbGioiTinh.Location = new System.Drawing.Point(1024, 77);
             this.cmbGioiTinh.Name = "cmbGioiTinh";
             this.cmbGioiTinh.Size = new System.Drawing.Size(121, 30);
             this.cmbGioiTinh.TabIndex = 6;
@@ -150,14 +150,14 @@ namespace VANPHONGPHAM
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtNgaySinh.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtNgaySinh.Size = new System.Drawing.Size(156, 28);
+            this.dtNgaySinh.Size = new System.Drawing.Size(120, 28);
             this.dtNgaySinh.TabIndex = 5;
             // 
             // ckbDisable
             // 
             this.ckbDisable.AutoSize = true;
             this.ckbDisable.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.ckbDisable.Location = new System.Drawing.Point(1205, 117);
+            this.ckbDisable.Location = new System.Drawing.Point(1024, 117);
             this.ckbDisable.Name = "ckbDisable";
             this.ckbDisable.Size = new System.Drawing.Size(104, 26);
             this.ckbDisable.TabIndex = 2;
@@ -168,7 +168,7 @@ namespace VANPHONGPHAM
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(749, 118);
+            this.label9.Location = new System.Drawing.Point(644, 118);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(149, 22);
             this.label9.TabIndex = 0;
@@ -178,7 +178,7 @@ namespace VANPHONGPHAM
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(336, 116);
+            this.label8.Location = new System.Drawing.Point(305, 116);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(83, 22);
             this.label8.TabIndex = 0;
@@ -188,7 +188,7 @@ namespace VANPHONGPHAM
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(301, 80);
+            this.label6.Location = new System.Drawing.Point(270, 80);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(118, 22);
             this.label6.TabIndex = 0;
@@ -198,7 +198,7 @@ namespace VANPHONGPHAM
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(1201, 46);
+            this.label10.Location = new System.Drawing.Point(1020, 46);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(74, 22);
             this.label10.TabIndex = 0;
@@ -208,7 +208,7 @@ namespace VANPHONGPHAM
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(788, 48);
+            this.label3.Location = new System.Drawing.Point(683, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 22);
             this.label3.TabIndex = 0;
@@ -218,7 +218,7 @@ namespace VANPHONGPHAM
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(304, 44);
+            this.label4.Location = new System.Drawing.Point(273, 44);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(115, 22);
             this.label4.TabIndex = 0;
@@ -227,17 +227,17 @@ namespace VANPHONGPHAM
             // txtNLMatKhau
             // 
             this.txtNLMatKhau.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtNLMatKhau.Location = new System.Drawing.Point(911, 113);
+            this.txtNLMatKhau.Location = new System.Drawing.Point(806, 113);
             this.txtNLMatKhau.Name = "txtNLMatKhau";
-            this.txtNLMatKhau.Size = new System.Drawing.Size(223, 30);
+            this.txtNLMatKhau.Size = new System.Drawing.Size(187, 30);
             this.txtNLMatKhau.TabIndex = 1;
             // 
             // txtMatKhau
             // 
             this.txtMatKhau.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtMatKhau.Location = new System.Drawing.Point(430, 113);
+            this.txtMatKhau.Location = new System.Drawing.Point(399, 113);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(296, 30);
+            this.txtMatKhau.Size = new System.Drawing.Size(223, 30);
             this.txtMatKhau.TabIndex = 1;
             // 
             // txtTenDangNhap
@@ -245,23 +245,23 @@ namespace VANPHONGPHAM
             this.txtTenDangNhap.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
             this.txtTenDangNhap.Location = new System.Drawing.Point(142, 113);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(156, 30);
+            this.txtTenDangNhap.Size = new System.Drawing.Size(120, 30);
             this.txtTenDangNhap.TabIndex = 1;
             // 
             // txtCMND
             // 
             this.txtCMND.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtCMND.Location = new System.Drawing.Point(430, 77);
+            this.txtCMND.Location = new System.Drawing.Point(399, 77);
             this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(296, 30);
+            this.txtCMND.Size = new System.Drawing.Size(223, 30);
             this.txtCMND.TabIndex = 1;
             // 
             // txtSDT
             // 
             this.txtSDT.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtSDT.Location = new System.Drawing.Point(911, 43);
+            this.txtSDT.Location = new System.Drawing.Point(806, 43);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(223, 30);
+            this.txtSDT.Size = new System.Drawing.Size(187, 30);
             this.txtSDT.TabIndex = 1;
             // 
             // label7
@@ -277,9 +277,9 @@ namespace VANPHONGPHAM
             // txtDiaChi
             // 
             this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtDiaChi.Location = new System.Drawing.Point(911, 79);
+            this.txtDiaChi.Location = new System.Drawing.Point(806, 79);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(223, 30);
+            this.txtDiaChi.Size = new System.Drawing.Size(187, 30);
             this.txtDiaChi.TabIndex = 1;
             // 
             // label5
@@ -295,16 +295,16 @@ namespace VANPHONGPHAM
             // txtTen
             // 
             this.txtTen.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtTen.Location = new System.Drawing.Point(430, 41);
+            this.txtTen.Location = new System.Drawing.Point(399, 41);
             this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(296, 30);
+            this.txtTen.Size = new System.Drawing.Size(223, 30);
             this.txtTen.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(836, 82);
+            this.label2.Location = new System.Drawing.Point(731, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 22);
             this.label2.TabIndex = 0;
@@ -315,7 +315,7 @@ namespace VANPHONGPHAM
             this.txtMa.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
             this.txtMa.Location = new System.Drawing.Point(142, 43);
             this.txtMa.Name = "txtMa";
-            this.txtMa.Size = new System.Drawing.Size(156, 30);
+            this.txtMa.Size = new System.Drawing.Size(120, 30);
             this.txtMa.TabIndex = 1;
             // 
             // label1

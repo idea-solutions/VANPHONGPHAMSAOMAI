@@ -21,6 +21,16 @@ namespace BusinessLayer
             return db.NHA_CUNG_CAP.FirstOrDefault(x => x.MANCC == mancc);
         }
 
+        public NHA_CUNG_CAP getItemBySDT(String sdt)
+        {
+            return db.NHA_CUNG_CAP.FirstOrDefault(x => x.SDT == sdt);
+        }
+
+        public NHA_CUNG_CAP getItemByMail(String email)
+        {
+            return db.NHA_CUNG_CAP.FirstOrDefault(x => x.EMAIL == email);
+        }
+
         public void add(NHA_CUNG_CAP ncc){
             try{
                 db.NHA_CUNG_CAP.Add(ncc);

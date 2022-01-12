@@ -19,8 +19,7 @@ namespace VANPHONGPHAM
 {
     public partial class frmDatHang : DevExpress.XtraEditors.XtraForm
     {
-        public frmDatHang()
-        {
+        public frmDatHang(){
             InitializeComponent();
         }
 
@@ -29,14 +28,12 @@ namespace VANPHONGPHAM
         NHACUNGCAP _ncc;
         DONDATHANG _ddh;
         MATHANG _mh;
-        LOAIMATHANG _loaimh;
         NHANVIEN _nv;
-        bool _them;
         string _mamh;
+        public int i = 10;
 
         frmMain objMain = (frmMain)Application.OpenForms["frmMain"];
-        private void frmDATHANG_Load(object sender, EventArgs e)
-        {
+        private void frmDATHANG_Load(object sender, EventArgs e){
             _nv = new NHANVIEN();
             _ddhmh = new DONDATHANGMATHANG();
             _ncc = new NHACUNGCAP();
@@ -45,16 +42,13 @@ namespace VANPHONGPHAM
             _ddhmh = new DONDATHANGMATHANG();
             _ddh = new DONDATHANG();
             _mh = new MATHANG();
-            _loaimh = new LOAIMATHANG();
             _ncc = new NHACUNGCAP();
             lstDDHMH = new List<OBJDDH_MH>();
             loadData();
             enable(false);
             lbThoigian.Text = DateTime.Now.ToString();
             tabControl.SelectedTabPage = tabBanHang;
-
             showHideControl(true);
-
             gvDanhSach.ExpandAllGroups();
             dateEditTuNgay.DateTimeChanged += dateEditTuNgay_DateTimeChanged;
             dateEditDenNgay.DateTimeChanged += dateEditTuNgay_DateTimeChanged;
@@ -62,81 +56,67 @@ namespace VANPHONGPHAM
             timer1.Enabled = true;
             timer1.Start();
             label7.Text = DateTime.Now.ToLongTimeString();
-            //label9.Text = DateTime.Now.ToShortDateString();
         }
 
-        void loadData()
-        {
+        void loadData(){
             loadDS();
             loadMH();
             loadNCC();
         }
-        void loadDS()
-        {
+        void loadDS(){
             gcDanhSach.DataSource = _ddhmh.getAll();
         }
-        void loadMH()
-        {
+        void loadMH(){
             gcDanhSachMH.DataSource = _mh.getAll();
         }
-        public void loadNCC()
-        {
+        public void loadNCC(){
             cmbNhaCungCap.DataSource = _ncc.getAll();
             cmbNhaCungCap.DisplayMember = "TENNCC";
             cmbNhaCungCap.ValueMember = "MANCC";
         }
 
-        public void setNhaCungCap(string mancc)
-        {
+        public void setNhaCungCap(string mancc){
             var ncc = _ncc.getItem(mancc);
             cmbNhaCungCap.SelectedValue = ncc.MANCC;
             cmbNhaCungCap.Text = ncc.TENNCC;
         }
 
-        void showHideControl(bool t)
-        {
+        void showHideControl(bool t){
             btnThem.Enabled = t;
             btnLuu.Enabled = !t;
             btnBoQua.Enabled = !t;
             btnXoaMH.Enabled = !t;
         }
 
-        public void enable(bool t)
-        {
+        public void enable(bool t){
             cmbNhaCungCap.Enabled = t;
             gcDanhSachMH.Enabled = t;
             gcDanhSachDatHang.Enabled = t;
             btnAddnew.Enabled = t;
         }
 
-        void reset(bool t)
-        {
+        void reset(){
             cmbNhaCungCap.SelectedIndex = 0;
             gcDanhSachDatHang.DataSource = _ddhmh.getAll(0);
         }
-        public static DateTime GetFirstDayOfMonth(DateTime dtInput)
-        {
+        public static DateTime GetFirstDayOfMonth(DateTime dtInput){
             DateTime dtResult = dtInput;
             dtResult = dtResult.AddDays((-dtResult.Day) + 1);
             return dtResult;
         }
 
-        bool cal(Int32 _Width, GridView _view)
-        {
+        bool cal(Int32 _Width, GridView _view){
             _view.IndicatorWidth = _view.IndicatorWidth < _Width ? _Width : _view.IndicatorWidth;
             return true;
         }
-        private void gvDanhSach_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
-        {
-            if (e.Info.IsRowIndicator)
-            {
-                if (e.RowHandle < 0)
-                {
+
+        private void gvDanhSach_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e){
+            if (e.Info.IsRowIndicator){
+                if (e.RowHandle < 0){
                     e.Info.ImageIndex = 0;
                     e.Info.DisplayText = string.Empty;
                 }
-                else
-                {
+                else{
                     e.Info.ImageIndex = -1; //Nếu hiển thị
                     e.Info.DisplayText = (e.RowHandle + 1).ToString(); //Số thứ tự tăng dần
                 }
@@ -146,17 +126,13 @@ namespace VANPHONGPHAM
             }
         }
 
-        private void gvDanhSachMH_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
-        {
-            if (e.Info.IsRowIndicator)
-            {
-                if (e.RowHandle < 0)
-                {
+        private void gvDanhSachMH_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e){
+            if (e.Info.IsRowIndicator){
+                if (e.RowHandle < 0){
                     e.Info.ImageIndex = 0;
                     e.Info.DisplayText = string.Empty;
                 }
-                else
-                {
+                else{
                     e.Info.ImageIndex = -1; //Nếu hiển thị
                     e.Info.DisplayText = (e.RowHandle + 1).ToString(); //Số thứ tự tăng dần
                 }
@@ -166,17 +142,13 @@ namespace VANPHONGPHAM
             }
         }
 
-        private void gvDanhSachDatHang_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
-        {
-            if (e.Info.IsRowIndicator)
-            {
-                if (e.RowHandle < 0)
-                {
+        private void gvDanhSachDatHang_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e){
+            if (e.Info.IsRowIndicator){
+                if (e.RowHandle < 0){
                     e.Info.ImageIndex = 0;
                     e.Info.DisplayText = string.Empty;
                 }
-                else
-                {
+                else{
                     e.Info.ImageIndex = -1; //Nếu hiển thị
                     e.Info.DisplayText = (e.RowHandle + 1).ToString(); //Số thứ tự tăng dần
                 }
@@ -186,114 +158,90 @@ namespace VANPHONGPHAM
             }
         }
 
-        private void btnAddnew_Click(object sender, EventArgs e)
-        {
+        private void btnAddnew_Click(object sender, EventArgs e){
             frmNHACUNGCAP frm = new frmNHACUNGCAP();
             frm.ShowDialog();
         }
 
-        private void dateEditTuNgay_DateTimeChanged(object sender, EventArgs e)
-        {
-            if (dateEditDenNgay.DateTime < dateEditTuNgay.DateTime)
-            {
+        private void dateEditTuNgay_DateTimeChanged(object sender, EventArgs e){
+            if (dateEditDenNgay.DateTime < dateEditTuNgay.DateTime){
                 MessageBox.Show("Vui lòng chọn lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else
-            {
+            else{
                 gvDanhSach.ExpandAllGroups();
-                gcDanhSach.DataSource = _ddhmh.getAllByDate(dateEditTuNgay.DateTime, dateEditDenNgay.DateTime);
+                gcDanhSach.DataSource = _ddhmh.getAllByDate(dateEditTuNgay.DateTime.Date, dateEditDenNgay.DateTime.Date.AddDays(1));
             }
         }
 
-        void loadCTHD()
-        {
+        void loadCTHD(){
             List<OBJDDH_MH> lsDDH = new List<OBJDDH_MH>();
-            foreach (var item in lstDDHMH)
-            {
+            foreach (var item in lstDDHMH){
                 lsDDH.Add(item);
             }
             gcDanhSachDatHang.DataSource = lsDDH;
         }
 
-        private void gvDanhSachDatHang_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
-        {
-            if (e.Column.FieldName == "SOLUONG")
-            {
+        private void gvDanhSachDatHang_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e){
+            if (e.Column.FieldName == "SOLUONG"){
                 int sl = int.Parse(e.Value.ToString());
-                if (sl != 0)
-                {
+                if (sl != 0){
                     double gia = double.Parse(gvDanhSachDatHang.GetRowCellValue(gvDanhSachDatHang.FocusedRowHandle, "DONGIA").ToString());
                     gvDanhSachDatHang.SetRowCellValue(gvDanhSachDatHang.FocusedRowHandle, "THANHTIEN", sl * gia);
                 }
-                else
-                {
+                else{
                     gvDanhSachDatHang.SetRowCellValue(gvDanhSachDatHang.FocusedRowHandle, "THANHTIEN", 0);
                 }
             }
             gvDanhSachDatHang.UpdateTotalSummary();
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            _them = true;
-            reset(true);
+        private void btnThem_Click(object sender, EventArgs e){
+            reset();
             enable(true);
             showHideControl(false);
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
-            _them = true;
+        private void btnLuu_Click(object sender, EventArgs e){
             saveData();
             tabControl.SelectedTabPage = tabDanhSach;
             loadData();
             showHideControl(true);
-            reset(true);
+            reset();
             enable(false);
             lstDDHMH.Clear();
             objMain.loadChart();
         }
 
-        void saveData()
-        {
+        void saveData(){
             DON_DAT_HANG ddh = new DON_DAT_HANG();
-
-            if (_them)
-            {
-                ddh.NGAYDAT = DateTime.Now;
-                ddh.MANV = _nv.getItemByTDN(objMain._tendn).MANHANVIEN;
-                ddh.MANCC = cmbNhaCungCap.SelectedValue.ToString();
-                var LuuDDH = _ddh.add(ddh);
-                int _maDDH = LuuDDH.MADDH;
-                for (int i = 0; i < gvDanhSachDatHang.RowCount; i++)
-                {
-                    DONDATHANG_MATHANG ddhmh = new DONDATHANG_MATHANG();
-                    ddhmh.MADDH = _maDDH;
-                    ddhmh.MAMH = gvDanhSachDatHang.GetRowCellValue(i, "MAMH").ToString();
-                    ddhmh.SOLUONG = int.Parse(gvDanhSachDatHang.GetRowCellValue(i, "SOLUONG").ToString());
-                    ddhmh.DONGIA = double.Parse(gvDanhSachDatHang.GetRowCellValue(i, "THANHTIEN").ToString());
-                    _ddhmh.add(ddhmh);
-                }
+            ddh.NGAYDAT = DateTime.Now;
+            ddh.MANV = _nv.getItemByTDN(objMain._tendn).MANHANVIEN;
+            ddh.MANCC = cmbNhaCungCap.SelectedValue.ToString();
+            var LuuDDH = _ddh.add(ddh);
+            int _maDDH = LuuDDH.MADDH;
+            for (int i = 0; i < gvDanhSachDatHang.RowCount; i++){
+                DONDATHANG_MATHANG ddhmh = new DONDATHANG_MATHANG();
+                ddhmh.MADDH = _maDDH;
+                ddhmh.MAMH = gvDanhSachDatHang.GetRowCellValue(i, "MAMH").ToString();
+                ddhmh.SOLUONG = int.Parse(gvDanhSachDatHang.GetRowCellValue(i, "SOLUONG").ToString());
+                ddhmh.DONGIA = double.Parse(gvDanhSachDatHang.GetRowCellValue(i, "THANHTIEN").ToString());
+                _ddhmh.add(ddhmh);
             }
+            MessageBox.Show("Đặt hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void btnBoQua_Click(object sender, EventArgs e)
-        {
-            tabControl.SelectedTabPage = tabDanhSach;
-            reset(true);
+        private void btnBoQua_Click(object sender, EventArgs e){
+            reset();
             enable(false);
             showHideControl(true);
         }
 
-        private void gcDanhSachDatHang_Click(object sender, EventArgs e)
-        {
+        private void gcDanhSachDatHang_Click(object sender, EventArgs e){
             _mamh = gvDanhSachDatHang.GetFocusedRowCellValue("MAMH").ToString();
         }
 
-        private void btnXoaMH_Click(object sender, EventArgs e)
-        {
-            if (gvDanhSachDatHang.RowCount > 0)
-            {
+        private void btnXoaMH_Click(object sender, EventArgs e){
+            if (gvDanhSachDatHang.RowCount > 0){
                 gvDanhSachDatHang.DeleteSelectedRows();
 
                 lstDDHMH.RemoveAll(r => r.MAMH == _mamh);
@@ -302,10 +250,7 @@ namespace VANPHONGPHAM
             }
         }
 
-        public int i = 10;
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
+        private void timer1_Tick(object sender, EventArgs e){
             string a = "";
             label7.Text = DateTime.Now.ToLongTimeString();
             if (DateTime.Now.Hour > 5 && DateTime.Now.Hour <= 10)
@@ -321,12 +266,10 @@ namespace VANPHONGPHAM
             label6.Left += i;
         }
 
-        private void gcDanhSachMH_DoubleClick(object sender, EventArgs e)
-        {
+        private void gcDanhSachMH_DoubleClick(object sender, EventArgs e){
             cmbNhaCungCap.Enabled = false;
             btnAddnew.Enabled = false;
-            if (gvDanhSachMH.GetFocusedRowCellValue("MAMH") != null)
-            {
+            if (gvDanhSachMH.GetFocusedRowCellValue("MAMH") != null){
                 OBJDDH_MH ctdhd = new OBJDDH_MH();
                 ctdhd.MAMH = gvDanhSachMH.GetFocusedRowCellValue("MAMH").ToString();
                 ctdhd.TENMH = gvDanhSachMH.GetFocusedRowCellValue("TENMH").ToString();
@@ -334,12 +277,9 @@ namespace VANPHONGPHAM
                 ctdhd.THANHTIEN = double.Parse(gvDanhSachMH.GetFocusedRowCellValue("GIABAN").ToString());
                 ctdhd.MANCC = cmbNhaCungCap.SelectedValue.ToString();
                 ctdhd.TENNCC = cmbNhaCungCap.Text;
-
                 ctdhd.DONGIA = long.Parse(gvDanhSachMH.GetFocusedRowCellValue("GIABAN").ToString());
-                foreach (var item in lstDDHMH)
-                {
-                    if (item.MAMH == ctdhd.MAMH)
-                    {
+                foreach (var item in lstDDHMH){
+                    if (item.MAMH == ctdhd.MAMH){
                         item.SOLUONG = item.SOLUONG + 1;
                         item.THANHTIEN = item.SOLUONG * item.DONGIA;
                         loadCTHD();
@@ -351,13 +291,11 @@ namespace VANPHONGPHAM
             loadCTHD();
         }
 
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
+        private void btnPrint_Click(object sender, EventArgs e){
             XuatReport("ReportDDH", "DANH SÁCH THỐNG KÊ LỊCH SỬ ĐẶT HÀNG");
         }
 
-        private void XuatReport(string _reportName, string _tieude)
-        {
+        private void XuatReport(string _reportName, string _tieude){
             Form frm = new Form();
             CrystalReportViewer Crv = new CrystalReportViewer();
             Crv.ShowGroupTreeButton = false;
@@ -372,8 +310,7 @@ namespace VANPHONGPHAM
             Thongtin.ConnectionInfo.Password = myFun._pw;
             Thongtin.ConnectionInfo.DatabaseName = myFun._db;
             doc.Database.Tables[0].ApplyLogOnInfo(Thongtin);
-            try
-            {
+            try{
                 DateTime tungay = dateEditTuNgay.DateTime.Date;
                 DateTime denngay = dateEditDenNgay.DateTime.Date;
 
@@ -387,8 +324,7 @@ namespace VANPHONGPHAM
                 frm.WindowState = FormWindowState.Maximized;
                 frm.ShowDialog();
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex){
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
         }

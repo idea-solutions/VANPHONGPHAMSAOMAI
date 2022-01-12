@@ -129,41 +129,52 @@ namespace VANPHONGPHAM
                     if (txtSDT.TextLength == 10){
                         string email = txtEmail.Text;
                         if (email.ToLower().IndexOf('@') != -1){
-                            var ncckt = _ncc.getItem(txtMa.Text);
-                            if (ncckt == null){
-                                if (_them){
-                                    NHA_CUNG_CAP ncc = new NHA_CUNG_CAP();
-                                    ncc.MANCC = txtMa.Text;
-                                    ncc.TENNCC = txtTen.Text;
-                                    ncc.SDT = txtSDT.Text;
-                                    ncc.DIACHI = txtDiaChi.Text;
-                                    ncc.EMAIL = txtEmail.Text;
-                                    ncc.VOHIEUHOA = ckbDisable.Checked;
-                                    _ncc.add(ncc);
-                                    MessageBox.Show("Thêm nhà cung cấp thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    _them = false;
-                                    loadData();
-                                    enable(false);
-                                    showHideControl(true);
+                            if (_them){
+                                var ncckt = _ncc.getItem(txtMa.Text);
+                                if (ncckt == null){
+                                    var sdt = _ncc.getItemBySDT(txtSDT.Text);
+                                    if (sdt == null){
+                                        var emailNCC = _ncc.getItemByMail(txtEmail.Text);
+                                        if (emailNCC == null){
+                                            NHA_CUNG_CAP ncc = new NHA_CUNG_CAP();
+                                            ncc.MANCC = txtMa.Text;
+                                            ncc.TENNCC = txtTen.Text;
+                                            ncc.SDT = txtSDT.Text;
+                                            ncc.DIACHI = txtDiaChi.Text;
+                                            ncc.EMAIL = txtEmail.Text;
+                                            ncc.VOHIEUHOA = ckbDisable.Checked;
+                                            _ncc.add(ncc);
+                                            MessageBox.Show("Thêm nhà cung cấp thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                            _them = false;
+                                            loadData();
+                                            enable(false);
+                                            showHideControl(true);
+                                        }
+                                        else
+                                            MessageBox.Show("Địa chỉ email nhà cung cấp đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    }
+                                    else
+                                        MessageBox.Show("Số điện thoại nhà cung cấp đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 }
-                                else{
-                                    NHA_CUNG_CAP ncc = _ncc.getItem(_mancc);
-                                    ncc.MANCC = txtMa.Text;
-                                    ncc.DIACHI = txtDiaChi.Text;
-                                    ncc.SDT = txtSDT.Text;
-                                    ncc.EMAIL = txtEmail.Text;
-                                    ncc.TENNCC = txtTen.Text;
-                                    ncc.VOHIEUHOA = ckbDisable.Checked;
-                                    _ncc.update(ncc);
-                                    MessageBox.Show("Cập nhật nhà cung cấp thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    _them = false;
-                                    loadData();
-                                    enable(false);
-                                    showHideControl(true);
-                                }
+                                else
+                                    MessageBox.Show("Nhà cung cấp đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
-                            else
-                                MessageBox.Show("Nhà cung cấp đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            else{
+                                NHA_CUNG_CAP ncc = _ncc.getItem(_mancc);
+                                ncc.MANCC = txtMa.Text;
+                                ncc.DIACHI = txtDiaChi.Text;
+                                ncc.SDT = txtSDT.Text;
+                                ncc.EMAIL = txtEmail.Text;
+                                ncc.TENNCC = txtTen.Text;
+                                ncc.VOHIEUHOA = ckbDisable.Checked;
+                                _ncc.update(ncc);
+                                MessageBox.Show("Cập nhật nhà cung cấp thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                _them = false;
+                                loadData();
+                                enable(false);
+                                showHideControl(true);
+                            }
+                                
                         }
                         else
                             MessageBox.Show("Vui lòng nhập đúng email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);

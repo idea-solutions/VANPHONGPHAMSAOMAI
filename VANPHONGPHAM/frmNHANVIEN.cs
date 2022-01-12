@@ -55,6 +55,7 @@ namespace VANPHONGPHAM
             cmbGioiTinh.Items.Add("Nam");
             cmbGioiTinh.Items.Add("Nữ");
             cmbGioiTinh.Items.Add("Khác");
+            cmbGioiTinh.Text = "Nam";
             txtMa.MaxLength = 4;
             txtDiaChi.MaxLength = 50;
             txtCMND.MaxLength = 12;
@@ -117,7 +118,7 @@ namespace VANPHONGPHAM
             txtSDT.Text = "";
             txtMatKhau.Text = "";
             txtNLMatKhau.Text = "";
-            cmbGioiTinh.Text = "";
+            cmbGioiTinh.Text = "Nam";
             ckbDisable.Checked = false;
         }
 
@@ -151,50 +152,68 @@ namespace VANPHONGPHAM
             if (txtMa.TextLength != 0 && txtCMND.TextLength!=0 && txtDiaChi.TextLength!=0&& txtTenDangNhap.TextLength!=0 && txtSDT.TextLength!=0&& txtMatKhau.TextLength!=0&& txtNLMatKhau.TextLength != 0 && dtNgaySinh.Text != ""){
                 if (txtMa.TextLength == 4){
                     if (txtSDT.TextLength == 10){
-                        if(txtCMND.TextLength==12 || txtCMND.TextLength == 9){
+                        if(txtCMND.TextLength == 12 || txtCMND.TextLength == 9){
                             if(cmbGioiTinh.Text == "Nam" || cmbGioiTinh.Text == "Nữ" && cmbGioiTinh.Text == "Khác"){
                                 if (txtMatKhau.TextLength >= 8){
                                     if(txtNLMatKhau.Text == txtMatKhau.Text){
-                                        var nvkt = _nv.getItem(txtMa.Text);
-                                        if (nvkt == null){
-                                            showHideControl(true);
-                                            if (_them){
-                                                NHAN_VIEN nv = new NHAN_VIEN();
-                                                nv.MANHANVIEN = txtMa.Text;
-                                                nv.TENNHANVIEN = txtTen.Text;
-                                                nv.DIACHI = txtDiaChi.Text;
-                                                nv.SDT = txtSDT.Text;
-                                                nv.GIOITINH = cmbGioiTinh.Text;
-                                                nv.NGAYSINH = dtNgaySinh.DateTime;
-                                                nv.CMND_CCCD = txtCMND.Text;
-                                                nv.TENDANGNHAP = txtTenDangNhap.Text;
-                                                nv.MATKHAU = txtMatKhau.Text;
-                                                nv.VOHIEUHOA = ckbDisable.Checked;
-                                                nv.LAQUANLY = false;
-                                                _nv.add(nv);
-                                                MessageBox.Show("Thêm mới nhân viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                                _them = false;
-                                                loadData();
-                                                enable(false);
-                                                showInfo(false);
+                                        var nvmanv = _nv.getItem(txtMa.Text);
+                                        if (nvmanv == null){
+                                            var tendn = _nv.getItemByTDN(txtTenDangNhap.Text);
+                                            if (tendn == null)
+                                            {
+                                                var sdt = _nv.getItemBySDT(txtSDT.Text);
+                                                if (sdt == null){
+                                                    var cmnd = _nv.getItemByCMND(txtCMND.Text);
+                                                    if (cmnd == null){
+                                                        showHideControl(true);
+                                                        if (_them)
+                                                        {
+                                                            NHAN_VIEN nv = new NHAN_VIEN();
+                                                            nv.MANHANVIEN = txtMa.Text;
+                                                            nv.TENNHANVIEN = txtTen.Text;
+                                                            nv.DIACHI = txtDiaChi.Text;
+                                                            nv.SDT = txtSDT.Text;
+                                                            nv.GIOITINH = cmbGioiTinh.Text;
+                                                            nv.NGAYSINH = dtNgaySinh.DateTime;
+                                                            nv.CMND_CCCD = txtCMND.Text;
+                                                            nv.TENDANGNHAP = txtTenDangNhap.Text;
+                                                            nv.MATKHAU = txtMatKhau.Text;
+                                                            nv.VOHIEUHOA = ckbDisable.Checked;
+                                                            nv.LAQUANLY = false;
+                                                            _nv.add(nv);
+                                                            MessageBox.Show("Thêm mới nhân viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                            _them = false;
+                                                            loadData();
+                                                            enable(false);
+                                                            showInfo(false);
+                                                        }
+                                                        else
+                                                        {
+                                                            NHAN_VIEN nv = _nv.getItem(_manv);
+                                                            nv.TENNHANVIEN = txtTen.Text;
+                                                            nv.DIACHI = txtDiaChi.Text;
+                                                            nv.SDT = txtSDT.Text;
+                                                            nv.GIOITINH = cmbGioiTinh.Text;
+                                                            nv.NGAYSINH = dtNgaySinh.DateTime;
+                                                            nv.CMND_CCCD = txtCMND.Text;
+                                                            nv.MATKHAU = txtMatKhau.Text;
+                                                            nv.VOHIEUHOA = ckbDisable.Checked;
+                                                            _nv.update(nv);
+                                                            MessageBox.Show("Cập nhật nhân viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                            _them = false;
+                                                            loadData();
+                                                            enable(false);
+                                                            showInfo(false);
+                                                        }
+                                                    }
+                                                    else
+                                                        MessageBox.Show("Số CMND đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                                }
+                                                else
+                                                    MessageBox.Show("Số điện thoại đang được sử dụng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                             }
-                                            else{
-                                                NHAN_VIEN nv = _nv.getItem(_manv);
-                                                nv.TENNHANVIEN = txtTen.Text;
-                                                nv.DIACHI = txtDiaChi.Text;
-                                                nv.SDT = txtSDT.Text;
-                                                nv.GIOITINH = cmbGioiTinh.Text;
-                                                nv.NGAYSINH = dtNgaySinh.DateTime;
-                                                nv.CMND_CCCD = txtCMND.Text;
-                                                nv.MATKHAU = txtMatKhau.Text;
-                                                nv.VOHIEUHOA = ckbDisable.Checked;
-                                                _nv.update(nv);
-                                                MessageBox.Show("Cập nhật nhân viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                                _them = false;
-                                                loadData();
-                                                enable(false);
-                                                showInfo(false);
-                                            }
+                                            else
+                                                MessageBox.Show("Tên đăng nhập đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                         }
                                         else
                                             MessageBox.Show("Nhân viên đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);

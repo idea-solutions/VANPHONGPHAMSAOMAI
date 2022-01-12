@@ -463,7 +463,7 @@ namespace VANPHONGPHAM
             this.btnPrint.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnPrint.Appearance.Options.UseFont = true;
             this.btnPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.ImageOptions.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(478, 32);
+            this.btnPrint.Location = new System.Drawing.Point(478, 28);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnPrint.Size = new System.Drawing.Size(89, 39);

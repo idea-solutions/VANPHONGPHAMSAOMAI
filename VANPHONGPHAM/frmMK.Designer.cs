@@ -71,7 +71,7 @@ namespace VANPHONGPHAM
             this.txtPASS.Location = new System.Drawing.Point(43, 7);
             this.txtPASS.Name = "txtPASS";
             this.txtPASS.Size = new System.Drawing.Size(211, 20);
-            this.txtPASS.TabIndex = 9;
+            this.txtPASS.TabIndex = 0;
             this.txtPASS.UseSystemPasswordChar = true;
             this.txtPASS.TextChanged += new System.EventHandler(this.txtPASS_TextChanged);
             // 

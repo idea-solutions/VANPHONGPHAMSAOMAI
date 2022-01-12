@@ -26,11 +26,9 @@ namespace VANPHONGPHAM
         List<OBJHOADON_MATHANG> listHDMH;
         HOADONMATHANG _hdmh;
         HOADON _hd;
-        LOAIMATHANG _loaimh;
         MATHANG _mh;
         NHANVIEN _nv;
         KHACHHANG _kh;
-        bool _them;
         string _mamh;
 
         frmKhachHang objKHACHHANG = (frmKhachHang)Application.OpenForms["frmKHACHHANG"];
@@ -98,7 +96,6 @@ namespace VANPHONGPHAM
             dateEditDenNgay.EditValue = DateTime.Now;
             _hdmh = new HOADONMATHANG();
             _hd = new HOADON();
-            _loaimh = new LOAIMATHANG();
             _mh = new MATHANG();
             _kh = new KHACHHANG();
             _nv = new NHANVIEN();
@@ -227,20 +224,18 @@ namespace VANPHONGPHAM
             btnAddnew.Enabled = t;
         }
 
-        void reset(bool t){
+        void reset(){
             cmbKhachHang.SelectedIndex = 0;
             gcDanhSachMuaHang.DataSource = _hdmh.getAll(0);
         }
 
         private void btnThem_Click(object sender, EventArgs e){
-            _them = true;
-            reset(true);
+            reset();
             enable(true);
             showHideControl(false);
         }
 
         private void btnLuu_Click(object sender, EventArgs e){
-            _them = true;
             saveData();
             loadData();
             showHideControl(true);
@@ -252,28 +247,26 @@ namespace VANPHONGPHAM
 
         void saveData(){
             HOA_DON hd = new HOA_DON();
-            
-            if (_them){
-                hd.NGAYLAP = DateTime.Now;
-                hd.MANHANVIEN = _nv.getItemByTDN(objMain._tendn).MANHANVIEN;
-                hd.MAKH = int.Parse(cmbKhachHang.SelectedValue.ToString());
-                var LuuHD = _hd.add(hd);
-                int _maHD = LuuHD.MAHOADON;
-                for (int i = 0; i < gvDanhSachMuaHang.RowCount; i++){
-                    HOADON_MATHANG hdmh = new HOADON_MATHANG();
-                    hdmh.MAHD = _maHD;
-                    hdmh.MAMH = gvDanhSachMuaHang.GetRowCellValue(i, "MAMH").ToString();
-                    hdmh.SOLUONGMUA = int.Parse(gvDanhSachMuaHang.GetRowCellValue(i, "SOLUONG").ToString());
-                    hdmh.THANHTIEN = double.Parse(gvDanhSachMuaHang.GetRowCellValue(i, "THANHTIEN").ToString());
-                    _hdmh.add(hdmh);
-                }
+
+            hd.NGAYLAP = DateTime.Now;
+            hd.MANHANVIEN = _nv.getItemByTDN(objMain._tendn).MANHANVIEN;
+            hd.MAKH = int.Parse(cmbKhachHang.SelectedValue.ToString());
+            var LuuHD = _hd.add(hd);
+            int _maHD = LuuHD.MAHOADON;
+            for (int i = 0; i < gvDanhSachMuaHang.RowCount; i++){
+                HOADON_MATHANG hdmh = new HOADON_MATHANG();
+                hdmh.MAHD = _maHD;
+                hdmh.MAMH = gvDanhSachMuaHang.GetRowCellValue(i, "MAMH").ToString();
+                hdmh.SOLUONGMUA = int.Parse(gvDanhSachMuaHang.GetRowCellValue(i, "SOLUONG").ToString());
+                hdmh.THANHTIEN = double.Parse(gvDanhSachMuaHang.GetRowCellValue(i, "THANHTIEN").ToString());
+                _hdmh.add(hdmh);
             }
+            MessageBox.Show("Bán hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
 
         private void btnBoQua_Click(object sender, EventArgs e){
-            tabControl.SelectedTabPage = tabDanhSach;
-            reset(true);
+            reset();
             enable(false);
             showHideControl(true);
             listHDMH.Clear();
@@ -362,7 +355,7 @@ namespace VANPHONGPHAM
         private void btnIN_Click(object sender, EventArgs e){
             XuatReportHD("ReportHD", "IN HÓA ĐƠN");
             tabControl.SelectedTabPage = tabDanhSach;
-            reset(true);
+            reset();
             listHDMH.Clear();
         }
 

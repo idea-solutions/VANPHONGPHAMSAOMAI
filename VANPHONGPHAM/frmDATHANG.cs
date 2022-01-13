@@ -67,10 +67,10 @@ namespace VANPHONGPHAM
             gcDanhSach.DataSource = _ddhmh.getAll();
         }
         void loadMH(){
-            gcDanhSachMH.DataSource = _mh.getAll();
+            gcDanhSachMH.DataSource = _mh.getAll().Where(x=> x.VOHIEUHOA == false).ToList();
         }
         public void loadNCC(){
-            cmbNhaCungCap.DataSource = _ncc.getAll();
+            cmbNhaCungCap.DataSource = _ncc.getAll().Where(x=> x.VOHIEUHOA == false).OrderBy(x=> x.TENNCC).ToList();
             cmbNhaCungCap.DisplayMember = "TENNCC";
             cmbNhaCungCap.ValueMember = "MANCC";
         }

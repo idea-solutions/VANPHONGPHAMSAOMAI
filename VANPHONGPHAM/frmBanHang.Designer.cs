@@ -30,13 +30,13 @@ namespace VANPHONGPHAM
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::VANPHONGPHAM.frmloaddulieu), true, true);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBanHang));
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::VANPHONGPHAM.frmloaddulieu), true, true);
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -188,6 +188,10 @@ namespace VANPHONGPHAM
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
             this.SuspendLayout();
+            // 
+            // splashScreenManager1
+            // 
+            splashScreenManager1.ClosingDelay = 500;
             // 
             // layoutControl1
             // 
@@ -487,7 +491,7 @@ namespace VANPHONGPHAM
             // dateEditDenNgay
             // 
             this.dateEditDenNgay.EditValue = new System.DateTime(2021, 12, 31, 13, 3, 7, 0);
-            this.dateEditDenNgay.Location = new System.Drawing.Point(316, 38);
+            this.dateEditDenNgay.Location = new System.Drawing.Point(316, 35);
             this.dateEditDenNgay.Name = "dateEditDenNgay";
             this.dateEditDenNgay.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
             this.dateEditDenNgay.Properties.Appearance.Options.UseFont = true;
@@ -501,7 +505,7 @@ namespace VANPHONGPHAM
             // dateEditTuNgay
             // 
             this.dateEditTuNgay.EditValue = null;
-            this.dateEditTuNgay.Location = new System.Drawing.Point(84, 38);
+            this.dateEditTuNgay.Location = new System.Drawing.Point(84, 35);
             this.dateEditTuNgay.Name = "dateEditTuNgay";
             this.dateEditTuNgay.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
             this.dateEditTuNgay.Properties.Appearance.Options.UseFont = true;
@@ -517,7 +521,7 @@ namespace VANPHONGPHAM
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(227, 41);
+            this.label5.Location = new System.Drawing.Point(227, 38);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 22);
             this.label5.TabIndex = 1;
@@ -528,7 +532,7 @@ namespace VANPHONGPHAM
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(11, 41);
+            this.label4.Location = new System.Drawing.Point(11, 38);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 22);
             this.label4.TabIndex = 1;
@@ -1477,10 +1481,6 @@ namespace VANPHONGPHAM
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // splashScreenManager1
-            // 
-            splashScreenManager1.ClosingDelay = 500;
             // 
             // frmBanHang
             // 

@@ -73,7 +73,7 @@ namespace VANPHONGPHAM
         }
         
         public void loadLoaiMH(){
-            cmbLoaiMH.DataSource = _loaimh.getAll();
+            cmbLoaiMH.DataSource = _loaimh.getAll().Where(x=> x.VOHIEUHOA == false).ToList();
             cmbLoaiMH.DisplayMember = "TENLOAI";
             cmbLoaiMH.ValueMember = "MALOAI";
         }

@@ -83,6 +83,7 @@ namespace VANPHONGPHAM
                 btnKiemTra.Visible = true;
                 btnBoQua.Visible = false;
                 btnDongY.Visible = false;
+                MessageBox.Show("Thay đổi thông tin thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

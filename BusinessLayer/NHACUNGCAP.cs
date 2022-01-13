@@ -13,8 +13,9 @@ namespace BusinessLayer
             db = Entities.CreateEntities();
         }
 
-        public List<NHA_CUNG_CAP> getAll(){
-            return db.NHA_CUNG_CAP.OrderBy(x => x.TENNCC).ToList();
+        public List<NHA_CUNG_CAP> getAll()
+        {
+            return db.NHA_CUNG_CAP.OrderBy(x => x.MANCC).ToList();
         }
 
         public NHA_CUNG_CAP getItem(String mancc){

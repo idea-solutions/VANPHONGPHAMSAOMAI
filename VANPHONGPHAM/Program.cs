@@ -42,7 +42,6 @@ namespace VANPHONGPHAM
                 myFun._us = username;
                 myFun._pw = pass;
                 myFun._db = database;
-                SqlConnection con = new SqlConnection(conStr);
                 fs.Close();
             }
             Application.Run(new frmDangNhap());

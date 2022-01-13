@@ -36,7 +36,6 @@ namespace VANPHONGPHAM
         }
 
         private void frmLOAIMATHANG_Load(object sender, EventArgs e){
-
             txtMa.MaxLength = 5;
             txtTen.MaxLength = 50;
             _loaimh = new LOAIMATHANG();
@@ -137,6 +136,7 @@ namespace VANPHONGPHAM
         private void btnDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e){
             if (MessageBox.Show("Bạn có chắc chắn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes){
                 _loaimh.disable(_maloaimh);
+                
                 MessageBox.Show("Xóa mặt hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             reset();

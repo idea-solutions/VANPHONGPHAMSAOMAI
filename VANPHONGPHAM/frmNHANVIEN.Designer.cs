@@ -41,18 +41,12 @@ namespace VANPHONGPHAM
             this.cmbGioiTinh = new System.Windows.Forms.ComboBox();
             this.dtNgaySinh = new DevExpress.XtraEditors.DateEdit();
             this.ckbDisable = new System.Windows.Forms.CheckBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtNLMatKhau = new System.Windows.Forms.TextBox();
-            this.txtMatKhau = new System.Windows.Forms.TextBox();
-            this.txtTenDangNhap = new System.Windows.Forms.TextBox();
             this.txtCMND = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTen = new System.Windows.Forms.TextBox();
@@ -105,18 +99,12 @@ namespace VANPHONGPHAM
             this.groupControl1.Controls.Add(this.cmbGioiTinh);
             this.groupControl1.Controls.Add(this.dtNgaySinh);
             this.groupControl1.Controls.Add(this.ckbDisable);
-            this.groupControl1.Controls.Add(this.label9);
-            this.groupControl1.Controls.Add(this.label8);
             this.groupControl1.Controls.Add(this.label6);
             this.groupControl1.Controls.Add(this.label10);
             this.groupControl1.Controls.Add(this.label3);
             this.groupControl1.Controls.Add(this.label4);
-            this.groupControl1.Controls.Add(this.txtNLMatKhau);
-            this.groupControl1.Controls.Add(this.txtMatKhau);
-            this.groupControl1.Controls.Add(this.txtTenDangNhap);
             this.groupControl1.Controls.Add(this.txtCMND);
             this.groupControl1.Controls.Add(this.txtSDT);
-            this.groupControl1.Controls.Add(this.label7);
             this.groupControl1.Controls.Add(this.txtDiaChi);
             this.groupControl1.Controls.Add(this.label5);
             this.groupControl1.Controls.Add(this.txtTen);
@@ -164,26 +152,6 @@ namespace VANPHONGPHAM
             this.ckbDisable.Text = "Nghỉ việc";
             this.ckbDisable.UseVisualStyleBackColor = true;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(644, 118);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(149, 22);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Nhập lại mật khẩu";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(305, 116);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 22);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Mật khẩu";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -224,30 +192,6 @@ namespace VANPHONGPHAM
             this.label4.TabIndex = 0;
             this.label4.Text = "Tên nhân viên";
             // 
-            // txtNLMatKhau
-            // 
-            this.txtNLMatKhau.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtNLMatKhau.Location = new System.Drawing.Point(806, 113);
-            this.txtNLMatKhau.Name = "txtNLMatKhau";
-            this.txtNLMatKhau.Size = new System.Drawing.Size(187, 30);
-            this.txtNLMatKhau.TabIndex = 1;
-            // 
-            // txtMatKhau
-            // 
-            this.txtMatKhau.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtMatKhau.Location = new System.Drawing.Point(399, 113);
-            this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(223, 30);
-            this.txtMatKhau.TabIndex = 1;
-            // 
-            // txtTenDangNhap
-            // 
-            this.txtTenDangNhap.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtTenDangNhap.Location = new System.Drawing.Point(142, 113);
-            this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(120, 30);
-            this.txtTenDangNhap.TabIndex = 1;
-            // 
             // txtCMND
             // 
             this.txtCMND.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
@@ -263,16 +207,6 @@ namespace VANPHONGPHAM
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(187, 30);
             this.txtSDT.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(14, 114);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 22);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Tên đăng nhập";
             // 
             // txtDiaChi
             // 
@@ -373,7 +307,7 @@ namespace VANPHONGPHAM
             this.MANHANVIEN.Name = "MANHANVIEN";
             this.MANHANVIEN.Visible = true;
             this.MANHANVIEN.VisibleIndex = 1;
-            this.MANHANVIEN.Width = 142;
+            this.MANHANVIEN.Width = 133;
             // 
             // TENNHANVIEN
             // 
@@ -382,8 +316,8 @@ namespace VANPHONGPHAM
             this.TENNHANVIEN.MinWidth = 25;
             this.TENNHANVIEN.Name = "TENNHANVIEN";
             this.TENNHANVIEN.Visible = true;
-            this.TENNHANVIEN.VisibleIndex = 2;
-            this.TENNHANVIEN.Width = 192;
+            this.TENNHANVIEN.VisibleIndex = 3;
+            this.TENNHANVIEN.Width = 174;
             // 
             // DISABLE
             // 
@@ -394,7 +328,7 @@ namespace VANPHONGPHAM
             this.DISABLE.Name = "DISABLE";
             this.DISABLE.Visible = true;
             this.DISABLE.VisibleIndex = 0;
-            this.DISABLE.Width = 44;
+            this.DISABLE.Width = 42;
             // 
             // DIACHI
             // 
@@ -403,8 +337,8 @@ namespace VANPHONGPHAM
             this.DIACHI.MinWidth = 25;
             this.DIACHI.Name = "DIACHI";
             this.DIACHI.Visible = true;
-            this.DIACHI.VisibleIndex = 3;
-            this.DIACHI.Width = 254;
+            this.DIACHI.VisibleIndex = 4;
+            this.DIACHI.Width = 176;
             // 
             // SDT
             // 
@@ -413,8 +347,8 @@ namespace VANPHONGPHAM
             this.SDT.MinWidth = 25;
             this.SDT.Name = "SDT";
             this.SDT.Visible = true;
-            this.SDT.VisibleIndex = 4;
-            this.SDT.Width = 170;
+            this.SDT.VisibleIndex = 5;
+            this.SDT.Width = 144;
             // 
             // GIOITINH
             // 
@@ -423,8 +357,8 @@ namespace VANPHONGPHAM
             this.GIOITINH.MinWidth = 25;
             this.GIOITINH.Name = "GIOITINH";
             this.GIOITINH.Visible = true;
-            this.GIOITINH.VisibleIndex = 5;
-            this.GIOITINH.Width = 91;
+            this.GIOITINH.VisibleIndex = 6;
+            this.GIOITINH.Width = 95;
             // 
             // NGAYSINH
             // 
@@ -433,8 +367,8 @@ namespace VANPHONGPHAM
             this.NGAYSINH.MinWidth = 25;
             this.NGAYSINH.Name = "NGAYSINH";
             this.NGAYSINH.Visible = true;
-            this.NGAYSINH.VisibleIndex = 6;
-            this.NGAYSINH.Width = 151;
+            this.NGAYSINH.VisibleIndex = 7;
+            this.NGAYSINH.Width = 117;
             // 
             // CMND_CCCD
             // 
@@ -443,8 +377,8 @@ namespace VANPHONGPHAM
             this.CMND_CCCD.MinWidth = 25;
             this.CMND_CCCD.Name = "CMND_CCCD";
             this.CMND_CCCD.Visible = true;
-            this.CMND_CCCD.VisibleIndex = 7;
-            this.CMND_CCCD.Width = 124;
+            this.CMND_CCCD.VisibleIndex = 8;
+            this.CMND_CCCD.Width = 138;
             // 
             // MATKHAU
             // 
@@ -460,7 +394,9 @@ namespace VANPHONGPHAM
             this.TENDANGNHAP.FieldName = "TENDANGNHAP";
             this.TENDANGNHAP.MinWidth = 25;
             this.TENDANGNHAP.Name = "TENDANGNHAP";
-            this.TENDANGNHAP.Width = 164;
+            this.TENDANGNHAP.Visible = true;
+            this.TENDANGNHAP.VisibleIndex = 2;
+            this.TENDANGNHAP.Width = 149;
             // 
             // btn1
             // 
@@ -649,6 +585,7 @@ namespace VANPHONGPHAM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1198, 660);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gcDanhSach);
@@ -679,17 +616,11 @@ namespace VANPHONGPHAM
 
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.CheckBox ckbDisable;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtNLMatKhau;
-        private System.Windows.Forms.TextBox txtMatKhau;
-        private System.Windows.Forms.TextBox txtTenDangNhap;
         private System.Windows.Forms.TextBox txtCMND;
         private System.Windows.Forms.TextBox txtSDT;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTen;

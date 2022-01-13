@@ -141,11 +141,11 @@ namespace VANPHONGPHAM
         }
 
         void loadMH(){
-            gcDanhSachMH.DataSource = _mh.getAll();
+            gcDanhSachMH.DataSource = _mh.getAll().Where(x => x.VOHIEUHOA == false).ToList();
         }
 
         public void loadKH(){
-            cmbKhachHang.DataSource = _kh.getAll();
+            cmbKhachHang.DataSource = _kh.getAll().Where(x => x.VOHIEUHOA == false).OrderBy(x => x.TENKH).ToList();
             cmbKhachHang.DisplayMember = "TENKH";
             cmbKhachHang.ValueMember = "MAKH";
         }
